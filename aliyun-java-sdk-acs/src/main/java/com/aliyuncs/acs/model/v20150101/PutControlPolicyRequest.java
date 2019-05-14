@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutControlPolicyRequest extends RoaAcsRequest<PutControlPolicyResponse> {
 	
 	public PutControlPolicyRequest() {
-		super("Acs", "2015-01-01", "PutControlPolicy", "1.0.3");
+		super("Acs", "2015-01-01", "PutControlPolicy");
 		setUriPattern("/ControlPolicy");
 		setMethod(MethodType.PUT);
 	}

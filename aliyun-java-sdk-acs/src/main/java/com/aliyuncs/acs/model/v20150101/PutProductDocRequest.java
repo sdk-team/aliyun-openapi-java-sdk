@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutProductDocRequest extends RoaAcsRequest<PutProductDocResponse> {
 	
 	public PutProductDocRequest() {
-		super("Acs", "2015-01-01", "PutProductDoc", "1.0.3");
+		super("Acs", "2015-01-01", "PutProductDoc");
 		setUriPattern("/ProductDoc/[ProductName]/[Language]");
 		setMethod(MethodType.PUT);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiGatedLaunchRequest extends RoaAcsRequest<PutApiGatedLaunchResponse> {
 	
 	public PutApiGatedLaunchRequest() {
-		super("Acs", "2015-01-01", "PutApiGatedLaunch", "1.0.3");
+		super("Acs", "2015-01-01", "PutApiGatedLaunch");
 		setUriPattern("/GatedLaunch/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.POST);
 	}

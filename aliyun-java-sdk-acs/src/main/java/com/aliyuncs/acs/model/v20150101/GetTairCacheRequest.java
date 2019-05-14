@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetTairCacheRequest extends RoaAcsRequest<GetTairCacheResponse> {
 	
 	public GetTairCacheRequest() {
-		super("Acs", "2015-01-01", "GetTairCache", "1.0.3");
+		super("Acs", "2015-01-01", "GetTairCache");
 		setUriPattern("/TairCache");
 		setMethod(MethodType.GET);
 	}

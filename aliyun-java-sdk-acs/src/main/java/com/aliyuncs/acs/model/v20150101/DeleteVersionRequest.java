@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteVersionRequest extends RoaAcsRequest<DeleteVersionResponse> {
 	
 	public DeleteVersionRequest() {
-		super("Acs", "2015-01-01", "DeleteVersion", "1.0.3");
+		super("Acs", "2015-01-01", "DeleteVersion");
 		setUriPattern("/Version/[ProductName]/[VersionName]");
 		setMethod(MethodType.DELETE);
 	}

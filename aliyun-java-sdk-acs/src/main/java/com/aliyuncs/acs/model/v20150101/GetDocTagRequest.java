@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetDocTagRequest extends RoaAcsRequest<GetDocTagResponse> {
 	
 	public GetDocTagRequest() {
-		super("Acs", "2015-01-01", "GetDocTag", "1.0.3");
+		super("Acs", "2015-01-01", "GetDocTag");
 		setUriPattern("/DocTag/[Product]/[TagId]/[Language]");
 		setMethod(MethodType.GET);
 	}

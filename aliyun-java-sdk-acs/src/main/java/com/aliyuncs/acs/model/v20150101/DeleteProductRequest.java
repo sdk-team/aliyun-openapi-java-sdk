@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteProductRequest extends RoaAcsRequest<DeleteProductResponse> {
 	
 	public DeleteProductRequest() {
-		super("Acs", "2015-01-01", "DeleteProduct", "1.0.3");
+		super("Acs", "2015-01-01", "DeleteProduct");
 		setUriPattern("/Product/[ProductName]");
 		setMethod(MethodType.DELETE);
 	}

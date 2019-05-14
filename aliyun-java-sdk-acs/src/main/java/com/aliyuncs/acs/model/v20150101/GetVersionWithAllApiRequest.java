@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetVersionWithAllApiRequest extends RoaAcsRequest<GetVersionWithAllApiResponse> {
 	
 	public GetVersionWithAllApiRequest() {
-		super("Acs", "2015-01-01", "GetVersionWithAllApi", "1.0.3");
+		super("Acs", "2015-01-01", "GetVersionWithAllApi");
 		setUriPattern("/VersionWithAllApi/[ProductName]/[VersionName]");
 		setMethod(MethodType.GET);
 	}

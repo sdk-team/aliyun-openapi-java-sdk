@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetProductDocNewRequest extends RoaAcsRequest<GetProductDocNewResponse> {
 	
 	public GetProductDocNewRequest() {
-		super("Acs", "2015-01-01", "GetProductDocNew", "1.0.3");
+		super("Acs", "2015-01-01", "GetProductDocNew");
 		setUriPattern("/ProductDocNew/[ProductName]/[Language]/[IsDraft]");
 		setMethod(MethodType.GET);
 	}

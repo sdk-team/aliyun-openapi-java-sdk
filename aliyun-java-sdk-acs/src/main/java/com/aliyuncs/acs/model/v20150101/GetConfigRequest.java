@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetConfigRequest extends RoaAcsRequest<GetConfigResponse> {
 	
 	public GetConfigRequest() {
-		super("Acs", "2015-01-01", "GetConfig", "1.0.3");
+		super("Acs", "2015-01-01", "GetConfig");
 		setUriPattern("/PopConfig/[ConfigKey]");
 		setMethod(MethodType.GET);
 	}

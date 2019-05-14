@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutAccountBindingRequest extends RoaAcsRequest<PutAccountBindingResponse> {
 	
 	public PutAccountBindingRequest() {
-		super("Acs", "2015-01-01", "PutAccountBinding", "1.0.3");
+		super("Acs", "2015-01-01", "PutAccountBinding");
 		setUriPattern("/AccountBinding/[Product]/[AliyunUid]/[BucEmpId]");
 		setMethod(MethodType.PUT);
 	}

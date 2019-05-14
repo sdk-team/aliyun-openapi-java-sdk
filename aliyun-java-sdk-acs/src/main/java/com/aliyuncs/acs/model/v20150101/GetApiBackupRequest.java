@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetApiBackupRequest extends RoaAcsRequest<GetApiBackupResponse> {
 	
 	public GetApiBackupRequest() {
-		super("Acs", "2015-01-01", "GetApiBackup", "1.0.3");
+		super("Acs", "2015-01-01", "GetApiBackup");
 		setUriPattern("/ApiBackUp/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.GET);
 	}

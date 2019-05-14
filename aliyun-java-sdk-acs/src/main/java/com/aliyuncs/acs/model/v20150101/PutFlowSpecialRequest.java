@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutFlowSpecialRequest extends RoaAcsRequest<PutFlowSpecialResponse> {
 	
 	public PutFlowSpecialRequest() {
-		super("Acs", "2015-01-01", "PutFlowSpecial", "1.0.3");
+		super("Acs", "2015-01-01", "PutFlowSpecial");
 		setUriPattern("/FlowSpecial");
 		setMethod(MethodType.PUT);
 	}
