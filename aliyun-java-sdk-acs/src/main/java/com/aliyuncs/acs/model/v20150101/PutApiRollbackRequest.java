@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiRollbackRequest extends RoaAcsRequest<PutApiRollbackResponse> {
 	
 	public PutApiRollbackRequest() {
-		super("Acs", "2015-01-01", "PutApiRollback");
+		super("Acs", "2015-01-01", "PutApiRollback", "1.0.3");
 		setUriPattern("/Rollback/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetVersionDocRequest extends RoaAcsRequest<GetVersionDocResponse> {
 	
 	public GetVersionDocRequest() {
-		super("Acs", "2015-01-01", "GetVersionDoc");
+		super("Acs", "2015-01-01", "GetVersionDoc", "1.0.3");
 		setUriPattern("/VersionDoc/[ProductName]/[VersionName]/[Language]");
 		setMethod(MethodType.GET);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiStatusRequest extends RoaAcsRequest<PutApiStatusResponse> {
 	
 	public PutApiStatusRequest() {
-		super("Acs", "2015-01-01", "PutApiStatus");
+		super("Acs", "2015-01-01", "PutApiStatus", "1.0.3");
 		setUriPattern("/Status/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

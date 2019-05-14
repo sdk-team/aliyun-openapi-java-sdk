@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetGatedLaunchPolicyRequest extends RoaAcsRequest<GetGatedLaunchPolicyResponse> {
 	
 	public GetGatedLaunchPolicyRequest() {
-		super("Acs", "2015-01-01", "GetGatedLaunchPolicy");
+		super("Acs", "2015-01-01", "GetGatedLaunchPolicy", "1.0.3");
 		setUriPattern("/GatedLaunchPolicy/[ProductName]/[PolicyName]");
 		setMethod(MethodType.GET);
 	}

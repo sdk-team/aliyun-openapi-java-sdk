@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetGlobalRequest extends RoaAcsRequest<GetGlobalResponse> {
 	
 	public GetGlobalRequest() {
-		super("Acs", "2015-01-01", "GetGlobal");
+		super("Acs", "2015-01-01", "GetGlobal", "1.0.3");
 		setUriPattern("/");
 		setMethod(MethodType.GET);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeletePolicyRequest extends RoaAcsRequest<DeletePolicyResponse> {
 	
 	public DeletePolicyRequest() {
-		super("Acs", "2015-01-01", "DeletePolicy");
+		super("Acs", "2015-01-01", "DeletePolicy", "1.0.3");
 		setUriPattern("/Policy/[Product]/[ControlPolicyName]/[UserId]");
 		setMethod(MethodType.DELETE);
 	}

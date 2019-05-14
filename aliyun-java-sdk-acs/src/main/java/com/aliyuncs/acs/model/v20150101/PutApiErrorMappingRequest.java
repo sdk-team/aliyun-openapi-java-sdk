@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiErrorMappingRequest extends RoaAcsRequest<PutApiErrorMappingResponse> {
 	
 	public PutApiErrorMappingRequest() {
-		super("Acs", "2015-01-01", "PutApiErrorMapping");
+		super("Acs", "2015-01-01", "PutApiErrorMapping", "1.0.3");
 		setUriPattern("/ErrorMapping/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

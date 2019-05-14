@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutConfigRequest extends RoaAcsRequest<PutConfigResponse> {
 	
 	public PutConfigRequest() {
-		super("Acs", "2015-01-01", "PutConfig");
+		super("Acs", "2015-01-01", "PutConfig", "1.0.3");
 		setUriPattern("/PopConfig");
 		setMethod(MethodType.PUT);
 	}

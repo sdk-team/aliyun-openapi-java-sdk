@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetControlPolicyRequest extends RoaAcsRequest<GetControlPolicyResponse> {
 	
 	public GetControlPolicyRequest() {
-		super("Acs", "2015-01-01", "GetControlPolicy");
+		super("Acs", "2015-01-01", "GetControlPolicy", "1.0.3");
 		setUriPattern("/ControlPolicy/[Product]/[ControlPolicyName]");
 		setMethod(MethodType.GET);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiVisibilityRequest extends RoaAcsRequest<PutApiVisibilityResponse> {
 	
 	public PutApiVisibilityRequest() {
-		super("Acs", "2015-01-01", "PutApiVisibility");
+		super("Acs", "2015-01-01", "PutApiVisibility", "1.0.3");
 		setUriPattern("/ApiVisibility/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

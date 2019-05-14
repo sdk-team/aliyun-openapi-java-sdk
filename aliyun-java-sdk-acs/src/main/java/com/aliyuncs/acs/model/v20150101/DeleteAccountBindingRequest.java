@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteAccountBindingRequest extends RoaAcsRequest<DeleteAccountBindingResponse> {
 	
 	public DeleteAccountBindingRequest() {
-		super("Acs", "2015-01-01", "DeleteAccountBinding");
+		super("Acs", "2015-01-01", "DeleteAccountBinding", "1.0.3");
 		setUriPattern("/AccountBinding/[Product]/[AliyunUid]");
 		setMethod(MethodType.DELETE);
 	}

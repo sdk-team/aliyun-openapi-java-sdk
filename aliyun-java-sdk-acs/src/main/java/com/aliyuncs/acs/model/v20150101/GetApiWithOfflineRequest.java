@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetApiWithOfflineRequest extends RoaAcsRequest<GetApiWithOfflineResponse> {
 	
 	public GetApiWithOfflineRequest() {
-		super("Acs", "2015-01-01", "GetApiWithOffline");
+		super("Acs", "2015-01-01", "GetApiWithOffline", "1.0.3");
 		setUriPattern("/ApiWithOffline/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.GET);
 	}

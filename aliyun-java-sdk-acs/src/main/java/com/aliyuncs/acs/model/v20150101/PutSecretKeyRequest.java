@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutSecretKeyRequest extends RoaAcsRequest<PutSecretKeyResponse> {
 	
 	public PutSecretKeyRequest() {
-		super("Acs", "2015-01-01", "PutSecretKey");
+		super("Acs", "2015-01-01", "PutSecretKey", "1.0.3");
 		setUriPattern("/SecretKey");
 		setMethod(MethodType.PUT);
 	}

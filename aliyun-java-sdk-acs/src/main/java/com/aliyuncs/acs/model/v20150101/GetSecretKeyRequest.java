@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetSecretKeyRequest extends RoaAcsRequest<GetSecretKeyResponse> {
 	
 	public GetSecretKeyRequest() {
-		super("Acs", "2015-01-01", "GetSecretKey");
+		super("Acs", "2015-01-01", "GetSecretKey", "1.0.3");
 		setUriPattern("/SecretKey/[Product]");
 		setMethod(MethodType.GET);
 	}

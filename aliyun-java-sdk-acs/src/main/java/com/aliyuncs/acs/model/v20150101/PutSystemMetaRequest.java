@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutSystemMetaRequest extends RoaAcsRequest<PutSystemMetaResponse> {
 	
 	public PutSystemMetaRequest() {
-		super("Acs", "2015-01-01", "PutSystemMeta");
+		super("Acs", "2015-01-01", "PutSystemMeta", "1.0.3");
 		setUriPattern("/PopSystemMeta");
 		setMethod(MethodType.PUT);
 	}

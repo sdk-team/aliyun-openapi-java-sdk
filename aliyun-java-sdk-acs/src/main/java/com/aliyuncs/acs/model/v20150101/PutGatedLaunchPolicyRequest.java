@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutGatedLaunchPolicyRequest extends RoaAcsRequest<PutGatedLaunchPolicyResponse> {
 	
 	public PutGatedLaunchPolicyRequest() {
-		super("Acs", "2015-01-01", "PutGatedLaunchPolicy");
+		super("Acs", "2015-01-01", "PutGatedLaunchPolicy", "1.0.3");
 		setUriPattern("/GatedLaunchPolicy");
 		setMethod(MethodType.PUT);
 	}

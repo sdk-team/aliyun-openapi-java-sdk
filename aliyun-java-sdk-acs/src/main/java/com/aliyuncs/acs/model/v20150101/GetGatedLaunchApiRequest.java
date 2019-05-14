@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetGatedLaunchApiRequest extends RoaAcsRequest<GetGatedLaunchApiResponse> {
 	
 	public GetGatedLaunchApiRequest() {
-		super("Acs", "2015-01-01", "GetGatedLaunchApi");
+		super("Acs", "2015-01-01", "GetGatedLaunchApi", "1.0.3");
 		setUriPattern("/GatedLaunch/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.GET);
 	}

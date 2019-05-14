@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiResultMappingRequest extends RoaAcsRequest<PutApiResultMappingResponse> {
 	
 	public PutApiResultMappingRequest() {
-		super("Acs", "2015-01-01", "PutApiResultMapping");
+		super("Acs", "2015-01-01", "PutApiResultMapping", "1.0.3");
 		setUriPattern("/ResultMapping/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

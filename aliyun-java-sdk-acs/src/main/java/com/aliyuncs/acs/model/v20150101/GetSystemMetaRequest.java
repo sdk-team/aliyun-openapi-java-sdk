@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetSystemMetaRequest extends RoaAcsRequest<GetSystemMetaResponse> {
 	
 	public GetSystemMetaRequest() {
-		super("Acs", "2015-01-01", "GetSystemMeta");
+		super("Acs", "2015-01-01", "GetSystemMeta", "1.0.3");
 		setUriPattern("/PopSystemMeta/[MetaName]");
 		setMethod(MethodType.GET);
 	}

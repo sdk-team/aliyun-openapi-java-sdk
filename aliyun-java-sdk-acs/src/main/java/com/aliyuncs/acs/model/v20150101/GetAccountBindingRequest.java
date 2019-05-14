@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetAccountBindingRequest extends RoaAcsRequest<GetAccountBindingResponse> {
 	
 	public GetAccountBindingRequest() {
-		super("Acs", "2015-01-01", "GetAccountBinding");
+		super("Acs", "2015-01-01", "GetAccountBinding", "1.0.3");
 		setUriPattern("/AccountBinding/[Product]");
 		setMethod(MethodType.GET);
 	}

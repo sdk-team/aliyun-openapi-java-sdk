@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class GetFlowSpecialByProductRequest extends RoaAcsRequest<GetFlowSpecialByProductResponse> {
 	
 	public GetFlowSpecialByProductRequest() {
-		super("Acs", "2015-01-01", "GetFlowSpecialByProduct");
+		super("Acs", "2015-01-01", "GetFlowSpecialByProduct", "1.0.3");
 		setUriPattern("/FlowSpecial/[Product]");
 		setMethod(MethodType.GET);
 	}

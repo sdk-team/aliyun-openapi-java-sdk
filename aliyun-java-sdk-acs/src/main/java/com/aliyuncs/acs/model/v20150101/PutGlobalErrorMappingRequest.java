@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutGlobalErrorMappingRequest extends RoaAcsRequest<PutGlobalErrorMappingResponse> {
 	
 	public PutGlobalErrorMappingRequest() {
-		super("Acs", "2015-01-01", "PutGlobalErrorMapping");
+		super("Acs", "2015-01-01", "PutGlobalErrorMapping", "1.0.3");
 		setUriPattern("/ErrorMapping");
 		setMethod(MethodType.PUT);
 	}

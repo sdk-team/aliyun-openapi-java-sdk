@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutApiParametersRequest extends RoaAcsRequest<PutApiParametersResponse> {
 	
 	public PutApiParametersRequest() {
-		super("Acs", "2015-01-01", "PutApiParameters");
+		super("Acs", "2015-01-01", "PutApiParameters", "1.0.3");
 		setUriPattern("/Parameters/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

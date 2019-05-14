@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteTairCacheRequest extends RoaAcsRequest<DeleteTairCacheResponse> {
 	
 	public DeleteTairCacheRequest() {
-		super("Acs", "2015-01-01", "DeleteTairCache");
+		super("Acs", "2015-01-01", "DeleteTairCache", "1.0.3");
 		setUriPattern("/TairCache");
 		setMethod(MethodType.DELETE);
 	}

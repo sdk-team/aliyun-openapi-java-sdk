@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutDocTagRequest extends RoaAcsRequest<PutDocTagResponse> {
 	
 	public PutDocTagRequest() {
-		super("Acs", "2015-01-01", "PutDocTag");
+		super("Acs", "2015-01-01", "PutDocTag", "1.0.3");
 		setUriPattern("/DocTag/[Product]/[TagId]/[Language]");
 		setMethod(MethodType.PUT);
 	}
