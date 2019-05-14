@@ -28,19 +28,19 @@ public class DescribeInstanceStatusRequest extends RpcAcsRequest<DescribeInstanc
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
-	private String ownerAccount;
+	private Integer pageNumber;
 
 	private Integer pageSize;
 
-	private String zoneId;
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
 
 	private String clusterId;
 
 	private Long ownerId;
 
-	private Integer pageNumber;
+	private String zoneId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -50,6 +50,28 @@ public class DescribeInstanceStatusRequest extends RpcAcsRequest<DescribeInstanc
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
 		}
 	}
 
@@ -75,28 +97,6 @@ public class DescribeInstanceStatusRequest extends RpcAcsRequest<DescribeInstanc
 		}
 	}
 
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
-	public String getZoneId() {
-		return this.zoneId;
-	}
-
-	public void setZoneId(String zoneId) {
-		this.zoneId = zoneId;
-		if(zoneId != null){
-			putQueryParameter("ZoneId", zoneId);
-		}
-	}
-
 	public String getClusterId() {
 		return this.clusterId;
 	}
@@ -119,14 +119,14 @@ public class DescribeInstanceStatusRequest extends RpcAcsRequest<DescribeInstanc
 		}
 	}
 
-	public Integer getPageNumber() {
-		return this.pageNumber;
+	public String getZoneId() {
+		return this.zoneId;
 	}
 
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-		if(pageNumber != null){
-			putQueryParameter("PageNumber", pageNumber.toString());
+	public void setZoneId(String zoneId) {
+		this.zoneId = zoneId;
+		if(zoneId != null){
+			putQueryParameter("ZoneId", zoneId);
 		}
 	}
 

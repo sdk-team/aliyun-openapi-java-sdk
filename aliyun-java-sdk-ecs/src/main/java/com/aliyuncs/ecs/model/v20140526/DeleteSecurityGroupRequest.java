@@ -28,11 +28,11 @@ public class DeleteSecurityGroupRequest extends RpcAcsRequest<DeleteSecurityGrou
 
 	private Long resourceOwnerId;
 
+	private String securityGroupId;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
-
-	private String securityGroupId;
 
 	private Long ownerId;
 
@@ -44,6 +44,17 @@ public class DeleteSecurityGroupRequest extends RpcAcsRequest<DeleteSecurityGrou
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getSecurityGroupId() {
+		return this.securityGroupId;
+	}
+
+	public void setSecurityGroupId(String securityGroupId) {
+		this.securityGroupId = securityGroupId;
+		if(securityGroupId != null){
+			putQueryParameter("SecurityGroupId", securityGroupId);
 		}
 	}
 
@@ -66,17 +77,6 @@ public class DeleteSecurityGroupRequest extends RpcAcsRequest<DeleteSecurityGrou
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getSecurityGroupId() {
-		return this.securityGroupId;
-	}
-
-	public void setSecurityGroupId(String securityGroupId) {
-		this.securityGroupId = securityGroupId;
-		if(securityGroupId != null){
-			putQueryParameter("SecurityGroupId", securityGroupId);
 		}
 	}
 

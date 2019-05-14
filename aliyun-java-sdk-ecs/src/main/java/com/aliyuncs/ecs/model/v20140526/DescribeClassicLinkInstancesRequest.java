@@ -28,17 +28,17 @@ public class DescribeClassicLinkInstancesRequest extends RpcAcsRequest<DescribeC
 
 	private Long resourceOwnerId;
 
-	private String instanceId;
-
-	private String resourceOwnerAccount;
-
-	private String vpcId;
+	private String pageNumber;
 
 	private String pageSize;
 
+	private String resourceOwnerAccount;
+
 	private Long ownerId;
 
-	private String pageNumber;
+	private String instanceId;
+
+	private String vpcId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -51,36 +51,14 @@ public class DescribeClassicLinkInstancesRequest extends RpcAcsRequest<DescribeC
 		}
 	}
 
-	public String getInstanceId() {
-		return this.instanceId;
+	public String getPageNumber() {
+		return this.pageNumber;
 	}
 
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getVpcId() {
-		return this.vpcId;
-	}
-
-	public void setVpcId(String vpcId) {
-		this.vpcId = vpcId;
-		if(vpcId != null){
-			putQueryParameter("VpcId", vpcId);
+	public void setPageNumber(String pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber);
 		}
 	}
 
@@ -95,6 +73,17 @@ public class DescribeClassicLinkInstancesRequest extends RpcAcsRequest<DescribeC
 		}
 	}
 
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -106,14 +95,25 @@ public class DescribeClassicLinkInstancesRequest extends RpcAcsRequest<DescribeC
 		}
 	}
 
-	public String getPageNumber() {
-		return this.pageNumber;
+	public String getInstanceId() {
+		return this.instanceId;
 	}
 
-	public void setPageNumber(String pageNumber) {
-		this.pageNumber = pageNumber;
-		if(pageNumber != null){
-			putQueryParameter("PageNumber", pageNumber);
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
+		}
+	}
+
+	public String getVpcId() {
+		return this.vpcId;
+	}
+
+	public void setVpcId(String vpcId) {
+		this.vpcId = vpcId;
+		if(vpcId != null){
+			putQueryParameter("VpcId", vpcId);
 		}
 	}
 

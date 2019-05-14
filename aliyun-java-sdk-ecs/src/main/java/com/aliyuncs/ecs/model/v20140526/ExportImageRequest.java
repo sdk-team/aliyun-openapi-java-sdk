@@ -30,17 +30,17 @@ public class ExportImageRequest extends RpcAcsRequest<ExportImageResponse> {
 
 	private String imageId;
 
+	private String imageFormat;
+
 	private String oSSBucket;
 
 	private String resourceOwnerAccount;
-
-	private String oSSPrefix;
 
 	private String roleName;
 
 	private Long ownerId;
 
-	private String imageFormat;
+	private String oSSPrefix;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -61,6 +61,17 @@ public class ExportImageRequest extends RpcAcsRequest<ExportImageResponse> {
 		this.imageId = imageId;
 		if(imageId != null){
 			putQueryParameter("ImageId", imageId);
+		}
+	}
+
+	public String getImageFormat() {
+		return this.imageFormat;
+	}
+
+	public void setImageFormat(String imageFormat) {
+		this.imageFormat = imageFormat;
+		if(imageFormat != null){
+			putQueryParameter("ImageFormat", imageFormat);
 		}
 	}
 
@@ -86,17 +97,6 @@ public class ExportImageRequest extends RpcAcsRequest<ExportImageResponse> {
 		}
 	}
 
-	public String getOSSPrefix() {
-		return this.oSSPrefix;
-	}
-
-	public void setOSSPrefix(String oSSPrefix) {
-		this.oSSPrefix = oSSPrefix;
-		if(oSSPrefix != null){
-			putQueryParameter("OSSPrefix", oSSPrefix);
-		}
-	}
-
 	public String getRoleName() {
 		return this.roleName;
 	}
@@ -119,14 +119,14 @@ public class ExportImageRequest extends RpcAcsRequest<ExportImageResponse> {
 		}
 	}
 
-	public String getImageFormat() {
-		return this.imageFormat;
+	public String getOSSPrefix() {
+		return this.oSSPrefix;
 	}
 
-	public void setImageFormat(String imageFormat) {
-		this.imageFormat = imageFormat;
-		if(imageFormat != null){
-			putQueryParameter("ImageFormat", imageFormat);
+	public void setOSSPrefix(String oSSPrefix) {
+		this.oSSPrefix = oSSPrefix;
+		if(oSSPrefix != null){
+			putQueryParameter("OSSPrefix", oSSPrefix);
 		}
 	}
 

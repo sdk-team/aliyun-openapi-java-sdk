@@ -28,11 +28,11 @@ public class ReleaseEipAddressRequest extends RpcAcsRequest<ReleaseEipAddressRes
 
 	private Long resourceOwnerId;
 
+	private String allocationId;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
-
-	private String allocationId;
 
 	private Long ownerId;
 
@@ -44,6 +44,17 @@ public class ReleaseEipAddressRequest extends RpcAcsRequest<ReleaseEipAddressRes
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getAllocationId() {
+		return this.allocationId;
+	}
+
+	public void setAllocationId(String allocationId) {
+		this.allocationId = allocationId;
+		if(allocationId != null){
+			putQueryParameter("AllocationId", allocationId);
 		}
 	}
 
@@ -66,17 +77,6 @@ public class ReleaseEipAddressRequest extends RpcAcsRequest<ReleaseEipAddressRes
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getAllocationId() {
-		return this.allocationId;
-	}
-
-	public void setAllocationId(String allocationId) {
-		this.allocationId = allocationId;
-		if(allocationId != null){
-			putQueryParameter("AllocationId", allocationId);
 		}
 	}
 

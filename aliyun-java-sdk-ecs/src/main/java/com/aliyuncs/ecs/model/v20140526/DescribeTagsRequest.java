@@ -29,19 +29,19 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 
 	private Long resourceOwnerId;
 
-	private String resourceId;
-
-	private String resourceOwnerAccount;
+	private Integer pageNumber;
 
 	private Integer pageSize;
 
 	private List<Tag> tags;
 
+	private String resourceId;
+
+	private String resourceOwnerAccount;
+
 	private Long ownerId;
 
 	private String resourceType;
-
-	private Integer pageNumber;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -54,25 +54,14 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 		}
 	}
 
-	public String getResourceId() {
-		return this.resourceId;
+	public Integer getPageNumber() {
+		return this.pageNumber;
 	}
 
-	public void setResourceId(String resourceId) {
-		this.resourceId = resourceId;
-		if(resourceId != null){
-			putQueryParameter("ResourceId", resourceId);
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
 		}
 	}
 
@@ -101,6 +90,28 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 		}	
 	}
 
+	public String getResourceId() {
+		return this.resourceId;
+	}
+
+	public void setResourceId(String resourceId) {
+		this.resourceId = resourceId;
+		if(resourceId != null){
+			putQueryParameter("ResourceId", resourceId);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -120,17 +131,6 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 		this.resourceType = resourceType;
 		if(resourceType != null){
 			putQueryParameter("ResourceType", resourceType);
-		}
-	}
-
-	public Integer getPageNumber() {
-		return this.pageNumber;
-	}
-
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-		if(pageNumber != null){
-			putQueryParameter("PageNumber", pageNumber.toString());
 		}
 	}
 

@@ -26,13 +26,11 @@ public class StartInstanceRequest extends RpcAcsRequest<StartInstanceResponse> {
 		super("Ecs", "2014-05-26", "StartInstance", "ecs");
 	}
 
+	private Long resourceOwnerId;
+
 	private String sourceRegionId;
 
 	private Boolean initLocalDisk;
-
-	private Long resourceOwnerId;
-
-	private String instanceId;
 
 	private Boolean dryRun;
 
@@ -41,6 +39,19 @@ public class StartInstanceRequest extends RpcAcsRequest<StartInstanceResponse> {
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String instanceId;
+
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
 
 	public String getSourceRegionId() {
 		return this.sourceRegionId;
@@ -61,28 +72,6 @@ public class StartInstanceRequest extends RpcAcsRequest<StartInstanceResponse> {
 		this.initLocalDisk = initLocalDisk;
 		if(initLocalDisk != null){
 			putQueryParameter("InitLocalDisk", initLocalDisk.toString());
-		}
-	}
-
-	public Long getResourceOwnerId() {
-		return this.resourceOwnerId;
-	}
-
-	public void setResourceOwnerId(Long resourceOwnerId) {
-		this.resourceOwnerId = resourceOwnerId;
-		if(resourceOwnerId != null){
-			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getInstanceId() {
-		return this.instanceId;
-	}
-
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
@@ -127,6 +116,17 @@ public class StartInstanceRequest extends RpcAcsRequest<StartInstanceResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 

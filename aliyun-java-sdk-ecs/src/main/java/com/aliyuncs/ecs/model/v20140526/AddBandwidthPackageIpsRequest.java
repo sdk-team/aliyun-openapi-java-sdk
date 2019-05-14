@@ -28,11 +28,11 @@ public class AddBandwidthPackageIpsRequest extends RpcAcsRequest<AddBandwidthPac
 
 	private Long resourceOwnerId;
 
+	private String clientToken;
+
 	private String bandwidthPackageId;
 
 	private String resourceOwnerAccount;
-
-	private String clientToken;
 
 	private String ownerAccount;
 
@@ -48,6 +48,17 @@ public class AddBandwidthPackageIpsRequest extends RpcAcsRequest<AddBandwidthPac
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
 		}
 	}
 
@@ -70,17 +81,6 @@ public class AddBandwidthPackageIpsRequest extends RpcAcsRequest<AddBandwidthPac
 		this.resourceOwnerAccount = resourceOwnerAccount;
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getClientToken() {
-		return this.clientToken;
-	}
-
-	public void setClientToken(String clientToken) {
-		this.clientToken = clientToken;
-		if(clientToken != null){
-			putQueryParameter("ClientToken", clientToken);
 		}
 	}
 

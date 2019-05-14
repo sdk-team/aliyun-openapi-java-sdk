@@ -30,15 +30,15 @@ public class DescribeVRoutersRequest extends RpcAcsRequest<DescribeVRoutersRespo
 
 	private String vRouterId;
 
+	private Integer pageNumber;
+
+	private Integer pageSize;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	private Integer pageSize;
-
 	private Long ownerId;
-
-	private Integer pageNumber;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -59,6 +59,28 @@ public class DescribeVRoutersRequest extends RpcAcsRequest<DescribeVRoutersRespo
 		this.vRouterId = vRouterId;
 		if(vRouterId != null){
 			putQueryParameter("VRouterId", vRouterId);
+		}
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
 		}
 	}
 
@@ -84,17 +106,6 @@ public class DescribeVRoutersRequest extends RpcAcsRequest<DescribeVRoutersRespo
 		}
 	}
 
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -103,17 +114,6 @@ public class DescribeVRoutersRequest extends RpcAcsRequest<DescribeVRoutersRespo
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public Integer getPageNumber() {
-		return this.pageNumber;
-	}
-
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-		if(pageNumber != null){
-			putQueryParameter("PageNumber", pageNumber.toString());
 		}
 	}
 

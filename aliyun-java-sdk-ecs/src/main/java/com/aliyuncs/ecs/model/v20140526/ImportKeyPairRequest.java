@@ -28,11 +28,11 @@ public class ImportKeyPairRequest extends RpcAcsRequest<ImportKeyPairResponse> {
 
 	private Long resourceOwnerId;
 
+	private String keyPairName;
+
 	private String resourceOwnerAccount;
 
 	private String publicKeyBody;
-
-	private String keyPairName;
 
 	private Long ownerId;
 
@@ -44,6 +44,17 @@ public class ImportKeyPairRequest extends RpcAcsRequest<ImportKeyPairResponse> {
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getKeyPairName() {
+		return this.keyPairName;
+	}
+
+	public void setKeyPairName(String keyPairName) {
+		this.keyPairName = keyPairName;
+		if(keyPairName != null){
+			putQueryParameter("KeyPairName", keyPairName);
 		}
 	}
 
@@ -66,17 +77,6 @@ public class ImportKeyPairRequest extends RpcAcsRequest<ImportKeyPairResponse> {
 		this.publicKeyBody = publicKeyBody;
 		if(publicKeyBody != null){
 			putQueryParameter("PublicKeyBody", publicKeyBody);
-		}
-	}
-
-	public String getKeyPairName() {
-		return this.keyPairName;
-	}
-
-	public void setKeyPairName(String keyPairName) {
-		this.keyPairName = keyPairName;
-		if(keyPairName != null){
-			putQueryParameter("KeyPairName", keyPairName);
 		}
 	}
 

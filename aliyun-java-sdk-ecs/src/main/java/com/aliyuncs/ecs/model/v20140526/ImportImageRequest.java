@@ -31,21 +31,21 @@ public class ImportImageRequest extends RpcAcsRequest<ImportImageResponse> {
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
-	private String roleName;
-
 	private String description;
-
-	private String oSType;
-
-	private Long ownerId;
 
 	private String platform;
 
 	private String imageName;
 
 	private String architecture;
+
+	private String resourceOwnerAccount;
+
+	private String roleName;
+
+	private String oSType;
+
+	private Long ownerId;
 
 	public List<DiskDeviceMapping> getDiskDeviceMappings() {
 		return this.diskDeviceMappings;
@@ -76,28 +76,6 @@ public class ImportImageRequest extends RpcAcsRequest<ImportImageResponse> {
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getRoleName() {
-		return this.roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-		if(roleName != null){
-			putQueryParameter("RoleName", roleName);
-		}
-	}
-
 	public String getDescription() {
 		return this.description;
 	}
@@ -106,28 +84,6 @@ public class ImportImageRequest extends RpcAcsRequest<ImportImageResponse> {
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getOSType() {
-		return this.oSType;
-	}
-
-	public void setOSType(String oSType) {
-		this.oSType = oSType;
-		if(oSType != null){
-			putQueryParameter("OSType", oSType);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -161,6 +117,50 @@ public class ImportImageRequest extends RpcAcsRequest<ImportImageResponse> {
 		this.architecture = architecture;
 		if(architecture != null){
 			putQueryParameter("Architecture", architecture);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getRoleName() {
+		return this.roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+		if(roleName != null){
+			putQueryParameter("RoleName", roleName);
+		}
+	}
+
+	public String getOSType() {
+		return this.oSType;
+	}
+
+	public void setOSType(String oSType) {
+		this.oSType = oSType;
+		if(oSType != null){
+			putQueryParameter("OSType", oSType);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

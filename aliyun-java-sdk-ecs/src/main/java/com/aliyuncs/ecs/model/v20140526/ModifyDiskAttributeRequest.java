@@ -26,11 +26,17 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 		super("Ecs", "2014-05-26", "ModifyDiskAttribute", "ecs");
 	}
 
+	private Long resourceOwnerId;
+
+	private String description;
+
 	private String diskName;
 
 	private Boolean deleteAutoSnapshot;
 
-	private Long resourceOwnerId;
+	private String diskId;
+
+	private Boolean deleteWithInstance;
 
 	private Boolean enableAutoSnapshot;
 
@@ -38,13 +44,29 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	private String ownerAccount;
 
-	private String description;
-
-	private String diskId;
-
 	private Long ownerId;
 
-	private Boolean deleteWithInstance;
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		if(description != null){
+			putQueryParameter("Description", description);
+		}
+	}
 
 	public String getDiskName() {
 		return this.diskName;
@@ -68,14 +90,25 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 		}
 	}
 
-	public Long getResourceOwnerId() {
-		return this.resourceOwnerId;
+	public String getDiskId() {
+		return this.diskId;
 	}
 
-	public void setResourceOwnerId(Long resourceOwnerId) {
-		this.resourceOwnerId = resourceOwnerId;
-		if(resourceOwnerId != null){
-			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+	public void setDiskId(String diskId) {
+		this.diskId = diskId;
+		if(diskId != null){
+			putQueryParameter("DiskId", diskId);
+		}
+	}
+
+	public Boolean getDeleteWithInstance() {
+		return this.deleteWithInstance;
+	}
+
+	public void setDeleteWithInstance(Boolean deleteWithInstance) {
+		this.deleteWithInstance = deleteWithInstance;
+		if(deleteWithInstance != null){
+			putQueryParameter("DeleteWithInstance", deleteWithInstance.toString());
 		}
 	}
 
@@ -112,28 +145,6 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 		}
 	}
 
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-		if(description != null){
-			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getDiskId() {
-		return this.diskId;
-	}
-
-	public void setDiskId(String diskId) {
-		this.diskId = diskId;
-		if(diskId != null){
-			putQueryParameter("DiskId", diskId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -142,17 +153,6 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public Boolean getDeleteWithInstance() {
-		return this.deleteWithInstance;
-	}
-
-	public void setDeleteWithInstance(Boolean deleteWithInstance) {
-		this.deleteWithInstance = deleteWithInstance;
-		if(deleteWithInstance != null){
-			putQueryParameter("DeleteWithInstance", deleteWithInstance.toString());
 		}
 	}
 

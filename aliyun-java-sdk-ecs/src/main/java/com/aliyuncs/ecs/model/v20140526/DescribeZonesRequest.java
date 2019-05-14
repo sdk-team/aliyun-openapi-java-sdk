@@ -26,32 +26,21 @@ public class DescribeZonesRequest extends RpcAcsRequest<DescribeZonesResponse> {
 		super("Ecs", "2014-05-26", "DescribeZones", "ecs");
 	}
 
-	private String spotStrategy;
-
 	private Long resourceOwnerId;
+
+	private String instanceChargeType;
 
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	private String acceptLanguage;
-
 	private Long ownerId;
-
-	private String instanceChargeType;
 
 	private Boolean verbose;
 
-	public String getSpotStrategy() {
-		return this.spotStrategy;
-	}
+	private String spotStrategy;
 
-	public void setSpotStrategy(String spotStrategy) {
-		this.spotStrategy = spotStrategy;
-		if(spotStrategy != null){
-			putQueryParameter("SpotStrategy", spotStrategy);
-		}
-	}
+	private String acceptLanguage;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -61,6 +50,17 @@ public class DescribeZonesRequest extends RpcAcsRequest<DescribeZonesResponse> {
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getInstanceChargeType() {
+		return this.instanceChargeType;
+	}
+
+	public void setInstanceChargeType(String instanceChargeType) {
+		this.instanceChargeType = instanceChargeType;
+		if(instanceChargeType != null){
+			putQueryParameter("InstanceChargeType", instanceChargeType);
 		}
 	}
 
@@ -86,17 +86,6 @@ public class DescribeZonesRequest extends RpcAcsRequest<DescribeZonesResponse> {
 		}
 	}
 
-	public String getAcceptLanguage() {
-		return this.acceptLanguage;
-	}
-
-	public void setAcceptLanguage(String acceptLanguage) {
-		this.acceptLanguage = acceptLanguage;
-		if(acceptLanguage != null){
-			putQueryParameter("AcceptLanguage", acceptLanguage);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -108,17 +97,6 @@ public class DescribeZonesRequest extends RpcAcsRequest<DescribeZonesResponse> {
 		}
 	}
 
-	public String getInstanceChargeType() {
-		return this.instanceChargeType;
-	}
-
-	public void setInstanceChargeType(String instanceChargeType) {
-		this.instanceChargeType = instanceChargeType;
-		if(instanceChargeType != null){
-			putQueryParameter("InstanceChargeType", instanceChargeType);
-		}
-	}
-
 	public Boolean getVerbose() {
 		return this.verbose;
 	}
@@ -127,6 +105,28 @@ public class DescribeZonesRequest extends RpcAcsRequest<DescribeZonesResponse> {
 		this.verbose = verbose;
 		if(verbose != null){
 			putQueryParameter("Verbose", verbose.toString());
+		}
+	}
+
+	public String getSpotStrategy() {
+		return this.spotStrategy;
+	}
+
+	public void setSpotStrategy(String spotStrategy) {
+		this.spotStrategy = spotStrategy;
+		if(spotStrategy != null){
+			putQueryParameter("SpotStrategy", spotStrategy);
+		}
+	}
+
+	public String getAcceptLanguage() {
+		return this.acceptLanguage;
+	}
+
+	public void setAcceptLanguage(String acceptLanguage) {
+		this.acceptLanguage = acceptLanguage;
+		if(acceptLanguage != null){
+			putQueryParameter("AcceptLanguage", acceptLanguage);
 		}
 	}
 

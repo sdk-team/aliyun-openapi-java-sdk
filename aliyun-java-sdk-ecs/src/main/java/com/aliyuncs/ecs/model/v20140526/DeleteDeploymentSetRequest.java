@@ -26,26 +26,15 @@ public class DeleteDeploymentSetRequest extends RpcAcsRequest<DeleteDeploymentSe
 		super("Ecs", "2014-05-26", "DeleteDeploymentSet", "ecs");
 	}
 
-	private String deploymentSetId;
-
 	private Long resourceOwnerId;
+
+	private String deploymentSetId;
 
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
 	private Long ownerId;
-
-	public String getDeploymentSetId() {
-		return this.deploymentSetId;
-	}
-
-	public void setDeploymentSetId(String deploymentSetId) {
-		this.deploymentSetId = deploymentSetId;
-		if(deploymentSetId != null){
-			putQueryParameter("DeploymentSetId", deploymentSetId);
-		}
-	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -55,6 +44,17 @@ public class DeleteDeploymentSetRequest extends RpcAcsRequest<DeleteDeploymentSe
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getDeploymentSetId() {
+		return this.deploymentSetId;
+	}
+
+	public void setDeploymentSetId(String deploymentSetId) {
+		this.deploymentSetId = deploymentSetId;
+		if(deploymentSetId != null){
+			putQueryParameter("DeploymentSetId", deploymentSetId);
 		}
 	}
 

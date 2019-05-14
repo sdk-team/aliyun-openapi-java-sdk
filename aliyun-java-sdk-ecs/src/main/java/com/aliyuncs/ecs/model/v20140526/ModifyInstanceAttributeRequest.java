@@ -28,17 +28,9 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private Boolean recyclable;
 
-	private String ownerAccount;
-
 	private String description;
-
-	private String creditSpecification;
-
-	private Long ownerId;
 
 	private Boolean deletionProtection;
 
@@ -47,6 +39,14 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 	private String password;
 
 	private String hostName;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private String creditSpecification;
+
+	private Long ownerId;
 
 	private String instanceId;
 
@@ -63,17 +63,6 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public Boolean getRecyclable() {
 		return this.recyclable;
 	}
@@ -85,17 +74,6 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 		}
 	}
 
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
 	public String getDescription() {
 		return this.description;
 	}
@@ -104,28 +82,6 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getCreditSpecification() {
-		return this.creditSpecification;
-	}
-
-	public void setCreditSpecification(String creditSpecification) {
-		this.creditSpecification = creditSpecification;
-		if(creditSpecification != null){
-			putQueryParameter("CreditSpecification", creditSpecification);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -170,6 +126,50 @@ public class ModifyInstanceAttributeRequest extends RpcAcsRequest<ModifyInstance
 		this.hostName = hostName;
 		if(hostName != null){
 			putQueryParameter("HostName", hostName);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getCreditSpecification() {
+		return this.creditSpecification;
+	}
+
+	public void setCreditSpecification(String creditSpecification) {
+		this.creditSpecification = creditSpecification;
+		if(creditSpecification != null){
+			putQueryParameter("CreditSpecification", creditSpecification);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

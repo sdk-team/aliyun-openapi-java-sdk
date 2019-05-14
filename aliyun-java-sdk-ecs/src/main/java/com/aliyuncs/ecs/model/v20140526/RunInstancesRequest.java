@@ -85,6 +85,8 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private Integer internetMaxBandwidthIn;
 
+	private String affinity;
+
 	private String imageId;
 
 	private String spotInterruptionBehavior;
@@ -119,6 +121,8 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private String ownerAccount;
 
+	private String tenancy;
+
 	private String systemDiskDiskName;
 
 	private String ramRoleName;
@@ -128,6 +132,8 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 	private String dedicatedHostId;
 
 	private String creditSpecification;
+
+	private List<String> securityGroupIdss;
 
 	private List<DataDisk> dataDisks;
 
@@ -461,6 +467,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getAffinity() {
+		return this.affinity;
+	}
+
+	public void setAffinity(String affinity) {
+		this.affinity = affinity;
+		if(affinity != null){
+			putQueryParameter("Affinity", affinity);
+		}
+	}
+
 	public String getImageId() {
 		return this.imageId;
 	}
@@ -654,6 +671,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getTenancy() {
+		return this.tenancy;
+	}
+
+	public void setTenancy(String tenancy) {
+		this.tenancy = tenancy;
+		if(tenancy != null){
+			putQueryParameter("Tenancy", tenancy);
+		}
+	}
+
 	public String getSystemDiskDiskName() {
 		return this.systemDiskDiskName;
 	}
@@ -707,6 +735,19 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		if(creditSpecification != null){
 			putQueryParameter("CreditSpecification", creditSpecification);
 		}
+	}
+
+	public List<String> getSecurityGroupIdss() {
+		return this.securityGroupIdss;
+	}
+
+	public void setSecurityGroupIdss(List<String> securityGroupIdss) {
+		this.securityGroupIdss = securityGroupIdss;	
+		if (securityGroupIdss != null) {
+			for (int i = 0; i < securityGroupIdss.size(); i++) {
+				putQueryParameter("SecurityGroupIds." + (i + 1) , securityGroupIdss.get(i));
+			}
+		}	
 	}
 
 	public List<DataDisk> getDataDisks() {

@@ -26,9 +26,9 @@ public class JoinResourceGroupRequest extends RpcAcsRequest<JoinResourceGroupRes
 		super("Ecs", "2014-05-26", "JoinResourceGroup", "ecs");
 	}
 
-	private String resourceGroupId;
-
 	private Long resourceOwnerId;
+
+	private String resourceGroupId;
 
 	private String resourceId;
 
@@ -40,17 +40,6 @@ public class JoinResourceGroupRequest extends RpcAcsRequest<JoinResourceGroupRes
 
 	private String resourceType;
 
-	public String getResourceGroupId() {
-		return this.resourceGroupId;
-	}
-
-	public void setResourceGroupId(String resourceGroupId) {
-		this.resourceGroupId = resourceGroupId;
-		if(resourceGroupId != null){
-			putQueryParameter("ResourceGroupId", resourceGroupId);
-		}
-	}
-
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
 	}
@@ -59,6 +48,17 @@ public class JoinResourceGroupRequest extends RpcAcsRequest<JoinResourceGroupRes
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getResourceGroupId() {
+		return this.resourceGroupId;
+	}
+
+	public void setResourceGroupId(String resourceGroupId) {
+		this.resourceGroupId = resourceGroupId;
+		if(resourceGroupId != null){
+			putQueryParameter("ResourceGroupId", resourceGroupId);
 		}
 	}
 

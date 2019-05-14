@@ -28,15 +28,15 @@ public class DeletePhysicalConnectionRequest extends RpcAcsRequest<DeletePhysica
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
 
-	private String physicalConnectionId;
+	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String physicalConnectionId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -46,17 +46,6 @@ public class DeletePhysicalConnectionRequest extends RpcAcsRequest<DeletePhysica
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -71,14 +60,14 @@ public class DeletePhysicalConnectionRequest extends RpcAcsRequest<DeletePhysica
 		}
 	}
 
-	public String getPhysicalConnectionId() {
-		return this.physicalConnectionId;
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
 	}
 
-	public void setPhysicalConnectionId(String physicalConnectionId) {
-		this.physicalConnectionId = physicalConnectionId;
-		if(physicalConnectionId != null){
-			putQueryParameter("PhysicalConnectionId", physicalConnectionId);
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -101,6 +90,17 @@ public class DeletePhysicalConnectionRequest extends RpcAcsRequest<DeletePhysica
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getPhysicalConnectionId() {
+		return this.physicalConnectionId;
+	}
+
+	public void setPhysicalConnectionId(String physicalConnectionId) {
+		this.physicalConnectionId = physicalConnectionId;
+		if(physicalConnectionId != null){
+			putQueryParameter("PhysicalConnectionId", physicalConnectionId);
 		}
 	}
 

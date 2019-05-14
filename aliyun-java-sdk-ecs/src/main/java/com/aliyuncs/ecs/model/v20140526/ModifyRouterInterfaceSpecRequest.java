@@ -28,19 +28,19 @@ public class ModifyRouterInterfaceSpecRequest extends RpcAcsRequest<ModifyRouter
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
 
-	private String ownerAccount;
+	private String spec;
 
 	private String userCidr;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
 
 	private String routerInterfaceId;
 
 	private Long ownerId;
-
-	private String spec;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -50,17 +50,6 @@ public class ModifyRouterInterfaceSpecRequest extends RpcAcsRequest<ModifyRouter
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -75,14 +64,14 @@ public class ModifyRouterInterfaceSpecRequest extends RpcAcsRequest<ModifyRouter
 		}
 	}
 
-	public String getOwnerAccount() {
-		return this.ownerAccount;
+	public String getSpec() {
+		return this.spec;
 	}
 
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
+	public void setSpec(String spec) {
+		this.spec = spec;
+		if(spec != null){
+			putQueryParameter("Spec", spec);
 		}
 	}
 
@@ -94,6 +83,28 @@ public class ModifyRouterInterfaceSpecRequest extends RpcAcsRequest<ModifyRouter
 		this.userCidr = userCidr;
 		if(userCidr != null){
 			putQueryParameter("UserCidr", userCidr);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 
@@ -116,17 +127,6 @@ public class ModifyRouterInterfaceSpecRequest extends RpcAcsRequest<ModifyRouter
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public String getSpec() {
-		return this.spec;
-	}
-
-	public void setSpec(String spec) {
-		this.spec = spec;
-		if(spec != null){
-			putQueryParameter("Spec", spec);
 		}
 	}
 

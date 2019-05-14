@@ -26,9 +26,17 @@ public class ModifyInstanceAutoRenewAttributeRequest extends RpcAcsRequest<Modif
 		super("Ecs", "2014-05-26", "ModifyInstanceAutoRenewAttribute", "ecs");
 	}
 
+	private Long resourceOwnerId;
+
 	private Integer duration;
 
-	private Long resourceOwnerId;
+	private String renewalStatus;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private Long ownerId;
 
 	private String periodUnit;
 
@@ -36,13 +44,16 @@ public class ModifyInstanceAutoRenewAttributeRequest extends RpcAcsRequest<Modif
 
 	private Boolean autoRenew;
 
-	private String resourceOwnerAccount;
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
 
-	private String ownerAccount;
-
-	private String renewalStatus;
-
-	private Long ownerId;
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
 
 	public Integer getDuration() {
 		return this.duration;
@@ -55,14 +66,47 @@ public class ModifyInstanceAutoRenewAttributeRequest extends RpcAcsRequest<Modif
 		}
 	}
 
-	public Long getResourceOwnerId() {
-		return this.resourceOwnerId;
+	public String getRenewalStatus() {
+		return this.renewalStatus;
 	}
 
-	public void setResourceOwnerId(Long resourceOwnerId) {
-		this.resourceOwnerId = resourceOwnerId;
-		if(resourceOwnerId != null){
-			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+	public void setRenewalStatus(String renewalStatus) {
+		this.renewalStatus = renewalStatus;
+		if(renewalStatus != null){
+			putQueryParameter("RenewalStatus", renewalStatus);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -96,50 +140,6 @@ public class ModifyInstanceAutoRenewAttributeRequest extends RpcAcsRequest<Modif
 		this.autoRenew = autoRenew;
 		if(autoRenew != null){
 			putQueryParameter("AutoRenew", autoRenew.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getRenewalStatus() {
-		return this.renewalStatus;
-	}
-
-	public void setRenewalStatus(String renewalStatus) {
-		this.renewalStatus = renewalStatus;
-		if(renewalStatus != null){
-			putQueryParameter("RenewalStatus", renewalStatus);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

@@ -28,15 +28,15 @@ public class ReleasePublicIpAddressRequest extends RpcAcsRequest<ReleasePublicIp
 
 	private Long resourceOwnerId;
 
-	private String publicIpAddress;
-
-	private String instanceId;
-
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String publicIpAddress;
+
+	private String instanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -46,28 +46,6 @@ public class ReleasePublicIpAddressRequest extends RpcAcsRequest<ReleasePublicIp
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getPublicIpAddress() {
-		return this.publicIpAddress;
-	}
-
-	public void setPublicIpAddress(String publicIpAddress) {
-		this.publicIpAddress = publicIpAddress;
-		if(publicIpAddress != null){
-			putQueryParameter("PublicIpAddress", publicIpAddress);
-		}
-	}
-
-	public String getInstanceId() {
-		return this.instanceId;
-	}
-
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
@@ -101,6 +79,28 @@ public class ReleasePublicIpAddressRequest extends RpcAcsRequest<ReleasePublicIp
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getPublicIpAddress() {
+		return this.publicIpAddress;
+	}
+
+	public void setPublicIpAddress(String publicIpAddress) {
+		this.publicIpAddress = publicIpAddress;
+		if(publicIpAddress != null){
+			putQueryParameter("PublicIpAddress", publicIpAddress);
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 

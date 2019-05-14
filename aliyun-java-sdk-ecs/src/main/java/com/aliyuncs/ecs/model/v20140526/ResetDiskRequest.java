@@ -30,11 +30,11 @@ public class ResetDiskRequest extends RpcAcsRequest<ResetDiskResponse> {
 
 	private String snapshotId;
 
+	private String diskId;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
-
-	private String diskId;
 
 	private Long ownerId;
 
@@ -60,6 +60,17 @@ public class ResetDiskRequest extends RpcAcsRequest<ResetDiskResponse> {
 		}
 	}
 
+	public String getDiskId() {
+		return this.diskId;
+	}
+
+	public void setDiskId(String diskId) {
+		this.diskId = diskId;
+		if(diskId != null){
+			putQueryParameter("DiskId", diskId);
+		}
+	}
+
 	public String getResourceOwnerAccount() {
 		return this.resourceOwnerAccount;
 	}
@@ -79,17 +90,6 @@ public class ResetDiskRequest extends RpcAcsRequest<ResetDiskResponse> {
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getDiskId() {
-		return this.diskId;
-	}
-
-	public void setDiskId(String diskId) {
-		this.diskId = diskId;
-		if(diskId != null){
-			putQueryParameter("DiskId", diskId);
 		}
 	}
 

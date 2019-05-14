@@ -27,37 +27,19 @@ public class DescribeAccessPointsRequest extends RpcAcsRequest<DescribeAccessPoi
 		super("Ecs", "2014-05-26", "DescribeAccessPoints", "ecs");
 	}
 
-	private List<Filter> filters;
-
 	private Long resourceOwnerId;
-
-	private String resourceOwnerAccount;
-
-	private Integer pageSize;
-
-	private Long ownerId;
 
 	private String type;
 
 	private Integer pageNumber;
 
-	public List<Filter> getFilters() {
-		return this.filters;
-	}
+	private Integer pageSize;
 
-	public void setFilters(List<Filter> filters) {
-		this.filters = filters;	
-		if (filters != null) {
-			for (int depth1 = 0; depth1 < filters.size(); depth1++) {
-				if (filters.get(depth1).getValues() != null) {
-					for (int i = 0; i < filters.get(depth1).getValues().size(); i++) {
-						putQueryParameter("Filter." + (depth1 + 1) + ".Value." + (i + 1) , filters.get(depth1).getValues().get(i));
-					}
-				}
-				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
-			}
-		}	
-	}
+	private String resourceOwnerAccount;
+
+	private Long ownerId;
+
+	private List<Filter> filters;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -67,39 +49,6 @@ public class DescribeAccessPointsRequest extends RpcAcsRequest<DescribeAccessPoi
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -123,6 +72,57 @@ public class DescribeAccessPointsRequest extends RpcAcsRequest<DescribeAccessPoi
 		if(pageNumber != null){
 			putQueryParameter("PageNumber", pageNumber.toString());
 		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public List<Filter> getFilters() {
+		return this.filters;
+	}
+
+	public void setFilters(List<Filter> filters) {
+		this.filters = filters;	
+		if (filters != null) {
+			for (int depth1 = 0; depth1 < filters.size(); depth1++) {
+				if (filters.get(depth1).getValues() != null) {
+					for (int i = 0; i < filters.get(depth1).getValues().size(); i++) {
+						putQueryParameter("Filter." + (depth1 + 1) + ".Value." + (i + 1) , filters.get(depth1).getValues().get(i));
+					}
+				}
+				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
+			}
+		}	
 	}
 
 	public static class Filter {

@@ -29,11 +29,11 @@ public class DescribeSecurityGroupReferencesRequest extends RpcAcsRequest<Descri
 
 	private Long resourceOwnerId;
 
+	private List<String> securityGroupIds;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
-
-	private List<String> securityGroupIds;
 
 	private Long ownerId;
 
@@ -46,6 +46,19 @@ public class DescribeSecurityGroupReferencesRequest extends RpcAcsRequest<Descri
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
 		}
+	}
+
+	public List<String> getSecurityGroupIds() {
+		return this.securityGroupIds;
+	}
+
+	public void setSecurityGroupIds(List<String> securityGroupIds) {
+		this.securityGroupIds = securityGroupIds;	
+		if (securityGroupIds != null) {
+			for (int i = 0; i < securityGroupIds.size(); i++) {
+				putQueryParameter("SecurityGroupId." + (i + 1) , securityGroupIds.get(i));
+			}
+		}	
 	}
 
 	public String getResourceOwnerAccount() {
@@ -68,19 +81,6 @@ public class DescribeSecurityGroupReferencesRequest extends RpcAcsRequest<Descri
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
 		}
-	}
-
-	public List<String> getSecurityGroupIds() {
-		return this.securityGroupIds;
-	}
-
-	public void setSecurityGroupIds(List<String> securityGroupIds) {
-		this.securityGroupIds = securityGroupIds;	
-		if (securityGroupIds != null) {
-			for (int i = 0; i < securityGroupIds.size(); i++) {
-				putQueryParameter("SecurityGroupId." + (i + 1) , securityGroupIds.get(i));
-			}
-		}	
 	}
 
 	public Long getOwnerId() {

@@ -32,9 +32,13 @@ public class ModifyAutoSnapshotPolicyRequest extends RpcAcsRequest<ModifyAutoSna
 
 	private Integer dataDiskPolicyRetentionDays;
 
-	private String resourceOwnerAccount;
-
 	private Boolean systemDiskPolicyRetentionLastWeek;
+
+	private Integer systemDiskPolicyRetentionDays;
+
+	private Integer dataDiskPolicyTimePeriod;
+
+	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
@@ -43,10 +47,6 @@ public class ModifyAutoSnapshotPolicyRequest extends RpcAcsRequest<ModifyAutoSna
 	private Long ownerId;
 
 	private Boolean dataDiskPolicyRetentionLastWeek;
-
-	private Integer systemDiskPolicyRetentionDays;
-
-	private Integer dataDiskPolicyTimePeriod;
 
 	private Boolean systemDiskPolicyEnabled;
 
@@ -83,17 +83,6 @@ public class ModifyAutoSnapshotPolicyRequest extends RpcAcsRequest<ModifyAutoSna
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public Boolean getSystemDiskPolicyRetentionLastWeek() {
 		return this.systemDiskPolicyRetentionLastWeek;
 	}
@@ -102,6 +91,39 @@ public class ModifyAutoSnapshotPolicyRequest extends RpcAcsRequest<ModifyAutoSna
 		this.systemDiskPolicyRetentionLastWeek = systemDiskPolicyRetentionLastWeek;
 		if(systemDiskPolicyRetentionLastWeek != null){
 			putQueryParameter("SystemDiskPolicyRetentionLastWeek", systemDiskPolicyRetentionLastWeek.toString());
+		}
+	}
+
+	public Integer getSystemDiskPolicyRetentionDays() {
+		return this.systemDiskPolicyRetentionDays;
+	}
+
+	public void setSystemDiskPolicyRetentionDays(Integer systemDiskPolicyRetentionDays) {
+		this.systemDiskPolicyRetentionDays = systemDiskPolicyRetentionDays;
+		if(systemDiskPolicyRetentionDays != null){
+			putQueryParameter("SystemDiskPolicyRetentionDays", systemDiskPolicyRetentionDays.toString());
+		}
+	}
+
+	public Integer getDataDiskPolicyTimePeriod() {
+		return this.dataDiskPolicyTimePeriod;
+	}
+
+	public void setDataDiskPolicyTimePeriod(Integer dataDiskPolicyTimePeriod) {
+		this.dataDiskPolicyTimePeriod = dataDiskPolicyTimePeriod;
+		if(dataDiskPolicyTimePeriod != null){
+			putQueryParameter("DataDiskPolicyTimePeriod", dataDiskPolicyTimePeriod.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -146,28 +168,6 @@ public class ModifyAutoSnapshotPolicyRequest extends RpcAcsRequest<ModifyAutoSna
 		this.dataDiskPolicyRetentionLastWeek = dataDiskPolicyRetentionLastWeek;
 		if(dataDiskPolicyRetentionLastWeek != null){
 			putQueryParameter("DataDiskPolicyRetentionLastWeek", dataDiskPolicyRetentionLastWeek.toString());
-		}
-	}
-
-	public Integer getSystemDiskPolicyRetentionDays() {
-		return this.systemDiskPolicyRetentionDays;
-	}
-
-	public void setSystemDiskPolicyRetentionDays(Integer systemDiskPolicyRetentionDays) {
-		this.systemDiskPolicyRetentionDays = systemDiskPolicyRetentionDays;
-		if(systemDiskPolicyRetentionDays != null){
-			putQueryParameter("SystemDiskPolicyRetentionDays", systemDiskPolicyRetentionDays.toString());
-		}
-	}
-
-	public Integer getDataDiskPolicyTimePeriod() {
-		return this.dataDiskPolicyTimePeriod;
-	}
-
-	public void setDataDiskPolicyTimePeriod(Integer dataDiskPolicyTimePeriod) {
-		this.dataDiskPolicyTimePeriod = dataDiskPolicyTimePeriod;
-		if(dataDiskPolicyTimePeriod != null){
-			putQueryParameter("DataDiskPolicyTimePeriod", dataDiskPolicyTimePeriod.toString());
 		}
 	}
 

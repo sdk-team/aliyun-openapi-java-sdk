@@ -43,6 +43,8 @@ public class InvokeCommandRequest extends RpcAcsRequest<InvokeCommandResponse> {
 
 	private List<String> instanceIds;
 
+	private String parameters;
+
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
 	}
@@ -131,6 +133,17 @@ public class InvokeCommandRequest extends RpcAcsRequest<InvokeCommandResponse> {
 				putQueryParameter("InstanceId." + (i + 1) , instanceIds.get(i));
 			}
 		}	
+	}
+
+	public String getParameters() {
+		return this.parameters;
+	}
+
+	public void setParameters(String parameters) {
+		this.parameters = parameters;
+		if(parameters != null){
+			putQueryParameter("Parameters", parameters);
+		}
 	}
 
 	@Override

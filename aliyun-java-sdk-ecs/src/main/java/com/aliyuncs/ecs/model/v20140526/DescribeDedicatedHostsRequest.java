@@ -31,14 +31,6 @@ public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicat
 
 	private Long resourceOwnerId;
 
-	private String dedicatedHostName;
-
-	private String resourceOwnerAccount;
-
-	private String ownerAccount;
-
-	private Long ownerId;
-
 	private Integer pageNumber;
 
 	private String resourceGroupId;
@@ -47,11 +39,19 @@ public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicat
 
 	private Integer pageSize;
 
-	private String zoneId;
-
 	private String dedicatedHostType;
 
 	private List<Tag> tags;
+
+	private String dedicatedHostName;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private Long ownerId;
+
+	private String zoneId;
 
 	private String status;
 
@@ -74,50 +74,6 @@ public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicat
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getDedicatedHostName() {
-		return this.dedicatedHostName;
-	}
-
-	public void setDedicatedHostName(String dedicatedHostName) {
-		this.dedicatedHostName = dedicatedHostName;
-		if(dedicatedHostName != null){
-			putQueryParameter("DedicatedHostName", dedicatedHostName);
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -165,17 +121,6 @@ public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicat
 		}
 	}
 
-	public String getZoneId() {
-		return this.zoneId;
-	}
-
-	public void setZoneId(String zoneId) {
-		this.zoneId = zoneId;
-		if(zoneId != null){
-			putQueryParameter("ZoneId", zoneId);
-		}
-	}
-
 	public String getDedicatedHostType() {
 		return this.dedicatedHostType;
 	}
@@ -199,6 +144,61 @@ public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicat
 				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
 			}
 		}	
+	}
+
+	public String getDedicatedHostName() {
+		return this.dedicatedHostName;
+	}
+
+	public void setDedicatedHostName(String dedicatedHostName) {
+		this.dedicatedHostName = dedicatedHostName;
+		if(dedicatedHostName != null){
+			putQueryParameter("DedicatedHostName", dedicatedHostName);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getZoneId() {
+		return this.zoneId;
+	}
+
+	public void setZoneId(String zoneId) {
+		this.zoneId = zoneId;
+		if(zoneId != null){
+			putQueryParameter("ZoneId", zoneId);
+		}
 	}
 
 	public String getStatus() {

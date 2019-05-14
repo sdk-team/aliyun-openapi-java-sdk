@@ -26,8 +26,6 @@ public class DeleteVSwitchRequest extends RpcAcsRequest<DeleteVSwitchResponse> {
 		super("Ecs", "2014-05-26", "DeleteVSwitch", "ecs");
 	}
 
-	private String vSwitchId;
-
 	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
@@ -36,16 +34,7 @@ public class DeleteVSwitchRequest extends RpcAcsRequest<DeleteVSwitchResponse> {
 
 	private Long ownerId;
 
-	public String getVSwitchId() {
-		return this.vSwitchId;
-	}
-
-	public void setVSwitchId(String vSwitchId) {
-		this.vSwitchId = vSwitchId;
-		if(vSwitchId != null){
-			putQueryParameter("VSwitchId", vSwitchId);
-		}
-	}
+	private String vSwitchId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -88,6 +77,17 @@ public class DeleteVSwitchRequest extends RpcAcsRequest<DeleteVSwitchResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getVSwitchId() {
+		return this.vSwitchId;
+	}
+
+	public void setVSwitchId(String vSwitchId) {
+		this.vSwitchId = vSwitchId;
+		if(vSwitchId != null){
+			putQueryParameter("VSwitchId", vSwitchId);
 		}
 	}
 

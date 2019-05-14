@@ -29,19 +29,19 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
-
-	private String ownerAccount;
 
 	private String description;
 
-	private String diskId;
-
 	private String snapshotName;
 
+	private String diskId;
+
 	private List<Tag> tags;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
 
 	private Long ownerId;
 
@@ -56,17 +56,6 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public String getClientToken() {
 		return this.clientToken;
 	}
@@ -75,17 +64,6 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 		this.clientToken = clientToken;
 		if(clientToken != null){
 			putQueryParameter("ClientToken", clientToken);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 
@@ -100,17 +78,6 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 		}
 	}
 
-	public String getDiskId() {
-		return this.diskId;
-	}
-
-	public void setDiskId(String diskId) {
-		this.diskId = diskId;
-		if(diskId != null){
-			putQueryParameter("DiskId", diskId);
-		}
-	}
-
 	public String getSnapshotName() {
 		return this.snapshotName;
 	}
@@ -119,6 +86,17 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 		this.snapshotName = snapshotName;
 		if(snapshotName != null){
 			putQueryParameter("SnapshotName", snapshotName);
+		}
+	}
+
+	public String getDiskId() {
+		return this.diskId;
+	}
+
+	public void setDiskId(String diskId) {
+		this.diskId = diskId;
+		if(diskId != null){
+			putQueryParameter("DiskId", diskId);
 		}
 	}
 
@@ -134,6 +112,28 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
 			}
 		}	
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
 	}
 
 	public Long getOwnerId() {

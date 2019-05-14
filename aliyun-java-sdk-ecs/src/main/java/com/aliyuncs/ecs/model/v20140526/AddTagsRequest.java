@@ -29,11 +29,11 @@ public class AddTagsRequest extends RpcAcsRequest<AddTagsResponse> {
 
 	private Long resourceOwnerId;
 
+	private List<Tag> tags;
+
 	private String resourceId;
 
 	private String resourceOwnerAccount;
-
-	private List<Tag> tags;
 
 	private Long ownerId;
 
@@ -48,6 +48,20 @@ public class AddTagsRequest extends RpcAcsRequest<AddTagsResponse> {
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
 		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
+			}
+		}	
 	}
 
 	public String getResourceId() {
@@ -70,20 +84,6 @@ public class AddTagsRequest extends RpcAcsRequest<AddTagsResponse> {
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
-	}
-
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
-			}
-		}	
 	}
 
 	public Long getOwnerId() {

@@ -31,11 +31,13 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	private String imageId;
 
+	private String destinationRegionId;
+
+	private List<Tag> tags;
+
 	private String resourceOwnerAccount;
 
 	private String destinationImageName;
-
-	private String destinationRegionId;
 
 	private String ownerAccount;
 
@@ -43,7 +45,7 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	private Boolean encrypted;
 
-	private List<Tag> tags;
+	private String kMSKeyId;
 
 	private String destinationDescription;
 
@@ -69,6 +71,31 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 		}
 	}
 
+	public String getDestinationRegionId() {
+		return this.destinationRegionId;
+	}
+
+	public void setDestinationRegionId(String destinationRegionId) {
+		this.destinationRegionId = destinationRegionId;
+		if(destinationRegionId != null){
+			putQueryParameter("DestinationRegionId", destinationRegionId);
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
+			}
+		}	
+	}
+
 	public String getResourceOwnerAccount() {
 		return this.resourceOwnerAccount;
 	}
@@ -88,17 +115,6 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 		this.destinationImageName = destinationImageName;
 		if(destinationImageName != null){
 			putQueryParameter("DestinationImageName", destinationImageName);
-		}
-	}
-
-	public String getDestinationRegionId() {
-		return this.destinationRegionId;
-	}
-
-	public void setDestinationRegionId(String destinationRegionId) {
-		this.destinationRegionId = destinationRegionId;
-		if(destinationRegionId != null){
-			putQueryParameter("DestinationRegionId", destinationRegionId);
 		}
 	}
 
@@ -135,18 +151,15 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 		}
 	}
 
-	public List<Tag> getTags() {
-		return this.tags;
+	public String getKMSKeyId() {
+		return this.kMSKeyId;
 	}
 
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
-			}
-		}	
+	public void setKMSKeyId(String kMSKeyId) {
+		this.kMSKeyId = kMSKeyId;
+		if(kMSKeyId != null){
+			putQueryParameter("KMSKeyId", kMSKeyId);
+		}
 	}
 
 	public String getDestinationDescription() {

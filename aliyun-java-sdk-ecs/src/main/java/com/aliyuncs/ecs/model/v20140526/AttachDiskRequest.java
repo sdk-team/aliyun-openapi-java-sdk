@@ -28,19 +28,19 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 
 	private Long resourceOwnerId;
 
-	private String instanceId;
+	private String diskId;
+
+	private Boolean deleteWithInstance;
 
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	private String diskId;
-
 	private Long ownerId;
 
-	private String device;
+	private String instanceId;
 
-	private Boolean deleteWithInstance;
+	private String device;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -53,14 +53,25 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 		}
 	}
 
-	public String getInstanceId() {
-		return this.instanceId;
+	public String getDiskId() {
+		return this.diskId;
 	}
 
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
+	public void setDiskId(String diskId) {
+		this.diskId = diskId;
+		if(diskId != null){
+			putQueryParameter("DiskId", diskId);
+		}
+	}
+
+	public Boolean getDeleteWithInstance() {
+		return this.deleteWithInstance;
+	}
+
+	public void setDeleteWithInstance(Boolean deleteWithInstance) {
+		this.deleteWithInstance = deleteWithInstance;
+		if(deleteWithInstance != null){
+			putQueryParameter("DeleteWithInstance", deleteWithInstance.toString());
 		}
 	}
 
@@ -86,17 +97,6 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 		}
 	}
 
-	public String getDiskId() {
-		return this.diskId;
-	}
-
-	public void setDiskId(String diskId) {
-		this.diskId = diskId;
-		if(diskId != null){
-			putQueryParameter("DiskId", diskId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -108,6 +108,17 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 		}
 	}
 
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
+		}
+	}
+
 	public String getDevice() {
 		return this.device;
 	}
@@ -116,17 +127,6 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 		this.device = device;
 		if(device != null){
 			putQueryParameter("Device", device);
-		}
-	}
-
-	public Boolean getDeleteWithInstance() {
-		return this.deleteWithInstance;
-	}
-
-	public void setDeleteWithInstance(Boolean deleteWithInstance) {
-		this.deleteWithInstance = deleteWithInstance;
-		if(deleteWithInstance != null){
-			putQueryParameter("DeleteWithInstance", deleteWithInstance.toString());
 		}
 	}
 

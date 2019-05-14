@@ -27,19 +27,41 @@ public class RemoveBandwidthPackageIpsRequest extends RpcAcsRequest<RemoveBandwi
 		super("Ecs", "2014-05-26", "RemoveBandwidthPackageIps", "ecs");
 	}
 
-	private List<String> removedIpAddressess;
-
 	private Long resourceOwnerId;
+
+	private String clientToken;
+
+	private List<String> removedIpAddressess;
 
 	private String bandwidthPackageId;
 
 	private String resourceOwnerAccount;
 
-	private String clientToken;
-
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	public Long getResourceOwnerId() {
+		return this.resourceOwnerId;
+	}
+
+	public void setResourceOwnerId(Long resourceOwnerId) {
+		this.resourceOwnerId = resourceOwnerId;
+		if(resourceOwnerId != null){
+			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
 
 	public List<String> getRemovedIpAddressess() {
 		return this.removedIpAddressess;
@@ -52,17 +74,6 @@ public class RemoveBandwidthPackageIpsRequest extends RpcAcsRequest<RemoveBandwi
 				putQueryParameter("RemovedIpAddresses." + (i + 1) , removedIpAddressess.get(i));
 			}
 		}	
-	}
-
-	public Long getResourceOwnerId() {
-		return this.resourceOwnerId;
-	}
-
-	public void setResourceOwnerId(Long resourceOwnerId) {
-		this.resourceOwnerId = resourceOwnerId;
-		if(resourceOwnerId != null){
-			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
 	}
 
 	public String getBandwidthPackageId() {
@@ -84,17 +95,6 @@ public class RemoveBandwidthPackageIpsRequest extends RpcAcsRequest<RemoveBandwi
 		this.resourceOwnerAccount = resourceOwnerAccount;
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getClientToken() {
-		return this.clientToken;
-	}
-
-	public void setClientToken(String clientToken) {
-		this.clientToken = clientToken;
-		if(clientToken != null){
-			putQueryParameter("ClientToken", clientToken);
 		}
 	}
 

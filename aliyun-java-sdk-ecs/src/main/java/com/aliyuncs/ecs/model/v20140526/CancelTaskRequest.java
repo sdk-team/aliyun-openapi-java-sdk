@@ -28,11 +28,11 @@ public class CancelTaskRequest extends RpcAcsRequest<CancelTaskResponse> {
 
 	private Long resourceOwnerId;
 
+	private String taskId;
+
 	private String resourceOwnerAccount;
 
 	private Long ownerId;
-
-	private String taskId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -42,6 +42,17 @@ public class CancelTaskRequest extends RpcAcsRequest<CancelTaskResponse> {
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getTaskId() {
+		return this.taskId;
+	}
+
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+		if(taskId != null){
+			putQueryParameter("TaskId", taskId);
 		}
 	}
 
@@ -64,17 +75,6 @@ public class CancelTaskRequest extends RpcAcsRequest<CancelTaskResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public String getTaskId() {
-		return this.taskId;
-	}
-
-	public void setTaskId(String taskId) {
-		this.taskId = taskId;
-		if(taskId != null){
-			putQueryParameter("TaskId", taskId);
 		}
 	}
 

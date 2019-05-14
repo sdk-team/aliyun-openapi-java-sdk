@@ -28,8 +28,6 @@ public class ModifyInstanceAutoReleaseTimeRequest extends RpcAcsRequest<ModifyIn
 
 	private Long resourceOwnerId;
 
-	private String instanceId;
-
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
@@ -37,6 +35,8 @@ public class ModifyInstanceAutoReleaseTimeRequest extends RpcAcsRequest<ModifyIn
 	private String autoReleaseTime;
 
 	private Long ownerId;
+
+	private String instanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -46,17 +46,6 @@ public class ModifyInstanceAutoReleaseTimeRequest extends RpcAcsRequest<ModifyIn
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getInstanceId() {
-		return this.instanceId;
-	}
-
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
@@ -101,6 +90,17 @@ public class ModifyInstanceAutoReleaseTimeRequest extends RpcAcsRequest<ModifyIn
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 

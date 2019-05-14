@@ -27,37 +27,19 @@ public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse>
 		super("Ecs", "2014-05-26", "DescribeHaVips", "ecs");
 	}
 
-	private List<Filter> filters;
-
 	private Long resourceOwnerId;
+
+	private Integer pageNumber;
+
+	private Integer pageSize;
 
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	private Integer pageSize;
-
 	private Long ownerId;
 
-	private Integer pageNumber;
-
-	public List<Filter> getFilters() {
-		return this.filters;
-	}
-
-	public void setFilters(List<Filter> filters) {
-		this.filters = filters;	
-		if (filters != null) {
-			for (int depth1 = 0; depth1 < filters.size(); depth1++) {
-				if (filters.get(depth1).getValues() != null) {
-					for (int i = 0; i < filters.get(depth1).getValues().size(); i++) {
-						putQueryParameter("Filter." + (depth1 + 1) + ".Value." + (i + 1) , filters.get(depth1).getValues().get(i));
-					}
-				}
-				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
-			}
-		}	
-	}
+	private List<Filter> filters;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -67,6 +49,28 @@ public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse>
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public Integer getPageNumber() {
+		return this.pageNumber;
+	}
+
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
+		if(pageNumber != null){
+			putQueryParameter("PageNumber", pageNumber.toString());
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
 		}
 	}
 
@@ -92,17 +96,6 @@ public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse>
 		}
 	}
 
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -114,15 +107,22 @@ public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse>
 		}
 	}
 
-	public Integer getPageNumber() {
-		return this.pageNumber;
+	public List<Filter> getFilters() {
+		return this.filters;
 	}
 
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-		if(pageNumber != null){
-			putQueryParameter("PageNumber", pageNumber.toString());
-		}
+	public void setFilters(List<Filter> filters) {
+		this.filters = filters;	
+		if (filters != null) {
+			for (int depth1 = 0; depth1 < filters.size(); depth1++) {
+				if (filters.get(depth1).getValues() != null) {
+					for (int i = 0; i < filters.get(depth1).getValues().size(); i++) {
+						putQueryParameter("Filter." + (depth1 + 1) + ".Value." + (i + 1) , filters.get(depth1).getValues().get(i));
+					}
+				}
+				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
+			}
+		}	
 	}
 
 	public static class Filter {

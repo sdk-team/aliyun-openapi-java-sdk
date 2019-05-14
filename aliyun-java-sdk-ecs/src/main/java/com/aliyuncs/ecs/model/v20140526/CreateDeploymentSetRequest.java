@@ -28,13 +28,13 @@ public class CreateDeploymentSetRequest extends RpcAcsRequest<CreateDeploymentSe
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
 
-	private String ownerAccount;
-
 	private String description;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
 
 	private String deploymentSetName;
 
@@ -59,17 +59,6 @@ public class CreateDeploymentSetRequest extends RpcAcsRequest<CreateDeploymentSe
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public String getClientToken() {
 		return this.clientToken;
 	}
@@ -81,17 +70,6 @@ public class CreateDeploymentSetRequest extends RpcAcsRequest<CreateDeploymentSe
 		}
 	}
 
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
 	public String getDescription() {
 		return this.description;
 	}
@@ -100,6 +78,28 @@ public class CreateDeploymentSetRequest extends RpcAcsRequest<CreateDeploymentSe
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 

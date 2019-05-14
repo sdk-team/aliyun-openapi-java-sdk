@@ -30,9 +30,9 @@ public class DescribeInstanceTopologyRequest extends RpcAcsRequest<DescribeInsta
 
 	private String resourceOwnerAccount;
 
-	private String instanceIds;
-
 	private Long ownerId;
+
+	private String instanceIds;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -56,17 +56,6 @@ public class DescribeInstanceTopologyRequest extends RpcAcsRequest<DescribeInsta
 		}
 	}
 
-	public String getInstanceIds() {
-		return this.instanceIds;
-	}
-
-	public void setInstanceIds(String instanceIds) {
-		this.instanceIds = instanceIds;
-		if(instanceIds != null){
-			putQueryParameter("InstanceIds", instanceIds);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -75,6 +64,17 @@ public class DescribeInstanceTopologyRequest extends RpcAcsRequest<DescribeInsta
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getInstanceIds() {
+		return this.instanceIds;
+	}
+
+	public void setInstanceIds(String instanceIds) {
+		this.instanceIds = instanceIds;
+		if(instanceIds != null){
+			putQueryParameter("InstanceIds", instanceIds);
 		}
 	}
 

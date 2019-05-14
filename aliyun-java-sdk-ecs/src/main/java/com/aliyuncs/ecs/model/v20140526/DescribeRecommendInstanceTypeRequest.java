@@ -28,25 +28,25 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
-	private String ownerAccount;
-
 	private String channel;
 
 	private String networkType;
 
-	private Long ownerId;
-
 	private String operator;
-
-	private String token;
 
 	private String scene;
 
 	private String instanceType;
 
 	private String proxyId;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private Long ownerId;
+
+	private String token;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -56,28 +56,6 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 
@@ -103,17 +81,6 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 		}
 	}
 
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
 	public String getOperator() {
 		return this.operator;
 	}
@@ -122,17 +89,6 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 		this.operator = operator;
 		if(operator != null){
 			putQueryParameter("operator", operator);
-		}
-	}
-
-	public String getToken() {
-		return this.token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-		if(token != null){
-			putQueryParameter("token", token);
 		}
 	}
 
@@ -166,6 +122,50 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 		this.proxyId = proxyId;
 		if(proxyId != null){
 			putQueryParameter("proxyId", proxyId);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getToken() {
+		return this.token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+		if(token != null){
+			putQueryParameter("token", token);
 		}
 	}
 

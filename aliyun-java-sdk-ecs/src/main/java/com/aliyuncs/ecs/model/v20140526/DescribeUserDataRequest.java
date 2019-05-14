@@ -28,11 +28,11 @@ public class DescribeUserDataRequest extends RpcAcsRequest<DescribeUserDataRespo
 
 	private Long resourceOwnerId;
 
-	private String instanceId;
-
 	private String resourceOwnerAccount;
 
 	private Long ownerId;
+
+	private String instanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -42,17 +42,6 @@ public class DescribeUserDataRequest extends RpcAcsRequest<DescribeUserDataRespo
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getInstanceId() {
-		return this.instanceId;
-	}
-
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
@@ -75,6 +64,17 @@ public class DescribeUserDataRequest extends RpcAcsRequest<DescribeUserDataRespo
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 

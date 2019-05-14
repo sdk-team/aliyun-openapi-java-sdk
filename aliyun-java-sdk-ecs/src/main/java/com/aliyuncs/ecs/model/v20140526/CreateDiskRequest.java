@@ -31,35 +31,35 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 
 	private String snapshotId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
 
-	private String ownerAccount;
-
 	private String description;
-
-	private Long ownerId;
 
 	private String diskName;
 
 	private String resourceGroupId;
 
-	private Integer size;
-
-	private Boolean encrypted;
-
 	private String diskCategory;
-
-	private String zoneId;
 
 	private List<Tag> tags;
 
 	private List<Arn> arns;
 
-	private String kMSKeyId;
-
 	private String advancedFeatures;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private Long ownerId;
+
+	private Integer size;
+
+	private Boolean encrypted;
+
+	private String zoneId;
+
+	private String kMSKeyId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -83,17 +83,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public String getClientToken() {
 		return this.clientToken;
 	}
@@ -105,17 +94,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		}
 	}
 
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
 	public String getDescription() {
 		return this.description;
 	}
@@ -124,17 +102,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -160,28 +127,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		}
 	}
 
-	public Integer getSize() {
-		return this.size;
-	}
-
-	public void setSize(Integer size) {
-		this.size = size;
-		if(size != null){
-			putQueryParameter("Size", size.toString());
-		}
-	}
-
-	public Boolean getEncrypted() {
-		return this.encrypted;
-	}
-
-	public void setEncrypted(Boolean encrypted) {
-		this.encrypted = encrypted;
-		if(encrypted != null){
-			putQueryParameter("Encrypted", encrypted.toString());
-		}
-	}
-
 	public String getDiskCategory() {
 		return this.diskCategory;
 	}
@@ -190,17 +135,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		this.diskCategory = diskCategory;
 		if(diskCategory != null){
 			putQueryParameter("DiskCategory", diskCategory);
-		}
-	}
-
-	public String getZoneId() {
-		return this.zoneId;
-	}
-
-	public void setZoneId(String zoneId) {
-		this.zoneId = zoneId;
-		if(zoneId != null){
-			putQueryParameter("ZoneId", zoneId);
 		}
 	}
 
@@ -233,17 +167,6 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		}	
 	}
 
-	public String getKMSKeyId() {
-		return this.kMSKeyId;
-	}
-
-	public void setKMSKeyId(String kMSKeyId) {
-		this.kMSKeyId = kMSKeyId;
-		if(kMSKeyId != null){
-			putQueryParameter("KMSKeyId", kMSKeyId);
-		}
-	}
-
 	public String getAdvancedFeatures() {
 		return this.advancedFeatures;
 	}
@@ -252,6 +175,83 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		this.advancedFeatures = advancedFeatures;
 		if(advancedFeatures != null){
 			putQueryParameter("AdvancedFeatures", advancedFeatures);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public Integer getSize() {
+		return this.size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+		if(size != null){
+			putQueryParameter("Size", size.toString());
+		}
+	}
+
+	public Boolean getEncrypted() {
+		return this.encrypted;
+	}
+
+	public void setEncrypted(Boolean encrypted) {
+		this.encrypted = encrypted;
+		if(encrypted != null){
+			putQueryParameter("Encrypted", encrypted.toString());
+		}
+	}
+
+	public String getZoneId() {
+		return this.zoneId;
+	}
+
+	public void setZoneId(String zoneId) {
+		this.zoneId = zoneId;
+		if(zoneId != null){
+			putQueryParameter("ZoneId", zoneId);
+		}
+	}
+
+	public String getKMSKeyId() {
+		return this.kMSKeyId;
+	}
+
+	public void setKMSKeyId(String kMSKeyId) {
+		this.kMSKeyId = kMSKeyId;
+		if(kMSKeyId != null){
+			putQueryParameter("KMSKeyId", kMSKeyId);
 		}
 	}
 

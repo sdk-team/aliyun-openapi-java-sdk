@@ -26,30 +26,19 @@ public class ModifyHaVipAttributeRequest extends RpcAcsRequest<ModifyHaVipAttrib
 		super("Ecs", "2014-05-26", "ModifyHaVipAttribute", "ecs");
 	}
 
-	private String haVipId;
-
 	private Long resourceOwnerId;
-
-	private String resourceOwnerAccount;
 
 	private String clientToken;
 
-	private String ownerAccount;
-
 	private String description;
 
+	private String haVipId;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
 	private Long ownerId;
-
-	public String getHaVipId() {
-		return this.haVipId;
-	}
-
-	public void setHaVipId(String haVipId) {
-		this.haVipId = haVipId;
-		if(haVipId != null){
-			putQueryParameter("HaVipId", haVipId);
-		}
-	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -59,17 +48,6 @@ public class ModifyHaVipAttributeRequest extends RpcAcsRequest<ModifyHaVipAttrib
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -84,17 +62,6 @@ public class ModifyHaVipAttributeRequest extends RpcAcsRequest<ModifyHaVipAttrib
 		}
 	}
 
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
 	public String getDescription() {
 		return this.description;
 	}
@@ -103,6 +70,39 @@ public class ModifyHaVipAttributeRequest extends RpcAcsRequest<ModifyHaVipAttrib
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
+		}
+	}
+
+	public String getHaVipId() {
+		return this.haVipId;
+	}
+
+	public void setHaVipId(String haVipId) {
+		this.haVipId = haVipId;
+		if(haVipId != null){
+			putQueryParameter("HaVipId", haVipId);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 

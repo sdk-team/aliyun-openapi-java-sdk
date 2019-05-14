@@ -26,13 +26,7 @@ public class ModifyInstanceVpcAttributeRequest extends RpcAcsRequest<ModifyInsta
 		super("Ecs", "2014-05-26", "ModifyInstanceVpcAttribute", "ecs");
 	}
 
-	private String vSwitchId;
-
-	private String privateIpAddress;
-
 	private Long resourceOwnerId;
-
-	private String instanceId;
 
 	private String resourceOwnerAccount;
 
@@ -40,27 +34,11 @@ public class ModifyInstanceVpcAttributeRequest extends RpcAcsRequest<ModifyInsta
 
 	private Long ownerId;
 
-	public String getVSwitchId() {
-		return this.vSwitchId;
-	}
+	private String vSwitchId;
 
-	public void setVSwitchId(String vSwitchId) {
-		this.vSwitchId = vSwitchId;
-		if(vSwitchId != null){
-			putQueryParameter("VSwitchId", vSwitchId);
-		}
-	}
+	private String privateIpAddress;
 
-	public String getPrivateIpAddress() {
-		return this.privateIpAddress;
-	}
-
-	public void setPrivateIpAddress(String privateIpAddress) {
-		this.privateIpAddress = privateIpAddress;
-		if(privateIpAddress != null){
-			putQueryParameter("PrivateIpAddress", privateIpAddress);
-		}
-	}
+	private String instanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -70,17 +48,6 @@ public class ModifyInstanceVpcAttributeRequest extends RpcAcsRequest<ModifyInsta
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public String getInstanceId() {
-		return this.instanceId;
-	}
-
-	public void setInstanceId(String instanceId) {
-		this.instanceId = instanceId;
-		if(instanceId != null){
-			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
@@ -114,6 +81,39 @@ public class ModifyInstanceVpcAttributeRequest extends RpcAcsRequest<ModifyInsta
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getVSwitchId() {
+		return this.vSwitchId;
+	}
+
+	public void setVSwitchId(String vSwitchId) {
+		this.vSwitchId = vSwitchId;
+		if(vSwitchId != null){
+			putQueryParameter("VSwitchId", vSwitchId);
+		}
+	}
+
+	public String getPrivateIpAddress() {
+		return this.privateIpAddress;
+	}
+
+	public void setPrivateIpAddress(String privateIpAddress) {
+		this.privateIpAddress = privateIpAddress;
+		if(privateIpAddress != null){
+			putQueryParameter("PrivateIpAddress", privateIpAddress);
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 
