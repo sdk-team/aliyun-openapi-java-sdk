@@ -24,7 +24,7 @@ import java.util.List;
 public class AddTagsRequest extends RpcAcsRequest<AddTagsResponse> {
 	
 	public AddTagsRequest() {
-		super("Ecs", "2014-05-26", "AddTags", "ecs");
+		super("Ecs", "2014-05-26", "AddTags");
 	}
 
 	private Long resourceOwnerId;

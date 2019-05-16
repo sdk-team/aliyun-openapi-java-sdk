@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateImage_GatedLaunchRequest extends RpcAcsRequest<CreateImage_GatedLaunchResponse> {
 	
 	public CreateImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateImage_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CreateImage_GatedLaunch");
 	}
 
 	private List<DiskDeviceMapping> diskDeviceMappings;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstanceVncUrl_GatedLaunchRequest extends RpcAcsRequest<DescribeInstanceVncUrl_GatedLaunchResponse> {
 	
 	public DescribeInstanceVncUrl_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstanceVncUrl_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInstanceVncUrl_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

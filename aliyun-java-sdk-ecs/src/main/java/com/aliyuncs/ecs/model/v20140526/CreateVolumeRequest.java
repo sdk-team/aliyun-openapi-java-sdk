@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateVolumeRequest extends RpcAcsRequest<CreateVolumeResponse> {
 	
 	public CreateVolumeRequest() {
-		super("Ecs", "2014-05-26", "CreateVolume", "ecs");
+		super("Ecs", "2014-05-26", "CreateVolume");
 	}
 
 	private Long resourceOwnerId;

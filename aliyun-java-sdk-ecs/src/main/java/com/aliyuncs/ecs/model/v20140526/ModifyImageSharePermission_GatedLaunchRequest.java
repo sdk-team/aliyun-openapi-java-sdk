@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyImageSharePermission_GatedLaunchRequest extends RpcAcsRequest<ModifyImageSharePermission_GatedLaunchResponse> {
 	
 	public ModifyImageSharePermission_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyImageSharePermission_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ModifyImageSharePermission_GatedLaunch");
 	}
 
 	private String addAccount1;

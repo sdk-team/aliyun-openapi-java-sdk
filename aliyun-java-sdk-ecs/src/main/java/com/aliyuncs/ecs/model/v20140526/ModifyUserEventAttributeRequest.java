@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyUserEventAttributeRequest extends RpcAcsRequest<ModifyUserEventAttributeResponse> {
 	
 	public ModifyUserEventAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyUserEventAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyUserEventAttribute");
 	}
 
 	private String eventId;

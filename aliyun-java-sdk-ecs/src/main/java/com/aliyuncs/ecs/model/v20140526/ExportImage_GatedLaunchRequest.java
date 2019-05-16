@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ExportImage_GatedLaunchRequest extends RpcAcsRequest<ExportImage_GatedLaunchResponse> {
 	
 	public ExportImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ExportImage_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ExportImage_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

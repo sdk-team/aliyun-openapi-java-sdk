@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckDiskEnableAutoSnapshotValidation_GatedLaunchRequest extends RpcAcsRequest<CheckDiskEnableAutoSnapshotValidation_GatedLaunchResponse> {
 	
 	public CheckDiskEnableAutoSnapshotValidation_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CheckDiskEnableAutoSnapshotValidation_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CheckDiskEnableAutoSnapshotValidation_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

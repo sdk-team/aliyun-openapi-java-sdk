@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class JoinSecurityGroup_GatedLaunchRequest extends RpcAcsRequest<JoinSecurityGroup_GatedLaunchResponse> {
 	
 	public JoinSecurityGroup_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "JoinSecurityGroup_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "JoinSecurityGroup_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

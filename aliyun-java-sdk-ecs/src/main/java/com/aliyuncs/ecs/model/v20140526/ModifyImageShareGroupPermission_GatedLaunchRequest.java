@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyImageShareGroupPermission_GatedLaunchRequest extends RpcAcsRequest<ModifyImageShareGroupPermission_GatedLaunchResponse> {
 	
 	public ModifyImageShareGroupPermission_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyImageShareGroupPermission_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ModifyImageShareGroupPermission_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

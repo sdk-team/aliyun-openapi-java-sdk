@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAutoSnapshotPolicy_GatedLaunchRequest extends RpcAcsRequest<CreateAutoSnapshotPolicy_GatedLaunchResponse> {
 	
 	public CreateAutoSnapshotPolicy_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateAutoSnapshotPolicy_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CreateAutoSnapshotPolicy_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 	
 	public CreateDiskRequest() {
-		super("Ecs", "2014-05-26", "CreateDisk", "ecs");
+		super("Ecs", "2014-05-26", "CreateDisk");
 	}
 
 	private Long resourceOwnerId;
@@ -52,6 +52,8 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String instanceId;
 
 	private Integer size;
 
@@ -208,6 +210,17 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getInstanceId() {
+		return this.instanceId;
+	}
+
+	public void setInstanceId(String instanceId) {
+		this.instanceId = instanceId;
+		if(instanceId != null){
+			putQueryParameter("InstanceId", instanceId);
 		}
 	}
 

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AuthorizeSecurityGroup_GatedLaunchRequest extends RpcAcsRequest<AuthorizeSecurityGroup_GatedLaunchResponse> {
 	
 	public AuthorizeSecurityGroup_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "AuthorizeSecurityGroup_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "AuthorizeSecurityGroup_GatedLaunch");
 	}
 
 	private String nicType;

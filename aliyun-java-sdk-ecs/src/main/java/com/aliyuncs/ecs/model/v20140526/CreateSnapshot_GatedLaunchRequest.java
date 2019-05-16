@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateSnapshot_GatedLaunchRequest extends RpcAcsRequest<CreateSnapshot_GatedLaunchResponse> {
 	
 	public CreateSnapshot_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateSnapshot_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CreateSnapshot_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

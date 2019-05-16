@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteImage_GatedLaunchRequest extends RpcAcsRequest<DeleteImage_GatedLaunchResponse> {
 	
 	public DeleteImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DeleteImage_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "DeleteImage_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

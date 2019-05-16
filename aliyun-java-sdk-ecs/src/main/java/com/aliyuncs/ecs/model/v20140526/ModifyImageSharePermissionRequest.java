@@ -24,7 +24,7 @@ import java.util.List;
 public class ModifyImageSharePermissionRequest extends RpcAcsRequest<ModifyImageSharePermissionResponse> {
 	
 	public ModifyImageSharePermissionRequest() {
-		super("Ecs", "2014-05-26", "ModifyImageSharePermission", "ecs");
+		super("Ecs", "2014-05-26", "ModifyImageSharePermission");
 	}
 
 	private Long resourceOwnerId;

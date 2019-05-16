@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReservedInstanceAttributeRequest extends RpcAcsRequest<ModifyReservedInstanceAttributeResponse> {
 	
 	public ModifyReservedInstanceAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyReservedInstanceAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyReservedInstanceAttribute");
 	}
 
 	private Long resourceOwnerId;

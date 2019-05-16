@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RedeployInstanceRequest extends RpcAcsRequest<RedeployInstanceResponse> {
 	
 	public RedeployInstanceRequest() {
-		super("Ecs", "2014-05-26", "RedeployInstance", "ecs");
+		super("Ecs", "2014-05-26", "RedeployInstance");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AllocatePublicIpAddress_GatedLaunchRequest extends RpcAcsRequest<AllocatePublicIpAddress_GatedLaunchResponse> {
 	
 	public AllocatePublicIpAddress_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "AllocatePublicIpAddress_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "AllocatePublicIpAddress_GatedLaunch");
 	}
 
 	private String ipAddress;

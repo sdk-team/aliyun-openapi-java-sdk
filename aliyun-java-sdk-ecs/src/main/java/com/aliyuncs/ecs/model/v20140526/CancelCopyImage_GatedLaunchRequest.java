@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CancelCopyImage_GatedLaunchRequest extends RpcAcsRequest<CancelCopyImage_GatedLaunchResponse> {
 	
 	public CancelCopyImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CancelCopyImage_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CancelCopyImage_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

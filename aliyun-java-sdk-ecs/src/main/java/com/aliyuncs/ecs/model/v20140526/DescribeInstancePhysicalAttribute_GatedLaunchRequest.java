@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstancePhysicalAttribute_GatedLaunchRequest extends RpcAcsRequest<DescribeInstancePhysicalAttribute_GatedLaunchResponse> {
 	
 	public DescribeInstancePhysicalAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstancePhysicalAttribute_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInstancePhysicalAttribute_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

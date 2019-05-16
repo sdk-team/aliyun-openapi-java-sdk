@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RenewInstance_GatedLaunchRequest extends RpcAcsRequest<RenewInstance_GatedLaunchResponse> {
 	
 	public RenewInstance_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "RenewInstance_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "RenewInstance_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CancelTask_GatedLaunchRequest extends RpcAcsRequest<CancelTask_GatedLaunchResponse> {
 	
 	public CancelTask_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CancelTask_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CancelTask_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

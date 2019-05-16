@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyInstanceDeploymentRequest extends RpcAcsRequest<ModifyInstanceDeploymentResponse> {
 	
 	public ModifyInstanceDeploymentRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceDeployment", "ecs");
+		super("Ecs", "2014-05-26", "ModifyInstanceDeployment");
 	}
 
 	private Long resourceOwnerId;

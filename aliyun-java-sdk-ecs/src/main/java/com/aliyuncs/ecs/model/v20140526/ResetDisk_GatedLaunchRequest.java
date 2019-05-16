@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ResetDisk_GatedLaunchRequest extends RpcAcsRequest<ResetDisk_GatedLaunchResponse> {
 	
 	public ResetDisk_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ResetDisk_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ResetDisk_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

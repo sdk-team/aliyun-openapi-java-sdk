@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateDisk_GatedLaunchRequest extends RpcAcsRequest<CreateDisk_GatedLaunchResponse> {
 	
 	public CreateDisk_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateDisk_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CreateDisk_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

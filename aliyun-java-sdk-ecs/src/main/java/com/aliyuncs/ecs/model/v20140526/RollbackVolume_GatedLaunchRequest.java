@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RollbackVolume_GatedLaunchRequest extends RpcAcsRequest<RollbackVolume_GatedLaunchResponse> {
 	
 	public RollbackVolume_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "RollbackVolume_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "RollbackVolume_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

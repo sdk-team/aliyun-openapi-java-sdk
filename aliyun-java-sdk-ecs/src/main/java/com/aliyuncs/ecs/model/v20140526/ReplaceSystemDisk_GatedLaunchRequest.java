@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReplaceSystemDisk_GatedLaunchRequest extends RpcAcsRequest<ReplaceSystemDisk_GatedLaunchResponse> {
 	
 	public ReplaceSystemDisk_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ReplaceSystemDisk_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ReplaceSystemDisk_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

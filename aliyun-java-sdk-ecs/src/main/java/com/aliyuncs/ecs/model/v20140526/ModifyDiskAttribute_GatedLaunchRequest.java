@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDiskAttribute_GatedLaunchRequest extends RpcAcsRequest<ModifyDiskAttribute_GatedLaunchResponse> {
 	
 	public ModifyDiskAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyDiskAttribute_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDiskAttribute_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

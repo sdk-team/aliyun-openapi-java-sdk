@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class BindIpRange_GatedLaunchRequest extends RpcAcsRequest<BindIpRange_GatedLaunchResponse> {
 	
 	public BindIpRange_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "BindIpRange_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "BindIpRange_GatedLaunch");
 	}
 
 	private String ipAddress;

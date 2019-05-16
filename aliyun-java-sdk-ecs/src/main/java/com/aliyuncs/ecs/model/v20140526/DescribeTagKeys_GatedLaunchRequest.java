@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeTagKeys_GatedLaunchRequest extends RpcAcsRequest<DescribeTagKeys_GatedLaunchResponse> {
 	
 	public DescribeTagKeys_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeTagKeys_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "DescribeTagKeys_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;

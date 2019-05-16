@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateSecurityGroup_GatedLaunchRequest extends RpcAcsRequest<CreateSecurityGroup_GatedLaunchResponse> {
 	
 	public CreateSecurityGroup_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateSecurityGroup_GatedLaunch", "ecs");
+		super("Ecs", "2014-05-26", "CreateSecurityGroup_GatedLaunch");
 	}
 
 	private Long resourceOwnerId;
