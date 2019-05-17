@@ -23,24 +23,24 @@ import com.aliyuncs.RpcAcsRequest;
 public class RestoreTableRequest extends RpcAcsRequest<RestoreTableResponse> {
 	
 	public RestoreTableRequest() {
-		super("Rds", "2014-08-15", "RestoreTable", "rds");
+		super("Rds", "2014-08-15", "RestoreTable");
 	}
 
 	private Long resourceOwnerId;
+
+	private String clientToken;
+
+	private String tableMeta;
+
+	private String dBInstanceId;
 
 	private String restoreTime;
 
 	private String resourceOwnerAccount;
 
-	private String clientToken;
-
 	private String backupId;
 
 	private String ownerAccount;
-
-	private String tableMeta;
-
-	private String dBInstanceId;
 
 	private Long ownerId;
 
@@ -52,6 +52,39 @@ public class RestoreTableRequest extends RpcAcsRequest<RestoreTableResponse> {
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public String getTableMeta() {
+		return this.tableMeta;
+	}
+
+	public void setTableMeta(String tableMeta) {
+		this.tableMeta = tableMeta;
+		if(tableMeta != null){
+			putQueryParameter("TableMeta", tableMeta);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 
@@ -77,17 +110,6 @@ public class RestoreTableRequest extends RpcAcsRequest<RestoreTableResponse> {
 		}
 	}
 
-	public String getClientToken() {
-		return this.clientToken;
-	}
-
-	public void setClientToken(String clientToken) {
-		this.clientToken = clientToken;
-		if(clientToken != null){
-			putQueryParameter("ClientToken", clientToken);
-		}
-	}
-
 	public String getBackupId() {
 		return this.backupId;
 	}
@@ -107,28 +129,6 @@ public class RestoreTableRequest extends RpcAcsRequest<RestoreTableResponse> {
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getTableMeta() {
-		return this.tableMeta;
-	}
-
-	public void setTableMeta(String tableMeta) {
-		this.tableMeta = tableMeta;
-		if(tableMeta != null){
-			putQueryParameter("TableMeta", tableMeta);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

@@ -23,26 +23,26 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReadWriteSplittingConnectionRequest extends RpcAcsRequest<ModifyReadWriteSplittingConnectionResponse> {
 	
 	public ModifyReadWriteSplittingConnectionRequest() {
-		super("Rds", "2014-08-15", "ModifyReadWriteSplittingConnection", "rds");
+		super("Rds", "2014-08-15", "ModifyReadWriteSplittingConnection");
 	}
 
 	private Long resourceOwnerId;
 
 	private String connectionStringPrefix;
 
-	private String resourceOwnerAccount;
-
-	private String port;
-
 	private String distributionType;
+
+	private String dBInstanceId;
+
+	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
 	private String weight;
 
-	private String dBInstanceId;
-
 	private Long ownerId;
+
+	private String port;
 
 	private String maxDelayTime;
 
@@ -68,28 +68,6 @@ public class ModifyReadWriteSplittingConnectionRequest extends RpcAcsRequest<Mod
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getPort() {
-		return this.port;
-	}
-
-	public void setPort(String port) {
-		this.port = port;
-		if(port != null){
-			putQueryParameter("Port", port);
-		}
-	}
-
 	public String getDistributionType() {
 		return this.distributionType;
 	}
@@ -98,6 +76,28 @@ public class ModifyReadWriteSplittingConnectionRequest extends RpcAcsRequest<Mod
 		this.distributionType = distributionType;
 		if(distributionType != null){
 			putQueryParameter("DistributionType", distributionType);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
 		}
 	}
 
@@ -123,17 +123,6 @@ public class ModifyReadWriteSplittingConnectionRequest extends RpcAcsRequest<Mod
 		}
 	}
 
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -142,6 +131,17 @@ public class ModifyReadWriteSplittingConnectionRequest extends RpcAcsRequest<Mod
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getPort() {
+		return this.port;
+	}
+
+	public void setPort(String port) {
+		this.port = port;
+		if(port != null){
+			putQueryParameter("Port", port);
 		}
 	}
 

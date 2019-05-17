@@ -23,20 +23,20 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpgradeDBInstanceKernelVersionRequest extends RpcAcsRequest<UpgradeDBInstanceKernelVersionResponse> {
 	
 	public UpgradeDBInstanceKernelVersionRequest() {
-		super("Rds", "2014-08-15", "UpgradeDBInstanceKernelVersion", "rds");
+		super("Rds", "2014-08-15", "UpgradeDBInstanceKernelVersion");
 	}
 
 	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
 
+	private Long ownerId;
+
 	private String upgradeTime;
 
 	private String dBInstanceId;
 
 	private String switchTime;
-
-	private Long ownerId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -57,6 +57,17 @@ public class UpgradeDBInstanceKernelVersionRequest extends RpcAcsRequest<Upgrade
 		this.resourceOwnerAccount = resourceOwnerAccount;
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 
@@ -90,17 +101,6 @@ public class UpgradeDBInstanceKernelVersionRequest extends RpcAcsRequest<Upgrade
 		this.switchTime = switchTime;
 		if(switchTime != null){
 			putQueryParameter("SwitchTime", switchTime);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

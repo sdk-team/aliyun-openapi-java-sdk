@@ -23,10 +23,12 @@ import com.aliyuncs.RpcAcsRequest;
 public class CopyDatabaseBetweenInstancesRequest extends RpcAcsRequest<CopyDatabaseBetweenInstancesResponse> {
 	
 	public CopyDatabaseBetweenInstancesRequest() {
-		super("Rds", "2014-08-15", "CopyDatabaseBetweenInstances", "rds");
+		super("Rds", "2014-08-15", "CopyDatabaseBetweenInstances");
 	}
 
 	private Long resourceOwnerId;
+
+	private String dBInstanceId;
 
 	private String restoreTime;
 
@@ -38,8 +40,6 @@ public class CopyDatabaseBetweenInstancesRequest extends RpcAcsRequest<CopyDatab
 
 	private String targetDBInstanceId;
 
-	private String dBInstanceId;
-
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
 	}
@@ -48,6 +48,17 @@ public class CopyDatabaseBetweenInstancesRequest extends RpcAcsRequest<CopyDatab
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 
@@ -103,17 +114,6 @@ public class CopyDatabaseBetweenInstancesRequest extends RpcAcsRequest<CopyDatab
 		this.targetDBInstanceId = targetDBInstanceId;
 		if(targetDBInstanceId != null){
 			putQueryParameter("TargetDBInstanceId", targetDBInstanceId);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

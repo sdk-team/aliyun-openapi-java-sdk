@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceTDERequest extends RpcAcsRequest<DescribeDBInstanceTDEResponse> {
 	
 	public DescribeDBInstanceTDERequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceTDE", "rds");
+		super("Rds", "2014-08-15", "DescribeDBInstanceTDE");
 	}
 
 	private Long resourceOwnerId;
@@ -32,9 +32,9 @@ public class DescribeDBInstanceTDERequest extends RpcAcsRequest<DescribeDBInstan
 
 	private String ownerAccount;
 
-	private String dBInstanceId;
-
 	private Long ownerId;
+
+	private String dBInstanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -69,17 +69,6 @@ public class DescribeDBInstanceTDERequest extends RpcAcsRequest<DescribeDBInstan
 		}
 	}
 
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -88,6 +77,17 @@ public class DescribeDBInstanceTDERequest extends RpcAcsRequest<DescribeDBInstan
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

@@ -23,16 +23,16 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSecurityGroupConfigurationRequest extends RpcAcsRequest<DescribeSecurityGroupConfigurationResponse> {
 	
 	public DescribeSecurityGroupConfigurationRequest() {
-		super("Rds", "2014-08-15", "DescribeSecurityGroupConfiguration", "rds");
+		super("Rds", "2014-08-15", "DescribeSecurityGroupConfiguration");
 	}
 
 	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
 
-	private String dBInstanceId;
-
 	private Long ownerId;
+
+	private String dBInstanceId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -56,17 +56,6 @@ public class DescribeSecurityGroupConfigurationRequest extends RpcAcsRequest<Des
 		}
 	}
 
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -75,6 +64,17 @@ public class DescribeSecurityGroupConfigurationRequest extends RpcAcsRequest<Des
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

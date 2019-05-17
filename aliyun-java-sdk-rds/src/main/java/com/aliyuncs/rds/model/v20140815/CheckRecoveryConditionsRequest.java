@@ -23,10 +23,12 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckRecoveryConditionsRequest extends RpcAcsRequest<CheckRecoveryConditionsResponse> {
 	
 	public CheckRecoveryConditionsRequest() {
-		super("Rds", "2014-08-15", "CheckRecoveryConditions", "rds");
+		super("Rds", "2014-08-15", "CheckRecoveryConditions");
 	}
 
 	private Long resourceOwnerId;
+
+	private String dBInstanceId;
 
 	private String restoreTime;
 
@@ -38,8 +40,6 @@ public class CheckRecoveryConditionsRequest extends RpcAcsRequest<CheckRecoveryC
 
 	private String ownerAccount;
 
-	private String dBInstanceId;
-
 	private Long ownerId;
 
 	public Long getResourceOwnerId() {
@@ -50,6 +50,17 @@ public class CheckRecoveryConditionsRequest extends RpcAcsRequest<CheckRecoveryC
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 
@@ -105,17 +116,6 @@ public class CheckRecoveryConditionsRequest extends RpcAcsRequest<CheckRecoveryC
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

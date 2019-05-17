@@ -23,26 +23,26 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 	
 	public CreateAccountRequest() {
-		super("Rds", "2014-08-15", "CreateAccount", "rds");
+		super("Rds", "2014-08-15", "CreateAccount");
 	}
 
 	private Long resourceOwnerId;
 
-	private String accountPassword;
+	private String accountType;
+
+	private String accountDescription;
 
 	private String accountName;
+
+	private String dBInstanceId;
 
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
-	private String accountType;
-
-	private String dBInstanceId;
-
 	private Long ownerId;
 
-	private String accountDescription;
+	private String accountPassword;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -55,14 +55,25 @@ public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 		}
 	}
 
-	public String getAccountPassword() {
-		return this.accountPassword;
+	public String getAccountType() {
+		return this.accountType;
 	}
 
-	public void setAccountPassword(String accountPassword) {
-		this.accountPassword = accountPassword;
-		if(accountPassword != null){
-			putQueryParameter("AccountPassword", accountPassword);
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+		if(accountType != null){
+			putQueryParameter("AccountType", accountType);
+		}
+	}
+
+	public String getAccountDescription() {
+		return this.accountDescription;
+	}
+
+	public void setAccountDescription(String accountDescription) {
+		this.accountDescription = accountDescription;
+		if(accountDescription != null){
+			putQueryParameter("AccountDescription", accountDescription);
 		}
 	}
 
@@ -74,6 +85,17 @@ public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 		this.accountName = accountName;
 		if(accountName != null){
 			putQueryParameter("AccountName", accountName);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 
@@ -99,28 +121,6 @@ public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 		}
 	}
 
-	public String getAccountType() {
-		return this.accountType;
-	}
-
-	public void setAccountType(String accountType) {
-		this.accountType = accountType;
-		if(accountType != null){
-			putQueryParameter("AccountType", accountType);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -132,14 +132,14 @@ public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 		}
 	}
 
-	public String getAccountDescription() {
-		return this.accountDescription;
+	public String getAccountPassword() {
+		return this.accountPassword;
 	}
 
-	public void setAccountDescription(String accountDescription) {
-		this.accountDescription = accountDescription;
-		if(accountDescription != null){
-			putQueryParameter("AccountDescription", accountDescription);
+	public void setAccountPassword(String accountPassword) {
+		this.accountPassword = accountPassword;
+		if(accountPassword != null){
+			putQueryParameter("AccountPassword", accountPassword);
 		}
 	}
 

@@ -23,18 +23,18 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyMySQLDBInstanceDelayRequest extends RpcAcsRequest<ModifyMySQLDBInstanceDelayResponse> {
 	
 	public ModifyMySQLDBInstanceDelayRequest() {
-		super("Rds", "2014-08-15", "ModifyMySQLDBInstanceDelay", "rds");
+		super("Rds", "2014-08-15", "ModifyMySQLDBInstanceDelay");
 	}
 
 	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
 
+	private Long ownerId;
+
 	private String sqlDelay;
 
 	private String dBInstanceId;
-
-	private Long ownerId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -58,6 +58,17 @@ public class ModifyMySQLDBInstanceDelayRequest extends RpcAcsRequest<ModifyMySQL
 		}
 	}
 
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
 	public String getSqlDelay() {
 		return this.sqlDelay;
 	}
@@ -77,17 +88,6 @@ public class ModifyMySQLDBInstanceDelayRequest extends RpcAcsRequest<ModifyMySQL
 		this.dBInstanceId = dBInstanceId;
 		if(dBInstanceId != null){
 			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

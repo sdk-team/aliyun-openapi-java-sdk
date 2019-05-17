@@ -23,10 +23,16 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDBInstanceNetworkTypeRequest extends RpcAcsRequest<ModifyDBInstanceNetworkTypeResponse> {
 	
 	public ModifyDBInstanceNetworkTypeRequest() {
-		super("Rds", "2014-08-15", "ModifyDBInstanceNetworkType", "rds");
+		super("Rds", "2014-08-15", "ModifyDBInstanceNetworkType");
 	}
 
 	private Long resourceOwnerId;
+
+	private String classicExpiredDays;
+
+	private String dBInstanceId;
+
+	private String readWriteSplittingPrivateIpAddress;
 
 	private String resourceOwnerAccount;
 
@@ -40,13 +46,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends RpcAcsRequest<ModifyDBIn
 
 	private String retainClassic;
 
-	private String classicExpiredDays;
-
 	private String vPCId;
-
-	private String dBInstanceId;
-
-	private String readWriteSplittingPrivateIpAddress;
 
 	private String instanceNetworkType;
 
@@ -60,6 +60,39 @@ public class ModifyDBInstanceNetworkTypeRequest extends RpcAcsRequest<ModifyDBIn
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getClassicExpiredDays() {
+		return this.classicExpiredDays;
+	}
+
+	public void setClassicExpiredDays(String classicExpiredDays) {
+		this.classicExpiredDays = classicExpiredDays;
+		if(classicExpiredDays != null){
+			putQueryParameter("ClassicExpiredDays", classicExpiredDays);
+		}
+	}
+
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
+	public String getReadWriteSplittingPrivateIpAddress() {
+		return this.readWriteSplittingPrivateIpAddress;
+	}
+
+	public void setReadWriteSplittingPrivateIpAddress(String readWriteSplittingPrivateIpAddress) {
+		this.readWriteSplittingPrivateIpAddress = readWriteSplittingPrivateIpAddress;
+		if(readWriteSplittingPrivateIpAddress != null){
+			putQueryParameter("ReadWriteSplittingPrivateIpAddress", readWriteSplittingPrivateIpAddress);
 		}
 	}
 
@@ -129,17 +162,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends RpcAcsRequest<ModifyDBIn
 		}
 	}
 
-	public String getClassicExpiredDays() {
-		return this.classicExpiredDays;
-	}
-
-	public void setClassicExpiredDays(String classicExpiredDays) {
-		this.classicExpiredDays = classicExpiredDays;
-		if(classicExpiredDays != null){
-			putQueryParameter("ClassicExpiredDays", classicExpiredDays);
-		}
-	}
-
 	public String getVPCId() {
 		return this.vPCId;
 	}
@@ -148,28 +170,6 @@ public class ModifyDBInstanceNetworkTypeRequest extends RpcAcsRequest<ModifyDBIn
 		this.vPCId = vPCId;
 		if(vPCId != null){
 			putQueryParameter("VPCId", vPCId);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
-	public String getReadWriteSplittingPrivateIpAddress() {
-		return this.readWriteSplittingPrivateIpAddress;
-	}
-
-	public void setReadWriteSplittingPrivateIpAddress(String readWriteSplittingPrivateIpAddress) {
-		this.readWriteSplittingPrivateIpAddress = readWriteSplittingPrivateIpAddress;
-		if(readWriteSplittingPrivateIpAddress != null){
-			putQueryParameter("ReadWriteSplittingPrivateIpAddress", readWriteSplittingPrivateIpAddress);
 		}
 	}
 

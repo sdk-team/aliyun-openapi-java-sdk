@@ -23,12 +23,22 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeAvailableResourceRequest extends RpcAcsRequest<DescribeAvailableResourceResponse> {
 	
 	public DescribeAvailableResourceRequest() {
-		super("Rds", "2014-08-15", "DescribeAvailableResource", "rds");
+		super("Rds", "2014-08-15", "DescribeAvailableResource");
 	}
 
 	private Long resourceOwnerId;
 
+	private String engineVersion;
+
+	private String engine;
+
 	private String dBInstanceId;
+
+	private String instanceChargeType;
+
+	private String zoneId;
+
+	private String orderType;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -41,6 +51,28 @@ public class DescribeAvailableResourceRequest extends RpcAcsRequest<DescribeAvai
 		}
 	}
 
+	public String getEngineVersion() {
+		return this.engineVersion;
+	}
+
+	public void setEngineVersion(String engineVersion) {
+		this.engineVersion = engineVersion;
+		if(engineVersion != null){
+			putQueryParameter("EngineVersion", engineVersion);
+		}
+	}
+
+	public String getEngine() {
+		return this.engine;
+	}
+
+	public void setEngine(String engine) {
+		this.engine = engine;
+		if(engine != null){
+			putQueryParameter("Engine", engine);
+		}
+	}
+
 	public String getDBInstanceId() {
 		return this.dBInstanceId;
 	}
@@ -49,6 +81,39 @@ public class DescribeAvailableResourceRequest extends RpcAcsRequest<DescribeAvai
 		this.dBInstanceId = dBInstanceId;
 		if(dBInstanceId != null){
 			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
+	public String getInstanceChargeType() {
+		return this.instanceChargeType;
+	}
+
+	public void setInstanceChargeType(String instanceChargeType) {
+		this.instanceChargeType = instanceChargeType;
+		if(instanceChargeType != null){
+			putQueryParameter("InstanceChargeType", instanceChargeType);
+		}
+	}
+
+	public String getZoneId() {
+		return this.zoneId;
+	}
+
+	public void setZoneId(String zoneId) {
+		this.zoneId = zoneId;
+		if(zoneId != null){
+			putQueryParameter("ZoneId", zoneId);
+		}
+	}
+
+	public String getOrderType() {
+		return this.orderType;
+	}
+
+	public void setOrderType(String orderType) {
+		this.orderType = orderType;
+		if(orderType != null){
+			putQueryParameter("OrderType", orderType);
 		}
 	}
 

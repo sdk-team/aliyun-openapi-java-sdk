@@ -23,18 +23,18 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeProxyFunctionSupportRequest extends RpcAcsRequest<DescribeProxyFunctionSupportResponse> {
 	
 	public DescribeProxyFunctionSupportRequest() {
-		super("Rds", "2014-08-15", "DescribeProxyFunctionSupport", "rds");
+		super("Rds", "2014-08-15", "DescribeProxyFunctionSupport");
 	}
 
 	private Long resourceOwnerId;
 
 	private String securityToken;
 
+	private String dBInstanceId;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
-
-	private String dBInstanceId;
 
 	private Long ownerId;
 
@@ -79,6 +79,17 @@ public class DescribeProxyFunctionSupportRequest extends RpcAcsRequest<DescribeP
 		}
 	}
 
+	public String getDBInstanceId() {
+		return this.dBInstanceId;
+	}
+
+	public void setDBInstanceId(String dBInstanceId) {
+		this.dBInstanceId = dBInstanceId;
+		if(dBInstanceId != null){
+			putQueryParameter("DBInstanceId", dBInstanceId);
+		}
+	}
+
 	public String getResourceOwnerAccount() {
 		return this.resourceOwnerAccount;
 	}
@@ -98,17 +109,6 @@ public class DescribeProxyFunctionSupportRequest extends RpcAcsRequest<DescribeP
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getDBInstanceId() {
-		return this.dBInstanceId;
-	}
-
-	public void setDBInstanceId(String dBInstanceId) {
-		this.dBInstanceId = dBInstanceId;
-		if(dBInstanceId != null){
-			putQueryParameter("DBInstanceId", dBInstanceId);
 		}
 	}
 

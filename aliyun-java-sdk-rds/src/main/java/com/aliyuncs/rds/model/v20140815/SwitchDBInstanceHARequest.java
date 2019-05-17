@@ -23,22 +23,22 @@ import com.aliyuncs.RpcAcsRequest;
 public class SwitchDBInstanceHARequest extends RpcAcsRequest<SwitchDBInstanceHAResponse> {
 	
 	public SwitchDBInstanceHARequest() {
-		super("Rds", "2014-08-15", "SwitchDBInstanceHA", "rds");
+		super("Rds", "2014-08-15", "SwitchDBInstanceHA");
 	}
 
 	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
 
-	private String effectiveTime;
-
 	private String ownerAccount;
+
+	private Long ownerId;
+
+	private String effectiveTime;
 
 	private String dBInstanceId;
 
 	private String force;
-
-	private Long ownerId;
 
 	private String nodeId;
 
@@ -66,17 +66,6 @@ public class SwitchDBInstanceHARequest extends RpcAcsRequest<SwitchDBInstanceHAR
 		}
 	}
 
-	public String getEffectiveTime() {
-		return this.effectiveTime;
-	}
-
-	public void setEffectiveTime(String effectiveTime) {
-		this.effectiveTime = effectiveTime;
-		if(effectiveTime != null){
-			putQueryParameter("EffectiveTime", effectiveTime);
-		}
-	}
-
 	public String getOwnerAccount() {
 		return this.ownerAccount;
 	}
@@ -85,6 +74,28 @@ public class SwitchDBInstanceHARequest extends RpcAcsRequest<SwitchDBInstanceHAR
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public Long getOwnerId() {
+		return this.ownerId;
+	}
+
+	public void setOwnerId(Long ownerId) {
+		this.ownerId = ownerId;
+		if(ownerId != null){
+			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getEffectiveTime() {
+		return this.effectiveTime;
+	}
+
+	public void setEffectiveTime(String effectiveTime) {
+		this.effectiveTime = effectiveTime;
+		if(effectiveTime != null){
+			putQueryParameter("EffectiveTime", effectiveTime);
 		}
 	}
 
@@ -107,17 +118,6 @@ public class SwitchDBInstanceHARequest extends RpcAcsRequest<SwitchDBInstanceHAR
 		this.force = force;
 		if(force != null){
 			putQueryParameter("Force", force);
-		}
-	}
-
-	public Long getOwnerId() {
-		return this.ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-		if(ownerId != null){
-			putQueryParameter("OwnerId", ownerId.toString());
 		}
 	}
 

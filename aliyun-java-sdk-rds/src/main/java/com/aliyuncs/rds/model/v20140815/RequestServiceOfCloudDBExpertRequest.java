@@ -23,14 +23,25 @@ import com.aliyuncs.RpcAcsRequest;
 public class RequestServiceOfCloudDBExpertRequest extends RpcAcsRequest<RequestServiceOfCloudDBExpertResponse> {
 	
 	public RequestServiceOfCloudDBExpertRequest() {
-		super("Rds", "2014-08-15", "RequestServiceOfCloudDBExpert", "rds");
+		super("Rds", "2014-08-15", "RequestServiceOfCloudDBExpert");
 	}
+
+	private String serviceRequestType;
 
 	private String serviceRequestParam;
 
 	private String dBInstanceId;
 
-	private String serviceRequestType;
+	public String getServiceRequestType() {
+		return this.serviceRequestType;
+	}
+
+	public void setServiceRequestType(String serviceRequestType) {
+		this.serviceRequestType = serviceRequestType;
+		if(serviceRequestType != null){
+			putQueryParameter("ServiceRequestType", serviceRequestType);
+		}
+	}
 
 	public String getServiceRequestParam() {
 		return this.serviceRequestParam;
@@ -51,17 +62,6 @@ public class RequestServiceOfCloudDBExpertRequest extends RpcAcsRequest<RequestS
 		this.dBInstanceId = dBInstanceId;
 		if(dBInstanceId != null){
 			putQueryParameter("DBInstanceId", dBInstanceId);
-		}
-	}
-
-	public String getServiceRequestType() {
-		return this.serviceRequestType;
-	}
-
-	public void setServiceRequestType(String serviceRequestType) {
-		this.serviceRequestType = serviceRequestType;
-		if(serviceRequestType != null){
-			putQueryParameter("ServiceRequestType", serviceRequestType);
 		}
 	}
 

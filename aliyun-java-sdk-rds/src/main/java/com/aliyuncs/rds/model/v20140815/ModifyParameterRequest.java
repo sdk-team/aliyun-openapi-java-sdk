@@ -23,20 +23,20 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyParameterRequest extends RpcAcsRequest<ModifyParameterResponse> {
 	
 	public ModifyParameterRequest() {
-		super("Rds", "2014-08-15", "ModifyParameter", "rds");
+		super("Rds", "2014-08-15", "ModifyParameter");
 	}
 
 	private Long resourceOwnerId;
 
-	private String resourceOwnerAccount;
-
 	private String clientToken;
-
-	private String ownerAccount;
 
 	private String dBInstanceId;
 
 	private Boolean forcerestart;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
 
 	private Long ownerId;
 
@@ -53,17 +53,6 @@ public class ModifyParameterRequest extends RpcAcsRequest<ModifyParameterRespons
 		}
 	}
 
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
 	public String getClientToken() {
 		return this.clientToken;
 	}
@@ -72,17 +61,6 @@ public class ModifyParameterRequest extends RpcAcsRequest<ModifyParameterRespons
 		this.clientToken = clientToken;
 		if(clientToken != null){
 			putQueryParameter("ClientToken", clientToken);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 
@@ -105,6 +83,28 @@ public class ModifyParameterRequest extends RpcAcsRequest<ModifyParameterRespons
 		this.forcerestart = forcerestart;
 		if(forcerestart != null){
 			putQueryParameter("Forcerestart", forcerestart.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
 		}
 	}
 
