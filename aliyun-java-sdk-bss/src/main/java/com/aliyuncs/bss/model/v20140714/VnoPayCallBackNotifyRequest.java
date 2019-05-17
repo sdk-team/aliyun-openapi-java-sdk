@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class VnoPayCallBackNotifyRequest extends RpcAcsRequest<VnoPayCallBackNotifyResponse> {
 	
 	public VnoPayCallBackNotifyRequest() {
-		super("Bss", "2014-07-14", "VnoPayCallBackNotify", "bss");
+		super("Bss", "2014-07-14", "VnoPayCallBackNotify");
 	}
 
 	private String paramStr;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class OpenCallbackRequest extends RpcAcsRequest<OpenCallbackResponse> {
 	
 	public OpenCallbackRequest() {
-		super("Bss", "2014-07-14", "OpenCallback", "bss");
+		super("Bss", "2014-07-14", "OpenCallback");
 	}
 
 	private String paramStr;

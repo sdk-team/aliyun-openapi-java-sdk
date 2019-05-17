@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class VnoBatchRefundOrderRequest extends RpcAcsRequest<VnoBatchRefundOrderResponse> {
 	
 	public VnoBatchRefundOrderRequest() {
-		super("Bss", "2014-07-14", "VnoBatchRefundOrder", "bss");
+		super("Bss", "2014-07-14", "VnoBatchRefundOrder");
 	}
 
 	private String paramStr;

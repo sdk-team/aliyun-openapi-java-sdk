@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SetResourceBusinessStatusRequest extends RpcAcsRequest<SetResourceBusinessStatusResponse> {
 	
 	public SetResourceBusinessStatusRequest() {
-		super("Bss", "2014-07-14", "SetResourceBusinessStatus", "bss");
+		super("Bss", "2014-07-14", "SetResourceBusinessStatus");
 	}
 
 	private String businessStatus;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SubscriptionCreateOrderApiRequest extends RpcAcsRequest<SubscriptionCreateOrderApiResponse> {
 	
 	public SubscriptionCreateOrderApiRequest() {
-		super("Bss", "2014-07-14", "SubscriptionCreateOrderApi", "bss");
+		super("Bss", "2014-07-14", "SubscriptionCreateOrderApi");
 	}
 
 	private String productCode;

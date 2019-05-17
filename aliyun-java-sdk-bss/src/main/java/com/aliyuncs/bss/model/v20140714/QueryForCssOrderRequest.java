@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryForCssOrderRequest extends RpcAcsRequest<QueryForCssOrderResponse> {
 	
 	public QueryForCssOrderRequest() {
-		super("Bss", "2014-07-14", "QueryForCssOrder", "bss");
+		super("Bss", "2014-07-14", "QueryForCssOrder");
 	}
 
 	private String paramStr;

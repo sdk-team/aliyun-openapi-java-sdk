@@ -24,7 +24,7 @@ import com.aliyuncs.http.ProtocolType;
 public class DescribeCouponDetailRequest extends RpcAcsRequest<DescribeCouponDetailResponse> {
 	
 	public DescribeCouponDetailRequest() {
-		super("Bss", "2014-07-14", "DescribeCouponDetail", "bss");
+		super("Bss", "2014-07-14", "DescribeCouponDetail");
 		setProtocol(ProtocolType.HTTPS);
 	}
 

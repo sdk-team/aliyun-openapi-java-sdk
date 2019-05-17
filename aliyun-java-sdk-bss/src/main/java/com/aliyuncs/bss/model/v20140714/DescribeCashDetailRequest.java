@@ -24,7 +24,7 @@ import com.aliyuncs.http.ProtocolType;
 public class DescribeCashDetailRequest extends RpcAcsRequest<DescribeCashDetailResponse> {
 	
 	public DescribeCashDetailRequest() {
-		super("Bss", "2014-07-14", "DescribeCashDetail", "bss");
+		super("Bss", "2014-07-14", "DescribeCashDetail");
 		setProtocol(ProtocolType.HTTPS);
 	}
 
