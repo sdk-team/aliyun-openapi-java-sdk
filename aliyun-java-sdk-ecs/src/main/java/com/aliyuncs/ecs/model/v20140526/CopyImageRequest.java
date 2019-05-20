@@ -24,7 +24,7 @@ import java.util.List;
 public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 	
 	public CopyImageRequest() {
-		super("Ecs", "2014-05-26", "CopyImage");
+		super("Ecs", "2014-05-26", "CopyImage", "ecs");
 	}
 
 	private Long resourceOwnerId;

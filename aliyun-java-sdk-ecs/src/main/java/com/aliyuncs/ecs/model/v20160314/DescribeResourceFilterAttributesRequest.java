@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeResourceFilterAttributesRequest extends RpcAcsRequest<DescribeResourceFilterAttributesResponse> {
 	
 	public DescribeResourceFilterAttributesRequest() {
-		super("Ecs", "2016-03-14", "DescribeResourceFilterAttributes");
+		super("Ecs", "2016-03-14", "DescribeResourceFilterAttributes", "ecs");
 	}
 
 	private Long resourceOwnerId;

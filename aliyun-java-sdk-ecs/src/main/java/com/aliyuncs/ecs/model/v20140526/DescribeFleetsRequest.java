@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeFleetsRequest extends RpcAcsRequest<DescribeFleetsResponse> {
 	
 	public DescribeFleetsRequest() {
-		super("Ecs", "2014-05-26", "DescribeFleets");
+		super("Ecs", "2014-05-26", "DescribeFleets", "ecs");
 	}
 
 	private Long resourceOwnerId;

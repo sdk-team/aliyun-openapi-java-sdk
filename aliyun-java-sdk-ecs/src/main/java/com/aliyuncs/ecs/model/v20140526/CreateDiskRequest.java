@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 	
 	public CreateDiskRequest() {
-		super("Ecs", "2014-05-26", "CreateDisk");
+		super("Ecs", "2014-05-26", "CreateDisk", "ecs");
 	}
 
 	private Long resourceOwnerId;

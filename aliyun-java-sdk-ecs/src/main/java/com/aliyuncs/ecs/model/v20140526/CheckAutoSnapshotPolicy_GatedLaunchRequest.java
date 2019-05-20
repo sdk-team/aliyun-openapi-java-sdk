@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckAutoSnapshotPolicy_GatedLaunchRequest extends RpcAcsRequest<CheckAutoSnapshotPolicy_GatedLaunchResponse> {
 	
 	public CheckAutoSnapshotPolicy_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CheckAutoSnapshotPolicy_GatedLaunch");
+		super("Ecs", "2014-05-26", "CheckAutoSnapshotPolicy_GatedLaunch", "ecs");
 	}
 
 	private Boolean dataDiskPolicyEnabled;

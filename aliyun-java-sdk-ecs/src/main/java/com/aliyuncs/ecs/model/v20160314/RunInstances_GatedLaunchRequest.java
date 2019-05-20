@@ -24,7 +24,7 @@ import java.util.List;
 public class RunInstances_GatedLaunchRequest extends RpcAcsRequest<RunInstances_GatedLaunchResponse> {
 	
 	public RunInstances_GatedLaunchRequest() {
-		super("Ecs", "2016-03-14", "RunInstances_GatedLaunch");
+		super("Ecs", "2016-03-14", "RunInstances_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

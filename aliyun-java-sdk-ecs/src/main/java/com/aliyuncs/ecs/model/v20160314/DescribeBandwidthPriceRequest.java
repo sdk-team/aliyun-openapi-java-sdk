@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeBandwidthPriceRequest extends RpcAcsRequest<DescribeBandwidthPriceResponse> {
 	
 	public DescribeBandwidthPriceRequest() {
-		super("Ecs", "2016-03-14", "DescribeBandwidthPrice");
+		super("Ecs", "2016-03-14", "DescribeBandwidthPrice", "ecs");
 	}
 
 	private Long resourceOwnerId;

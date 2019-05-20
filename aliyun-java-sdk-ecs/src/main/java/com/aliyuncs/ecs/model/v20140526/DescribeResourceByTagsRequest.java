@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeResourceByTagsRequest extends RpcAcsRequest<DescribeResourceByTagsResponse> {
 	
 	public DescribeResourceByTagsRequest() {
-		super("Ecs", "2014-05-26", "DescribeResourceByTags");
+		super("Ecs", "2014-05-26", "DescribeResourceByTags", "ecs");
 	}
 
 	private Long resourceOwnerId;

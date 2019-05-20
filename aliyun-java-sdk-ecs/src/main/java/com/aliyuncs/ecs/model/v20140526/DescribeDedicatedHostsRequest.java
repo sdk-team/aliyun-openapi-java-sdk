@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeDedicatedHostsRequest extends RpcAcsRequest<DescribeDedicatedHostsResponse> {
 	
 	public DescribeDedicatedHostsRequest() {
-		super("Ecs", "2014-05-26", "DescribeDedicatedHosts");
+		super("Ecs", "2014-05-26", "DescribeDedicatedHosts", "ecs");
 	}
 
 	private String dedicatedHostIds;

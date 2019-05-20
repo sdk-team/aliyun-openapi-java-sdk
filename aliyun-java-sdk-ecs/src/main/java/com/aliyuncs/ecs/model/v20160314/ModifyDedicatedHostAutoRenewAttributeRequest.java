@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDedicatedHostAutoRenewAttributeRequest extends RpcAcsRequest<ModifyDedicatedHostAutoRenewAttributeResponse> {
 	
 	public ModifyDedicatedHostAutoRenewAttributeRequest() {
-		super("Ecs", "2016-03-14", "ModifyDedicatedHostAutoRenewAttribute");
+		super("Ecs", "2016-03-14", "ModifyDedicatedHostAutoRenewAttribute", "ecs");
 	}
 
 	private Long resourceOwnerId;

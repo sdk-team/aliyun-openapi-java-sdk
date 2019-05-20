@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstanceTopologyRequest extends RpcAcsRequest<DescribeInstanceTopologyResponse> {
 	
 	public DescribeInstanceTopologyRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstanceTopology");
+		super("Ecs", "2014-05-26", "DescribeInstanceTopology", "ecs");
 	}
 
 	private Long resourceOwnerId;

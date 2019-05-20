@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateInstance_GatedLaunchRequest extends RpcAcsRequest<CreateInstance_GatedLaunchResponse> {
 	
 	public CreateInstance_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateInstance_GatedLaunch");
+		super("Ecs", "2014-05-26", "CreateInstance_GatedLaunch", "ecs");
 	}
 
 	private Integer dataDisk3Size;

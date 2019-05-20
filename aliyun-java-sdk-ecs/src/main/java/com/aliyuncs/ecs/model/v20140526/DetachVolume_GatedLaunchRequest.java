@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DetachVolume_GatedLaunchRequest extends RpcAcsRequest<DetachVolume_GatedLaunchResponse> {
 	
 	public DetachVolume_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DetachVolume_GatedLaunch");
+		super("Ecs", "2014-05-26", "DetachVolume_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

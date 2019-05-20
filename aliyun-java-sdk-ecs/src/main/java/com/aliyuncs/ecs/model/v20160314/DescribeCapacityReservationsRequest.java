@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeCapacityReservationsRequest extends RpcAcsRequest<DescribeCapacityReservationsResponse> {
 	
 	public DescribeCapacityReservationsRequest() {
-		super("Ecs", "2016-03-14", "DescribeCapacityReservations");
+		super("Ecs", "2016-03-14", "DescribeCapacityReservations", "ecs");
 	}
 
 	private Long resourceOwnerId;

@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeReservedInstancesRequest extends RpcAcsRequest<DescribeReservedInstancesResponse> {
 	
 	public DescribeReservedInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeReservedInstances");
+		super("Ecs", "2014-05-26", "DescribeReservedInstances", "ecs");
 	}
 
 	private Long resourceOwnerId;

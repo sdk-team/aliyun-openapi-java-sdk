@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RebootInstance_GatedLaunchRequest extends RpcAcsRequest<RebootInstance_GatedLaunchResponse> {
 	
 	public RebootInstance_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "RebootInstance_GatedLaunch");
+		super("Ecs", "2014-05-26", "RebootInstance_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

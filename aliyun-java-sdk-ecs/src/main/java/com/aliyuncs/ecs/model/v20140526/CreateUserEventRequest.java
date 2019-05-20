@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateUserEventRequest extends RpcAcsRequest<CreateUserEventResponse> {
 	
 	public CreateUserEventRequest() {
-		super("Ecs", "2014-05-26", "CreateUserEvent");
+		super("Ecs", "2014-05-26", "CreateUserEvent", "ecs");
 	}
 
 	private Long resourceOwnerId;

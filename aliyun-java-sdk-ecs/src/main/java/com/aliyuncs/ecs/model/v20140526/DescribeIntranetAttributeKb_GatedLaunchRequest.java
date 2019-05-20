@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeIntranetAttributeKb_GatedLaunchRequest extends RpcAcsRequest<DescribeIntranetAttributeKb_GatedLaunchResponse> {
 	
 	public DescribeIntranetAttributeKb_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeIntranetAttributeKb_GatedLaunch");
+		super("Ecs", "2014-05-26", "DescribeIntranetAttributeKb_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

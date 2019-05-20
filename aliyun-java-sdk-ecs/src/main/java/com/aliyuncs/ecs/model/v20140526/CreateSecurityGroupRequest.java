@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateSecurityGroupRequest extends RpcAcsRequest<CreateSecurityGroupResponse> {
 	
 	public CreateSecurityGroupRequest() {
-		super("Ecs", "2014-05-26", "CreateSecurityGroup");
+		super("Ecs", "2014-05-26", "CreateSecurityGroup", "ecs");
 	}
 
 	private Long resourceOwnerId;

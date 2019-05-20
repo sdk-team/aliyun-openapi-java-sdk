@@ -24,7 +24,7 @@ import java.util.List;
 public class DeleteConfigLogSubscriptionsRequest extends RpcAcsRequest<DeleteConfigLogSubscriptionsResponse> {
 	
 	public DeleteConfigLogSubscriptionsRequest() {
-		super("Ecs", "2016-03-14", "DeleteConfigLogSubscriptions");
+		super("Ecs", "2016-03-14", "DeleteConfigLogSubscriptions", "ecs");
 	}
 
 	private Long resourceOwnerId;

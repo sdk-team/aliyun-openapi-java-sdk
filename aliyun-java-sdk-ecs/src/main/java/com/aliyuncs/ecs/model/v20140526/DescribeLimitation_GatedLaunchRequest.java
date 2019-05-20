@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeLimitation_GatedLaunchRequest extends RpcAcsRequest<DescribeLimitation_GatedLaunchResponse> {
 	
 	public DescribeLimitation_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeLimitation_GatedLaunch");
+		super("Ecs", "2014-05-26", "DescribeLimitation_GatedLaunch", "ecs");
 	}
 
 	private String limitation;

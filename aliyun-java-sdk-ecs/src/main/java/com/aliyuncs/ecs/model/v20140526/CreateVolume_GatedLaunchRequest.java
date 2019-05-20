@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateVolume_GatedLaunchRequest extends RpcAcsRequest<CreateVolume_GatedLaunchResponse> {
 	
 	public CreateVolume_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CreateVolume_GatedLaunch");
+		super("Ecs", "2014-05-26", "CreateVolume_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

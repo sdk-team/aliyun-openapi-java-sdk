@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StopInstance_GatedLaunchRequest extends RpcAcsRequest<StopInstance_GatedLaunchResponse> {
 	
 	public StopInstance_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "StopInstance_GatedLaunch");
+		super("Ecs", "2014-05-26", "StopInstance_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

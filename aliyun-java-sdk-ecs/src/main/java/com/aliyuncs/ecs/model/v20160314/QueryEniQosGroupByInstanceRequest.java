@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryEniQosGroupByInstanceRequest extends RpcAcsRequest<QueryEniQosGroupByInstanceResponse> {
 	
 	public QueryEniQosGroupByInstanceRequest() {
-		super("Ecs", "2016-03-14", "QueryEniQosGroupByInstance");
+		super("Ecs", "2016-03-14", "QueryEniQosGroupByInstance", "ecs");
 	}
 
 	private Long resourceOwnerId;

@@ -28,6 +28,8 @@ public class CreateInstanceResponse extends AcsResponse {
 
 	private String instanceId;
 
+	private Float tradePrice;
+
 	public String getRequestId() {
 		return this.requestId;
 	}
@@ -42,6 +44,14 @@ public class CreateInstanceResponse extends AcsResponse {
 
 	public void setInstanceId(String instanceId) {
 		this.instanceId = instanceId;
+	}
+
+	public Float getTradePrice() {
+		return this.tradePrice;
+	}
+
+	public void setTradePrice(Float tradePrice) {
+		this.tradePrice = tradePrice;
 	}
 
 	@Override

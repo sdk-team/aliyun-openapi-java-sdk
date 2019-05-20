@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateNetworkInterfaceRequest extends RpcAcsRequest<CreateNetworkInterfaceResponse> {
 	
 	public CreateNetworkInterfaceRequest() {
-		super("Ecs", "2014-05-26", "CreateNetworkInterface");
+		super("Ecs", "2014-05-26", "CreateNetworkInterface", "ecs");
 	}
 
 	private Long resourceOwnerId;

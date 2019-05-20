@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifySnapshotAttribute_GatedLaunchRequest extends RpcAcsRequest<ModifySnapshotAttribute_GatedLaunchResponse> {
 	
 	public ModifySnapshotAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifySnapshotAttribute_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifySnapshotAttribute_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

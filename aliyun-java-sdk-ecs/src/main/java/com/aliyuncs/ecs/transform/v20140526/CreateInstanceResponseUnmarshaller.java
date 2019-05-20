@@ -24,6 +24,7 @@ public class CreateInstanceResponseUnmarshaller {
 		
 		createInstanceResponse.setRequestId(context.stringValue("CreateInstanceResponse.RequestId"));
 		createInstanceResponse.setInstanceId(context.stringValue("CreateInstanceResponse.InstanceId"));
+		createInstanceResponse.setTradePrice(context.floatValue("CreateInstanceResponse.TradePrice"));
 	 
 	 	return createInstanceResponse;
 	}

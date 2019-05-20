@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class LeaveEniQosGroupRequest extends RpcAcsRequest<LeaveEniQosGroupResponse> {
 	
 	public LeaveEniQosGroupRequest() {
-		super("Ecs", "2016-03-14", "LeaveEniQosGroup");
+		super("Ecs", "2016-03-14", "LeaveEniQosGroup", "ecs");
 	}
 
 	private Long resourceOwnerId;

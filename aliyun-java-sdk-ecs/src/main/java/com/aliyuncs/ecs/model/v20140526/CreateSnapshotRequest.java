@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse> {
 	
 	public CreateSnapshotRequest() {
-		super("Ecs", "2014-05-26", "CreateSnapshot");
+		super("Ecs", "2014-05-26", "CreateSnapshot", "ecs");
 	}
 
 	private Long resourceOwnerId;

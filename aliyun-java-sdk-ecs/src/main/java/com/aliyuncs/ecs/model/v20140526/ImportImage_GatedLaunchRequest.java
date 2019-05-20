@@ -24,7 +24,7 @@ import java.util.List;
 public class ImportImage_GatedLaunchRequest extends RpcAcsRequest<ImportImage_GatedLaunchResponse> {
 	
 	public ImportImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ImportImage_GatedLaunch");
+		super("Ecs", "2014-05-26", "ImportImage_GatedLaunch", "ecs");
 	}
 
 	private List<DiskDeviceMapping> diskDeviceMappings;

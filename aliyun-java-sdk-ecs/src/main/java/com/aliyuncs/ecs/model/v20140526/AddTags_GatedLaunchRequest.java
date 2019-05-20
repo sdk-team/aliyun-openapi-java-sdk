@@ -24,7 +24,7 @@ import java.util.List;
 public class AddTags_GatedLaunchRequest extends RpcAcsRequest<AddTags_GatedLaunchResponse> {
 	
 	public AddTags_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "AddTags_GatedLaunch");
+		super("Ecs", "2014-05-26", "AddTags_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

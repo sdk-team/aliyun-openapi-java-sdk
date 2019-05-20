@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReleasePublicIpAddress_GatedLaunchRequest extends RpcAcsRequest<ReleasePublicIpAddress_GatedLaunchResponse> {
 	
 	public ReleasePublicIpAddress_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ReleasePublicIpAddress_GatedLaunch");
+		super("Ecs", "2014-05-26", "ReleasePublicIpAddress_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

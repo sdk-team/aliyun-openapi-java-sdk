@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeEventsRequest extends RpcAcsRequest<DescribeEventsResponse> {
 	
 	public DescribeEventsRequest() {
-		super("Ecs", "2014-05-26", "DescribeEvents");
+		super("Ecs", "2014-05-26", "DescribeEvents", "ecs");
 	}
 
 	private String eventId;

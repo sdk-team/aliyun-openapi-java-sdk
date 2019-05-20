@@ -28,6 +28,7 @@ public class CreateOrderResponseUnmarshaller {
 		
 		createOrderResponse.setRequestId(context.stringValue("CreateOrderResponse.RequestId"));
 		createOrderResponse.setOrderId(context.stringValue("CreateOrderResponse.OrderId"));
+		createOrderResponse.setTradePrice(context.floatValue("CreateOrderResponse.TradePrice"));
 		createOrderResponse.setTaskId(context.stringValue("CreateOrderResponse.TaskId"));
 
 		List<String> orderParams = new ArrayList<String>();

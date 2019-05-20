@@ -24,7 +24,7 @@ import java.util.List;
 public class UntagResourcesRequest extends RpcAcsRequest<UntagResourcesResponse> {
 	
 	public UntagResourcesRequest() {
-		super("Ecs", "2014-05-26", "UntagResources");
+		super("Ecs", "2014-05-26", "UntagResources", "ecs");
 	}
 
 	private Long resourceOwnerId;

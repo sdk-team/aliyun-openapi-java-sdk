@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeUserData_GatedLaunchRequest extends RpcAcsRequest<DescribeUserData_GatedLaunchResponse> {
 	
 	public DescribeUserData_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DescribeUserData_GatedLaunch");
+		super("Ecs", "2014-05-26", "DescribeUserData_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

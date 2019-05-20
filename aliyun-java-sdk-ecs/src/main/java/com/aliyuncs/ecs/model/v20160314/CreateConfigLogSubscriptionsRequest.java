@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateConfigLogSubscriptionsRequest extends RpcAcsRequest<CreateConfigLogSubscriptionsResponse> {
 	
 	public CreateConfigLogSubscriptionsRequest() {
-		super("Ecs", "2016-03-14", "CreateConfigLogSubscriptions");
+		super("Ecs", "2016-03-14", "CreateConfigLogSubscriptions", "ecs");
 	}
 
 	private Long resourceOwnerId;

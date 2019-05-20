@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeKMSKeysRequest extends RpcAcsRequest<DescribeKMSKeysResponse> {
 	
 	public DescribeKMSKeysRequest() {
-		super("Ecs", "2016-03-14", "DescribeKMSKeys");
+		super("Ecs", "2016-03-14", "DescribeKMSKeys", "ecs");
 	}
 
 	private Long resourceOwnerId;

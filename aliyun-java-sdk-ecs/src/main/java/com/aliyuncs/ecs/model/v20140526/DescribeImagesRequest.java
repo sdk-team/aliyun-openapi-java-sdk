@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse> {
 	
 	public DescribeImagesRequest() {
-		super("Ecs", "2014-05-26", "DescribeImages");
+		super("Ecs", "2014-05-26", "DescribeImages", "ecs");
 	}
 
 	private String actionType;

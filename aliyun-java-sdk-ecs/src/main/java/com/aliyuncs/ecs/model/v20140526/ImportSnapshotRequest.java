@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ImportSnapshotRequest extends RpcAcsRequest<ImportSnapshotResponse> {
 	
 	public ImportSnapshotRequest() {
-		super("Ecs", "2014-05-26", "ImportSnapshot");
+		super("Ecs", "2014-05-26", "ImportSnapshot", "ecs");
 	}
 
 	private Long resourceOwnerId;

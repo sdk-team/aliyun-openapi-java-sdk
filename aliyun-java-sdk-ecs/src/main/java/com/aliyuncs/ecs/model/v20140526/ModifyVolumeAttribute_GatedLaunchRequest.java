@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyVolumeAttribute_GatedLaunchRequest extends RpcAcsRequest<ModifyVolumeAttribute_GatedLaunchResponse> {
 	
 	public ModifyVolumeAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyVolumeAttribute_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifyVolumeAttribute_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

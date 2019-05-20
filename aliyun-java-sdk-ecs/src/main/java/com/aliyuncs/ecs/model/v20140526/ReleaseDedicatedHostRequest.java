@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReleaseDedicatedHostRequest extends RpcAcsRequest<ReleaseDedicatedHostResponse> {
 	
 	public ReleaseDedicatedHostRequest() {
-		super("Ecs", "2014-05-26", "ReleaseDedicatedHost");
+		super("Ecs", "2014-05-26", "ReleaseDedicatedHost", "ecs");
 	}
 
 	private Long resourceOwnerId;

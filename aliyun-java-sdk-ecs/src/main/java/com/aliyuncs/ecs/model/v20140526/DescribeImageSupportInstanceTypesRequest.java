@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeImageSupportInstanceTypesRequest extends RpcAcsRequest<DescribeImageSupportInstanceTypesResponse> {
 	
 	public DescribeImageSupportInstanceTypesRequest() {
-		super("Ecs", "2014-05-26", "DescribeImageSupportInstanceTypes");
+		super("Ecs", "2014-05-26", "DescribeImageSupportInstanceTypes", "ecs");
 	}
 
 	private String actionType;

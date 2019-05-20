@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse> {
 	
 	public DescribeHaVipsRequest() {
-		super("Ecs", "2014-05-26", "DescribeHaVips");
+		super("Ecs", "2014-05-26", "DescribeHaVips", "ecs");
 	}
 
 	private Long resourceOwnerId;

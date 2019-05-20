@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyInstanceNetworkSpec_GatedLaunchRequest extends RpcAcsRequest<ModifyInstanceNetworkSpec_GatedLaunchResponse> {
 	
 	public ModifyInstanceNetworkSpec_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceNetworkSpec_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifyInstanceNetworkSpec_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeAccountLimitsRequest extends RpcAcsRequest<DescribeAccountLimitsResponse> {
 	
 	public DescribeAccountLimitsRequest() {
-		super("Ecs", "2016-03-14", "DescribeAccountLimits");
+		super("Ecs", "2016-03-14", "DescribeAccountLimits", "ecs");
 	}
 
 	private Long resourceOwnerId;

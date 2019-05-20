@@ -24,7 +24,7 @@ import java.util.List;
 public class AssignIpv6AddressesRequest extends RpcAcsRequest<AssignIpv6AddressesResponse> {
 	
 	public AssignIpv6AddressesRequest() {
-		super("Ecs", "2014-05-26", "AssignIpv6Addresses");
+		super("Ecs", "2014-05-26", "AssignIpv6Addresses", "ecs");
 	}
 
 	private Long resourceOwnerId;

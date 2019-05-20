@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteSnapshot_GatedLaunchRequest extends RpcAcsRequest<DeleteSnapshot_GatedLaunchResponse> {
 	
 	public DeleteSnapshot_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "DeleteSnapshot_GatedLaunch");
+		super("Ecs", "2014-05-26", "DeleteSnapshot_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDedicatedHostTypesRequest extends RpcAcsRequest<DescribeDedicatedHostTypesResponse> {
 	
 	public DescribeDedicatedHostTypesRequest() {
-		super("Ecs", "2014-05-26", "DescribeDedicatedHostTypes");
+		super("Ecs", "2014-05-26", "DescribeDedicatedHostTypes", "ecs");
 	}
 
 	private Long resourceOwnerId;

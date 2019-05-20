@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CancelUserEventRequest extends RpcAcsRequest<CancelUserEventResponse> {
 	
 	public CancelUserEventRequest() {
-		super("Ecs", "2014-05-26", "CancelUserEvent");
+		super("Ecs", "2014-05-26", "CancelUserEvent", "ecs");
 	}
 
 	private String eventId;

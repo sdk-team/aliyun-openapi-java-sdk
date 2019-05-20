@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeAccountAttributesRequest extends RpcAcsRequest<DescribeAccountAttributesResponse> {
 	
 	public DescribeAccountAttributesRequest() {
-		super("Ecs", "2016-03-14", "DescribeAccountAttributes");
+		super("Ecs", "2016-03-14", "DescribeAccountAttributes", "ecs");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeFleetInstancesRequest extends RpcAcsRequest<DescribeFleetInstancesResponse> {
 	
 	public DescribeFleetInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeFleetInstances");
+		super("Ecs", "2014-05-26", "DescribeFleetInstances", "ecs");
 	}
 
 	private Long resourceOwnerId;

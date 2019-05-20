@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateFleetRequest extends RpcAcsRequest<CreateFleetResponse> {
 	
 	public CreateFleetRequest() {
-		super("Ecs", "2014-05-26", "CreateFleet");
+		super("Ecs", "2014-05-26", "CreateFleet", "ecs");
 	}
 
 	private Long resourceOwnerId;

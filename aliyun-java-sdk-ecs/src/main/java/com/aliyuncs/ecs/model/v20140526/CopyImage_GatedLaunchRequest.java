@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CopyImage_GatedLaunchRequest extends RpcAcsRequest<CopyImage_GatedLaunchResponse> {
 	
 	public CopyImage_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "CopyImage_GatedLaunch");
+		super("Ecs", "2014-05-26", "CopyImage_GatedLaunch", "ecs");
 	}
 
 	private String tag4Value;

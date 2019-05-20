@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReInitDisk_GatedLaunchRequest extends RpcAcsRequest<ReInitDisk_GatedLaunchResponse> {
 	
 	public ReInitDisk_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ReInitDisk_GatedLaunch");
+		super("Ecs", "2014-05-26", "ReInitDisk_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

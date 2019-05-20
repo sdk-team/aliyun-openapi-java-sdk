@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AcceptInquiredSystemEventRequest extends RpcAcsRequest<AcceptInquiredSystemEventResponse> {
 	
 	public AcceptInquiredSystemEventRequest() {
-		super("Ecs", "2014-05-26", "AcceptInquiredSystemEvent");
+		super("Ecs", "2014-05-26", "AcceptInquiredSystemEvent", "ecs");
 	}
 
 	private String eventId;

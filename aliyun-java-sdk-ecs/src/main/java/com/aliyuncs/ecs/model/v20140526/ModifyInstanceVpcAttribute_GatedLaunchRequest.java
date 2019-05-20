@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyInstanceVpcAttribute_GatedLaunchRequest extends RpcAcsRequest<ModifyInstanceVpcAttribute_GatedLaunchResponse> {
 	
 	public ModifyInstanceVpcAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceVpcAttribute_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifyInstanceVpcAttribute_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

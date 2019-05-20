@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyInstanceVncPasswd_GatedLaunchRequest extends RpcAcsRequest<ModifyInstanceVncPasswd_GatedLaunchResponse> {
 	
 	public ModifyInstanceVncPasswd_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceVncPasswd_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifyInstanceVncPasswd_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

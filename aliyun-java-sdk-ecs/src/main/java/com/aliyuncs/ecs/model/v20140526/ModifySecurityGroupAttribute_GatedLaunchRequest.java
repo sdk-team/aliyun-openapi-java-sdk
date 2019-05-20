@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifySecurityGroupAttribute_GatedLaunchRequest extends RpcAcsRequest<ModifySecurityGroupAttribute_GatedLaunchResponse> {
 	
 	public ModifySecurityGroupAttribute_GatedLaunchRequest() {
-		super("Ecs", "2014-05-26", "ModifySecurityGroupAttribute_GatedLaunch");
+		super("Ecs", "2014-05-26", "ModifySecurityGroupAttribute_GatedLaunch", "ecs");
 	}
 
 	private Long resourceOwnerId;

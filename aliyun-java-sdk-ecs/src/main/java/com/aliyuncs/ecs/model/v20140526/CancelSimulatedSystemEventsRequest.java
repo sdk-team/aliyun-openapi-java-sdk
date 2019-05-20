@@ -24,7 +24,7 @@ import java.util.List;
 public class CancelSimulatedSystemEventsRequest extends RpcAcsRequest<CancelSimulatedSystemEventsResponse> {
 	
 	public CancelSimulatedSystemEventsRequest() {
-		super("Ecs", "2014-05-26", "CancelSimulatedSystemEvents");
+		super("Ecs", "2014-05-26", "CancelSimulatedSystemEvents", "ecs");
 	}
 
 	private List<String> eventIds;

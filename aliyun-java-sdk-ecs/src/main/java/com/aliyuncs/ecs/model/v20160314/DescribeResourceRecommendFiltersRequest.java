@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeResourceRecommendFiltersRequest extends RpcAcsRequest<DescribeResourceRecommendFiltersResponse> {
 	
 	public DescribeResourceRecommendFiltersRequest() {
-		super("Ecs", "2016-03-14", "DescribeResourceRecommendFilters");
+		super("Ecs", "2016-03-14", "DescribeResourceRecommendFilters", "ecs");
 	}
 
 	private Long resourceOwnerId;

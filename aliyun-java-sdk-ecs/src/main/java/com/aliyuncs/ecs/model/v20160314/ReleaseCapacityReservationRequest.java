@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReleaseCapacityReservationRequest extends RpcAcsRequest<ReleaseCapacityReservationResponse> {
 	
 	public ReleaseCapacityReservationRequest() {
-		super("Ecs", "2016-03-14", "ReleaseCapacityReservation");
+		super("Ecs", "2016-03-14", "ReleaseCapacityReservation", "ecs");
 	}
 
 	private Long resourceOwnerId;

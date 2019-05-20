@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateKeyPairRequest extends RpcAcsRequest<CreateKeyPairResponse> {
 	
 	public CreateKeyPairRequest() {
-		super("Ecs", "2014-05-26", "CreateKeyPair");
+		super("Ecs", "2014-05-26", "CreateKeyPair", "ecs");
 	}
 
 	private Long resourceOwnerId;

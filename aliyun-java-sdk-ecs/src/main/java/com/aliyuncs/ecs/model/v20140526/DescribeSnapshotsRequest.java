@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeSnapshotsRequest extends RpcAcsRequest<DescribeSnapshotsResponse> {
 	
 	public DescribeSnapshotsRequest() {
-		super("Ecs", "2014-05-26", "DescribeSnapshots");
+		super("Ecs", "2014-05-26", "DescribeSnapshots", "ecs");
 	}
 
 	private Long resourceOwnerId;

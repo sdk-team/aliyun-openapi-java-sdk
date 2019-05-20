@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesResponse> {
 	
 	public DescribeInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstances");
+		super("Ecs", "2014-05-26", "DescribeInstances", "ecs");
 	}
 
 	private String innerIpAddresses;

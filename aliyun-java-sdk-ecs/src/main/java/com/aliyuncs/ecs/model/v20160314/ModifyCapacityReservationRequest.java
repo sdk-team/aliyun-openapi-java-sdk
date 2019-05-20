@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyCapacityReservationRequest extends RpcAcsRequest<ModifyCapacityReservationResponse> {
 	
 	public ModifyCapacityReservationRequest() {
-		super("Ecs", "2016-03-14", "ModifyCapacityReservation");
+		super("Ecs", "2016-03-14", "ModifyCapacityReservation", "ecs");
 	}
 
 	private Long resourceOwnerId;
