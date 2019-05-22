@@ -2,6 +2,9 @@
 - Generated 2015-07-01 for `Aas`
 
 2019-05-22 Version: 1.10.5
+- Generated 2015-07-01 for `Aas`
+
+2019-05-22 Version: 1.10.5
 1. 测试发布 Aas Java/Python/C# SDK
 
 2019-05-22 Version: 2.0.0
