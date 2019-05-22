@@ -1,3 +1,7 @@
+2019-05-22 Version: 1.0.0
+1. 测试发布 Arms 全部语言
+2. 查看发布是否成功
+
 2019-03-25 Version: 2.4.3
 1, add tag object list for SearchTraces
 
