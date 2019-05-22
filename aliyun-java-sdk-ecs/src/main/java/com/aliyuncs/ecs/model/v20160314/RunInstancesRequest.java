@@ -24,7 +24,7 @@ import java.util.List;
 public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 	
 	public RunInstancesRequest() {
-		super("Ecs", "2016-03-14", "RunInstances", "ecs");
+		super("Ecs", "2016-03-14", "RunInstances");
 	}
 
 	private Long resourceOwnerId;

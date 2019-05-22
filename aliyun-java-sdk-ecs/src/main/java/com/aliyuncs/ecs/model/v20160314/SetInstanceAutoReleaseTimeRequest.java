@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SetInstanceAutoReleaseTimeRequest extends RpcAcsRequest<SetInstanceAutoReleaseTimeResponse> {
 	
 	public SetInstanceAutoReleaseTimeRequest() {
-		super("Ecs", "2016-03-14", "SetInstanceAutoReleaseTime", "ecs");
+		super("Ecs", "2016-03-14", "SetInstanceAutoReleaseTime");
 	}
 
 	private Long resourceOwnerId;

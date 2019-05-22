@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyPrepayInstanceSpecRequest extends RpcAcsRequest<ModifyPrepayInstanceSpecResponse> {
 	
 	public ModifyPrepayInstanceSpecRequest() {
-		super("Ecs", "2014-05-26", "ModifyPrepayInstanceSpec", "ecs");
+		super("Ecs", "2014-05-26", "ModifyPrepayInstanceSpec");
 	}
 
 	private Long resourceOwnerId;
@@ -34,6 +34,8 @@ public class ModifyPrepayInstanceSpecRequest extends RpcAcsRequest<ModifyPrepayI
 
 	private String systemDiskCategory;
 
+	private String rebootTime;
+
 	private Boolean migrateAcrossZone;
 
 	private String instanceType;
@@ -43,6 +45,8 @@ public class ModifyPrepayInstanceSpecRequest extends RpcAcsRequest<ModifyPrepayI
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
+
+	private String endTime;
 
 	private Long ownerId;
 
@@ -89,6 +93,17 @@ public class ModifyPrepayInstanceSpecRequest extends RpcAcsRequest<ModifyPrepayI
 		this.systemDiskCategory = systemDiskCategory;
 		if(systemDiskCategory != null){
 			putQueryParameter("SystemDisk.Category", systemDiskCategory);
+		}
+	}
+
+	public String getRebootTime() {
+		return this.rebootTime;
+	}
+
+	public void setRebootTime(String rebootTime) {
+		this.rebootTime = rebootTime;
+		if(rebootTime != null){
+			putQueryParameter("RebootTime", rebootTime);
 		}
 	}
 
@@ -144,6 +159,17 @@ public class ModifyPrepayInstanceSpecRequest extends RpcAcsRequest<ModifyPrepayI
 		this.ownerAccount = ownerAccount;
 		if(ownerAccount != null){
 			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getEndTime() {
+		return this.endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+		if(endTime != null){
+			putQueryParameter("EndTime", endTime);
 		}
 	}
 

@@ -24,7 +24,7 @@ import java.util.List;
 public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<PurchaseReservedInstancesOfferingResponse> {
 	
 	public PurchaseReservedInstancesOfferingRequest() {
-		super("Ecs", "2016-03-14", "PurchaseReservedInstancesOffering", "ecs");
+		super("Ecs", "2016-03-14", "PurchaseReservedInstancesOffering");
 	}
 
 	private Long resourceOwnerId;

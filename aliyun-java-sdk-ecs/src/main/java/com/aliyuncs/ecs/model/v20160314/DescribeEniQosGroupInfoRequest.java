@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeEniQosGroupInfoRequest extends RpcAcsRequest<DescribeEniQosGroupInfoResponse> {
 	
 	public DescribeEniQosGroupInfoRequest() {
-		super("Ecs", "2016-03-14", "DescribeEniQosGroupInfo", "ecs");
+		super("Ecs", "2016-03-14", "DescribeEniQosGroupInfo");
 	}
 
 	private Long resourceOwnerId;

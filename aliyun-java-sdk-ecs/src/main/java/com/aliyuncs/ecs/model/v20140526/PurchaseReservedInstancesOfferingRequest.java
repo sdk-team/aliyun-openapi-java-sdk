@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<PurchaseReservedInstancesOfferingResponse> {
 	
 	public PurchaseReservedInstancesOfferingRequest() {
-		super("Ecs", "2014-05-26", "PurchaseReservedInstancesOffering", "ecs");
+		super("Ecs", "2014-05-26", "PurchaseReservedInstancesOffering");
 	}
 
 	private Long resourceOwnerId;

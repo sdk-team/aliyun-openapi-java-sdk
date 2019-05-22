@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeInstanceNeedRebootRequest extends RpcAcsRequest<DescribeInstanceNeedRebootResponse> {
 	
 	public DescribeInstanceNeedRebootRequest() {
-		super("Ecs", "2016-03-14", "DescribeInstanceNeedReboot", "ecs");
+		super("Ecs", "2016-03-14", "DescribeInstanceNeedReboot");
 	}
 
 	private Long resourceOwnerId;

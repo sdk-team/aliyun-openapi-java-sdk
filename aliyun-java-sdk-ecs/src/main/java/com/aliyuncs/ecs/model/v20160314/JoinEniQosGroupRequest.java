@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class JoinEniQosGroupRequest extends RpcAcsRequest<JoinEniQosGroupResponse> {
 	
 	public JoinEniQosGroupRequest() {
-		super("Ecs", "2016-03-14", "JoinEniQosGroup", "ecs");
+		super("Ecs", "2016-03-14", "JoinEniQosGroup");
 	}
 
 	private Long resourceOwnerId;

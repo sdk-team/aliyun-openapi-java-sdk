@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeInstanceAutoRebootTimeRequest extends RpcAcsRequest<DescribeInstanceAutoRebootTimeResponse> {
 	
 	public DescribeInstanceAutoRebootTimeRequest() {
-		super("Ecs", "2016-03-14", "DescribeInstanceAutoRebootTime", "ecs");
+		super("Ecs", "2016-03-14", "DescribeInstanceAutoRebootTime");
 	}
 
 	private String autoRebootTimeTo;

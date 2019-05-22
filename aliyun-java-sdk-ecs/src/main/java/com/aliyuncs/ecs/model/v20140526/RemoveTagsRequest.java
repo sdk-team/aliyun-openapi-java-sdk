@@ -24,7 +24,7 @@ import java.util.List;
 public class RemoveTagsRequest extends RpcAcsRequest<RemoveTagsResponse> {
 	
 	public RemoveTagsRequest() {
-		super("Ecs", "2014-05-26", "RemoveTags", "ecs");
+		super("Ecs", "2014-05-26", "RemoveTags");
 	}
 
 	private Long resourceOwnerId;

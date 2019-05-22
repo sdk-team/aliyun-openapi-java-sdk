@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeReservedInstancePriceRequest extends RpcAcsRequest<DescribeReservedInstancePriceResponse> {
 	
 	public DescribeReservedInstancePriceRequest() {
-		super("Ecs", "2016-03-14", "DescribeReservedInstancePrice", "ecs");
+		super("Ecs", "2016-03-14", "DescribeReservedInstancePrice");
 	}
 
 	private Long resourceOwnerId;

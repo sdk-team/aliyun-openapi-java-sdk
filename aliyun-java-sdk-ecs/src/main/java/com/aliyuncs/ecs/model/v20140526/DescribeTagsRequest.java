@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 	
 	public DescribeTagsRequest() {
-		super("Ecs", "2014-05-26", "DescribeTags", "ecs");
+		super("Ecs", "2014-05-26", "DescribeTags");
 	}
 
 	private Long resourceOwnerId;
@@ -42,6 +42,8 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 	private Long ownerId;
 
 	private String resourceType;
+
+	private String category;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -131,6 +133,17 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 		this.resourceType = resourceType;
 		if(resourceType != null){
 			putQueryParameter("ResourceType", resourceType);
+		}
+	}
+
+	public String getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+		if(category != null){
+			putQueryParameter("Category", category);
 		}
 	}
 

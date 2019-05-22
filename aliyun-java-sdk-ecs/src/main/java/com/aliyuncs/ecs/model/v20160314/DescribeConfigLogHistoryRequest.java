@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeConfigLogHistoryRequest extends RpcAcsRequest<DescribeConfigLogHistoryResponse> {
 	
 	public DescribeConfigLogHistoryRequest() {
-		super("Ecs", "2016-03-14", "DescribeConfigLogHistory", "ecs");
+		super("Ecs", "2016-03-14", "DescribeConfigLogHistory");
 	}
 
 	private Long resourceOwnerId;

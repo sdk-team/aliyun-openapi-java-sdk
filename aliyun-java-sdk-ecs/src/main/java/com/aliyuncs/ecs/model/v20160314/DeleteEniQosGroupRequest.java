@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteEniQosGroupRequest extends RpcAcsRequest<DeleteEniQosGroupResponse> {
 	
 	public DeleteEniQosGroupRequest() {
-		super("Ecs", "2016-03-14", "DeleteEniQosGroup", "ecs");
+		super("Ecs", "2016-03-14", "DeleteEniQosGroup");
 	}
 
 	private Long resourceOwnerId;

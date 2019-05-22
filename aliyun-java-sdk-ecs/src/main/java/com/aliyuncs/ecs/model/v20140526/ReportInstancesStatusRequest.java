@@ -24,7 +24,7 @@ import java.util.List;
 public class ReportInstancesStatusRequest extends RpcAcsRequest<ReportInstancesStatusResponse> {
 	
 	public ReportInstancesStatusRequest() {
-		super("Ecs", "2014-05-26", "ReportInstancesStatus", "ecs");
+		super("Ecs", "2014-05-26", "ReportInstancesStatus");
 	}
 
 	private String reason;

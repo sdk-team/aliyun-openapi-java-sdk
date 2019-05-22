@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyFleetRequest extends RpcAcsRequest<ModifyFleetResponse> {
 	
 	public ModifyFleetRequest() {
-		super("Ecs", "2014-05-26", "ModifyFleet", "ecs");
+		super("Ecs", "2014-05-26", "ModifyFleet");
 	}
 
 	private Long resourceOwnerId;

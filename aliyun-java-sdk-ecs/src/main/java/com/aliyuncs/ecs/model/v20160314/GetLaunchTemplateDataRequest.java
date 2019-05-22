@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetLaunchTemplateDataRequest extends RpcAcsRequest<GetLaunchTemplateDataResponse> {
 	
 	public GetLaunchTemplateDataRequest() {
-		super("Ecs", "2016-03-14", "GetLaunchTemplateData", "ecs");
+		super("Ecs", "2016-03-14", "GetLaunchTemplateData");
 	}
 
 	private Long resourceOwnerId;

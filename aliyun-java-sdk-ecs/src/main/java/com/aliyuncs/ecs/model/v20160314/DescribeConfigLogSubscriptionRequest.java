@@ -24,7 +24,7 @@ import java.util.List;
 public class DescribeConfigLogSubscriptionRequest extends RpcAcsRequest<DescribeConfigLogSubscriptionResponse> {
 	
 	public DescribeConfigLogSubscriptionRequest() {
-		super("Ecs", "2016-03-14", "DescribeConfigLogSubscription", "ecs");
+		super("Ecs", "2016-03-14", "DescribeConfigLogSubscription");
 	}
 
 	private Long resourceOwnerId;

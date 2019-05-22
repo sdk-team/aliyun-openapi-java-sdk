@@ -24,7 +24,7 @@ import java.util.List;
 public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicatedHostsResponse> {
 	
 	public AllocateDedicatedHostsRequest() {
-		super("Ecs", "2014-05-26", "AllocateDedicatedHosts", "ecs");
+		super("Ecs", "2014-05-26", "AllocateDedicatedHosts");
 	}
 
 	private Long resourceOwnerId;

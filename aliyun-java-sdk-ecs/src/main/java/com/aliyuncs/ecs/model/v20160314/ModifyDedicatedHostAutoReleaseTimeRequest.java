@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDedicatedHostAutoReleaseTimeRequest extends RpcAcsRequest<ModifyDedicatedHostAutoReleaseTimeResponse> {
 	
 	public ModifyDedicatedHostAutoReleaseTimeRequest() {
-		super("Ecs", "2016-03-14", "ModifyDedicatedHostAutoReleaseTime", "ecs");
+		super("Ecs", "2016-03-14", "ModifyDedicatedHostAutoReleaseTime");
 	}
 
 	private Long resourceOwnerId;

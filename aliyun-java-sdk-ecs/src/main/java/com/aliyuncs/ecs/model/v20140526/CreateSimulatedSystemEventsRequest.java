@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateSimulatedSystemEventsRequest extends RpcAcsRequest<CreateSimulatedSystemEventsResponse> {
 	
 	public CreateSimulatedSystemEventsRequest() {
-		super("Ecs", "2014-05-26", "CreateSimulatedSystemEvents", "ecs");
+		super("Ecs", "2014-05-26", "CreateSimulatedSystemEvents");
 	}
 
 	private Long resourceOwnerId;

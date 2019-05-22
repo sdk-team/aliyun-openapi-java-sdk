@@ -24,7 +24,7 @@ import java.util.List;
 public class ModifyInstanceAutoRebootTimeRequest extends RpcAcsRequest<ModifyInstanceAutoRebootTimeResponse> {
 	
 	public ModifyInstanceAutoRebootTimeRequest() {
-		super("Ecs", "2016-03-14", "ModifyInstanceAutoRebootTime", "ecs");
+		super("Ecs", "2016-03-14", "ModifyInstanceAutoRebootTime");
 	}
 
 	private Long resourceOwnerId;

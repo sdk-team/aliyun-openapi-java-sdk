@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteFleetRequest extends RpcAcsRequest<DeleteFleetResponse> {
 	
 	public DeleteFleetRequest() {
-		super("Ecs", "2014-05-26", "DeleteFleet", "ecs");
+		super("Ecs", "2014-05-26", "DeleteFleet");
 	}
 
 	private Long resourceOwnerId;
