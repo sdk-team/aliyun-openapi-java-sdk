@@ -1,3 +1,6 @@
+2019-05-23 Version: 1.0.4
+测试发布 1.0.4-SNAPSHOT
+
 2019-05-23 Version: 1.0.3
 测试发布 1.0.3-SNAPSHOT
 
