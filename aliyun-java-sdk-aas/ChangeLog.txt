@@ -1,3 +1,6 @@
+2019-05-23 Version: 1.0.9
+测试发布 Aas 1.0.9-SNAPSHOT 版本
+
 2019-05-23 Version: 1.0.8
 - Generated 2015-07-01 for `Aas`
 
