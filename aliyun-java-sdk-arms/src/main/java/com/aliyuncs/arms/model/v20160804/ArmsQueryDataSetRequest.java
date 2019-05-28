@@ -24,7 +24,7 @@ import java.util.List;
 public class ArmsQueryDataSetRequest extends RpcAcsRequest<ArmsQueryDataSetResponse> {
 	
 	public ArmsQueryDataSetRequest() {
-		super("ARMS", "2016-08-04", "ArmsQueryDataSet");
+		super("ARMS", "2016-08-04", "ArmsQueryDataSet", "arms");
 	}
 
 	private Long dateStr;
