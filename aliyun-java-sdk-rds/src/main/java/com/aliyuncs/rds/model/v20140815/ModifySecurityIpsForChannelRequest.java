@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifySecurityIpsForChannelRequest extends RpcAcsRequest<ModifySecurityIpsForChannelResponse> {
 	
 	public ModifySecurityIpsForChannelRequest() {
-		super("Rds", "2014-08-15", "ModifySecurityIpsForChannel");
+		super("Rds", "2014-08-15", "ModifySecurityIpsForChannel", "rds");
 	}
 
 	private String dBInstanceIPArrayName;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceOnBigTableRequest extends RpcAcsRequest<DescribeOptimizeAdviceOnBigTableResponse> {
 	
 	public DescribeOptimizeAdviceOnBigTableRequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnBigTable");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnBigTable", "rds");
 	}
 
 	private Long resourceOwnerId;

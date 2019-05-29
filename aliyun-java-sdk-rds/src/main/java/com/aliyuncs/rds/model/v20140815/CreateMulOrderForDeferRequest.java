@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateMulOrderForDeferRequest extends RpcAcsRequest<CreateMulOrderForDeferResponse> {
 	
 	public CreateMulOrderForDeferRequest() {
-		super("Rds", "2014-08-15", "CreateMulOrderForDefer");
+		super("Rds", "2014-08-15", "CreateMulOrderForDefer", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class BatchGrantAccountPrivilegeRequest extends RpcAcsRequest<BatchGrantAccountPrivilegeResponse> {
 	
 	public BatchGrantAccountPrivilegeRequest() {
-		super("Rds", "2014-08-15", "BatchGrantAccountPrivilege");
+		super("Rds", "2014-08-15", "BatchGrantAccountPrivilege", "rds");
 	}
 
 	private Long resourceOwnerId;

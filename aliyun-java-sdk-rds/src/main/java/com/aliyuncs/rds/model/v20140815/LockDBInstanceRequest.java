@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class LockDBInstanceRequest extends RpcAcsRequest<LockDBInstanceResponse> {
 	
 	public LockDBInstanceRequest() {
-		super("Rds", "2014-08-15", "LockDBInstance");
+		super("Rds", "2014-08-15", "LockDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

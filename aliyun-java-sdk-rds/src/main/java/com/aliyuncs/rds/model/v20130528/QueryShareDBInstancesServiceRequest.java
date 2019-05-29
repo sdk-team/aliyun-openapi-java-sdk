@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryShareDBInstancesServiceRequest extends RpcAcsRequest<QueryShareDBInstancesServiceResponse> {
 	
 	public QueryShareDBInstancesServiceRequest() {
-		super("Rds", "2013-05-28", "QueryShareDBInstancesService");
+		super("Rds", "2013-05-28", "QueryShareDBInstancesService", "rds");
 	}
 
 	private Long resourceOwnerId;

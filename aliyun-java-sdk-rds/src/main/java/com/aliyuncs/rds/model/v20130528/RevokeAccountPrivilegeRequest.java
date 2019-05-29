@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RevokeAccountPrivilegeRequest extends RpcAcsRequest<RevokeAccountPrivilegeResponse> {
 	
 	public RevokeAccountPrivilegeRequest() {
-		super("Rds", "2013-05-28", "RevokeAccountPrivilege");
+		super("Rds", "2013-05-28", "RevokeAccountPrivilege", "rds");
 	}
 
 	private Long resourceOwnerId;

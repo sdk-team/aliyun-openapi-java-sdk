@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDBInstanceChargeTypeForJuShiTaRequest extends RpcAcsRequest<ModifyDBInstanceChargeTypeForJuShiTaResponse> {
 	
 	public ModifyDBInstanceChargeTypeForJuShiTaRequest() {
-		super("Rds", "2014-08-15", "ModifyDBInstanceChargeTypeForJuShiTa");
+		super("Rds", "2014-08-15", "ModifyDBInstanceChargeTypeForJuShiTa", "rds");
 	}
 
 	private Long resourceOwnerId;

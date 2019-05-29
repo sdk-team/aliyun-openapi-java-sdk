@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StopSyncingRequest extends RpcAcsRequest<StopSyncingResponse> {
 	
 	public StopSyncingRequest() {
-		super("Rds", "2014-08-15", "StopSyncing");
+		super("Rds", "2014-08-15", "StopSyncing", "rds");
 	}
 
 	private Long resourceOwnerId;

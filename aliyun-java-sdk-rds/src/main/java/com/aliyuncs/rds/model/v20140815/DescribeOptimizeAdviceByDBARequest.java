@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceByDBARequest extends RpcAcsRequest<DescribeOptimizeAdviceByDBAResponse> {
 	
 	public DescribeOptimizeAdviceByDBARequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceByDBA");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceByDBA", "rds");
 	}
 
 	private Long resourceOwnerId;

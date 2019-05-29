@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StartSqlLogDumpRequest extends RpcAcsRequest<StartSqlLogDumpResponse> {
 	
 	public StartSqlLogDumpRequest() {
-		super("Rds", "2014-08-15", "StartSqlLogDump");
+		super("Rds", "2014-08-15", "StartSqlLogDump", "rds");
 	}
 
 	private Long resourceOwnerId;

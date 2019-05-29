@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeFCTriggerRequest extends RpcAcsRequest<DescribeFCTriggerResponse> {
 	
 	public DescribeFCTriggerRequest() {
-		super("Rds", "2014-08-15", "DescribeFCTrigger");
+		super("Rds", "2014-08-15", "DescribeFCTrigger", "rds");
 	}
 
 	private Long resourceOwnerId;

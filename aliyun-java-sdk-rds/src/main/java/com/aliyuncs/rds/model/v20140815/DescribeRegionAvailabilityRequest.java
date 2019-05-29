@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeRegionAvailabilityRequest extends RpcAcsRequest<DescribeRegionAvailabilityResponse> {
 	
 	public DescribeRegionAvailabilityRequest() {
-		super("Rds", "2014-08-15", "DescribeRegionAvailability");
+		super("Rds", "2014-08-15", "DescribeRegionAvailability", "rds");
 	}
 
 	private Long resourceOwnerId;

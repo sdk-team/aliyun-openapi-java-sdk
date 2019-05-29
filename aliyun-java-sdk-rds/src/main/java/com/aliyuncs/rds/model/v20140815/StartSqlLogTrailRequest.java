@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StartSqlLogTrailRequest extends RpcAcsRequest<StartSqlLogTrailResponse> {
 	
 	public StartSqlLogTrailRequest() {
-		super("Rds", "2014-08-15", "StartSqlLogTrail");
+		super("Rds", "2014-08-15", "StartSqlLogTrail", "rds");
 	}
 
 	private Long resourceOwnerId;

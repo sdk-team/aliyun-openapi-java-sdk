@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryPriceForTempUpgradeRequest extends RpcAcsRequest<QueryPriceForTempUpgradeResponse> {
 	
 	public QueryPriceForTempUpgradeRequest() {
-		super("Rds", "2014-08-15", "QueryPriceForTempUpgrade");
+		super("Rds", "2014-08-15", "QueryPriceForTempUpgrade", "rds");
 	}
 
 	private Long resourceOwnerId;

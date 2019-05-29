@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeCustinsKernelReleaseNotesRequest extends RpcAcsRequest<DescribeCustinsKernelReleaseNotesResponse> {
 	
 	public DescribeCustinsKernelReleaseNotesRequest() {
-		super("Rds", "2014-08-15", "DescribeCustinsKernelReleaseNotes");
+		super("Rds", "2014-08-15", "DescribeCustinsKernelReleaseNotes", "rds");
 	}
 
 	private Long resourceOwnerId;

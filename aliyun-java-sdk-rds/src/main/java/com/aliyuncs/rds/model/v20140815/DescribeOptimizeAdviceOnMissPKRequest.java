@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceOnMissPKRequest extends RpcAcsRequest<DescribeOptimizeAdviceOnMissPKResponse> {
 	
 	public DescribeOptimizeAdviceOnMissPKRequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnMissPK");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnMissPK", "rds");
 	}
 
 	private Long resourceOwnerId;

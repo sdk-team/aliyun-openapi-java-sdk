@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AllocateClassicNetworkTypeRequest extends RpcAcsRequest<AllocateClassicNetworkTypeResponse> {
 	
 	public AllocateClassicNetworkTypeRequest() {
-		super("Rds", "2014-08-15", "AllocateClassicNetworkType");
+		super("Rds", "2014-08-15", "AllocateClassicNetworkType", "rds");
 	}
 
 	private Long resourceOwnerId;

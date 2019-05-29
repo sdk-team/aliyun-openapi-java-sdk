@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateOpenSearchDBInstanceRequest extends RpcAcsRequest<CreateOpenSearchDBInstanceResponse> {
 	
 	public CreateOpenSearchDBInstanceRequest() {
-		super("Rds", "2014-08-15", "CreateOpenSearchDBInstance");
+		super("Rds", "2014-08-15", "CreateOpenSearchDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryPriceMultiForDeferRequest extends RpcAcsRequest<QueryPriceMultiForDeferResponse> {
 	
 	public QueryPriceMultiForDeferRequest() {
-		super("Rds", "2014-08-15", "QueryPriceMultiForDefer");
+		super("Rds", "2014-08-15", "QueryPriceMultiForDefer", "rds");
 	}
 
 	private Long resourceOwnerId;

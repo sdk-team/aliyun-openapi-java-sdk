@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceOnExcessIndexRequest extends RpcAcsRequest<DescribeOptimizeAdviceOnExcessIndexResponse> {
 	
 	public DescribeOptimizeAdviceOnExcessIndexRequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnExcessIndex");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnExcessIndex", "rds");
 	}
 
 	private Long resourceOwnerId;

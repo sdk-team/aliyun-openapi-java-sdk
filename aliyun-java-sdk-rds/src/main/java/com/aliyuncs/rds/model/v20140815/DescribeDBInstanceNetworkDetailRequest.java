@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceNetworkDetailRequest extends RpcAcsRequest<DescribeDBInstanceNetworkDetailResponse> {
 	
 	public DescribeDBInstanceNetworkDetailRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceNetworkDetail");
+		super("Rds", "2014-08-15", "DescribeDBInstanceNetworkDetail", "rds");
 	}
 
 	private String startPoint;

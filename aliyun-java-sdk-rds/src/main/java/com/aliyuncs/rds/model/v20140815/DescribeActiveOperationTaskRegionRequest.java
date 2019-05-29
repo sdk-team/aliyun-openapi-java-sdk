@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeActiveOperationTaskRegionRequest extends RpcAcsRequest<DescribeActiveOperationTaskRegionResponse> {
 	
 	public DescribeActiveOperationTaskRegionRequest() {
-		super("Rds", "2014-08-15", "DescribeActiveOperationTaskRegion");
+		super("Rds", "2014-08-15", "DescribeActiveOperationTaskRegion", "rds");
 	}
 
 	private Long resourceOwnerId;

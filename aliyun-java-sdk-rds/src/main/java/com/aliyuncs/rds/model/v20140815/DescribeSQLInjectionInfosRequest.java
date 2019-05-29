@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSQLInjectionInfosRequest extends RpcAcsRequest<DescribeSQLInjectionInfosResponse> {
 	
 	public DescribeSQLInjectionInfosRequest() {
-		super("Rds", "2014-08-15", "DescribeSQLInjectionInfos");
+		super("Rds", "2014-08-15", "DescribeSQLInjectionInfos", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReplicaDynamicModeRequest extends RpcAcsRequest<ModifyReplicaDynamicModeResponse> {
 	
 	public ModifyReplicaDynamicModeRequest() {
-		super("Rds", "2014-08-15", "ModifyReplicaDynamicMode");
+		super("Rds", "2014-08-15", "ModifyReplicaDynamicMode", "rds");
 	}
 
 	private Long resourceOwnerId;

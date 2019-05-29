@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RestartDBInstanceRequest extends RpcAcsRequest<RestartDBInstanceResponse> {
 	
 	public RestartDBInstanceRequest() {
-		super("Rds", "2013-05-28", "RestartDBInstance");
+		super("Rds", "2013-05-28", "RestartDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

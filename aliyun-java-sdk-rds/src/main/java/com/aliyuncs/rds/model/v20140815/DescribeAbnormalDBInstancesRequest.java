@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeAbnormalDBInstancesRequest extends RpcAcsRequest<DescribeAbnormalDBInstancesResponse> {
 	
 	public DescribeAbnormalDBInstancesRequest() {
-		super("Rds", "2014-08-15", "DescribeAbnormalDBInstances");
+		super("Rds", "2014-08-15", "DescribeAbnormalDBInstances", "rds");
 	}
 
 	private String tag4value;

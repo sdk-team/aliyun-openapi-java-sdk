@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AllocateCloudInstanceIpRequest extends RpcAcsRequest<AllocateCloudInstanceIpResponse> {
 	
 	public AllocateCloudInstanceIpRequest() {
-		super("Rds", "2014-08-15", "AllocateCloudInstanceIp");
+		super("Rds", "2014-08-15", "AllocateCloudInstanceIp", "rds");
 	}
 
 	private Long resourceOwnerId;

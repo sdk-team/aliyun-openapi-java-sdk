@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class PreCheckBeforeImportDataRequest extends RpcAcsRequest<PreCheckBeforeImportDataResponse> {
 	
 	public PreCheckBeforeImportDataRequest() {
-		super("Rds", "2014-08-15", "PreCheckBeforeImportData");
+		super("Rds", "2014-08-15", "PreCheckBeforeImportData", "rds");
 	}
 
 	private Long resourceOwnerId;

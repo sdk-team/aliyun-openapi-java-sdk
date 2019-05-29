@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceEncryptionKeyRequest extends RpcAcsRequest<DescribeDBInstanceEncryptionKeyResponse> {
 	
 	public DescribeDBInstanceEncryptionKeyRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceEncryptionKey");
+		super("Rds", "2014-08-15", "DescribeDBInstanceEncryptionKey", "rds");
 	}
 
 	private Long resourceOwnerId;
@@ -36,7 +36,11 @@ public class DescribeDBInstanceEncryptionKeyRequest extends RpcAcsRequest<Descri
 
 	private String ownerAccount;
 
+	private String encryptionKey;
+
 	private Long ownerId;
+
+	private String targetRegionId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -112,6 +116,17 @@ public class DescribeDBInstanceEncryptionKeyRequest extends RpcAcsRequest<Descri
 		}
 	}
 
+	public String getEncryptionKey() {
+		return this.encryptionKey;
+	}
+
+	public void setEncryptionKey(String encryptionKey) {
+		this.encryptionKey = encryptionKey;
+		if(encryptionKey != null){
+			putQueryParameter("EncryptionKey", encryptionKey);
+		}
+	}
+
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -120,6 +135,17 @@ public class DescribeDBInstanceEncryptionKeyRequest extends RpcAcsRequest<Descri
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getTargetRegionId() {
+		return this.targetRegionId;
+	}
+
+	public void setTargetRegionId(String targetRegionId) {
+		this.targetRegionId = targetRegionId;
+		if(targetRegionId != null){
+			putQueryParameter("TargetRegionId", targetRegionId);
 		}
 	}
 

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstanceKeywordsRequest extends RpcAcsRequest<DescribeInstanceKeywordsResponse> {
 	
 	public DescribeInstanceKeywordsRequest() {
-		super("Rds", "2014-08-15", "DescribeInstanceKeywords");
+		super("Rds", "2014-08-15", "DescribeInstanceKeywords", "rds");
 	}
 
 	private Long resourceOwnerId;

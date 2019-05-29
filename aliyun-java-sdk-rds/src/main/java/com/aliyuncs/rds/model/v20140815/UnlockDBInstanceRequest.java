@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UnlockDBInstanceRequest extends RpcAcsRequest<UnlockDBInstanceResponse> {
 	
 	public UnlockDBInstanceRequest() {
-		super("Rds", "2014-08-15", "UnlockDBInstance");
+		super("Rds", "2014-08-15", "UnlockDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

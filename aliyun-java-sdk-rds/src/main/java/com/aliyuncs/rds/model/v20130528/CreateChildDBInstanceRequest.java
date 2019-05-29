@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateChildDBInstanceRequest extends RpcAcsRequest<CreateChildDBInstanceResponse> {
 	
 	public CreateChildDBInstanceRequest() {
-		super("Rds", "2013-05-28", "CreateChildDBInstance");
+		super("Rds", "2013-05-28", "CreateChildDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

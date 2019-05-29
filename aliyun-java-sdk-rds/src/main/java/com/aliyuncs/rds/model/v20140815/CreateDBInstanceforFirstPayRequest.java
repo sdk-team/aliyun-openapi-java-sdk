@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDBInstanceforFirstPayRequest extends RpcAcsRequest<CreateDBInstanceforFirstPayResponse> {
 	
 	public CreateDBInstanceforFirstPayRequest() {
-		super("Rds", "2014-08-15", "CreateDBInstanceforFirstPay");
+		super("Rds", "2014-08-15", "CreateDBInstanceforFirstPay", "rds");
 	}
 
 	private Integer dBInstanceStorage;

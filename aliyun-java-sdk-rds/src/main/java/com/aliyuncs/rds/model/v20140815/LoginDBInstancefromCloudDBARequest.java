@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class LoginDBInstancefromCloudDBARequest extends RpcAcsRequest<LoginDBInstancefromCloudDBAResponse> {
 	
 	public LoginDBInstancefromCloudDBARequest() {
-		super("Rds", "2014-08-15", "LoginDBInstancefromCloudDBA");
+		super("Rds", "2014-08-15", "LoginDBInstancefromCloudDBA", "rds");
 	}
 
 	private String serviceRequestType;

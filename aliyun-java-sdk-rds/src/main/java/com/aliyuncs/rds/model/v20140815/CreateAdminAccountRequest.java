@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAdminAccountRequest extends RpcAcsRequest<CreateAdminAccountResponse> {
 	
 	public CreateAdminAccountRequest() {
-		super("Rds", "2014-08-15", "CreateAdminAccount");
+		super("Rds", "2014-08-15", "CreateAdminAccount", "rds");
 	}
 
 	private String accountType;

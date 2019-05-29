@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryPriceRequest extends RpcAcsRequest<QueryPriceResponse> {
 	
 	public QueryPriceRequest() {
-		super("Rds", "2014-08-15", "QueryPrice");
+		super("Rds", "2014-08-15", "QueryPrice", "rds");
 	}
 
 	private Long resourceOwnerId;

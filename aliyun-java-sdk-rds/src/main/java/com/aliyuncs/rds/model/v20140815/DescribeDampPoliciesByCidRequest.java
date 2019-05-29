@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDampPoliciesByCidRequest extends RpcAcsRequest<DescribeDampPoliciesByCidResponse> {
 	
 	public DescribeDampPoliciesByCidRequest() {
-		super("Rds", "2014-08-15", "DescribeDampPoliciesByCid");
+		super("Rds", "2014-08-15", "DescribeDampPoliciesByCid", "rds");
 	}
 
 	private Long resourceOwnerId;

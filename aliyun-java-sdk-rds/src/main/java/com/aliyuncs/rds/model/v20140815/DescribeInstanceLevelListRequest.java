@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstanceLevelListRequest extends RpcAcsRequest<DescribeInstanceLevelListResponse> {
 	
 	public DescribeInstanceLevelListRequest() {
-		super("Rds", "2014-08-15", "DescribeInstanceLevelList");
+		super("Rds", "2014-08-15", "DescribeInstanceLevelList", "rds");
 	}
 
 	private Long resourceOwnerId;

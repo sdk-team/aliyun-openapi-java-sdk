@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSQLCollectorRetentionRequest extends RpcAcsRequest<DescribeSQLCollectorRetentionResponse> {
 	
 	public DescribeSQLCollectorRetentionRequest() {
-		super("Rds", "2014-08-15", "DescribeSQLCollectorRetention");
+		super("Rds", "2014-08-15", "DescribeSQLCollectorRetention", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDBInstanceForChannelRequest extends RpcAcsRequest<CreateDBInstanceForChannelResponse> {
 	
 	public CreateDBInstanceForChannelRequest() {
-		super("Rds", "2014-08-15", "CreateDBInstanceForChannel");
+		super("Rds", "2014-08-15", "CreateDBInstanceForChannel", "rds");
 	}
 
 	private Long resourceOwnerId;

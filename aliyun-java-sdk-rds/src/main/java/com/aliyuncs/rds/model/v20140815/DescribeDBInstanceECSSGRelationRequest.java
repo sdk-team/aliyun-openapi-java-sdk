@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceECSSGRelationRequest extends RpcAcsRequest<DescribeDBInstanceECSSGRelationResponse> {
 	
 	public DescribeDBInstanceECSSGRelationRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceECSSGRelation");
+		super("Rds", "2014-08-15", "DescribeDBInstanceECSSGRelation", "rds");
 	}
 
 	private Long resourceOwnerId;

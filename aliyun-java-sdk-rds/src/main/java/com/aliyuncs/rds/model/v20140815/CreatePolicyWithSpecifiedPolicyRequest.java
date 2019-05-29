@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreatePolicyWithSpecifiedPolicyRequest extends RpcAcsRequest<CreatePolicyWithSpecifiedPolicyResponse> {
 	
 	public CreatePolicyWithSpecifiedPolicyRequest() {
-		super("Rds", "2014-08-15", "CreatePolicyWithSpecifiedPolicy");
+		super("Rds", "2014-08-15", "CreatePolicyWithSpecifiedPolicy", "rds");
 	}
 
 	private Long resourceOwnerId;

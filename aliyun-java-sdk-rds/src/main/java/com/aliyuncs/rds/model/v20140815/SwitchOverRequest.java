@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SwitchOverRequest extends RpcAcsRequest<SwitchOverResponse> {
 	
 	public SwitchOverRequest() {
-		super("Rds", "2014-08-15", "SwitchOver");
+		super("Rds", "2014-08-15", "SwitchOver", "rds");
 	}
 
 	private Long resourceOwnerId;

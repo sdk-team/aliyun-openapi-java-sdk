@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeRegionsForChannelRequest extends RpcAcsRequest<DescribeRegionsForChannelResponse> {
 	
 	public DescribeRegionsForChannelRequest() {
-		super("Rds", "2014-08-15", "DescribeRegionsForChannel");
+		super("Rds", "2014-08-15", "DescribeRegionsForChannel", "rds");
 	}
 
 	private Long resourceOwnerId;

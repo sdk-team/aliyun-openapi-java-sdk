@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceInfoRequest extends RpcAcsRequest<DescribeDBInstanceInfoResponse> {
 	
 	public DescribeDBInstanceInfoRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceInfo");
+		super("Rds", "2014-08-15", "DescribeDBInstanceInfo", "rds");
 	}
 
 	private String addressPort;

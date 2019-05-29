@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyAccountAttributeRequest extends RpcAcsRequest<ModifyAccountAttributeResponse> {
 	
 	public ModifyAccountAttributeRequest() {
-		super("Rds", "2013-05-28", "ModifyAccountAttribute");
+		super("Rds", "2013-05-28", "ModifyAccountAttribute", "rds");
 	}
 
 	private Long resourceOwnerId;

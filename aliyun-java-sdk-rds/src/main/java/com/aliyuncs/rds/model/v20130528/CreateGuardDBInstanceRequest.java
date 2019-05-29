@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateGuardDBInstanceRequest extends RpcAcsRequest<CreateGuardDBInstanceResponse> {
 	
 	public CreateGuardDBInstanceRequest() {
-		super("Rds", "2013-05-28", "CreateGuardDBInstance");
+		super("Rds", "2013-05-28", "CreateGuardDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

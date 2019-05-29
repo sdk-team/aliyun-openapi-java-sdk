@@ -77,6 +77,8 @@ public class DescribeSqlLogInstancesResponse extends AcsResponse {
 
 		private String loghubLogstore;
 
+		private String sqlExplorerTrial;
+
 		public String getDBInstanceID() {
 			return this.dBInstanceID;
 		}
@@ -155,6 +157,14 @@ public class DescribeSqlLogInstancesResponse extends AcsResponse {
 
 		public void setLoghubLogstore(String loghubLogstore) {
 			this.loghubLogstore = loghubLogstore;
+		}
+
+		public String getSqlExplorerTrial() {
+			return this.sqlExplorerTrial;
+		}
+
+		public void setSqlExplorerTrial(String sqlExplorerTrial) {
+			this.sqlExplorerTrial = sqlExplorerTrial;
 		}
 	}
 

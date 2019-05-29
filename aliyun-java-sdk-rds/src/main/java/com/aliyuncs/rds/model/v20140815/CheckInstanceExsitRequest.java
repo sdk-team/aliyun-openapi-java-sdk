@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckInstanceExsitRequest extends RpcAcsRequest<CheckInstanceExsitResponse> {
 	
 	public CheckInstanceExsitRequest() {
-		super("Rds", "2014-08-15", "CheckInstanceExsit");
+		super("Rds", "2014-08-15", "CheckInstanceExsit", "rds");
 	}
 
 	private Long resourceOwnerId;

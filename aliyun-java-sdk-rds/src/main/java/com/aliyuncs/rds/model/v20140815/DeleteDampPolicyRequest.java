@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteDampPolicyRequest extends RpcAcsRequest<DeleteDampPolicyResponse> {
 	
 	public DeleteDampPolicyRequest() {
-		super("Rds", "2014-08-15", "DeleteDampPolicy");
+		super("Rds", "2014-08-15", "DeleteDampPolicy", "rds");
 	}
 
 	private Long resourceOwnerId;

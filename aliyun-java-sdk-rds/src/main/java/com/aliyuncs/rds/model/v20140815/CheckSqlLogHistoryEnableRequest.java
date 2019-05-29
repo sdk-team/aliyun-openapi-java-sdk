@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckSqlLogHistoryEnableRequest extends RpcAcsRequest<CheckSqlLogHistoryEnableResponse> {
 	
 	public CheckSqlLogHistoryEnableRequest() {
-		super("Rds", "2014-08-15", "CheckSqlLogHistoryEnable");
+		super("Rds", "2014-08-15", "CheckSqlLogHistoryEnable", "rds");
 	}
 
 	private Long resourceOwnerId;

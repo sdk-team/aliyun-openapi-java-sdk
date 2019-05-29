@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AddBuDBInstanceRelationRequest extends RpcAcsRequest<AddBuDBInstanceRelationResponse> {
 	
 	public AddBuDBInstanceRelationRequest() {
-		super("Rds", "2014-08-15", "AddBuDBInstanceRelation");
+		super("Rds", "2014-08-15", "AddBuDBInstanceRelation", "rds");
 	}
 
 	private Long resourceOwnerId;

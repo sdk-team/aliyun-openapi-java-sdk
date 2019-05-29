@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteFCTriggerRequest extends RpcAcsRequest<DeleteFCTriggerResponse> {
 	
 	public DeleteFCTriggerRequest() {
-		super("Rds", "2014-08-15", "DeleteFCTrigger");
+		super("Rds", "2014-08-15", "DeleteFCTrigger", "rds");
 	}
 
 	private Long resourceOwnerId;

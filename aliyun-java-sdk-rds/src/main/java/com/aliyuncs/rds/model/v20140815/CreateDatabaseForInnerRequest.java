@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDatabaseForInnerRequest extends RpcAcsRequest<CreateDatabaseForInnerResponse> {
 	
 	public CreateDatabaseForInnerRequest() {
-		super("Rds", "2014-08-15", "CreateDatabaseForInner");
+		super("Rds", "2014-08-15", "CreateDatabaseForInner", "rds");
 	}
 
 	private Long resourceOwnerId;

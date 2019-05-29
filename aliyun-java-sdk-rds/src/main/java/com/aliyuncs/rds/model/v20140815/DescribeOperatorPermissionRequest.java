@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOperatorPermissionRequest extends RpcAcsRequest<DescribeOperatorPermissionResponse> {
 	
 	public DescribeOperatorPermissionRequest() {
-		super("Rds", "2014-08-15", "DescribeOperatorPermission");
+		super("Rds", "2014-08-15", "DescribeOperatorPermission", "rds");
 	}
 
 	private Long resourceOwnerId;

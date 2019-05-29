@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeUserEncryptionKeyListRequest extends RpcAcsRequest<DescribeUserEncryptionKeyListResponse> {
 	
 	public DescribeUserEncryptionKeyListRequest() {
-		super("Rds", "2014-08-15", "DescribeUserEncryptionKeyList");
+		super("Rds", "2014-08-15", "DescribeUserEncryptionKeyList", "rds");
 	}
 
 	private Long resourceOwnerId;
@@ -37,6 +37,8 @@ public class DescribeUserEncryptionKeyListRequest extends RpcAcsRequest<Describe
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String targetRegionId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -120,6 +122,17 @@ public class DescribeUserEncryptionKeyListRequest extends RpcAcsRequest<Describe
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getTargetRegionId() {
+		return this.targetRegionId;
+	}
+
+	public void setTargetRegionId(String targetRegionId) {
+		this.targetRegionId = targetRegionId;
+		if(targetRegionId != null){
+			putQueryParameter("TargetRegionId", targetRegionId);
 		}
 	}
 

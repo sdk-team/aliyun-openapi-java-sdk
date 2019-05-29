@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceClassesRequest extends RpcAcsRequest<DescribeDBInstanceClassesResponse> {
 	
 	public DescribeDBInstanceClassesRequest() {
-		super("Rds", "2013-05-28", "DescribeDBInstanceClasses");
+		super("Rds", "2013-05-28", "DescribeDBInstanceClasses", "rds");
 	}
 
 	private Long resourceOwnerId;

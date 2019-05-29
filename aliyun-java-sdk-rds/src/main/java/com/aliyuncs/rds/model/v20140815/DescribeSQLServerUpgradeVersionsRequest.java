@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSQLServerUpgradeVersionsRequest extends RpcAcsRequest<DescribeSQLServerUpgradeVersionsResponse> {
 	
 	public DescribeSQLServerUpgradeVersionsRequest() {
-		super("Rds", "2014-08-15", "DescribeSQLServerUpgradeVersions");
+		super("Rds", "2014-08-15", "DescribeSQLServerUpgradeVersions", "rds");
 	}
 
 	private Long resourceOwnerId;

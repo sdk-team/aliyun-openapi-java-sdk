@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckDBNameAvailableRequest extends RpcAcsRequest<CheckDBNameAvailableResponse> {
 	
 	public CheckDBNameAvailableRequest() {
-		super("Rds", "2014-08-15", "CheckDBNameAvailable");
+		super("Rds", "2014-08-15", "CheckDBNameAvailable", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class EvaluateFailOverSwitchRequest extends RpcAcsRequest<EvaluateFailOverSwitchResponse> {
 	
 	public EvaluateFailOverSwitchRequest() {
-		super("Rds", "2014-08-15", "EvaluateFailOverSwitch");
+		super("Rds", "2014-08-15", "EvaluateFailOverSwitch", "rds");
 	}
 
 	private Long resourceOwnerId;

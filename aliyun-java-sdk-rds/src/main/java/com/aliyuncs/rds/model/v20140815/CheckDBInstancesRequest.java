@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckDBInstancesRequest extends RpcAcsRequest<CheckDBInstancesResponse> {
 	
 	public CheckDBInstancesRequest() {
-		super("Rds", "2014-08-15", "CheckDBInstances");
+		super("Rds", "2014-08-15", "CheckDBInstances", "rds");
 	}
 
 	private Long resourceOwnerId;

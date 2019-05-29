@@ -23,10 +23,8 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceResponse> {
 	
 	public CreateDBInstanceRequest() {
-		super("Rds", "2014-08-15", "CreateDBInstance");
+		super("Rds", "2014-08-15", "CreateDBInstance", "rds");
 	}
-
-	private String connectionMode;
 
 	private Long resourceOwnerId;
 
@@ -34,23 +32,13 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 
 	private String systemDBCharset;
 
-	private String clientToken;
-
 	private String engineVersion;
-
-	private String engine;
 
 	private String dBInstanceDescription;
 
-	private String dBInstanceStorageType;
-
 	private String businessInfo;
 
-	private String dBInstanceNetType;
-
 	private String period;
-
-	private String usedTime;
 
 	private String dBInstanceClass;
 
@@ -60,24 +48,27 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 
 	private String privateIpAddress;
 
-	private String vPCId;
+	private String autoRenew;
 
 	private String zoneId;
 
-	private String payType;
-
 	private String instanceNetworkType;
 
-	public String getConnectionMode() {
-		return this.connectionMode;
-	}
+	private String connectionMode;
 
-	public void setConnectionMode(String connectionMode) {
-		this.connectionMode = connectionMode;
-		if(connectionMode != null){
-			putQueryParameter("ConnectionMode", connectionMode);
-		}
-	}
+	private String clientToken;
+
+	private String engine;
+
+	private String dBInstanceStorageType;
+
+	private String dBInstanceNetType;
+
+	private String usedTime;
+
+	private String vPCId;
+
+	private String payType;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -112,17 +103,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		}
 	}
 
-	public String getClientToken() {
-		return this.clientToken;
-	}
-
-	public void setClientToken(String clientToken) {
-		this.clientToken = clientToken;
-		if(clientToken != null){
-			putQueryParameter("ClientToken", clientToken);
-		}
-	}
-
 	public String getEngineVersion() {
 		return this.engineVersion;
 	}
@@ -131,17 +111,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		this.engineVersion = engineVersion;
 		if(engineVersion != null){
 			putQueryParameter("EngineVersion", engineVersion);
-		}
-	}
-
-	public String getEngine() {
-		return this.engine;
-	}
-
-	public void setEngine(String engine) {
-		this.engine = engine;
-		if(engine != null){
-			putQueryParameter("Engine", engine);
 		}
 	}
 
@@ -156,17 +125,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		}
 	}
 
-	public String getDBInstanceStorageType() {
-		return this.dBInstanceStorageType;
-	}
-
-	public void setDBInstanceStorageType(String dBInstanceStorageType) {
-		this.dBInstanceStorageType = dBInstanceStorageType;
-		if(dBInstanceStorageType != null){
-			putQueryParameter("DBInstanceStorageType", dBInstanceStorageType);
-		}
-	}
-
 	public String getBusinessInfo() {
 		return this.businessInfo;
 	}
@@ -178,17 +136,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		}
 	}
 
-	public String getDBInstanceNetType() {
-		return this.dBInstanceNetType;
-	}
-
-	public void setDBInstanceNetType(String dBInstanceNetType) {
-		this.dBInstanceNetType = dBInstanceNetType;
-		if(dBInstanceNetType != null){
-			putQueryParameter("DBInstanceNetType", dBInstanceNetType);
-		}
-	}
-
 	public String getPeriod() {
 		return this.period;
 	}
@@ -197,17 +144,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		this.period = period;
 		if(period != null){
 			putQueryParameter("Period", period);
-		}
-	}
-
-	public String getUsedTime() {
-		return this.usedTime;
-	}
-
-	public void setUsedTime(String usedTime) {
-		this.usedTime = usedTime;
-		if(usedTime != null){
-			putQueryParameter("UsedTime", usedTime);
 		}
 	}
 
@@ -255,14 +191,14 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		}
 	}
 
-	public String getVPCId() {
-		return this.vPCId;
+	public String getAutoRenew() {
+		return this.autoRenew;
 	}
 
-	public void setVPCId(String vPCId) {
-		this.vPCId = vPCId;
-		if(vPCId != null){
-			putQueryParameter("VPCId", vPCId);
+	public void setAutoRenew(String autoRenew) {
+		this.autoRenew = autoRenew;
+		if(autoRenew != null){
+			putQueryParameter("AutoRenew", autoRenew);
 		}
 	}
 
@@ -277,17 +213,6 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		}
 	}
 
-	public String getPayType() {
-		return this.payType;
-	}
-
-	public void setPayType(String payType) {
-		this.payType = payType;
-		if(payType != null){
-			putQueryParameter("PayType", payType);
-		}
-	}
-
 	public String getInstanceNetworkType() {
 		return this.instanceNetworkType;
 	}
@@ -296,6 +221,94 @@ public class CreateDBInstanceRequest extends RpcAcsRequest<CreateDBInstanceRespo
 		this.instanceNetworkType = instanceNetworkType;
 		if(instanceNetworkType != null){
 			putQueryParameter("InstanceNetworkType", instanceNetworkType);
+		}
+	}
+
+	public String getConnectionMode() {
+		return this.connectionMode;
+	}
+
+	public void setConnectionMode(String connectionMode) {
+		this.connectionMode = connectionMode;
+		if(connectionMode != null){
+			putQueryParameter("ConnectionMode", connectionMode);
+		}
+	}
+
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public String getEngine() {
+		return this.engine;
+	}
+
+	public void setEngine(String engine) {
+		this.engine = engine;
+		if(engine != null){
+			putQueryParameter("Engine", engine);
+		}
+	}
+
+	public String getDBInstanceStorageType() {
+		return this.dBInstanceStorageType;
+	}
+
+	public void setDBInstanceStorageType(String dBInstanceStorageType) {
+		this.dBInstanceStorageType = dBInstanceStorageType;
+		if(dBInstanceStorageType != null){
+			putQueryParameter("DBInstanceStorageType", dBInstanceStorageType);
+		}
+	}
+
+	public String getDBInstanceNetType() {
+		return this.dBInstanceNetType;
+	}
+
+	public void setDBInstanceNetType(String dBInstanceNetType) {
+		this.dBInstanceNetType = dBInstanceNetType;
+		if(dBInstanceNetType != null){
+			putQueryParameter("DBInstanceNetType", dBInstanceNetType);
+		}
+	}
+
+	public String getUsedTime() {
+		return this.usedTime;
+	}
+
+	public void setUsedTime(String usedTime) {
+		this.usedTime = usedTime;
+		if(usedTime != null){
+			putQueryParameter("UsedTime", usedTime);
+		}
+	}
+
+	public String getVPCId() {
+		return this.vPCId;
+	}
+
+	public void setVPCId(String vPCId) {
+		this.vPCId = vPCId;
+		if(vPCId != null){
+			putQueryParameter("VPCId", vPCId);
+		}
+	}
+
+	public String getPayType() {
+		return this.payType;
+	}
+
+	public void setPayType(String payType) {
+		this.payType = payType;
+		if(payType != null){
+			putQueryParameter("PayType", payType);
 		}
 	}
 

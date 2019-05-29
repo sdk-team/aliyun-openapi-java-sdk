@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeInstanceAutoRenewalAttributeRequest extends RpcAcsRequest<DescribeInstanceAutoRenewalAttributeResponse> {
 	
 	public DescribeInstanceAutoRenewalAttributeRequest() {
-		super("Rds", "2014-08-15", "DescribeInstanceAutoRenewalAttribute");
+		super("Rds", "2014-08-15", "DescribeInstanceAutoRenewalAttribute", "rds");
 	}
 
 	private Long resourceOwnerId;

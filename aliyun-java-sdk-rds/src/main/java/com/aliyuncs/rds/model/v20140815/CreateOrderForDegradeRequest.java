@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateOrderForDegradeRequest extends RpcAcsRequest<CreateOrderForDegradeResponse> {
 	
 	public CreateOrderForDegradeRequest() {
-		super("Rds", "2014-08-15", "CreateOrderForDegrade");
+		super("Rds", "2014-08-15", "CreateOrderForDegrade", "rds");
 	}
 
 	private Long resourceOwnerId;

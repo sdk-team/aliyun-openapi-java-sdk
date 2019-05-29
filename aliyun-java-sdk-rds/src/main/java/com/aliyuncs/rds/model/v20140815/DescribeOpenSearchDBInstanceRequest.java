@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOpenSearchDBInstanceRequest extends RpcAcsRequest<DescribeOpenSearchDBInstanceResponse> {
 	
 	public DescribeOpenSearchDBInstanceRequest() {
-		super("Rds", "2014-08-15", "DescribeOpenSearchDBInstance");
+		super("Rds", "2014-08-15", "DescribeOpenSearchDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

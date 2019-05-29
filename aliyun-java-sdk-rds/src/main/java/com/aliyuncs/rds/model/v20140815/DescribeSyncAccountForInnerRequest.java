@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSyncAccountForInnerRequest extends RpcAcsRequest<DescribeSyncAccountForInnerResponse> {
 	
 	public DescribeSyncAccountForInnerRequest() {
-		super("Rds", "2014-08-15", "DescribeSyncAccountForInner");
+		super("Rds", "2014-08-15", "DescribeSyncAccountForInner", "rds");
 	}
 
 	private String dBInstanceName;

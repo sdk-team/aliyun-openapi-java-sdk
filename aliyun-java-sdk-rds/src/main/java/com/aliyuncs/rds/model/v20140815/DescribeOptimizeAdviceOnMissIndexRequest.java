@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceOnMissIndexRequest extends RpcAcsRequest<DescribeOptimizeAdviceOnMissIndexResponse> {
 	
 	public DescribeOptimizeAdviceOnMissIndexRequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnMissIndex");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnMissIndex", "rds");
 	}
 
 	private Long resourceOwnerId;

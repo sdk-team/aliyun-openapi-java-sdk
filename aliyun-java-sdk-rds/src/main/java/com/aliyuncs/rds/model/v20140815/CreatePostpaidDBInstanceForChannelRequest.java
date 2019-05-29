@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreatePostpaidDBInstanceForChannelRequest extends RpcAcsRequest<CreatePostpaidDBInstanceForChannelResponse> {
 	
 	public CreatePostpaidDBInstanceForChannelRequest() {
-		super("Rds", "2014-08-15", "CreatePostpaidDBInstanceForChannel");
+		super("Rds", "2014-08-15", "CreatePostpaidDBInstanceForChannel", "rds");
 	}
 
 	private Long resourceOwnerId;

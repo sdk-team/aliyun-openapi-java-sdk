@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DecribeSqlLogDumpStatusRequest extends RpcAcsRequest<DecribeSqlLogDumpStatusResponse> {
 	
 	public DecribeSqlLogDumpStatusRequest() {
-		super("Rds", "2014-08-15", "DecribeSqlLogDumpStatus");
+		super("Rds", "2014-08-15", "DecribeSqlLogDumpStatus", "rds");
 	}
 
 	private Long resourceOwnerId;

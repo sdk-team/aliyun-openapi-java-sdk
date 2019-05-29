@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 	
 	public CreateOrderRequest() {
-		super("Rds", "2014-08-15", "CreateOrder");
+		super("Rds", "2014-08-15", "CreateOrder", "rds");
 	}
 
 	private Long resourceOwnerId;
@@ -52,6 +52,8 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 
 	private String commodityCode;
 
+	private String encryptionKey;
+
 	private Long ownerId;
 
 	private String dBInstanceClass;
@@ -65,6 +67,8 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 	private String autoRenew;
 
 	private String promotionCode;
+
+	private String roleARN;
 
 	private String zoneId;
 
@@ -253,6 +257,17 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 		}
 	}
 
+	public String getEncryptionKey() {
+		return this.encryptionKey;
+	}
+
+	public void setEncryptionKey(String encryptionKey) {
+		this.encryptionKey = encryptionKey;
+		if(encryptionKey != null){
+			putQueryParameter("EncryptionKey", encryptionKey);
+		}
+	}
+
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -327,6 +342,17 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 		this.promotionCode = promotionCode;
 		if(promotionCode != null){
 			putQueryParameter("PromotionCode", promotionCode);
+		}
+	}
+
+	public String getRoleARN() {
+		return this.roleARN;
+	}
+
+	public void setRoleARN(String roleARN) {
+		this.roleARN = roleARN;
+		if(roleARN != null){
+			putQueryParameter("RoleARN", roleARN);
 		}
 	}
 

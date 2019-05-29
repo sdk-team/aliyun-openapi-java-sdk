@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpgradeDBInstanceNetworkRequest extends RpcAcsRequest<UpgradeDBInstanceNetworkResponse> {
 	
 	public UpgradeDBInstanceNetworkRequest() {
-		super("Rds", "2014-08-15", "UpgradeDBInstanceNetwork");
+		super("Rds", "2014-08-15", "UpgradeDBInstanceNetwork", "rds");
 	}
 
 	private Long resourceOwnerId;

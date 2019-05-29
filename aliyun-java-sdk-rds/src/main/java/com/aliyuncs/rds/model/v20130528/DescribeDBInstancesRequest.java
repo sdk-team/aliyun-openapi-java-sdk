@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstancesRequest extends RpcAcsRequest<DescribeDBInstancesResponse> {
 	
 	public DescribeDBInstancesRequest() {
-		super("Rds", "2013-05-28", "DescribeDBInstances");
+		super("Rds", "2013-05-28", "DescribeDBInstances", "rds");
 	}
 
 	private String connectionMode;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstanceSwitchLogRequest extends RpcAcsRequest<DescribeDBInstanceSwitchLogResponse> {
 	
 	public DescribeDBInstanceSwitchLogRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstanceSwitchLog");
+		super("Rds", "2014-08-15", "DescribeDBInstanceSwitchLog", "rds");
 	}
 
 	private Long resourceOwnerId;

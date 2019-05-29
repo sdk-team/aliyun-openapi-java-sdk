@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeLogicDBInstanceTopologyRequest extends RpcAcsRequest<DescribeLogicDBInstanceTopologyResponse> {
 	
 	public DescribeLogicDBInstanceTopologyRequest() {
-		super("Rds", "2014-08-15", "DescribeLogicDBInstanceTopology");
+		super("Rds", "2014-08-15", "DescribeLogicDBInstanceTopology", "rds");
 	}
 
 	private Long resourceOwnerId;

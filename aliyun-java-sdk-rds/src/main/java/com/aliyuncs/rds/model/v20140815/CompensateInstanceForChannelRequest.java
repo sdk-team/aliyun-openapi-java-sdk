@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CompensateInstanceForChannelRequest extends RpcAcsRequest<CompensateInstanceForChannelResponse> {
 	
 	public CompensateInstanceForChannelRequest() {
-		super("Rds", "2014-08-15", "CompensateInstanceForChannel");
+		super("Rds", "2014-08-15", "CompensateInstanceForChannel", "rds");
 	}
 
 	private Long resourceOwnerId;

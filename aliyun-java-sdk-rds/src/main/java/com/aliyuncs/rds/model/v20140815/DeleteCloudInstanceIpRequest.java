@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteCloudInstanceIpRequest extends RpcAcsRequest<DeleteCloudInstanceIpResponse> {
 	
 	public DeleteCloudInstanceIpRequest() {
-		super("Rds", "2014-08-15", "DeleteCloudInstanceIp");
+		super("Rds", "2014-08-15", "DeleteCloudInstanceIp", "rds");
 	}
 
 	private Long resourceOwnerId;

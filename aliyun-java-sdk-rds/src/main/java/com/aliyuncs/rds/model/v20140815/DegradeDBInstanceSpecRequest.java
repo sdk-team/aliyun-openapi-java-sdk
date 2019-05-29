@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DegradeDBInstanceSpecRequest extends RpcAcsRequest<DegradeDBInstanceSpecResponse> {
 	
 	public DegradeDBInstanceSpecRequest() {
-		super("Rds", "2014-08-15", "DegradeDBInstanceSpec");
+		super("Rds", "2014-08-15", "DegradeDBInstanceSpec", "rds");
 	}
 
 	private Long resourceOwnerId;

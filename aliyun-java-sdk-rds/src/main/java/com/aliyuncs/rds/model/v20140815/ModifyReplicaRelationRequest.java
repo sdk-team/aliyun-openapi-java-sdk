@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReplicaRelationRequest extends RpcAcsRequest<ModifyReplicaRelationResponse> {
 	
 	public ModifyReplicaRelationRequest() {
-		super("Rds", "2014-08-15", "ModifyReplicaRelation");
+		super("Rds", "2014-08-15", "ModifyReplicaRelation", "rds");
 	}
 
 	private Long resourceOwnerId;

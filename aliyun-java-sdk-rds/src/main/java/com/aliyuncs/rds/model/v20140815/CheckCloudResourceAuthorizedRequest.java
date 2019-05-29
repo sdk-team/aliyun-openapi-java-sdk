@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CheckCloudResourceAuthorizedRequest extends RpcAcsRequest<CheckCloudResourceAuthorizedResponse> {
 	
 	public CheckCloudResourceAuthorizedRequest() {
-		super("Rds", "2014-08-15", "CheckCloudResourceAuthorized");
+		super("Rds", "2014-08-15", "CheckCloudResourceAuthorized", "rds");
 	}
 
 	private Long resourceOwnerId;
@@ -37,6 +37,8 @@ public class CheckCloudResourceAuthorizedRequest extends RpcAcsRequest<CheckClou
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	private String targetRegionId;
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -120,6 +122,17 @@ public class CheckCloudResourceAuthorizedRequest extends RpcAcsRequest<CheckClou
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getTargetRegionId() {
+		return this.targetRegionId;
+	}
+
+	public void setTargetRegionId(String targetRegionId) {
+		this.targetRegionId = targetRegionId;
+		if(targetRegionId != null){
+			putQueryParameter("TargetRegionId", targetRegionId);
 		}
 	}
 

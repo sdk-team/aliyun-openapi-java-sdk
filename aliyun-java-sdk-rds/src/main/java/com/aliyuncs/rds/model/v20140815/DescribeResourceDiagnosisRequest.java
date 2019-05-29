@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeResourceDiagnosisRequest extends RpcAcsRequest<DescribeResourceDiagnosisResponse> {
 	
 	public DescribeResourceDiagnosisRequest() {
-		super("Rds", "2014-08-15", "DescribeResourceDiagnosis");
+		super("Rds", "2014-08-15", "DescribeResourceDiagnosis", "rds");
 	}
 
 	private String endTime;

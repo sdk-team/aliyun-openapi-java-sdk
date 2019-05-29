@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SwitchGuardToMasterInstanceRequest extends RpcAcsRequest<SwitchGuardToMasterInstanceResponse> {
 	
 	public SwitchGuardToMasterInstanceRequest() {
-		super("Rds", "2014-08-15", "SwitchGuardToMasterInstance");
+		super("Rds", "2014-08-15", "SwitchGuardToMasterInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

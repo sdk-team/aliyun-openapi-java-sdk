@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeReplicaInitializeProgressRequest extends RpcAcsRequest<DescribeReplicaInitializeProgressResponse> {
 	
 	public DescribeReplicaInitializeProgressRequest() {
-		super("Rds", "2014-08-15", "DescribeReplicaInitializeProgress");
+		super("Rds", "2014-08-15", "DescribeReplicaInitializeProgress", "rds");
 	}
 
 	private Long resourceOwnerId;

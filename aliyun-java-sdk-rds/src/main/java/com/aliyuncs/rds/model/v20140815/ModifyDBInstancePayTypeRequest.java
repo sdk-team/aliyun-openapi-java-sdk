@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDBInstancePayTypeRequest extends RpcAcsRequest<ModifyDBInstancePayTypeResponse> {
 	
 	public ModifyDBInstancePayTypeRequest() {
-		super("Rds", "2014-08-15", "ModifyDBInstancePayType");
+		super("Rds", "2014-08-15", "ModifyDBInstancePayType", "rds");
 	}
 
 	private Long resourceOwnerId;

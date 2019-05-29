@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDatabaseLockDiagnosisRequest extends RpcAcsRequest<DescribeDatabaseLockDiagnosisResponse> {
 	
 	public DescribeDatabaseLockDiagnosisRequest() {
-		super("Rds", "2014-08-15", "DescribeDatabaseLockDiagnosis");
+		super("Rds", "2014-08-15", "DescribeDatabaseLockDiagnosis", "rds");
 	}
 
 	private String endTime;

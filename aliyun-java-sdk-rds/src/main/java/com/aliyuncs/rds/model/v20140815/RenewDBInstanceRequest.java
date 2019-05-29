@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RenewDBInstanceRequest extends RpcAcsRequest<RenewDBInstanceResponse> {
 	
 	public RenewDBInstanceRequest() {
-		super("Rds", "2014-08-15", "RenewDBInstance");
+		super("Rds", "2014-08-15", "RenewDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

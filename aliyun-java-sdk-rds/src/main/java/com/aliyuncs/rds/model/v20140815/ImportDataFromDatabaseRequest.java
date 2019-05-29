@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ImportDataFromDatabaseRequest extends RpcAcsRequest<ImportDataFromDatabaseResponse> {
 	
 	public ImportDataFromDatabaseRequest() {
-		super("Rds", "2014-08-15", "ImportDataFromDatabase");
+		super("Rds", "2014-08-15", "ImportDataFromDatabase", "rds");
 	}
 
 	private Long resourceOwnerId;

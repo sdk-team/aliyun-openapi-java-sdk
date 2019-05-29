@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DisableSqlLogDistributionRequest extends RpcAcsRequest<DisableSqlLogDistributionResponse> {
 	
 	public DisableSqlLogDistributionRequest() {
-		super("Rds", "2014-08-15", "DisableSqlLogDistribution");
+		super("Rds", "2014-08-15", "DisableSqlLogDistribution", "rds");
 	}
 
 	private Long resourceOwnerId;

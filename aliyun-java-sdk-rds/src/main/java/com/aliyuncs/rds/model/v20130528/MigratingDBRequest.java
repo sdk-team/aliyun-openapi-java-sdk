@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class MigratingDBRequest extends RpcAcsRequest<MigratingDBResponse> {
 	
 	public MigratingDBRequest() {
-		super("Rds", "2013-05-28", "MigratingDB");
+		super("Rds", "2013-05-28", "MigratingDB", "rds");
 	}
 
 	private Long resourceOwnerId;

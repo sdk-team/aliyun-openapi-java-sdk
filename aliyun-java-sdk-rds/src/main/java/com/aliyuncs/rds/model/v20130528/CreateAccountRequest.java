@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAccountRequest extends RpcAcsRequest<CreateAccountResponse> {
 	
 	public CreateAccountRequest() {
-		super("Rds", "2013-05-28", "CreateAccount");
+		super("Rds", "2013-05-28", "CreateAccount", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSQLCollectorVersionRequest extends RpcAcsRequest<DescribeSQLCollectorVersionResponse> {
 	
 	public DescribeSQLCollectorVersionRequest() {
-		super("Rds", "2014-08-15", "DescribeSQLCollectorVersion");
+		super("Rds", "2014-08-15", "DescribeSQLCollectorVersion", "rds");
 	}
 
 	private Long resourceOwnerId;

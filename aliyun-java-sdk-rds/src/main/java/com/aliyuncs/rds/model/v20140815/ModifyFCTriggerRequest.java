@@ -24,7 +24,7 @@ import java.util.List;
 public class ModifyFCTriggerRequest extends RpcAcsRequest<ModifyFCTriggerResponse> {
 	
 	public ModifyFCTriggerRequest() {
-		super("Rds", "2014-08-15", "ModifyFCTrigger");
+		super("Rds", "2014-08-15", "ModifyFCTrigger", "rds");
 	}
 
 	private Long resourceOwnerId;

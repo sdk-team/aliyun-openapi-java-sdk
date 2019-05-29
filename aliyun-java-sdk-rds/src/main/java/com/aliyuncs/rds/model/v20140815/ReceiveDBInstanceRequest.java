@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ReceiveDBInstanceRequest extends RpcAcsRequest<ReceiveDBInstanceResponse> {
 	
 	public ReceiveDBInstanceRequest() {
-		super("Rds", "2014-08-15", "ReceiveDBInstance");
+		super("Rds", "2014-08-15", "ReceiveDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

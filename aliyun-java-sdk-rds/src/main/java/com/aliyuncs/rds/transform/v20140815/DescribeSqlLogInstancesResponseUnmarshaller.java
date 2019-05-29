@@ -42,6 +42,7 @@ public class DescribeSqlLogInstancesResponseUnmarshaller {
 			sqlLogInstance.setLoghubRegion(context.stringValue("DescribeSqlLogInstancesResponse.Items["+ i +"].LoghubRegion"));
 			sqlLogInstance.setLoghubProject(context.stringValue("DescribeSqlLogInstancesResponse.Items["+ i +"].LoghubProject"));
 			sqlLogInstance.setLoghubLogstore(context.stringValue("DescribeSqlLogInstancesResponse.Items["+ i +"].LoghubLogstore"));
+			sqlLogInstance.setSqlExplorerTrial(context.stringValue("DescribeSqlLogInstancesResponse.Items["+ i +"].SqlExplorerTrial"));
 
 			items.add(sqlLogInstance);
 		}

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RequestServiceOfCloudDBARequest extends RpcAcsRequest<RequestServiceOfCloudDBAResponse> {
 	
 	public RequestServiceOfCloudDBARequest() {
-		super("Rds", "2014-08-15", "RequestServiceOfCloudDBA");
+		super("Rds", "2014-08-15", "RequestServiceOfCloudDBA", "rds");
 	}
 
 	private String serviceRequestType;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteOpenSearchDBInstanceRequest extends RpcAcsRequest<DeleteOpenSearchDBInstanceResponse> {
 	
 	public DeleteOpenSearchDBInstanceRequest() {
-		super("Rds", "2014-08-15", "DeleteOpenSearchDBInstance");
+		super("Rds", "2014-08-15", "DeleteOpenSearchDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteParameterGroupRequest extends RpcAcsRequest<DeleteParameterGroupResponse> {
 	
 	public DeleteParameterGroupRequest() {
-		super("Rds", "2014-08-15", "DeleteParameterGroup");
+		super("Rds", "2014-08-15", "DeleteParameterGroup", "rds");
 	}
 
 	private Long resourceOwnerId;

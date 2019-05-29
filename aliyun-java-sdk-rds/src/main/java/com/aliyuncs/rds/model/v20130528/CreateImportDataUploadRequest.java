@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateImportDataUploadRequest extends RpcAcsRequest<CreateImportDataUploadResponse> {
 	
 	public CreateImportDataUploadRequest() {
-		super("Rds", "2013-05-28", "CreateImportDataUpload");
+		super("Rds", "2013-05-28", "CreateImportDataUpload", "rds");
 	}
 
 	private Long resourceOwnerId;

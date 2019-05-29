@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StartDBInstanceDiagnoseRequest extends RpcAcsRequest<StartDBInstanceDiagnoseResponse> {
 	
 	public StartDBInstanceDiagnoseRequest() {
-		super("Rds", "2014-08-15", "StartDBInstanceDiagnose");
+		super("Rds", "2014-08-15", "StartDBInstanceDiagnose", "rds");
 	}
 
 	private Long resourceOwnerId;

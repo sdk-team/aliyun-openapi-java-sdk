@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreatePostpaidDBInstanceRequest extends RpcAcsRequest<CreatePostpaidDBInstanceResponse> {
 	
 	public CreatePostpaidDBInstanceRequest() {
-		super("Rds", "2014-08-15", "CreatePostpaidDBInstance");
+		super("Rds", "2014-08-15", "CreatePostpaidDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

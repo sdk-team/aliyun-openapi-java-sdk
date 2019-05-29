@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeOptimizeAdviceOnStorageRequest extends RpcAcsRequest<DescribeOptimizeAdviceOnStorageResponse> {
 	
 	public DescribeOptimizeAdviceOnStorageRequest() {
-		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnStorage");
+		super("Rds", "2014-08-15", "DescribeOptimizeAdviceOnStorage", "rds");
 	}
 
 	private Long resourceOwnerId;

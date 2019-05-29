@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyOpenSearchDBInstanceRequest extends RpcAcsRequest<ModifyOpenSearchDBInstanceResponse> {
 	
 	public ModifyOpenSearchDBInstanceRequest() {
-		super("Rds", "2014-08-15", "ModifyOpenSearchDBInstance");
+		super("Rds", "2014-08-15", "ModifyOpenSearchDBInstance", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReplicaModeRequest extends RpcAcsRequest<ModifyReplicaModeResponse> {
 	
 	public ModifyReplicaModeRequest() {
-		super("Rds", "2014-08-15", "ModifyReplicaMode");
+		super("Rds", "2014-08-15", "ModifyReplicaMode", "rds");
 	}
 
 	private String domainMode;

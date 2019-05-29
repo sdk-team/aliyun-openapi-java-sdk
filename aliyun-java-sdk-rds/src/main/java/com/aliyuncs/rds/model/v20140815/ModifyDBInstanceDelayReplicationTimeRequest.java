@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDBInstanceDelayReplicationTimeRequest extends RpcAcsRequest<ModifyDBInstanceDelayReplicationTimeResponse> {
 	
 	public ModifyDBInstanceDelayReplicationTimeRequest() {
-		super("Rds", "2014-08-15", "ModifyDBInstanceDelayReplicationTime");
+		super("Rds", "2014-08-15", "ModifyDBInstanceDelayReplicationTime", "rds");
 	}
 
 	private Long resourceOwnerId;

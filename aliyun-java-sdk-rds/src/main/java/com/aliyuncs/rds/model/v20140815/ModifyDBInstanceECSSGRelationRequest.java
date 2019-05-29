@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyDBInstanceECSSGRelationRequest extends RpcAcsRequest<ModifyDBInstanceECSSGRelationResponse> {
 	
 	public ModifyDBInstanceECSSGRelationRequest() {
-		super("Rds", "2014-08-15", "ModifyDBInstanceECSSGRelation");
+		super("Rds", "2014-08-15", "ModifyDBInstanceECSSGRelation", "rds");
 	}
 
 	private Long resourceOwnerId;

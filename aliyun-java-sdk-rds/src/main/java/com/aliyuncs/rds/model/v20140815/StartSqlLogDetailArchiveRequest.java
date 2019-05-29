@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class StartSqlLogDetailArchiveRequest extends RpcAcsRequest<StartSqlLogDetailArchiveResponse> {
 	
 	public StartSqlLogDetailArchiveRequest() {
-		super("Rds", "2014-08-15", "StartSqlLogDetailArchive");
+		super("Rds", "2014-08-15", "StartSqlLogDetailArchive", "rds");
 	}
 
 	private Long resourceOwnerId;

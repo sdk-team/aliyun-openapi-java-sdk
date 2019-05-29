@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeDBInstancesWithCloudResourceRequest extends RpcAcsRequest<DescribeDBInstancesWithCloudResourceResponse> {
 	
 	public DescribeDBInstancesWithCloudResourceRequest() {
-		super("Rds", "2014-08-15", "DescribeDBInstancesWithCloudResource");
+		super("Rds", "2014-08-15", "DescribeDBInstancesWithCloudResource", "rds");
 	}
 
 	private Long resourceOwnerId;

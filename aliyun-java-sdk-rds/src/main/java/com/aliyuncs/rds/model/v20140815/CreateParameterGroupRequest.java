@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateParameterGroupRequest extends RpcAcsRequest<CreateParameterGroupResponse> {
 	
 	public CreateParameterGroupRequest() {
-		super("Rds", "2014-08-15", "CreateParameterGroup");
+		super("Rds", "2014-08-15", "CreateParameterGroup", "rds");
 	}
 
 	private Long resourceOwnerId;

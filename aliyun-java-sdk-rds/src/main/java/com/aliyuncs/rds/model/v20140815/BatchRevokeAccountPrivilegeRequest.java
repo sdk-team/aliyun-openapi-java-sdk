@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class BatchRevokeAccountPrivilegeRequest extends RpcAcsRequest<BatchRevokeAccountPrivilegeResponse> {
 	
 	public BatchRevokeAccountPrivilegeRequest() {
-		super("Rds", "2014-08-15", "BatchRevokeAccountPrivilege");
+		super("Rds", "2014-08-15", "BatchRevokeAccountPrivilege", "rds");
 	}
 
 	private Long resourceOwnerId;

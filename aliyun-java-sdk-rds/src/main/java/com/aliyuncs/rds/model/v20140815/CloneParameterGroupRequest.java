@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CloneParameterGroupRequest extends RpcAcsRequest<CloneParameterGroupResponse> {
 	
 	public CloneParameterGroupRequest() {
-		super("Rds", "2014-08-15", "CloneParameterGroup");
+		super("Rds", "2014-08-15", "CloneParameterGroup", "rds");
 	}
 
 	private Long resourceOwnerId;

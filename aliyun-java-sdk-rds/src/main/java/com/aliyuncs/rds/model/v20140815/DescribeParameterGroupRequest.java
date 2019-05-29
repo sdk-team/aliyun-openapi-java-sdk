@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeParameterGroupRequest extends RpcAcsRequest<DescribeParameterGroupResponse> {
 	
 	public DescribeParameterGroupRequest() {
-		super("Rds", "2014-08-15", "DescribeParameterGroup");
+		super("Rds", "2014-08-15", "DescribeParameterGroup", "rds");
 	}
 
 	private Long resourceOwnerId;

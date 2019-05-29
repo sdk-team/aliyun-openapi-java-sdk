@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSqlLogTimeDistributionRequest extends RpcAcsRequest<DescribeSqlLogTimeDistributionResponse> {
 	
 	public DescribeSqlLogTimeDistributionRequest() {
-		super("Rds", "2014-08-15", "DescribeSqlLogTimeDistribution");
+		super("Rds", "2014-08-15", "DescribeSqlLogTimeDistribution", "rds");
 	}
 
 	private Long resourceOwnerId;

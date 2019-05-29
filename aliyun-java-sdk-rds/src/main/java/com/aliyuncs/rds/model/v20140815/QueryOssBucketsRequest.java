@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryOssBucketsRequest extends RpcAcsRequest<QueryOssBucketsResponse> {
 	
 	public QueryOssBucketsRequest() {
-		super("Rds", "2014-08-15", "QueryOssBuckets");
+		super("Rds", "2014-08-15", "QueryOssBuckets", "rds");
 	}
 
 	private Long resourceOwnerId;

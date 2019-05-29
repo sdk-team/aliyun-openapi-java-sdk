@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeRealtimeDiagnosesRequest extends RpcAcsRequest<DescribeRealtimeDiagnosesResponse> {
 	
 	public DescribeRealtimeDiagnosesRequest() {
-		super("Rds", "2014-08-15", "DescribeRealtimeDiagnoses");
+		super("Rds", "2014-08-15", "DescribeRealtimeDiagnoses", "rds");
 	}
 
 	private Long resourceOwnerId;

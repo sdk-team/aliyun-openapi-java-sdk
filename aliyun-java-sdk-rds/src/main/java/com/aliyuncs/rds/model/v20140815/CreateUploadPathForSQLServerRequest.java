@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateUploadPathForSQLServerRequest extends RpcAcsRequest<CreateUploadPathForSQLServerResponse> {
 	
 	public CreateUploadPathForSQLServerRequest() {
-		super("Rds", "2014-08-15", "CreateUploadPathForSQLServer");
+		super("Rds", "2014-08-15", "CreateUploadPathForSQLServer", "rds");
 	}
 
 	private Long resourceOwnerId;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyReplicaRecoverModeRequest extends RpcAcsRequest<ModifyReplicaRecoverModeResponse> {
 	
 	public ModifyReplicaRecoverModeRequest() {
-		super("Rds", "2014-08-15", "ModifyReplicaRecoverMode");
+		super("Rds", "2014-08-15", "ModifyReplicaRecoverMode", "rds");
 	}
 
 	private Long resourceOwnerId;

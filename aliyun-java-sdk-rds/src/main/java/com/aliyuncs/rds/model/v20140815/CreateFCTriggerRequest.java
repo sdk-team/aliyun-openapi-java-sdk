@@ -24,7 +24,7 @@ import java.util.List;
 public class CreateFCTriggerRequest extends RpcAcsRequest<CreateFCTriggerResponse> {
 	
 	public CreateFCTriggerRequest() {
-		super("Rds", "2014-08-15", "CreateFCTrigger");
+		super("Rds", "2014-08-15", "CreateFCTrigger", "rds");
 	}
 
 	private Long resourceOwnerId;

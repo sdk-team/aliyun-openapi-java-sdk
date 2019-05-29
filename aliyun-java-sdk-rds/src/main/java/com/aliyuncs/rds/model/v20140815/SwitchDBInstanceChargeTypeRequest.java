@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SwitchDBInstanceChargeTypeRequest extends RpcAcsRequest<SwitchDBInstanceChargeTypeResponse> {
 	
 	public SwitchDBInstanceChargeTypeRequest() {
-		super("Rds", "2014-08-15", "SwitchDBInstanceChargeType");
+		super("Rds", "2014-08-15", "SwitchDBInstanceChargeType", "rds");
 	}
 
 	private Long resourceOwnerId;

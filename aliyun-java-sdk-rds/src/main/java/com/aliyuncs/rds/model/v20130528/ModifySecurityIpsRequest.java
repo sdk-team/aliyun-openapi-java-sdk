@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifySecurityIpsRequest extends RpcAcsRequest<ModifySecurityIpsResponse> {
 	
 	public ModifySecurityIpsRequest() {
-		super("Rds", "2013-05-28", "ModifySecurityIps");
+		super("Rds", "2013-05-28", "ModifySecurityIps", "rds");
 	}
 
 	private Long resourceOwnerId;

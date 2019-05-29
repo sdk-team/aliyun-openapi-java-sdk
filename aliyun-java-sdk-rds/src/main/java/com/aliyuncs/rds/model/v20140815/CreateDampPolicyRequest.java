@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDampPolicyRequest extends RpcAcsRequest<CreateDampPolicyResponse> {
 	
 	public CreateDampPolicyRequest() {
-		super("Rds", "2014-08-15", "CreateDampPolicy");
+		super("Rds", "2014-08-15", "CreateDampPolicy", "rds");
 	}
 
 	private Long resourceOwnerId;

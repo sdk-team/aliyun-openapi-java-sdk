@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeArchiveSQLLogFromKeplerRequest extends RpcAcsRequest<DescribeArchiveSQLLogFromKeplerResponse> {
 	
 	public DescribeArchiveSQLLogFromKeplerRequest() {
-		super("Rds", "2014-08-15", "DescribeArchiveSQLLogFromKepler");
+		super("Rds", "2014-08-15", "DescribeArchiveSQLLogFromKepler", "rds");
 	}
 
 	private Long resourceOwnerId;

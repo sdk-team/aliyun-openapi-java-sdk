@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ExtractBackupFromOASRequest extends RpcAcsRequest<ExtractBackupFromOASResponse> {
 	
 	public ExtractBackupFromOASRequest() {
-		super("Rds", "2014-08-15", "ExtractBackupFromOAS");
+		super("Rds", "2014-08-15", "ExtractBackupFromOAS", "rds");
 	}
 
 	private Long resourceOwnerId;

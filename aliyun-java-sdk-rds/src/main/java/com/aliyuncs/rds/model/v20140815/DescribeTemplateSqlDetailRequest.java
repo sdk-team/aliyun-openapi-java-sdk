@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeTemplateSqlDetailRequest extends RpcAcsRequest<DescribeTemplateSqlDetailResponse> {
 	
 	public DescribeTemplateSqlDetailRequest() {
-		super("Rds", "2014-08-15", "DescribeTemplateSqlDetail");
+		super("Rds", "2014-08-15", "DescribeTemplateSqlDetail", "rds");
 	}
 
 	private Long resourceOwnerId;
