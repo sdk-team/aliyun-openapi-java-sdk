@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse> {
 	
 	public PutFlowControlRequest() {
-		super("Acs", "2015-01-01", "PutFlowControl", "sfdsadfs");
+		super("Acs", "2015-01-01", "PutFlowControl", "dsafsd");
 		setUriPattern("/FlowControl/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}
