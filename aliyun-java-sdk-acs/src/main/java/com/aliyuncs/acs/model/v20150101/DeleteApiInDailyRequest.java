@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteApiInDailyRequest extends RoaAcsRequest<DeleteApiInDailyResponse> {
 	
 	public DeleteApiInDailyRequest() {
-		super("Acs", "2015-01-01", "DeleteApiInDaily", "dsfasdf");
+		super("Acs", "2015-01-01", "DeleteApiInDaily", "sfdsadfs");
 		setUriPattern("/deleteApiInDaily");
 		setMethod(MethodType.POST);
 	}

@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class DeleteApiOnlineRequest extends RoaAcsRequest<DeleteApiOnlineResponse> {
 	
 	public DeleteApiOnlineRequest() {
-		super("Acs", "2015-01-01", "DeleteApiOnline", "dsfasdf");
+		super("Acs", "2015-01-01", "DeleteApiOnline", "sfdsadfs");
 		setUriPattern("/deleteApiOnline");
 		setMethod(MethodType.POST);
 	}
