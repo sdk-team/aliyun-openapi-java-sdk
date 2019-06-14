@@ -21,43 +21,41 @@ import com.aliyuncs.http.MethodType;
  * @author auto create
  * @version 
  */
-public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse> {
+public class DeleteApiOnlineRequest extends RoaAcsRequest<DeleteApiOnlineResponse> {
 	
-	public PutFlowControlRequest() {
-		super("Acs", "2015-01-01", "PutFlowControl", "dsfasdf");
-		setUriPattern("/FlowControl/[ProductName]/[VersionName]/[ApiName]");
-		setMethod(MethodType.PUT);
+	public DeleteApiOnlineRequest() {
+		super("Acs", "2015-01-01", "DeleteApiOnline", "dsfasdf");
+		setUriPattern("/deleteApiOnline");
+		setMethod(MethodType.POST);
 	}
 
-	private String bodyContent;
+	private String environment;
 
-	private String apiName;
+	private String name;
 
 	private String productName;
 
 	private String versionName;
 
-	private String accept;
-
-	public String getBodyContent() {
-		return this.bodyContent;
+	public String getEnvironment() {
+		return this.environment;
 	}
 
-	public void setBodyContent(String bodyContent) {
-		this.bodyContent = bodyContent;
-		if(bodyContent != null){
-			putBodyParameter("BodyContent", bodyContent);
+	public void setEnvironment(String environment) {
+		this.environment = environment;
+		if(environment != null){
+			putQueryParameter("Environment", environment);
 		}
 	}
 
-	public String getApiName() {
-		return this.apiName;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setApiName(String apiName) {
-		this.apiName = apiName;
-		if(apiName != null){
-			putPathParameter("ApiName", apiName);
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
 		}
 	}
 
@@ -68,7 +66,7 @@ public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse>
 	public void setProductName(String productName) {
 		this.productName = productName;
 		if(productName != null){
-			putPathParameter("ProductName", productName);
+			putQueryParameter("ProductName", productName);
 		}
 	}
 
@@ -79,24 +77,13 @@ public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse>
 	public void setVersionName(String versionName) {
 		this.versionName = versionName;
 		if(versionName != null){
-			putPathParameter("VersionName", versionName);
-		}
-	}
-
-	public String getAccept() {
-		return this.accept;
-	}
-
-	public void setAccept(String accept) {
-		this.accept = accept;
-		if(accept != null){
-			putHeaderParameter("Accept", accept);
+			putQueryParameter("VersionName", versionName);
 		}
 	}
 
 	@Override
-	public Class<PutFlowControlResponse> getResponseClass() {
-		return PutFlowControlResponse.class;
+	public Class<DeleteApiOnlineResponse> getResponseClass() {
+		return DeleteApiOnlineResponse.class;
 	}
 
 }
