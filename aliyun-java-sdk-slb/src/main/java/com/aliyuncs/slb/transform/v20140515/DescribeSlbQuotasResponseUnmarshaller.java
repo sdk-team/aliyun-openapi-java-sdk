@@ -19,7 +19,6 @@ import java.util.List;
 
 import com.aliyuncs.slb.model.v20140515.DescribeSlbQuotasResponse;
 import com.aliyuncs.slb.model.v20140515.DescribeSlbQuotasResponse.Quota;
-import java.util.Map;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -32,9 +31,8 @@ public class DescribeSlbQuotasResponseUnmarshaller {
 		List<Quota> quotas = new ArrayList<Quota>();
 		for (int i = 0; i < context.lengthValue("DescribeSlbQuotasResponse.Quotas.Length"); i++) {
 			Quota quota = new Quota();
-			quota.setMax(context.stringValue("DescribeSlbQuotasResponse.Quotas["+ i +"].Max"));
 			quota.setQuotaName(context.stringValue("DescribeSlbQuotasResponse.Quotas["+ i +"].QuotaName"));
-			quota.setComment(context.stringValue("DescribeSlbQuotasResponse.Quotas["+ i +"].Comment"));
+			quota.setMax(context.stringValue("DescribeSlbQuotasResponse.Quotas["+ i +"].Max"));
 
 			quotas.add(quota);
 		}

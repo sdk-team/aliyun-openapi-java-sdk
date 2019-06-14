@@ -33,7 +33,7 @@ public class DescribeTagsResponse extends AcsResponse {
 
 	private Integer totalCount;
 
-	private List<TagSet> tagSets;
+	private List<TagSetItem> tagSet;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -67,15 +67,15 @@ public class DescribeTagsResponse extends AcsResponse {
 		this.totalCount = totalCount;
 	}
 
-	public List<TagSet> getTagSets() {
-		return this.tagSets;
+	public List<TagSetItem> getTagSet() {
+		return this.tagSet;
 	}
 
-	public void setTagSets(List<TagSet> tagSets) {
-		this.tagSets = tagSets;
+	public void setTagSet(List<TagSetItem> tagSet) {
+		this.tagSet = tagSet;
 	}
 
-	public static class TagSet {
+	public static class TagSetItem {
 
 		private String tagKey;
 

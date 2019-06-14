@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class RemoveAccessControlListEntryRequest extends RpcAcsRequest<RemoveAccessControlListEntryResponse> {
 	
 	public RemoveAccessControlListEntryRequest() {
-		super("Slb", "2014-05-15", "RemoveAccessControlListEntry", "slb");
+		super("Slb", "2014-05-15", "RemoveAccessControlListEntry", "asdfdsf");
 	}
 
 	private String access_key_id;

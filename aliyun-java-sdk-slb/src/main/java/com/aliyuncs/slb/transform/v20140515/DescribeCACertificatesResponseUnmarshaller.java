@@ -19,7 +19,6 @@ import java.util.List;
 
 import com.aliyuncs.slb.model.v20140515.DescribeCACertificatesResponse;
 import com.aliyuncs.slb.model.v20140515.DescribeCACertificatesResponse.CACertificate;
-import java.util.Map;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -36,9 +35,6 @@ public class DescribeCACertificatesResponseUnmarshaller {
 			cACertificate.setCACertificateId(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].CACertificateId"));
 			cACertificate.setCACertificateName(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].CACertificateName"));
 			cACertificate.setFingerprint(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].Fingerprint"));
-			cACertificate.setResourceGroupId(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].ResourceGroupId"));
-			cACertificate.setCreateTime(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].CreateTime"));
-			cACertificate.setCreateTimeStamp(context.longValue("DescribeCACertificatesResponse.CACertificates["+ i +"].CreateTimeStamp"));
 			cACertificate.setExpireTime(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].ExpireTime"));
 			cACertificate.setExpireTimeStamp(context.longValue("DescribeCACertificatesResponse.CACertificates["+ i +"].ExpireTimeStamp"));
 			cACertificate.setCommonName(context.stringValue("DescribeCACertificatesResponse.CACertificates["+ i +"].CommonName"));

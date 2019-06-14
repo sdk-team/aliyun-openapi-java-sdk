@@ -19,7 +19,6 @@ import java.util.List;
 
 import com.aliyuncs.slb.model.v20140515.DescribeAccessControlListsResponse;
 import com.aliyuncs.slb.model.v20140515.DescribeAccessControlListsResponse.Acl;
-import java.util.Map;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -34,7 +33,6 @@ public class DescribeAccessControlListsResponseUnmarshaller {
 			Acl acl = new Acl();
 			acl.setAclId(context.stringValue("DescribeAccessControlListsResponse.Acls["+ i +"].AclId"));
 			acl.setAclName(context.stringValue("DescribeAccessControlListsResponse.Acls["+ i +"].AclName"));
-			acl.setAddressIPVersion(context.stringValue("DescribeAccessControlListsResponse.Acls["+ i +"].AddressIPVersion"));
 
 			acls.add(acl);
 		}

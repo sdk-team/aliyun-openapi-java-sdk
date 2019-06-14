@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteDomainExtensionRequest extends RpcAcsRequest<DeleteDomainExtensionResponse> {
 	
 	public DeleteDomainExtensionRequest() {
-		super("Slb", "2014-05-15", "DeleteDomainExtension", "slb");
+		super("Slb", "2014-05-15", "DeleteDomainExtension", "asdfdsf");
 	}
 
 	private Long resourceOwnerId;

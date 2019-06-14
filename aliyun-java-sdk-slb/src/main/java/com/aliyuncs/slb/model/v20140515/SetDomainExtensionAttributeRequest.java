@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SetDomainExtensionAttributeRequest extends RpcAcsRequest<SetDomainExtensionAttributeResponse> {
 	
 	public SetDomainExtensionAttributeRequest() {
-		super("Slb", "2014-05-15", "SetDomainExtensionAttribute", "slb");
+		super("Slb", "2014-05-15", "SetDomainExtensionAttribute", "asdfdsf");
 	}
 
 	private Long resourceOwnerId;

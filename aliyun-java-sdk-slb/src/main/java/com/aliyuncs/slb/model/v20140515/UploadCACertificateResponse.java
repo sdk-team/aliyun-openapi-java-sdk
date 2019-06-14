@@ -32,12 +32,6 @@ public class UploadCACertificateResponse extends AcsResponse {
 
 	private String fingerprint;
 
-	private String resourceGroupId;
-
-	private String createTime;
-
-	private Long createTimeStamp;
-
 	private String expireTime;
 
 	private Long expireTimeStamp;
@@ -74,30 +68,6 @@ public class UploadCACertificateResponse extends AcsResponse {
 
 	public void setFingerprint(String fingerprint) {
 		this.fingerprint = fingerprint;
-	}
-
-	public String getResourceGroupId() {
-		return this.resourceGroupId;
-	}
-
-	public void setResourceGroupId(String resourceGroupId) {
-		this.resourceGroupId = resourceGroupId;
-	}
-
-	public String getCreateTime() {
-		return this.createTime;
-	}
-
-	public void setCreateTime(String createTime) {
-		this.createTime = createTime;
-	}
-
-	public Long getCreateTimeStamp() {
-		return this.createTimeStamp;
-	}
-
-	public void setCreateTimeStamp(Long createTimeStamp) {
-		this.createTimeStamp = createTimeStamp;
 	}
 
 	public String getExpireTime() {

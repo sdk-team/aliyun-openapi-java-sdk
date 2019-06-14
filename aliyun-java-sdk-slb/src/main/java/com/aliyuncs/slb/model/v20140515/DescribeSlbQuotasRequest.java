@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeSlbQuotasRequest extends RpcAcsRequest<DescribeSlbQuotasResponse> {
 	
 	public DescribeSlbQuotasRequest() {
-		super("Slb", "2014-05-15", "DescribeSlbQuotas", "slb");
+		super("Slb", "2014-05-15", "DescribeSlbQuotas", "asdfdsf");
 	}
 
 	private Long resourceOwnerId;

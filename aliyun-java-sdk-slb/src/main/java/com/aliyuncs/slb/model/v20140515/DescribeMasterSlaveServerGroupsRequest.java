@@ -23,8 +23,10 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeMasterSlaveServerGroupsRequest extends RpcAcsRequest<DescribeMasterSlaveServerGroupsResponse> {
 	
 	public DescribeMasterSlaveServerGroupsRequest() {
-		super("Slb", "2014-05-15", "DescribeMasterSlaveServerGroups", "slb");
+		super("Slb", "2014-05-15", "DescribeMasterSlaveServerGroups", "asdfdsf");
 	}
+
+	private String access_key_id;
 
 	private Long resourceOwnerId;
 
@@ -32,13 +34,22 @@ public class DescribeMasterSlaveServerGroupsRequest extends RpcAcsRequest<Descri
 
 	private String resourceOwnerAccount;
 
-	private Boolean includeListener;
-
 	private String ownerAccount;
 
 	private Long ownerId;
 
 	private String tags;
+
+	public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -70,17 +81,6 @@ public class DescribeMasterSlaveServerGroupsRequest extends RpcAcsRequest<Descri
 		this.resourceOwnerAccount = resourceOwnerAccount;
 		if(resourceOwnerAccount != null){
 			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public Boolean getIncludeListener() {
-		return this.includeListener;
-	}
-
-	public void setIncludeListener(Boolean includeListener) {
-		this.includeListener = includeListener;
-		if(includeListener != null){
-			putQueryParameter("IncludeListener", includeListener.toString());
 		}
 	}
 

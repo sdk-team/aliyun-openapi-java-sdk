@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeAccessControlListsRequest extends RpcAcsRequest<DescribeAccessControlListsResponse> {
 	
 	public DescribeAccessControlListsRequest() {
-		super("Slb", "2014-05-15", "DescribeAccessControlLists", "slb");
+		super("Slb", "2014-05-15", "DescribeAccessControlLists", "asdfdsf");
 	}
 
 	private String access_key_id;
@@ -36,15 +36,13 @@ public class DescribeAccessControlListsRequest extends RpcAcsRequest<DescribeAcc
 
 	private String ownerAccount;
 
-	private Long ownerId;
+	private Integer pageSize;
 
-	private String addressIPVersion;
+	private Long ownerId;
 
 	private Integer pageNumber;
 
 	private String tags;
-
-	private Integer pageSize;
 
 	public String getAccess_key_id() {
 		return this.access_key_id;
@@ -101,6 +99,17 @@ public class DescribeAccessControlListsRequest extends RpcAcsRequest<DescribeAcc
 		}
 	}
 
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
 	public Long getOwnerId() {
 		return this.ownerId;
 	}
@@ -109,17 +118,6 @@ public class DescribeAccessControlListsRequest extends RpcAcsRequest<DescribeAcc
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public String getAddressIPVersion() {
-		return this.addressIPVersion;
-	}
-
-	public void setAddressIPVersion(String addressIPVersion) {
-		this.addressIPVersion = addressIPVersion;
-		if(addressIPVersion != null){
-			putQueryParameter("AddressIPVersion", addressIPVersion);
 		}
 	}
 
@@ -142,17 +140,6 @@ public class DescribeAccessControlListsRequest extends RpcAcsRequest<DescribeAcc
 		this.tags = tags;
 		if(tags != null){
 			putQueryParameter("Tags", tags);
-		}
-	}
-
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
 		}
 	}
 

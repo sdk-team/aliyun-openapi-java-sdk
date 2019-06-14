@@ -26,22 +26,12 @@ public class SetAccessControlListAttributeResponse extends AcsResponse {
 
 	private String requestId;
 
-	private String aclId;
-
 	public String getRequestId() {
 		return this.requestId;
 	}
 
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
-	}
-
-	public String getAclId() {
-		return this.aclId;
-	}
-
-	public void setAclId(String aclId) {
-		this.aclId = aclId;
 	}
 
 	@Override

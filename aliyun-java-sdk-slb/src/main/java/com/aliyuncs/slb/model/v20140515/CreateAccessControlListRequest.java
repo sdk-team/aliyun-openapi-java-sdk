@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAccessControlListRequest extends RpcAcsRequest<CreateAccessControlListResponse> {
 	
 	public CreateAccessControlListRequest() {
-		super("Slb", "2014-05-15", "CreateAccessControlList", "slb");
+		super("Slb", "2014-05-15", "CreateAccessControlList", "asdfdsf");
 	}
 
 	private String access_key_id;
@@ -37,8 +37,6 @@ public class CreateAccessControlListRequest extends RpcAcsRequest<CreateAccessCo
 	private String ownerAccount;
 
 	private Long ownerId;
-
-	private String addressIPVersion;
 
 	private String tags;
 
@@ -105,17 +103,6 @@ public class CreateAccessControlListRequest extends RpcAcsRequest<CreateAccessCo
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public String getAddressIPVersion() {
-		return this.addressIPVersion;
-	}
-
-	public void setAddressIPVersion(String addressIPVersion) {
-		this.addressIPVersion = addressIPVersion;
-		if(addressIPVersion != null){
-			putQueryParameter("AddressIPVersion", addressIPVersion);
 		}
 	}
 

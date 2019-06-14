@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateMasterSlaveVServerGroupRequest extends RpcAcsRequest<CreateMasterSlaveVServerGroupResponse> {
 	
 	public CreateMasterSlaveVServerGroupRequest() {
-		super("Slb", "2014-05-15", "CreateMasterSlaveVServerGroup", "slb");
+		super("Slb", "2014-05-15", "CreateMasterSlaveVServerGroup", "asdfdsf");
 	}
 
 	private String access_key_id;

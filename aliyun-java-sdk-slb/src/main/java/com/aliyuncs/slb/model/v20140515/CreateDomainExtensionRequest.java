@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateDomainExtensionRequest extends RpcAcsRequest<CreateDomainExtensionResponse> {
 	
 	public CreateDomainExtensionRequest() {
-		super("Slb", "2014-05-15", "CreateDomainExtension", "slb");
+		super("Slb", "2014-05-15", "CreateDomainExtension", "asdfdsf");
 	}
 
 	private Long resourceOwnerId;
@@ -99,10 +99,29 @@ public class CreateDomainExtensionRequest extends RpcAcsRequest<CreateDomainExte
 		}
 	}
 
+	public String getBizDomain() {
+		return this.domain;
+	}
+
+	public void setBizDomain(String domain) {
+		this.domain = domain;
+		if(domain != null){
+			putQueryParameter("Domain", domain);
+		}
+	}
+
+	/**
+	 * @deprecated use getBizDomain instead of this.
+	 */
+	@Deprecated
 	public String getDomain() {
 		return this.domain;
 	}
 
+	/**
+	 * @deprecated use setBizDomain instead of this.
+	 */
+	@Deprecated
 	public void setDomain(String domain) {
 		this.domain = domain;
 		if(domain != null){

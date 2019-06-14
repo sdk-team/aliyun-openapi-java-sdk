@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeAccessControlListAttributeRequest extends RpcAcsRequest<DescribeAccessControlListAttributeResponse> {
 	
 	public DescribeAccessControlListAttributeRequest() {
-		super("Slb", "2014-05-15", "DescribeAccessControlListAttribute", "slb");
+		super("Slb", "2014-05-15", "DescribeAccessControlListAttribute", "asdfdsf");
 	}
 
 	private String access_key_id;

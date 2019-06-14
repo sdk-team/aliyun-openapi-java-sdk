@@ -55,22 +55,32 @@ public class DescribeCACertificatesResponse extends AcsResponse {
 
 		private String fingerprint;
 
-		private String resourceGroupId;
-
-		private String createTime;
-
-		private Long createTimeStamp;
-
 		private String expireTime;
 
 		private Long expireTimeStamp;
 
 		private String commonName;
 
+		public String getBizRegionId() {
+			return this.regionId;
+		}
+
+		public void setBizRegionId(String regionId) {
+			this.regionId = regionId;
+		}
+
+		/**
+		 * @deprecated use getBizRegionId instead of this.
+		 */
+		@Deprecated
 		public String getRegionId() {
 			return this.regionId;
 		}
 
+		/**
+		 * @deprecated use setBizRegionId instead of this.
+		 */
+		@Deprecated
 		public void setRegionId(String regionId) {
 			this.regionId = regionId;
 		}
@@ -97,30 +107,6 @@ public class DescribeCACertificatesResponse extends AcsResponse {
 
 		public void setFingerprint(String fingerprint) {
 			this.fingerprint = fingerprint;
-		}
-
-		public String getResourceGroupId() {
-			return this.resourceGroupId;
-		}
-
-		public void setResourceGroupId(String resourceGroupId) {
-			this.resourceGroupId = resourceGroupId;
-		}
-
-		public String getCreateTime() {
-			return this.createTime;
-		}
-
-		public void setCreateTime(String createTime) {
-			this.createTime = createTime;
-		}
-
-		public Long getCreateTimeStamp() {
-			return this.createTimeStamp;
-		}
-
-		public void setCreateTimeStamp(Long createTimeStamp) {
-			this.createTimeStamp = createTimeStamp;
 		}
 
 		public String getExpireTime() {

@@ -47,19 +47,9 @@ public class DescribeSlbQuotasResponse extends AcsResponse {
 
 	public static class Quota {
 
-		private String max;
-
 		private String quotaName;
 
-		private String comment;
-
-		public String getMax() {
-			return this.max;
-		}
-
-		public void setMax(String max) {
-			this.max = max;
-		}
+		private String max;
 
 		public String getQuotaName() {
 			return this.quotaName;
@@ -69,12 +59,12 @@ public class DescribeSlbQuotasResponse extends AcsResponse {
 			this.quotaName = quotaName;
 		}
 
-		public String getComment() {
-			return this.comment;
+		public String getMax() {
+			return this.max;
 		}
 
-		public void setComment(String comment) {
-			this.comment = comment;
+		public void setMax(String max) {
+			this.max = max;
 		}
 	}
 

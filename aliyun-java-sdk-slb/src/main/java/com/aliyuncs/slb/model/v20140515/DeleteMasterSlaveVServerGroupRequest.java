@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteMasterSlaveVServerGroupRequest extends RpcAcsRequest<DeleteMasterSlaveVServerGroupResponse> {
 	
 	public DeleteMasterSlaveVServerGroupRequest() {
-		super("Slb", "2014-05-15", "DeleteMasterSlaveVServerGroup", "slb");
+		super("Slb", "2014-05-15", "DeleteMasterSlaveVServerGroup", "asdfdsf");
 	}
 
 	private String access_key_id;

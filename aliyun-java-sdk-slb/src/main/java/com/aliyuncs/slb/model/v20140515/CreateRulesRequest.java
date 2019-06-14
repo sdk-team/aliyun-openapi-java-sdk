@@ -23,8 +23,10 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateRulesRequest extends RpcAcsRequest<CreateRulesResponse> {
 	
 	public CreateRulesRequest() {
-		super("Slb", "2014-05-15", "CreateRules", "slb");
+		super("Slb", "2014-05-15", "CreateRules", "asdfdsf");
 	}
+
+	private String access_key_id;
 
 	private Long resourceOwnerId;
 
@@ -40,7 +42,16 @@ public class CreateRulesRequest extends RpcAcsRequest<CreateRulesResponse> {
 
 	private Long ownerId;
 
-	private String tags;
+	public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -116,17 +127,6 @@ public class CreateRulesRequest extends RpcAcsRequest<CreateRulesResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
-		}
-	}
-
-	public String getTags() {
-		return this.tags;
-	}
-
-	public void setTags(String tags) {
-		this.tags = tags;
-		if(tags != null){
-			putQueryParameter("Tags", tags);
 		}
 	}
 

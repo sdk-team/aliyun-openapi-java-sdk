@@ -26,9 +26,6 @@ public class UploadCACertificateResponseUnmarshaller {
 		uploadCACertificateResponse.setCACertificateId(context.stringValue("UploadCACertificateResponse.CACertificateId"));
 		uploadCACertificateResponse.setCACertificateName(context.stringValue("UploadCACertificateResponse.CACertificateName"));
 		uploadCACertificateResponse.setFingerprint(context.stringValue("UploadCACertificateResponse.Fingerprint"));
-		uploadCACertificateResponse.setResourceGroupId(context.stringValue("UploadCACertificateResponse.ResourceGroupId"));
-		uploadCACertificateResponse.setCreateTime(context.stringValue("UploadCACertificateResponse.CreateTime"));
-		uploadCACertificateResponse.setCreateTimeStamp(context.longValue("UploadCACertificateResponse.CreateTimeStamp"));
 		uploadCACertificateResponse.setExpireTime(context.stringValue("UploadCACertificateResponse.ExpireTime"));
 		uploadCACertificateResponse.setExpireTimeStamp(context.longValue("UploadCACertificateResponse.ExpireTimeStamp"));
 		uploadCACertificateResponse.setCommonName(context.stringValue("UploadCACertificateResponse.CommonName"));

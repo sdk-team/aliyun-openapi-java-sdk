@@ -23,12 +23,12 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyLoadBalancerPayTypeRequest extends RpcAcsRequest<ModifyLoadBalancerPayTypeResponse> {
 	
 	public ModifyLoadBalancerPayTypeRequest() {
-		super("Slb", "2014-05-15", "ModifyLoadBalancerPayType", "slb");
+		super("Slb", "2014-05-15", "ModifyLoadBalancerPayType", "asdfdsf");
 	}
 
-	private Long resourceOwnerId;
+	private String access_key_id;
 
-	private Boolean autoPay;
+	private Long resourceOwnerId;
 
 	private String resourceOwnerAccount;
 
@@ -46,6 +46,17 @@ public class ModifyLoadBalancerPayTypeRequest extends RpcAcsRequest<ModifyLoadBa
 
 	private String pricingCycle;
 
+	public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
+		}
+	}
+
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
 	}
@@ -54,17 +65,6 @@ public class ModifyLoadBalancerPayTypeRequest extends RpcAcsRequest<ModifyLoadBa
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public Boolean getAutoPay() {
-		return this.autoPay;
-	}
-
-	public void setAutoPay(Boolean autoPay) {
-		this.autoPay = autoPay;
-		if(autoPay != null){
-			putQueryParameter("AutoPay", autoPay.toString());
 		}
 	}
 

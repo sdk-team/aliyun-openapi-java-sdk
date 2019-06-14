@@ -23,7 +23,6 @@ public class SetAccessControlListAttributeResponseUnmarshaller {
 	public static SetAccessControlListAttributeResponse unmarshall(SetAccessControlListAttributeResponse setAccessControlListAttributeResponse, UnmarshallerContext context) {
 		
 		setAccessControlListAttributeResponse.setRequestId(context.stringValue("SetAccessControlListAttributeResponse.RequestId"));
-		setAccessControlListAttributeResponse.setAclId(context.stringValue("SetAccessControlListAttributeResponse.AclId"));
 	 
 	 	return setAccessControlListAttributeResponse;
 	}

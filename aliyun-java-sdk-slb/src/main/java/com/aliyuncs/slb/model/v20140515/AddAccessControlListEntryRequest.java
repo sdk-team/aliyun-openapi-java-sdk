@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class AddAccessControlListEntryRequest extends RpcAcsRequest<AddAccessControlListEntryResponse> {
 	
 	public AddAccessControlListEntryRequest() {
-		super("Slb", "2014-05-15", "AddAccessControlListEntry", "slb");
+		super("Slb", "2014-05-15", "AddAccessControlListEntry", "asdfdsf");
 	}
 
 	private String access_key_id;

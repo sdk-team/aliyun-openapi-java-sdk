@@ -23,8 +23,10 @@ import com.aliyuncs.RpcAcsRequest;
 public class SetCACertificateNameRequest extends RpcAcsRequest<SetCACertificateNameResponse> {
 	
 	public SetCACertificateNameRequest() {
-		super("Slb", "2014-05-15", "SetCACertificateName", "slb");
+		super("Slb", "2014-05-15", "SetCACertificateName", "asdfdsf");
 	}
+
+	private String access_key_id;
 
 	private Long resourceOwnerId;
 
@@ -37,6 +39,17 @@ public class SetCACertificateNameRequest extends RpcAcsRequest<SetCACertificateN
 	private Long ownerId;
 
 	private String cACertificateId;
+
+	public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;

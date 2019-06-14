@@ -29,7 +29,7 @@ public class CreateMasterSlaveVServerGroupResponse extends AcsResponse {
 
 	private String masterSlaveVServerGroupId;
 
-	private List<MasterSlaveBackendServer> masterSlaveBackendServers;
+	private List<BackendServer> masterSlaveBackendServers;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -47,15 +47,15 @@ public class CreateMasterSlaveVServerGroupResponse extends AcsResponse {
 		this.masterSlaveVServerGroupId = masterSlaveVServerGroupId;
 	}
 
-	public List<MasterSlaveBackendServer> getMasterSlaveBackendServers() {
+	public List<BackendServer> getMasterSlaveBackendServers() {
 		return this.masterSlaveBackendServers;
 	}
 
-	public void setMasterSlaveBackendServers(List<MasterSlaveBackendServer> masterSlaveBackendServers) {
+	public void setMasterSlaveBackendServers(List<BackendServer> masterSlaveBackendServers) {
 		this.masterSlaveBackendServers = masterSlaveBackendServers;
 	}
 
-	public static class MasterSlaveBackendServer {
+	public static class BackendServer {
 
 		private String serverId;
 
@@ -63,13 +63,11 @@ public class CreateMasterSlaveVServerGroupResponse extends AcsResponse {
 
 		private Integer weight;
 
-		private Integer isBackup;
+		private Boolean backup;
 
 		private String type;
 
 		private String serverIp;
-
-		private String eniHost;
 
 		private String vpcId;
 
@@ -97,12 +95,12 @@ public class CreateMasterSlaveVServerGroupResponse extends AcsResponse {
 			this.weight = weight;
 		}
 
-		public Integer getIsBackup() {
-			return this.isBackup;
+		public Boolean getBackup() {
+			return this.backup;
 		}
 
-		public void setIsBackup(Integer isBackup) {
-			this.isBackup = isBackup;
+		public void setBackup(Boolean backup) {
+			this.backup = backup;
 		}
 
 		public String getType() {
@@ -119,14 +117,6 @@ public class CreateMasterSlaveVServerGroupResponse extends AcsResponse {
 
 		public void setServerIp(String serverIp) {
 			this.serverIp = serverIp;
-		}
-
-		public String getEniHost() {
-			return this.eniHost;
-		}
-
-		public void setEniHost(String eniHost) {
-			this.eniHost = eniHost;
 		}
 
 		public String getVpcId() {

@@ -20,7 +20,6 @@ import java.util.List;
 import com.aliyuncs.slb.model.v20140515.DescribeAccessControlListAttributeResponse;
 import com.aliyuncs.slb.model.v20140515.DescribeAccessControlListAttributeResponse.AclEntry;
 import com.aliyuncs.slb.model.v20140515.DescribeAccessControlListAttributeResponse.RelatedListener;
-import java.util.Map;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -31,13 +30,12 @@ public class DescribeAccessControlListAttributeResponseUnmarshaller {
 		describeAccessControlListAttributeResponse.setRequestId(context.stringValue("DescribeAccessControlListAttributeResponse.RequestId"));
 		describeAccessControlListAttributeResponse.setAclId(context.stringValue("DescribeAccessControlListAttributeResponse.AclId"));
 		describeAccessControlListAttributeResponse.setAclName(context.stringValue("DescribeAccessControlListAttributeResponse.AclName"));
-		describeAccessControlListAttributeResponse.setAddressIPVersion(context.stringValue("DescribeAccessControlListAttributeResponse.AddressIPVersion"));
 
 		List<AclEntry> aclEntrys = new ArrayList<AclEntry>();
 		for (int i = 0; i < context.lengthValue("DescribeAccessControlListAttributeResponse.AclEntrys.Length"); i++) {
 			AclEntry aclEntry = new AclEntry();
 			aclEntry.setAclEntryIP(context.stringValue("DescribeAccessControlListAttributeResponse.AclEntrys["+ i +"].AclEntryIP"));
-			aclEntry.setAclEntryComment(context.stringValue("DescribeAccessControlListAttributeResponse.AclEntrys["+ i +"].AclEntryComment"));
+			aclEntry.setAclEntryComment(context.integerValue("DescribeAccessControlListAttributeResponse.AclEntrys["+ i +"].AclEntryComment"));
 
 			aclEntrys.add(aclEntry);
 		}

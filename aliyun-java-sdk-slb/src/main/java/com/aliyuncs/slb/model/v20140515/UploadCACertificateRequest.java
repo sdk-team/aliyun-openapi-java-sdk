@@ -23,10 +23,10 @@ import com.aliyuncs.RpcAcsRequest;
 public class UploadCACertificateRequest extends RpcAcsRequest<UploadCACertificateResponse> {
 	
 	public UploadCACertificateRequest() {
-		super("Slb", "2014-05-15", "UploadCACertificate", "slb");
+		super("Slb", "2014-05-15", "UploadCACertificate", "asdfdsf");
 	}
 
-	private String resourceGroupId;
+	private String access_key_id;
 
 	private Long resourceOwnerId;
 
@@ -40,14 +40,14 @@ public class UploadCACertificateRequest extends RpcAcsRequest<UploadCACertificat
 
 	private Long ownerId;
 
-	public String getResourceGroupId() {
-		return this.resourceGroupId;
+	public String getAccess_key_id() {
+		return this.access_key_id;
 	}
 
-	public void setResourceGroupId(String resourceGroupId) {
-		this.resourceGroupId = resourceGroupId;
-		if(resourceGroupId != null){
-			putQueryParameter("ResourceGroupId", resourceGroupId);
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
 		}
 	}
 

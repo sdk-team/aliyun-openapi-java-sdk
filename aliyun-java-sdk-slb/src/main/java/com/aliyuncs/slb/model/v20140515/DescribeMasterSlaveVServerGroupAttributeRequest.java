@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DescribeMasterSlaveVServerGroupAttributeRequest extends RpcAcsRequest<DescribeMasterSlaveVServerGroupAttributeResponse> {
 	
 	public DescribeMasterSlaveVServerGroupAttributeRequest() {
-		super("Slb", "2014-05-15", "DescribeMasterSlaveVServerGroupAttribute", "slb");
+		super("Slb", "2014-05-15", "DescribeMasterSlaveVServerGroupAttribute", "asdfdsf");
 	}
 
 	private String access_key_id;

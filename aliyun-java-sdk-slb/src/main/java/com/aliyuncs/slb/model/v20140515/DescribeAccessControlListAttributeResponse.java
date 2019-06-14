@@ -31,8 +31,6 @@ public class DescribeAccessControlListAttributeResponse extends AcsResponse {
 
 	private String aclName;
 
-	private String addressIPVersion;
-
 	private List<AclEntry> aclEntrys;
 
 	private List<RelatedListener> relatedListeners;
@@ -61,14 +59,6 @@ public class DescribeAccessControlListAttributeResponse extends AcsResponse {
 		this.aclName = aclName;
 	}
 
-	public String getAddressIPVersion() {
-		return this.addressIPVersion;
-	}
-
-	public void setAddressIPVersion(String addressIPVersion) {
-		this.addressIPVersion = addressIPVersion;
-	}
-
 	public List<AclEntry> getAclEntrys() {
 		return this.aclEntrys;
 	}
@@ -89,7 +79,7 @@ public class DescribeAccessControlListAttributeResponse extends AcsResponse {
 
 		private String aclEntryIP;
 
-		private String aclEntryComment;
+		private Integer aclEntryComment;
 
 		public String getAclEntryIP() {
 			return this.aclEntryIP;
@@ -99,11 +89,11 @@ public class DescribeAccessControlListAttributeResponse extends AcsResponse {
 			this.aclEntryIP = aclEntryIP;
 		}
 
-		public String getAclEntryComment() {
+		public Integer getAclEntryComment() {
 			return this.aclEntryComment;
 		}
 
-		public void setAclEntryComment(String aclEntryComment) {
+		public void setAclEntryComment(Integer aclEntryComment) {
 			this.aclEntryComment = aclEntryComment;
 		}
 	}
@@ -142,10 +132,26 @@ public class DescribeAccessControlListAttributeResponse extends AcsResponse {
 			this.aclType = aclType;
 		}
 
+		public String getBizProtocol() {
+			return this.protocol;
+		}
+
+		public void setBizProtocol(String protocol) {
+			this.protocol = protocol;
+		}
+
+		/**
+		 * @deprecated use getBizProtocol instead of this.
+		 */
+		@Deprecated
 		public String getProtocol() {
 			return this.protocol;
 		}
 
+		/**
+		 * @deprecated use setBizProtocol instead of this.
+		 */
+		@Deprecated
 		public void setProtocol(String protocol) {
 			this.protocol = protocol;
 		}

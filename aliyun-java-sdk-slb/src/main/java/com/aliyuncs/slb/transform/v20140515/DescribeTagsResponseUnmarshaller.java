@@ -18,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.aliyuncs.slb.model.v20140515.DescribeTagsResponse;
-import com.aliyuncs.slb.model.v20140515.DescribeTagsResponse.TagSet;
-import java.util.Map;
+import com.aliyuncs.slb.model.v20140515.DescribeTagsResponse.TagSetItem;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -32,16 +31,16 @@ public class DescribeTagsResponseUnmarshaller {
 		describeTagsResponse.setPageNumber(context.integerValue("DescribeTagsResponse.PageNumber"));
 		describeTagsResponse.setTotalCount(context.integerValue("DescribeTagsResponse.TotalCount"));
 
-		List<TagSet> tagSets = new ArrayList<TagSet>();
-		for (int i = 0; i < context.lengthValue("DescribeTagsResponse.TagSets.Length"); i++) {
-			TagSet tagSet = new TagSet();
-			tagSet.setTagKey(context.stringValue("DescribeTagsResponse.TagSets["+ i +"].TagKey"));
-			tagSet.setTagValue(context.stringValue("DescribeTagsResponse.TagSets["+ i +"].TagValue"));
-			tagSet.setInstanceCount(context.integerValue("DescribeTagsResponse.TagSets["+ i +"].InstanceCount"));
+		List<TagSetItem> tagSet = new ArrayList<TagSetItem>();
+		for (int i = 0; i < context.lengthValue("DescribeTagsResponse.TagSet.Length"); i++) {
+			TagSetItem tagSetItem = new TagSetItem();
+			tagSetItem.setTagKey(context.stringValue("DescribeTagsResponse.TagSet["+ i +"].TagKey"));
+			tagSetItem.setTagValue(context.stringValue("DescribeTagsResponse.TagSet["+ i +"].TagValue"));
+			tagSetItem.setInstanceCount(context.integerValue("DescribeTagsResponse.TagSet["+ i +"].InstanceCount"));
 
-			tagSets.add(tagSet);
+			tagSet.add(tagSetItem);
 		}
-		describeTagsResponse.setTagSets(tagSets);
+		describeTagsResponse.setTagSet(tagSet);
 	 
 	 	return describeTagsResponse;
 	}

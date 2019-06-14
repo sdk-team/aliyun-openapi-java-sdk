@@ -18,8 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.aliyuncs.slb.model.v20140515.DescribeMasterSlaveVServerGroupAttributeResponse;
-import com.aliyuncs.slb.model.v20140515.DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServer;
-import java.util.Map;
+import com.aliyuncs.slb.model.v20140515.DescribeMasterSlaveVServerGroupAttributeResponse.BackendServer;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -31,19 +30,18 @@ public class DescribeMasterSlaveVServerGroupAttributeResponseUnmarshaller {
 		describeMasterSlaveVServerGroupAttributeResponse.setMasterSlaveVServerGroupId(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveVServerGroupId"));
 		describeMasterSlaveVServerGroupAttributeResponse.setMasterSlaveVServerGroupName(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveVServerGroupName"));
 
-		List<MasterSlaveBackendServer> masterSlaveBackendServers = new ArrayList<MasterSlaveBackendServer>();
+		List<BackendServer> masterSlaveBackendServers = new ArrayList<BackendServer>();
 		for (int i = 0; i < context.lengthValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers.Length"); i++) {
-			MasterSlaveBackendServer masterSlaveBackendServer = new MasterSlaveBackendServer();
-			masterSlaveBackendServer.setServerId(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].ServerId"));
-			masterSlaveBackendServer.setPort(context.integerValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Port"));
-			masterSlaveBackendServer.setWeight(context.integerValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Weight"));
-			masterSlaveBackendServer.setIsBackup(context.integerValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].IsBackup"));
-			masterSlaveBackendServer.setType(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Type"));
-			masterSlaveBackendServer.setServerIp(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].ServerIp"));
-			masterSlaveBackendServer.setEniHost(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].EniHost"));
-			masterSlaveBackendServer.setVpcId(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].VpcId"));
+			BackendServer backendServer = new BackendServer();
+			backendServer.setServerId(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].ServerId"));
+			backendServer.setPort(context.integerValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Port"));
+			backendServer.setWeight(context.integerValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Weight"));
+			backendServer.setBackup(context.booleanValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Backup"));
+			backendServer.setType(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].Type"));
+			backendServer.setServerIp(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].ServerIp"));
+			backendServer.setVpcId(context.stringValue("DescribeMasterSlaveVServerGroupAttributeResponse.MasterSlaveBackendServers["+ i +"].VpcId"));
 
-			masterSlaveBackendServers.add(masterSlaveBackendServer);
+			masterSlaveBackendServers.add(backendServer);
 		}
 		describeMasterSlaveVServerGroupAttributeResponse.setMasterSlaveBackendServers(masterSlaveBackendServers);
 	 

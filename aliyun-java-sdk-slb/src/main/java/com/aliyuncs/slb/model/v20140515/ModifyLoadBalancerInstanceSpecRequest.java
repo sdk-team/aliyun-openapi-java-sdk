@@ -23,16 +23,16 @@ import com.aliyuncs.RpcAcsRequest;
 public class ModifyLoadBalancerInstanceSpecRequest extends RpcAcsRequest<ModifyLoadBalancerInstanceSpecResponse> {
 	
 	public ModifyLoadBalancerInstanceSpecRequest() {
-		super("Slb", "2014-05-15", "ModifyLoadBalancerInstanceSpec", "slb");
+		super("Slb", "2014-05-15", "ModifyLoadBalancerInstanceSpec", "asdfdsf");
 	}
 
 	private String loadBalancerSpec;
 
+	private String access_key_id;
+
 	private Long resourceOwnerId;
 
 	private String loadBalancerId;
-
-	private Boolean autoPay;
 
 	private String resourceOwnerAccount;
 
@@ -50,6 +50,17 @@ public class ModifyLoadBalancerInstanceSpecRequest extends RpcAcsRequest<ModifyL
 		this.loadBalancerSpec = loadBalancerSpec;
 		if(loadBalancerSpec != null){
 			putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
+		}
+	}
+
+	public String getAccess_key_id() {
+		return this.access_key_id;
+	}
+
+	public void setAccess_key_id(String access_key_id) {
+		this.access_key_id = access_key_id;
+		if(access_key_id != null){
+			putQueryParameter("access_key_id", access_key_id);
 		}
 	}
 
@@ -72,17 +83,6 @@ public class ModifyLoadBalancerInstanceSpecRequest extends RpcAcsRequest<ModifyL
 		this.loadBalancerId = loadBalancerId;
 		if(loadBalancerId != null){
 			putQueryParameter("LoadBalancerId", loadBalancerId);
-		}
-	}
-
-	public Boolean getAutoPay() {
-		return this.autoPay;
-	}
-
-	public void setAutoPay(Boolean autoPay) {
-		this.autoPay = autoPay;
-		if(autoPay != null){
-			putQueryParameter("AutoPay", autoPay.toString());
 		}
 	}
 
