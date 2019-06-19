@@ -30,10 +30,6 @@ public class DoLogicalDeleteResourceRequest extends RpcAcsRequest<DoLogicalDelet
 
 	private Long hid;
 
-	private String invoker;
-
-	private String message;
-
 	private Boolean success;
 
 	private Boolean interrupt;
@@ -42,7 +38,11 @@ public class DoLogicalDeleteResourceRequest extends RpcAcsRequest<DoLogicalDelet
 
 	private String pk;
 
+	private String invoker;
+
 	private String bid;
+
+	private String message;
 
 	private String taskExtraData;
 
@@ -67,28 +67,6 @@ public class DoLogicalDeleteResourceRequest extends RpcAcsRequest<DoLogicalDelet
 		this.hid = hid;
 		if(hid != null){
 			putQueryParameter("Hid", hid.toString());
-		}
-	}
-
-	public String getInvoker() {
-		return this.invoker;
-	}
-
-	public void setInvoker(String invoker) {
-		this.invoker = invoker;
-		if(invoker != null){
-			putQueryParameter("Invoker", invoker);
-		}
-	}
-
-	public String getMessage() {
-		return this.message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-		if(message != null){
-			putQueryParameter("Message", message);
 		}
 	}
 
@@ -136,6 +114,17 @@ public class DoLogicalDeleteResourceRequest extends RpcAcsRequest<DoLogicalDelet
 		}
 	}
 
+	public String getInvoker() {
+		return this.invoker;
+	}
+
+	public void setInvoker(String invoker) {
+		this.invoker = invoker;
+		if(invoker != null){
+			putQueryParameter("Invoker", invoker);
+		}
+	}
+
 	public String getBid() {
 		return this.bid;
 	}
@@ -144,6 +133,17 @@ public class DoLogicalDeleteResourceRequest extends RpcAcsRequest<DoLogicalDelet
 		this.bid = bid;
 		if(bid != null){
 			putQueryParameter("Bid", bid);
+		}
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+		if(message != null){
+			putQueryParameter("Message", message);
 		}
 	}
 
