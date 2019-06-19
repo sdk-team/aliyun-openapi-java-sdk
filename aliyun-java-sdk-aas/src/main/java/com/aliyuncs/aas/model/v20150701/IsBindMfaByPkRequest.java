@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class IsBindMfaByPkRequest extends RpcAcsRequest<IsBindMfaByPkResponse> {
 	
 	public IsBindMfaByPkRequest() {
-		super("Aas", "2015-07-01", "IsBindMfaByPk");
+		super("Aas", "2015-07-01", "IsBindMfaByPk", "aas");
 	}
 
 	private String pK;

@@ -14,22 +14,22 @@
 
 package com.aliyuncs.aas.transform.v20150701;
 
-import com.aliyuncs.aas.model.v20150701.GetAccountKinShipInfoByPKResponse;
+import com.aliyuncs.aas.model.v20150701.GetAccountKinshipInfoByPKResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class GetAccountKinShipInfoByPKResponseUnmarshaller {
+public class GetAccountKinshipInfoByPKResponseUnmarshaller {
 
-	public static GetAccountKinShipInfoByPKResponse unmarshall(GetAccountKinShipInfoByPKResponse getAccountKinShipInfoByPKResponse, UnmarshallerContext context) {
+	public static GetAccountKinshipInfoByPKResponse unmarshall(GetAccountKinshipInfoByPKResponse getAccountKinshipInfoByPKResponse, UnmarshallerContext context) {
 		
-		getAccountKinShipInfoByPKResponse.setRequestId(context.stringValue("GetAccountKinShipInfoByPKResponse.RequestId"));
-		getAccountKinShipInfoByPKResponse.setPK(context.stringValue("GetAccountKinShipInfoByPKResponse.PK"));
-		getAccountKinShipInfoByPKResponse.setParentPk(context.stringValue("GetAccountKinShipInfoByPKResponse.ParentPk"));
-		getAccountKinShipInfoByPKResponse.setPartnerPk(context.stringValue("GetAccountKinShipInfoByPKResponse.PartnerPk"));
-		getAccountKinShipInfoByPKResponse.setAccountStructure(context.stringValue("GetAccountKinShipInfoByPKResponse.AccountStructure"));
-		getAccountKinShipInfoByPKResponse.setAccountName(context.stringValue("GetAccountKinShipInfoByPKResponse.AccountName"));
-		getAccountKinShipInfoByPKResponse.setIsSubAccount(context.booleanValue("GetAccountKinShipInfoByPKResponse.IsSubAccount"));
+		getAccountKinshipInfoByPKResponse.setRequestId(context.stringValue("GetAccountKinshipInfoByPKResponse.RequestId"));
+		getAccountKinshipInfoByPKResponse.setPK(context.stringValue("GetAccountKinshipInfoByPKResponse.PK"));
+		getAccountKinshipInfoByPKResponse.setParentPk(context.stringValue("GetAccountKinshipInfoByPKResponse.ParentPk"));
+		getAccountKinshipInfoByPKResponse.setPartnerPk(context.stringValue("GetAccountKinshipInfoByPKResponse.PartnerPk"));
+		getAccountKinshipInfoByPKResponse.setAccountStructure(context.stringValue("GetAccountKinshipInfoByPKResponse.AccountStructure"));
+		getAccountKinshipInfoByPKResponse.setAccountName(context.stringValue("GetAccountKinshipInfoByPKResponse.AccountName"));
+		getAccountKinshipInfoByPKResponse.setIsSubAccount(context.booleanValue("GetAccountKinshipInfoByPKResponse.IsSubAccount"));
 	 
-	 	return getAccountKinShipInfoByPKResponse;
+	 	return getAccountKinshipInfoByPKResponse;
 	}
 }

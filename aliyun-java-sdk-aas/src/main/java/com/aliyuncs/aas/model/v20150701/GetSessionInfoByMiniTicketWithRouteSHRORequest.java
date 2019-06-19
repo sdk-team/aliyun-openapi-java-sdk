@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetSessionInfoByMiniTicketWithRouteSHRORequest extends RpcAcsRequest<GetSessionInfoByMiniTicketWithRouteSHROResponse> {
 	
 	public GetSessionInfoByMiniTicketWithRouteSHRORequest() {
-		super("Aas", "2015-07-01", "GetSessionInfoByMiniTicketWithRouteSHRO");
+		super("Aas", "2015-07-01", "GetSessionInfoByMiniTicketWithRouteSHRO", "aas");
 	}
 
 	private String ticket;

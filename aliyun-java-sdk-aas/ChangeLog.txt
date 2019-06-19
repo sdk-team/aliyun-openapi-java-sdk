@@ -1,3 +1,6 @@
+2019-06-19 Version: 1.0.2
+- Generated 2015-07-01 for `Aas`.
+
 2019-06-19 Version: 1.0.30
 - Test error package.
 

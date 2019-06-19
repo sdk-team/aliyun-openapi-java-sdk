@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetLoginConfigInfoByPKRequest extends RpcAcsRequest<GetLoginConfigInfoByPKResponse> {
 	
 	public GetLoginConfigInfoByPKRequest() {
-		super("Aas", "2015-07-01", "GetLoginConfigInfoByPK");
+		super("Aas", "2015-07-01", "GetLoginConfigInfoByPK", "aas");
 	}
 
 	private String pK;

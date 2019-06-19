@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetSessionInfoByTicketWithRouteRequest extends RpcAcsRequest<GetSessionInfoByTicketWithRouteResponse> {
 	
 	public GetSessionInfoByTicketWithRouteRequest() {
-		super("Aas", "2015-07-01", "GetSessionInfoByTicketWithRoute");
+		super("Aas", "2015-07-01", "GetSessionInfoByTicketWithRoute", "aas");
 	}
 
 	private String ticket;
