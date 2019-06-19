@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetAliyunAccountWithBindHidRequest extends RpcAcsRequest<GetAliyunAccountWithBindHidResponse> {
 	
 	public GetAliyunAccountWithBindHidRequest() {
-		super("Aas", "2015-07-01", "GetAliyunAccountWithBindHid");
+		super("Aas", "2015-07-01", "GetAliyunAccountWithBindHid", "aas");
 	}
 
 	private String innerAccountHid;

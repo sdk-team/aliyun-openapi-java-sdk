@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateShortTermAccessKeyForAccountRequest extends RpcAcsRequest<CreateShortTermAccessKeyForAccountResponse> {
 	
 	public CreateShortTermAccessKeyForAccountRequest() {
-		super("Aas", "2015-07-01", "CreateShortTermAccessKeyForAccount");
+		super("Aas", "2015-07-01", "CreateShortTermAccessKeyForAccount", "aas");
 	}
 
 	private String expireTime;

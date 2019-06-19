@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteAccessKeyForAccountRequest extends RpcAcsRequest<DeleteAccessKeyForAccountResponse> {
 	
 	public DeleteAccessKeyForAccountRequest() {
-		super("Aas", "2015-07-01", "DeleteAccessKeyForAccount");
+		super("Aas", "2015-07-01", "DeleteAccessKeyForAccount", "aas");
 	}
 
 	private String aKId;

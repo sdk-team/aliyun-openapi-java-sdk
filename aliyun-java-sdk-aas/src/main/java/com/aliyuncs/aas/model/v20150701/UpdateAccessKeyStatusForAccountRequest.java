@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateAccessKeyStatusForAccountRequest extends RpcAcsRequest<UpdateAccessKeyStatusForAccountResponse> {
 	
 	public UpdateAccessKeyStatusForAccountRequest() {
-		super("Aas", "2015-07-01", "UpdateAccessKeyStatusForAccount");
+		super("Aas", "2015-07-01", "UpdateAccessKeyStatusForAccount", "aas");
 	}
 
 	private String aKStatus;

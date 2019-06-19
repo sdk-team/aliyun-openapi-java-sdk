@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAccessKeyForAccountRequest extends RpcAcsRequest<CreateAccessKeyForAccountResponse> {
 	
 	public CreateAccessKeyForAccountRequest() {
-		super("Aas", "2015-07-01", "CreateAccessKeyForAccount");
+		super("Aas", "2015-07-01", "CreateAccessKeyForAccount", "aas");
 	}
 
 	private String aKSecret;

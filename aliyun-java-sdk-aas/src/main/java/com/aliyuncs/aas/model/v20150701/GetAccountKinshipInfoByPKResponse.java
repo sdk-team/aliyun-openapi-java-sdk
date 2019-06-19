@@ -15,14 +15,14 @@
 package com.aliyuncs.aas.model.v20150701;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.aas.transform.v20150701.GetAccountKinshipInfoByPKResponseUnmarshaller;
+import com.aliyuncs.aas.transform.v20150701.GetAccountKinShipInfoByPKResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class GetAccountKinshipInfoByPKResponse extends AcsResponse {
+public class GetAccountKinShipInfoByPKResponse extends AcsResponse {
 
 	private String requestId;
 
@@ -95,7 +95,7 @@ public class GetAccountKinshipInfoByPKResponse extends AcsResponse {
 	}
 
 	@Override
-	public GetAccountKinshipInfoByPKResponse getInstance(UnmarshallerContext context) {
-		return	GetAccountKinshipInfoByPKResponseUnmarshaller.unmarshall(this, context);
+	public GetAccountKinShipInfoByPKResponse getInstance(UnmarshallerContext context) {
+		return	GetAccountKinShipInfoByPKResponseUnmarshaller.unmarshall(this, context);
 	}
 }

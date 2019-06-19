@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetBasicAccountInfoByPkRequest extends RpcAcsRequest<GetBasicAccountInfoByPkResponse> {
 	
 	public GetBasicAccountInfoByPkRequest() {
-		super("Aas", "2015-07-01", "GetBasicAccountInfoByPk");
+		super("Aas", "2015-07-01", "GetBasicAccountInfoByPk", "aas");
 	}
 
 	private String pK;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetBasicInfoForAccountRequest extends RpcAcsRequest<GetBasicInfoForAccountResponse> {
 	
 	public GetBasicInfoForAccountRequest() {
-		super("Aas", "2015-07-01", "GetBasicInfoForAccount");
+		super("Aas", "2015-07-01", "GetBasicInfoForAccount", "aas");
 	}
 
 	private String aliyunId;

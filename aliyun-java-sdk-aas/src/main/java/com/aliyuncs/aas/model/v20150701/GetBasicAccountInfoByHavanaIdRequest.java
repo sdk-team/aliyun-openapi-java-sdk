@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetBasicAccountInfoByHavanaIdRequest extends RpcAcsRequest<GetBasicAccountInfoByHavanaIdResponse> {
 	
 	public GetBasicAccountInfoByHavanaIdRequest() {
-		super("Aas", "2015-07-01", "GetBasicAccountInfoByHavanaId");
+		super("Aas", "2015-07-01", "GetBasicAccountInfoByHavanaId", "aas");
 	}
 
 	private String havanaId;

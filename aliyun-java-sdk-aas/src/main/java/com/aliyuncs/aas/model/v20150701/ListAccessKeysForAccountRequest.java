@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListAccessKeysForAccountRequest extends RpcAcsRequest<ListAccessKeysForAccountResponse> {
 	
 	public ListAccessKeysForAccountRequest() {
-		super("Aas", "2015-07-01", "ListAccessKeysForAccount");
+		super("Aas", "2015-07-01", "ListAccessKeysForAccount", "aas");
 	}
 
 	private String aKType;

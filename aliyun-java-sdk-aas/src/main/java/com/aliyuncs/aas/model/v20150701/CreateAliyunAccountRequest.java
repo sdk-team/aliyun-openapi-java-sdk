@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateAliyunAccountRequest extends RpcAcsRequest<CreateAliyunAccountResponse> {
 	
 	public CreateAliyunAccountRequest() {
-		super("Aas", "2015-07-01", "CreateAliyunAccount");
+		super("Aas", "2015-07-01", "CreateAliyunAccount", "aas");
 	}
 
 	private String aliyunId;

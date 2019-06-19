@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdatePasswordForAccountRequest extends RpcAcsRequest<UpdatePasswordForAccountResponse> {
 	
 	public UpdatePasswordForAccountRequest() {
-		super("Aas", "2015-07-01", "UpdatePasswordForAccount");
+		super("Aas", "2015-07-01", "UpdatePasswordForAccount", "aas");
 	}
 
 	private String pK;

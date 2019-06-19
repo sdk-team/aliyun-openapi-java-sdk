@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class VerifyAccountLoginTokenRequest extends RpcAcsRequest<VerifyAccountLoginTokenResponse> {
 	
 	public VerifyAccountLoginTokenRequest() {
-		super("Aas", "2015-07-01", "VerifyAccountLoginToken");
+		super("Aas", "2015-07-01", "VerifyAccountLoginToken", "aas");
 	}
 
 	private String loginToken;

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetSessionInfoByMiniTicketRequest extends RpcAcsRequest<GetSessionInfoByMiniTicketResponse> {
 	
 	public GetSessionInfoByMiniTicketRequest() {
-		super("Aas", "2015-07-01", "GetSessionInfoByMiniTicket");
+		super("Aas", "2015-07-01", "GetSessionInfoByMiniTicket", "aas");
 	}
 
 	private String ticket;

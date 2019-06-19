@@ -20,10 +20,10 @@ import com.aliyuncs.RpcAcsRequest;
  * @author auto create
  * @version 
  */
-public class GetAccountKinshipInfoByPKRequest extends RpcAcsRequest<GetAccountKinshipInfoByPKResponse> {
+public class GetAccountKinShipInfoByPKRequest extends RpcAcsRequest<GetAccountKinShipInfoByPKResponse> {
 	
-	public GetAccountKinshipInfoByPKRequest() {
-		super("Aas", "2015-07-01", "GetAccountKinshipInfoByPK");
+	public GetAccountKinShipInfoByPKRequest() {
+		super("Aas", "2015-07-01", "GetAccountKinShipInfoByPK", "aas");
 	}
 
 	private String pK;
@@ -40,8 +40,8 @@ public class GetAccountKinshipInfoByPKRequest extends RpcAcsRequest<GetAccountKi
 	}
 
 	@Override
-	public Class<GetAccountKinshipInfoByPKResponse> getResponseClass() {
-		return GetAccountKinshipInfoByPKResponse.class;
+	public Class<GetAccountKinShipInfoByPKResponse> getResponseClass() {
+		return GetAccountKinShipInfoByPKResponse.class;
 	}
 
 }

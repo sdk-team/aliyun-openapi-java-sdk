@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListAliyunAccountRequest extends RpcAcsRequest<ListAliyunAccountResponse> {
 	
 	public ListAliyunAccountRequest() {
-		super("Aas", "2015-07-01", "ListAliyunAccount");
+		super("Aas", "2015-07-01", "ListAliyunAccount", "aas");
 	}
 
 	private String marker;

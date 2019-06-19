@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GenerateAccountLoginTokenRequest extends RpcAcsRequest<GenerateAccountLoginTokenResponse> {
 	
 	public GenerateAccountLoginTokenRequest() {
-		super("Aas", "2015-07-01", "GenerateAccountLoginToken");
+		super("Aas", "2015-07-01", "GenerateAccountLoginToken", "aas");
 	}
 
 	private String targetPk;

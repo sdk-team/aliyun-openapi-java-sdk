@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetAliyunAccountWithBindTaobaoHidRequest extends RpcAcsRequest<GetAliyunAccountWithBindTaobaoHidResponse> {
 	
 	public GetAliyunAccountWithBindTaobaoHidRequest() {
-		super("Aas", "2015-07-01", "GetAliyunAccountWithBindTaobaoHid");
+		super("Aas", "2015-07-01", "GetAliyunAccountWithBindTaobaoHid", "aas");
 	}
 
 	private String havanaId;
