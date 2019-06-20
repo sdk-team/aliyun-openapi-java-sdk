@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
 	
 	public PurchaseApiRequest() {
-		super("Acs", "2015-01-01", "PurchaseApi", "dsafsd");
+		super("Acs", "2015-01-01", "PurchaseApi");
 		setUriPattern("/Api/PurchaseApi");
 		setMethod(MethodType.POST);
 	}

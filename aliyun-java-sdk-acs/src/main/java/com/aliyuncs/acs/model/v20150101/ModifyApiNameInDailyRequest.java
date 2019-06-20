@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class ModifyApiNameInDailyRequest extends RoaAcsRequest<ModifyApiNameInDailyResponse> {
 	
 	public ModifyApiNameInDailyRequest() {
-		super("Acs", "2015-01-01", "ModifyApiNameInDaily", "dsafsd");
+		super("Acs", "2015-01-01", "ModifyApiNameInDaily");
 		setUriPattern("/modifyApiNameInDaily");
 		setMethod(MethodType.POST);
 	}
