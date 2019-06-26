@@ -41,6 +41,8 @@ public class ListPropertyPoolForTmallGenieResponseUnmarshaller {
 			property.setTmallFunctionId(context.longValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].TmallFunctionId"));
 			property.setThingTemplateKey(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].ThingTemplateKey"));
 			property.setDataType(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataType"));
+			property.setIdentifier(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Identifier"));
+			property.setDescription(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Description"));
 			property.setRwType(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].RwType"));
 			property.setName(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Name"));
 			property.setDataSpecs(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataSpecs"));

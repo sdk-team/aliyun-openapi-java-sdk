@@ -121,6 +121,8 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 
 		private List<Argument1> outputParams;
 
+		private List<Tag> tags;
+
 		public Long getTmallFunctionId() {
 			return this.tmallFunctionId;
 		}
@@ -175,6 +177,14 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 
 		public void setOutputParams(List<Argument1> outputParams) {
 			this.outputParams = outputParams;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
 		}
 
 		public static class Argument {
@@ -340,6 +350,29 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 
 			public void setDataSpecsList(String dataSpecsList) {
 				this.dataSpecsList = dataSpecsList;
+			}
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
 			}
 		}
 	}

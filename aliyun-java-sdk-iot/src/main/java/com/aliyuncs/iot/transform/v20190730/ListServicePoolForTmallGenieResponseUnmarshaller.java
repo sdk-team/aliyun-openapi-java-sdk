@@ -21,6 +21,7 @@ import com.aliyuncs.iot.model.v20190730.ListServicePoolForTmallGenieResponse;
 import com.aliyuncs.iot.model.v20190730.ListServicePoolForTmallGenieResponse.Service;
 import com.aliyuncs.iot.model.v20190730.ListServicePoolForTmallGenieResponse.Service.Argument;
 import com.aliyuncs.iot.model.v20190730.ListServicePoolForTmallGenieResponse.Service.Argument1;
+import com.aliyuncs.iot.model.v20190730.ListServicePoolForTmallGenieResponse.Service.Tag;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
@@ -76,6 +77,16 @@ public class ListServicePoolForTmallGenieResponseUnmarshaller {
 				outputParams.add(argument1);
 			}
 			service.setOutputParams(outputParams);
+
+			List<Tag> tags = new ArrayList<Tag>();
+			for (int j = 0; j < context.lengthValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].Tags.Length"); j++) {
+				Tag tag = new Tag();
+				tag.setTagKey(context.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].Tags["+ j +"].TagKey"));
+				tag.setTagValue(context.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].Tags["+ j +"].TagValue"));
+
+				tags.add(tag);
+			}
+			service.setTags(tags);
 
 			services.add(service);
 		}

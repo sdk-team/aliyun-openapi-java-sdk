@@ -113,6 +113,10 @@ public class ListPropertyPoolForTmallGenieResponse extends AcsResponse {
 
 		private String dataType;
 
+		private String identifier;
+
+		private String description;
+
 		private String rwType;
 
 		private String name;
@@ -145,6 +149,22 @@ public class ListPropertyPoolForTmallGenieResponse extends AcsResponse {
 
 		public void setDataType(String dataType) {
 			this.dataType = dataType;
+		}
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
 		}
 
 		public String getRwType() {
