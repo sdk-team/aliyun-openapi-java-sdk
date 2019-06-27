@@ -26,11 +26,26 @@ public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDe
 		super("Iot", "2019-07-30", "ListTestDeviceForTmallGenie", "iot");
 	}
 
+	private Long pageNo;
+
 	private String iotInstanceId;
+
+	private Long pageSize;
 
 	private String thingType;
 
 	private String productKey;
+
+	public Long getPageNo() {
+		return this.pageNo;
+	}
+
+	public void setPageNo(Long pageNo) {
+		this.pageNo = pageNo;
+		if(pageNo != null){
+			putQueryParameter("PageNo", pageNo.toString());
+		}
+	}
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -40,6 +55,17 @@ public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDe
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Long getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Long pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
 		}
 	}
 

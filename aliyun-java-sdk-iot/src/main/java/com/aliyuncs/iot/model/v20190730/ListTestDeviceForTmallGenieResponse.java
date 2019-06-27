@@ -33,6 +33,12 @@ public class ListTestDeviceForTmallGenieResponse extends AcsResponse {
 
 	private String errorMessage;
 
+	private Integer pageNo;
+
+	private Integer total;
+
+	private Integer pageSize;
+
 	private List<DeviceInfo> data;
 
 	public String getRequestId() {
@@ -65,6 +71,30 @@ public class ListTestDeviceForTmallGenieResponse extends AcsResponse {
 
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
+	}
+
+	public Integer getPageNo() {
+		return this.pageNo;
+	}
+
+	public void setPageNo(Integer pageNo) {
+		this.pageNo = pageNo;
+	}
+
+	public Integer getTotal() {
+		return this.total;
+	}
+
+	public void setTotal(Integer total) {
+		this.total = total;
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
 	}
 
 	public List<DeviceInfo> getData() {

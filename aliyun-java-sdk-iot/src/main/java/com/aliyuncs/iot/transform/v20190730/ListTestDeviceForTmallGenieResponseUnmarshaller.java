@@ -30,6 +30,9 @@ public class ListTestDeviceForTmallGenieResponseUnmarshaller {
 		listTestDeviceForTmallGenieResponse.setSuccess(context.booleanValue("ListTestDeviceForTmallGenieResponse.Success"));
 		listTestDeviceForTmallGenieResponse.setCode(context.stringValue("ListTestDeviceForTmallGenieResponse.Code"));
 		listTestDeviceForTmallGenieResponse.setErrorMessage(context.stringValue("ListTestDeviceForTmallGenieResponse.ErrorMessage"));
+		listTestDeviceForTmallGenieResponse.setPageNo(context.integerValue("ListTestDeviceForTmallGenieResponse.PageNo"));
+		listTestDeviceForTmallGenieResponse.setTotal(context.integerValue("ListTestDeviceForTmallGenieResponse.Total"));
+		listTestDeviceForTmallGenieResponse.setPageSize(context.integerValue("ListTestDeviceForTmallGenieResponse.PageSize"));
 
 		List<DeviceInfo> data = new ArrayList<DeviceInfo>();
 		for (int i = 0; i < context.lengthValue("ListTestDeviceForTmallGenieResponse.Data.Length"); i++) {
