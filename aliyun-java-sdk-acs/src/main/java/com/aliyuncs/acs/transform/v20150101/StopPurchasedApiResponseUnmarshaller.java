@@ -20,9 +20,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class StopPurchasedApiResponseUnmarshaller {
 
-	public static StopPurchasedApiResponse unmarshall(StopPurchasedApiResponse stopPurchasedApiResponse, UnmarshallerContext context) {
+	public static StopPurchasedApiResponse unmarshall(StopPurchasedApiResponse stopPurchasedApiResponse, UnmarshallerContext _ctx) {
 		
-		stopPurchasedApiResponse.setRequestId(context.stringValue("StopPurchasedApiResponse.RequestId"));
+		stopPurchasedApiResponse.setRequestId(_ctx.stringValue("StopPurchasedApiResponse.RequestId"));
 	 
 	 	return stopPurchasedApiResponse;
 	}

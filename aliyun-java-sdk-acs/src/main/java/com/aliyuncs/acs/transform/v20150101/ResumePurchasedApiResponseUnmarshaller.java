@@ -20,9 +20,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ResumePurchasedApiResponseUnmarshaller {
 
-	public static ResumePurchasedApiResponse unmarshall(ResumePurchasedApiResponse resumePurchasedApiResponse, UnmarshallerContext context) {
+	public static ResumePurchasedApiResponse unmarshall(ResumePurchasedApiResponse resumePurchasedApiResponse, UnmarshallerContext _ctx) {
 		
-		resumePurchasedApiResponse.setRequestId(context.stringValue("ResumePurchasedApiResponse.RequestId"));
+		resumePurchasedApiResponse.setRequestId(_ctx.stringValue("ResumePurchasedApiResponse.RequestId"));
 	 
 	 	return resumePurchasedApiResponse;
 	}

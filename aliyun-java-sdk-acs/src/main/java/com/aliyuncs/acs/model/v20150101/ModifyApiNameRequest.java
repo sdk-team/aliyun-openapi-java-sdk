@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class ModifyApiNameRequest extends RoaAcsRequest<ModifyApiNameResponse> {
 	
 	public ModifyApiNameRequest() {
-		super("Acs", "2015-01-01", "ModifyApiName");
+		super("Acs", "2015-01-01", "ModifyApiName", "12334");
 		setUriPattern("/modifyApiName");
 		setMethod(MethodType.POST);
 	}

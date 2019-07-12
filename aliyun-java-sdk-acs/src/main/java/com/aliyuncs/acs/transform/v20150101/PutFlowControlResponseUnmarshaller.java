@@ -20,9 +20,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class PutFlowControlResponseUnmarshaller {
 
-	public static PutFlowControlResponse unmarshall(PutFlowControlResponse putFlowControlResponse, UnmarshallerContext context) {
+	public static PutFlowControlResponse unmarshall(PutFlowControlResponse putFlowControlResponse, UnmarshallerContext _ctx) {
 		
-		putFlowControlResponse.setRequestId(context.stringValue("PutFlowControlResponse.RequestId"));
+		putFlowControlResponse.setRequestId(_ctx.stringValue("PutFlowControlResponse.RequestId"));
 	 
 	 	return putFlowControlResponse;
 	}

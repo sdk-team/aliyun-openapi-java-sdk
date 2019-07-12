@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class StopPurchasedApiRequest extends RoaAcsRequest<StopPurchasedApiResponse> {
 	
 	public StopPurchasedApiRequest() {
-		super("Acs", "2015-01-01", "StopPurchasedApi");
+		super("Acs", "2015-01-01", "StopPurchasedApi", "12334");
 		setUriPattern("/Api/StopPurchasedApi");
 		setMethod(MethodType.POST);
 	}

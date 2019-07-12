@@ -20,10 +20,10 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class PurchaseApiResponseUnmarshaller {
 
-	public static PurchaseApiResponse unmarshall(PurchaseApiResponse purchaseApiResponse, UnmarshallerContext context) {
+	public static PurchaseApiResponse unmarshall(PurchaseApiResponse purchaseApiResponse, UnmarshallerContext _ctx) {
 		
-		purchaseApiResponse.setRequestId(context.stringValue("PurchaseApiResponse.RequestId"));
-		purchaseApiResponse.setInstanceId(context.stringValue("PurchaseApiResponse.InstanceId"));
+		purchaseApiResponse.setRequestId(_ctx.stringValue("PurchaseApiResponse.RequestId"));
+		purchaseApiResponse.setInstanceId(_ctx.stringValue("PurchaseApiResponse.InstanceId"));
 	 
 	 	return purchaseApiResponse;
 	}

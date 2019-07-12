@@ -20,9 +20,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DeleteApiInDailyResponseUnmarshaller {
 
-	public static DeleteApiInDailyResponse unmarshall(DeleteApiInDailyResponse deleteApiInDailyResponse, UnmarshallerContext context) {
+	public static DeleteApiInDailyResponse unmarshall(DeleteApiInDailyResponse deleteApiInDailyResponse, UnmarshallerContext _ctx) {
 		
-		deleteApiInDailyResponse.setRequestId(context.stringValue("DeleteApiInDailyResponse.RequestId"));
+		deleteApiInDailyResponse.setRequestId(_ctx.stringValue("DeleteApiInDailyResponse.RequestId"));
 	 
 	 	return deleteApiInDailyResponse;
 	}

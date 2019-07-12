@@ -24,7 +24,7 @@ import com.aliyuncs.http.MethodType;
 public class ResumePurchasedApiRequest extends RoaAcsRequest<ResumePurchasedApiResponse> {
 	
 	public ResumePurchasedApiRequest() {
-		super("Acs", "2015-01-01", "ResumePurchasedApi");
+		super("Acs", "2015-01-01", "ResumePurchasedApi", "12334");
 		setUriPattern("/Api/ResumePurchasedApi");
 		setMethod(MethodType.POST);
 	}
