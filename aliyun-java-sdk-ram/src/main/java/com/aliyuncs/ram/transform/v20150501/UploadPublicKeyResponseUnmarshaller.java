@@ -21,15 +21,15 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class UploadPublicKeyResponseUnmarshaller {
 
-	public static UploadPublicKeyResponse unmarshall(UploadPublicKeyResponse uploadPublicKeyResponse, UnmarshallerContext context) {
+	public static UploadPublicKeyResponse unmarshall(UploadPublicKeyResponse uploadPublicKeyResponse, UnmarshallerContext _ctx) {
 		
-		uploadPublicKeyResponse.setRequestId(context.stringValue("UploadPublicKeyResponse.RequestId"));
+		uploadPublicKeyResponse.setRequestId(_ctx.stringValue("UploadPublicKeyResponse.RequestId"));
 
 		PublicKey publicKey = new PublicKey();
-		publicKey.setPublicKeyId(context.stringValue("UploadPublicKeyResponse.PublicKey.PublicKeyId"));
-		publicKey.setPublicKeySpec(context.stringValue("UploadPublicKeyResponse.PublicKey.PublicKeySpec"));
-		publicKey.setStatus(context.stringValue("UploadPublicKeyResponse.PublicKey.Status"));
-		publicKey.setCreateDate(context.stringValue("UploadPublicKeyResponse.PublicKey.CreateDate"));
+		publicKey.setPublicKeyId(_ctx.stringValue("UploadPublicKeyResponse.PublicKey.PublicKeyId"));
+		publicKey.setPublicKeySpec(_ctx.stringValue("UploadPublicKeyResponse.PublicKey.PublicKeySpec"));
+		publicKey.setStatus(_ctx.stringValue("UploadPublicKeyResponse.PublicKey.Status"));
+		publicKey.setCreateDate(_ctx.stringValue("UploadPublicKeyResponse.PublicKey.CreateDate"));
 		uploadPublicKeyResponse.setPublicKey(publicKey);
 	 
 	 	return uploadPublicKeyResponse;

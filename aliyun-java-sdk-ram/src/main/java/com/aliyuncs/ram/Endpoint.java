@@ -12,18 +12,12 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ram.transform.v20150501;
+package com.aliyuncs.ram;
 
-import com.aliyuncs.ram.model.v20150501.DeletePublicKeyResponse;
-import com.aliyuncs.transform.UnmarshallerContext;
+import java.util.HashMap;
 
+public class Endpoint {
+    public static HashMap<String, String> endpointMap = new HashMap<String, String>() {};
 
-public class DeletePublicKeyResponseUnmarshaller {
-
-	public static DeletePublicKeyResponse unmarshall(DeletePublicKeyResponse deletePublicKeyResponse, UnmarshallerContext _ctx) {
-		
-		deletePublicKeyResponse.setRequestId(_ctx.stringValue("DeletePublicKeyResponse.RequestId"));
-	 
-	 	return deletePublicKeyResponse;
-	}
+    public static String endpointRegionalType = "central";
 }

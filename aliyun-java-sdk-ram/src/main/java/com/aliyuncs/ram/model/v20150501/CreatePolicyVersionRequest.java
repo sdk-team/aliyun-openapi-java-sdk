@@ -16,6 +16,7 @@ package com.aliyuncs.ram.model.v20150501;
 
 import com.aliyuncs.RpcAcsRequest;
 import com.aliyuncs.http.ProtocolType;
+import com.aliyuncs.ram.Endpoint;
 
 /**
  * @author auto create
@@ -26,6 +27,10 @@ public class CreatePolicyVersionRequest extends RpcAcsRequest<CreatePolicyVersio
 	public CreatePolicyVersionRequest() {
 		super("Ram", "2015-05-01", "CreatePolicyVersion", "ram");
 		setProtocol(ProtocolType.HTTPS);
+		try {
+			this.getClass().getDeclaredField("ProductEndpointMap").set(this, Endpoint.endpointMap);
+			this.getClass().getDeclaredField("ProductEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	private Boolean setAsDefault;
@@ -33,6 +38,8 @@ public class CreatePolicyVersionRequest extends RpcAcsRequest<CreatePolicyVersio
 	private String policyName;
 
 	private String policyDocument;
+
+	private String rotateStrategy;
 
 	public Boolean getSetAsDefault() {
 		return this.setAsDefault;
@@ -64,6 +71,17 @@ public class CreatePolicyVersionRequest extends RpcAcsRequest<CreatePolicyVersio
 		this.policyDocument = policyDocument;
 		if(policyDocument != null){
 			putQueryParameter("PolicyDocument", policyDocument);
+		}
+	}
+
+	public String getRotateStrategy() {
+		return this.rotateStrategy;
+	}
+
+	public void setRotateStrategy(String rotateStrategy) {
+		this.rotateStrategy = rotateStrategy;
+		if(rotateStrategy != null){
+			putQueryParameter("RotateStrategy", rotateStrategy);
 		}
 	}
 

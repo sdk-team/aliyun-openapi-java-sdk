@@ -24,16 +24,16 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ListPublicKeysResponseUnmarshaller {
 
-	public static ListPublicKeysResponse unmarshall(ListPublicKeysResponse listPublicKeysResponse, UnmarshallerContext context) {
+	public static ListPublicKeysResponse unmarshall(ListPublicKeysResponse listPublicKeysResponse, UnmarshallerContext _ctx) {
 		
-		listPublicKeysResponse.setRequestId(context.stringValue("ListPublicKeysResponse.RequestId"));
+		listPublicKeysResponse.setRequestId(_ctx.stringValue("ListPublicKeysResponse.RequestId"));
 
 		List<PublicKey> publicKeys = new ArrayList<PublicKey>();
-		for (int i = 0; i < context.lengthValue("ListPublicKeysResponse.PublicKeys.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("ListPublicKeysResponse.PublicKeys.Length"); i++) {
 			PublicKey publicKey = new PublicKey();
-			publicKey.setPublicKeyId(context.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].PublicKeyId"));
-			publicKey.setStatus(context.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].Status"));
-			publicKey.setCreateDate(context.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].CreateDate"));
+			publicKey.setPublicKeyId(_ctx.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].PublicKeyId"));
+			publicKey.setStatus(_ctx.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].Status"));
+			publicKey.setCreateDate(_ctx.stringValue("ListPublicKeysResponse.PublicKeys["+ i +"].CreateDate"));
 
 			publicKeys.add(publicKey);
 		}

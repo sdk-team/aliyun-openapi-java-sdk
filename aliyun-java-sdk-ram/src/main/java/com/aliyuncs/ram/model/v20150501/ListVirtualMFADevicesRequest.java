@@ -16,6 +16,7 @@ package com.aliyuncs.ram.model.v20150501;
 
 import com.aliyuncs.RpcAcsRequest;
 import com.aliyuncs.http.ProtocolType;
+import com.aliyuncs.ram.Endpoint;
 
 /**
  * @author auto create
@@ -26,6 +27,10 @@ public class ListVirtualMFADevicesRequest extends RpcAcsRequest<ListVirtualMFADe
 	public ListVirtualMFADevicesRequest() {
 		super("Ram", "2015-05-01", "ListVirtualMFADevices", "ram");
 		setProtocol(ProtocolType.HTTPS);
+		try {
+			this.getClass().getDeclaredField("ProductEndpointMap").set(this, Endpoint.endpointMap);
+			this.getClass().getDeclaredField("ProductEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
 	}
 
 	@Override
