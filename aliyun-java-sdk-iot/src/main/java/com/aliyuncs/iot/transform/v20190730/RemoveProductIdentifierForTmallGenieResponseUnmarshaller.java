@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class RemoveProductIdentifierForTmallGenieResponseUnmarshaller {
 
-	public static RemoveProductIdentifierForTmallGenieResponse unmarshall(RemoveProductIdentifierForTmallGenieResponse removeProductIdentifierForTmallGenieResponse, UnmarshallerContext context) {
+	public static RemoveProductIdentifierForTmallGenieResponse unmarshall(RemoveProductIdentifierForTmallGenieResponse removeProductIdentifierForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		removeProductIdentifierForTmallGenieResponse.setRequestId(context.stringValue("RemoveProductIdentifierForTmallGenieResponse.RequestId"));
-		removeProductIdentifierForTmallGenieResponse.setSuccess(context.booleanValue("RemoveProductIdentifierForTmallGenieResponse.Success"));
-		removeProductIdentifierForTmallGenieResponse.setErrorMessage(context.stringValue("RemoveProductIdentifierForTmallGenieResponse.ErrorMessage"));
-		removeProductIdentifierForTmallGenieResponse.setCode(context.stringValue("RemoveProductIdentifierForTmallGenieResponse.Code"));
+		removeProductIdentifierForTmallGenieResponse.setRequestId(_ctx.stringValue("RemoveProductIdentifierForTmallGenieResponse.RequestId"));
+		removeProductIdentifierForTmallGenieResponse.setSuccess(_ctx.booleanValue("RemoveProductIdentifierForTmallGenieResponse.Success"));
+		removeProductIdentifierForTmallGenieResponse.setErrorMessage(_ctx.stringValue("RemoveProductIdentifierForTmallGenieResponse.ErrorMessage"));
+		removeProductIdentifierForTmallGenieResponse.setCode(_ctx.stringValue("RemoveProductIdentifierForTmallGenieResponse.Code"));
 	 
 	 	return removeProductIdentifierForTmallGenieResponse;
 	}

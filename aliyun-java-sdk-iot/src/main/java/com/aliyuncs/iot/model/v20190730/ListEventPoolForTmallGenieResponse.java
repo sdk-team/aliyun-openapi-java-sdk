@@ -187,7 +187,7 @@ public class ListEventPoolForTmallGenieResponse extends AcsResponse {
 
 			private String name;
 
-			private Long paraOrder;
+			private Integer paraOrder;
 
 			private String dataSpecs;
 
@@ -225,11 +225,11 @@ public class ListEventPoolForTmallGenieResponse extends AcsResponse {
 				this.name = name;
 			}
 
-			public Long getParaOrder() {
+			public Integer getParaOrder() {
 				return this.paraOrder;
 			}
 
-			public void setParaOrder(Long paraOrder) {
+			public void setParaOrder(Integer paraOrder) {
 				this.paraOrder = paraOrder;
 			}
 

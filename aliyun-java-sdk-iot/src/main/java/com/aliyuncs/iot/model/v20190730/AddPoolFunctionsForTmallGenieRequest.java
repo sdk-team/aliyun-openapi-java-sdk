@@ -16,7 +16,6 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
-import com.google.gson.Gson;
 
 /**
  * @author auto create
@@ -25,28 +24,30 @@ import com.google.gson.Gson;
 public class AddPoolFunctionsForTmallGenieRequest extends RpcAcsRequest<AddPoolFunctionsForTmallGenieResponse> {
 	
 	public AddPoolFunctionsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddPoolFunctionsForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddPoolFunctionsForTmallGenie", "Iot");
 	}
 
-	private List<Object> tmallServiceIdList;
+	private List<Long> tmallServiceIdLists;
 
 	private String thingTemplateKey;
 
-	private List<Object> tmallEventIdList;
+	private List<Long> tmallEventIdLists;
 
 	private String iotInstanceId;
 
-	private List<Object> tmallPropertyIdList;
+	private List<Long> tmallPropertyIdLists;
 
-	public List<Object> getTmallServiceIdList() {
-		return this.tmallServiceIdList;
+	public List<Long> getTmallServiceIdLists() {
+		return this.tmallServiceIdLists;
 	}
 
-	public void setTmallServiceIdList(List<Object> tmallServiceIdList) {
-		this.tmallServiceIdList = tmallServiceIdList;
-		if(tmallServiceIdList != null){
-			putQueryParameter("TmallServiceIdList", new Gson().toJson(tmallServiceIdList));
-		}
+	public void setTmallServiceIdLists(List<Long> tmallServiceIdLists) {
+		this.tmallServiceIdLists = tmallServiceIdLists;	
+		if (tmallServiceIdLists != null) {
+			for (int i = 0; i < tmallServiceIdLists.size(); i++) {
+				putQueryParameter("TmallServiceIdList." + (i + 1) , tmallServiceIdLists.get(i));
+			}
+		}	
 	}
 
 	public String getThingTemplateKey() {
@@ -60,15 +61,17 @@ public class AddPoolFunctionsForTmallGenieRequest extends RpcAcsRequest<AddPoolF
 		}
 	}
 
-	public List<Object> getTmallEventIdList() {
-		return this.tmallEventIdList;
+	public List<Long> getTmallEventIdLists() {
+		return this.tmallEventIdLists;
 	}
 
-	public void setTmallEventIdList(List<Object> tmallEventIdList) {
-		this.tmallEventIdList = tmallEventIdList;
-		if(tmallEventIdList != null){
-			putQueryParameter("TmallEventIdList", new Gson().toJson(tmallEventIdList));
-		}
+	public void setTmallEventIdLists(List<Long> tmallEventIdLists) {
+		this.tmallEventIdLists = tmallEventIdLists;	
+		if (tmallEventIdLists != null) {
+			for (int i = 0; i < tmallEventIdLists.size(); i++) {
+				putQueryParameter("TmallEventIdList." + (i + 1) , tmallEventIdLists.get(i));
+			}
+		}	
 	}
 
 	public String getIotInstanceId() {
@@ -82,15 +85,17 @@ public class AddPoolFunctionsForTmallGenieRequest extends RpcAcsRequest<AddPoolF
 		}
 	}
 
-	public List<Object> getTmallPropertyIdList() {
-		return this.tmallPropertyIdList;
+	public List<Long> getTmallPropertyIdLists() {
+		return this.tmallPropertyIdLists;
 	}
 
-	public void setTmallPropertyIdList(List<Object> tmallPropertyIdList) {
-		this.tmallPropertyIdList = tmallPropertyIdList;
-		if(tmallPropertyIdList != null){
-			putQueryParameter("TmallPropertyIdList", new Gson().toJson(tmallPropertyIdList));
-		}
+	public void setTmallPropertyIdLists(List<Long> tmallPropertyIdLists) {
+		this.tmallPropertyIdLists = tmallPropertyIdLists;	
+		if (tmallPropertyIdLists != null) {
+			for (int i = 0; i < tmallPropertyIdLists.size(); i++) {
+				putQueryParameter("TmallPropertyIdList." + (i + 1) , tmallPropertyIdLists.get(i));
+			}
+		}	
 	}
 
 	@Override

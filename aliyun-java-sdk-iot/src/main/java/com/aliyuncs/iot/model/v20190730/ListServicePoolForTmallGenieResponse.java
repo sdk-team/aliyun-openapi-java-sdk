@@ -197,7 +197,7 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 
 			private String name;
 
-			private Long paraOrder;
+			private Integer paraOrder;
 
 			private String direction;
 
@@ -237,11 +237,11 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 				this.name = name;
 			}
 
-			public Long getParaOrder() {
+			public Integer getParaOrder() {
 				return this.paraOrder;
 			}
 
-			public void setParaOrder(Long paraOrder) {
+			public void setParaOrder(Integer paraOrder) {
 				this.paraOrder = paraOrder;
 			}
 
@@ -278,7 +278,7 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 
 			private String identifier;
 
-			private Long paraOrder;
+			private Integer paraOrder;
 
 			private String direction;
 
@@ -312,11 +312,11 @@ public class ListServicePoolForTmallGenieResponse extends AcsResponse {
 				this.identifier = identifier;
 			}
 
-			public Long getParaOrder() {
+			public Integer getParaOrder() {
 				return this.paraOrder;
 			}
 
-			public void setParaOrder(Long paraOrder) {
+			public void setParaOrder(Integer paraOrder) {
 				this.paraOrder = paraOrder;
 			}
 

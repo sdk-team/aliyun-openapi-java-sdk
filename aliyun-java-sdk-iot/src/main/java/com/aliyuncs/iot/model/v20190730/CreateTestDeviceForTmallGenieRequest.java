@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateTestDeviceForTmallGenieRequest extends RpcAcsRequest<CreateTestDeviceForTmallGenieResponse> {
 	
 	public CreateTestDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie", "Iot");
 	}
 
 	private String iotInstanceId;

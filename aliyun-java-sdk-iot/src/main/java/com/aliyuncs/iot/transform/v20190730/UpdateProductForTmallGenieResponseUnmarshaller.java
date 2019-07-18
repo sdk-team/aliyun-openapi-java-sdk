@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class UpdateProductForTmallGenieResponseUnmarshaller {
 
-	public static UpdateProductForTmallGenieResponse unmarshall(UpdateProductForTmallGenieResponse updateProductForTmallGenieResponse, UnmarshallerContext context) {
+	public static UpdateProductForTmallGenieResponse unmarshall(UpdateProductForTmallGenieResponse updateProductForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		updateProductForTmallGenieResponse.setRequestId(context.stringValue("UpdateProductForTmallGenieResponse.RequestId"));
-		updateProductForTmallGenieResponse.setSuccess(context.booleanValue("UpdateProductForTmallGenieResponse.Success"));
-		updateProductForTmallGenieResponse.setCode(context.stringValue("UpdateProductForTmallGenieResponse.Code"));
-		updateProductForTmallGenieResponse.setErrorMessage(context.stringValue("UpdateProductForTmallGenieResponse.ErrorMessage"));
+		updateProductForTmallGenieResponse.setRequestId(_ctx.stringValue("UpdateProductForTmallGenieResponse.RequestId"));
+		updateProductForTmallGenieResponse.setSuccess(_ctx.booleanValue("UpdateProductForTmallGenieResponse.Success"));
+		updateProductForTmallGenieResponse.setCode(_ctx.stringValue("UpdateProductForTmallGenieResponse.Code"));
+		updateProductForTmallGenieResponse.setErrorMessage(_ctx.stringValue("UpdateProductForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return updateProductForTmallGenieResponse;
 	}

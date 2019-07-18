@@ -18,135 +18,131 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Argument5;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Tag6;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Tag;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Argument;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Argument2;
-import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Tag3;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.EventInfo;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Argument5;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Tag6;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Tag;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Argument;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Argument2;
+import com.aliyuncs.iot.model.v20190730.GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Tag3;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
 public class GetThingTemplateFunctionForTmallGenieResponseUnmarshaller {
 
-	public static GetThingTemplateFunctionForTmallGenieResponse unmarshall(GetThingTemplateFunctionForTmallGenieResponse getThingTemplateFunctionForTmallGenieResponse, UnmarshallerContext context) {
+	public static GetThingTemplateFunctionForTmallGenieResponse unmarshall(GetThingTemplateFunctionForTmallGenieResponse getThingTemplateFunctionForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		getThingTemplateFunctionForTmallGenieResponse.setRequestId(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.RequestId"));
-		getThingTemplateFunctionForTmallGenieResponse.setSuccess(context.booleanValue("GetThingTemplateFunctionForTmallGenieResponse.Success"));
-		getThingTemplateFunctionForTmallGenieResponse.setCode(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Code"));
-		getThingTemplateFunctionForTmallGenieResponse.setErrorMessage(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ErrorMessage"));
-
-		Data data = new Data();
+		getThingTemplateFunctionForTmallGenieResponse.setRequestId(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.RequestId"));
+		getThingTemplateFunctionForTmallGenieResponse.setSuccess(_ctx.booleanValue("GetThingTemplateFunctionForTmallGenieResponse.Success"));
+		getThingTemplateFunctionForTmallGenieResponse.setCode(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Code"));
+		getThingTemplateFunctionForTmallGenieResponse.setErrorMessage(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ErrorMessage"));
 
 		PropertyInfo propertyInfo = new PropertyInfo();
-		propertyInfo.setTmallFunctionId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.TmallFunctionId"));
-		propertyInfo.setThingTemplateKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.ThingTemplateKey"));
-		propertyInfo.setDataType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.DataType"));
-		propertyInfo.setRwType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.RwType"));
-		propertyInfo.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Identifier"));
-		propertyInfo.setDescription(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Description"));
-		propertyInfo.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Name"));
-		propertyInfo.setDataSpecs(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.DataSpecs"));
-		propertyInfo.setDataSpecsList(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.DataSpecsList"));
+		propertyInfo.setTmallFunctionId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.TmallFunctionId"));
+		propertyInfo.setThingTemplateKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.ThingTemplateKey"));
+		propertyInfo.setDataType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.DataType"));
+		propertyInfo.setRwType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.RwType"));
+		propertyInfo.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Identifier"));
+		propertyInfo.setDescription(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Description"));
+		propertyInfo.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Name"));
+		propertyInfo.setDataSpecs(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.DataSpecs"));
+		propertyInfo.setDataSpecsList(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.DataSpecsList"));
 
 		List<Tag> tags = new ArrayList<Tag>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Tags.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Tags.Length"); i++) {
 			Tag tag = new Tag();
-			tag.setTagKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Tags["+ i +"].TagKey"));
-			tag.setTagValue(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.PropertyInfo.Tags["+ i +"].TagValue"));
+			tag.setTagKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Tags["+ i +"].TagKey"));
+			tag.setTagValue(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.PropertyInfo.Tags["+ i +"].TagValue"));
 
 			tags.add(tag);
 		}
 		propertyInfo.setTags(tags);
-		data.setPropertyInfo(propertyInfo);
+		getThingTemplateFunctionForTmallGenieResponse.setPropertyInfo(propertyInfo);
 
 		ServiceInfo serviceInfo = new ServiceInfo();
-		serviceInfo.setTmallFunctionId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.TmallFunctionId"));
-		serviceInfo.setThingTemplateKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.ThingTemplateKey"));
-		serviceInfo.setCallType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.CallType"));
-		serviceInfo.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Name"));
-		serviceInfo.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Identifier"));
+		serviceInfo.setTmallFunctionId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.TmallFunctionId"));
+		serviceInfo.setThingTemplateKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.ThingTemplateKey"));
+		serviceInfo.setCallType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.CallType"));
+		serviceInfo.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Name"));
+		serviceInfo.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Identifier"));
 
 		List<Argument> inputParams = new ArrayList<Argument>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams.Length"); i++) {
 			Argument argument = new Argument();
-			argument.setId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].Id"));
-			argument.setDataType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].DataType"));
-			argument.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].Identifier"));
-			argument.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].Name"));
-			argument.setParaOrder(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].ParaOrder"));
-			argument.setDirection(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].Direction"));
-			argument.setDataSpecs(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].DataSpecs"));
-			argument.setDataSpecsList(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.InputParams["+ i +"].DataSpecsList"));
+			argument.setId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].Id"));
+			argument.setDataType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].DataType"));
+			argument.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].Identifier"));
+			argument.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].Name"));
+			argument.setParaOrder(_ctx.integerValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].ParaOrder"));
+			argument.setDirection(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].Direction"));
+			argument.setDataSpecs(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].DataSpecs"));
+			argument.setDataSpecsList(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].DataSpecsList"));
 
 			inputParams.add(argument);
 		}
 		serviceInfo.setInputParams(inputParams);
 
 		List<Argument2> outputParams = new ArrayList<Argument2>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams.Length"); i++) {
 			Argument2 argument2 = new Argument2();
-			argument2.setId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].Id"));
-			argument2.setDataType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].DataType"));
-			argument2.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].Identifier"));
-			argument2.setParaOrder(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].ParaOrder"));
-			argument2.setDirection(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].Direction"));
-			argument2.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].Name"));
-			argument2.setDataSpecs(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].DataSpecs"));
-			argument2.setDataSpecsList(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.OutputParams["+ i +"].DataSpecsList"));
+			argument2.setId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].Id"));
+			argument2.setDataType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].DataType"));
+			argument2.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].Identifier"));
+			argument2.setParaOrder(_ctx.integerValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].ParaOrder"));
+			argument2.setDirection(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].Direction"));
+			argument2.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].Name"));
+			argument2.setDataSpecs(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].DataSpecs"));
+			argument2.setDataSpecsList(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].DataSpecsList"));
 
 			outputParams.add(argument2);
 		}
 		serviceInfo.setOutputParams(outputParams);
 
 		List<Tag3> tags1 = new ArrayList<Tag3>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Tags.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Tags.Length"); i++) {
 			Tag3 tag3 = new Tag3();
-			tag3.setTagKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Tags["+ i +"].TagKey"));
-			tag3.setTagValue(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.ServiceInfo.Tags["+ i +"].TagValue"));
+			tag3.setTagKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Tags["+ i +"].TagKey"));
+			tag3.setTagValue(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.ServiceInfo.Tags["+ i +"].TagValue"));
 
 			tags1.add(tag3);
 		}
 		serviceInfo.setTags1(tags1);
-		data.setServiceInfo(serviceInfo);
+		getThingTemplateFunctionForTmallGenieResponse.setServiceInfo(serviceInfo);
 
-		EventInfos eventInfos = new EventInfos();
-		eventInfos.setTmallFunctionId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.TmallFunctionId"));
-		eventInfos.setThingTemplateKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.ThingTemplateKey"));
-		eventInfos.setEventType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.EventType"));
-		eventInfos.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Name"));
-		eventInfos.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Identifier"));
+		EventInfo eventInfo = new EventInfo();
+		eventInfo.setTmallFunctionId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.TmallFunctionId"));
+		eventInfo.setThingTemplateKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.ThingTemplateKey"));
+		eventInfo.setEventType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.EventType"));
+		eventInfo.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Name"));
+		eventInfo.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Identifier"));
 
 		List<Argument5> outputData = new ArrayList<Argument5>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData.Length"); i++) {
 			Argument5 argument5 = new Argument5();
-			argument5.setId(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].Id"));
-			argument5.setDataType(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].DataType"));
-			argument5.setIdentifier(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].Identifier"));
-			argument5.setName(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].Name"));
-			argument5.setParaOrder(context.longValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].ParaOrder"));
-			argument5.setDataSpecs(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].DataSpecs"));
-			argument5.setDataSpecsList(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.OutputData["+ i +"].DataSpecsList"));
+			argument5.setId(_ctx.longValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].Id"));
+			argument5.setDataType(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].DataType"));
+			argument5.setIdentifier(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].Identifier"));
+			argument5.setName(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].Name"));
+			argument5.setParaOrder(_ctx.integerValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].ParaOrder"));
+			argument5.setDataSpecs(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].DataSpecs"));
+			argument5.setDataSpecsList(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.OutputData["+ i +"].DataSpecsList"));
 
 			outputData.add(argument5);
 		}
-		eventInfos.setOutputData(outputData);
+		eventInfo.setOutputData(outputData);
 
 		List<Tag6> tags4 = new ArrayList<Tag6>();
-		for (int i = 0; i < context.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Tags.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Tags.Length"); i++) {
 			Tag6 tag6 = new Tag6();
-			tag6.setTagKey(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Tags["+ i +"].TagKey"));
-			tag6.setTagValue(context.stringValue("GetThingTemplateFunctionForTmallGenieResponse.Data.EventInfos.Tags["+ i +"].TagValue"));
+			tag6.setTagKey(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Tags["+ i +"].TagKey"));
+			tag6.setTagValue(_ctx.stringValue("GetThingTemplateFunctionForTmallGenieResponse.EventInfo.Tags["+ i +"].TagValue"));
 
 			tags4.add(tag6);
 		}
-		eventInfos.setTags4(tags4);
-		data.setEventInfos(eventInfos);
-		getThingTemplateFunctionForTmallGenieResponse.setData(data);
+		eventInfo.setTags4(tags4);
+		getThingTemplateFunctionForTmallGenieResponse.setEventInfo(eventInfo);
 	 
 	 	return getThingTemplateFunctionForTmallGenieResponse;
 	}

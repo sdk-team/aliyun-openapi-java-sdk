@@ -20,13 +20,14 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateProductForTmallGenieResponseUnmarshaller {
 
-	public static CreateProductForTmallGenieResponse unmarshall(CreateProductForTmallGenieResponse createProductForTmallGenieResponse, UnmarshallerContext context) {
+	public static CreateProductForTmallGenieResponse unmarshall(CreateProductForTmallGenieResponse createProductForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		createProductForTmallGenieResponse.setRequestId(context.stringValue("CreateProductForTmallGenieResponse.RequestId"));
-		createProductForTmallGenieResponse.setSuccess(context.booleanValue("CreateProductForTmallGenieResponse.Success"));
-		createProductForTmallGenieResponse.setCode(context.stringValue("CreateProductForTmallGenieResponse.Code"));
-		createProductForTmallGenieResponse.setErrorMessage(context.stringValue("CreateProductForTmallGenieResponse.ErrorMessage"));
-		createProductForTmallGenieResponse.setProductKey(context.stringValue("CreateProductForTmallGenieResponse.ProductKey"));
+		createProductForTmallGenieResponse.setRequestId(_ctx.stringValue("CreateProductForTmallGenieResponse.RequestId"));
+		createProductForTmallGenieResponse.setSuccess(_ctx.booleanValue("CreateProductForTmallGenieResponse.Success"));
+		createProductForTmallGenieResponse.setCode(_ctx.stringValue("CreateProductForTmallGenieResponse.Code"));
+		createProductForTmallGenieResponse.setErrorMessage(_ctx.stringValue("CreateProductForTmallGenieResponse.ErrorMessage"));
+		createProductForTmallGenieResponse.setProductKey(_ctx.stringValue("CreateProductForTmallGenieResponse.ProductKey"));
+		createProductForTmallGenieResponse.setProductSecret(_ctx.stringValue("CreateProductForTmallGenieResponse.ProductSecret"));
 	 
 	 	return createProductForTmallGenieResponse;
 	}

@@ -18,42 +18,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.aliyuncs.iot.model.v20190730.SearchProductForTmallGenieResponse;
-import com.aliyuncs.iot.model.v20190730.SearchProductForTmallGenieResponse.Data;
-import com.aliyuncs.iot.model.v20190730.SearchProductForTmallGenieResponse.Data.ProductInfo;
+import com.aliyuncs.iot.model.v20190730.SearchProductForTmallGenieResponse.ProductInfo;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
 public class SearchProductForTmallGenieResponseUnmarshaller {
 
-	public static SearchProductForTmallGenieResponse unmarshall(SearchProductForTmallGenieResponse searchProductForTmallGenieResponse, UnmarshallerContext context) {
+	public static SearchProductForTmallGenieResponse unmarshall(SearchProductForTmallGenieResponse searchProductForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		searchProductForTmallGenieResponse.setRequestId(context.stringValue("SearchProductForTmallGenieResponse.RequestId"));
-		searchProductForTmallGenieResponse.setSuccess(context.booleanValue("SearchProductForTmallGenieResponse.Success"));
-		searchProductForTmallGenieResponse.setErrorMessage(context.stringValue("SearchProductForTmallGenieResponse.ErrorMessage"));
-
-		Data data = new Data();
-		data.setPage(context.integerValue("SearchProductForTmallGenieResponse.Data.Page"));
-		data.setPageCount(context.integerValue("SearchProductForTmallGenieResponse.Data.PageCount"));
-		data.setPageSize(context.integerValue("SearchProductForTmallGenieResponse.Data.PageSize"));
-		data.setTotal(context.integerValue("SearchProductForTmallGenieResponse.Data.Total"));
+		searchProductForTmallGenieResponse.setRequestId(_ctx.stringValue("SearchProductForTmallGenieResponse.RequestId"));
+		searchProductForTmallGenieResponse.setSuccess(_ctx.booleanValue("SearchProductForTmallGenieResponse.Success"));
+		searchProductForTmallGenieResponse.setErrorMessage(_ctx.stringValue("SearchProductForTmallGenieResponse.ErrorMessage"));
+		searchProductForTmallGenieResponse.setPage(_ctx.integerValue("SearchProductForTmallGenieResponse.Page"));
+		searchProductForTmallGenieResponse.setPageSize(_ctx.integerValue("SearchProductForTmallGenieResponse.PageSize"));
+		searchProductForTmallGenieResponse.setTotal(_ctx.integerValue("SearchProductForTmallGenieResponse.Total"));
 
 		List<ProductInfo> list = new ArrayList<ProductInfo>();
-		for (int i = 0; i < context.lengthValue("SearchProductForTmallGenieResponse.Data.List.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("SearchProductForTmallGenieResponse.List.Length"); i++) {
 			ProductInfo productInfo = new ProductInfo();
-			productInfo.setGmtCreate(context.stringValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].GmtCreate"));
-			productInfo.setDataFormat(context.integerValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].DataFormat"));
-			productInfo.setDescription(context.stringValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].Description"));
-			productInfo.setDeviceCount(context.integerValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].DeviceCount"));
-			productInfo.setNodeType(context.integerValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].NodeType"));
-			productInfo.setProductKey(context.stringValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].ProductKey"));
-			productInfo.setProductName(context.stringValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].ProductName"));
-			productInfo.setScriptId(context.longValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].ScriptId"));
-			productInfo.setScriptDraftCode(context.stringValue("SearchProductForTmallGenieResponse.Data.List["+ i +"].ScriptDraftCode"));
+			productInfo.setGmtCreate(_ctx.stringValue("SearchProductForTmallGenieResponse.List["+ i +"].GmtCreate"));
+			productInfo.setDataFormat(_ctx.integerValue("SearchProductForTmallGenieResponse.List["+ i +"].DataFormat"));
+			productInfo.setDescription(_ctx.stringValue("SearchProductForTmallGenieResponse.List["+ i +"].Description"));
+			productInfo.setDeviceCount(_ctx.integerValue("SearchProductForTmallGenieResponse.List["+ i +"].DeviceCount"));
+			productInfo.setNodeType(_ctx.integerValue("SearchProductForTmallGenieResponse.List["+ i +"].NodeType"));
+			productInfo.setNetType(_ctx.integerValue("SearchProductForTmallGenieResponse.List["+ i +"].NetType"));
+			productInfo.setProductKey(_ctx.stringValue("SearchProductForTmallGenieResponse.List["+ i +"].ProductKey"));
+			productInfo.setProductName(_ctx.stringValue("SearchProductForTmallGenieResponse.List["+ i +"].ProductName"));
+			productInfo.setScriptId(_ctx.longValue("SearchProductForTmallGenieResponse.List["+ i +"].ScriptId"));
+			productInfo.setScriptDraftCode(_ctx.stringValue("SearchProductForTmallGenieResponse.List["+ i +"].ScriptDraftCode"));
 
 			list.add(productInfo);
 		}
-		data.setList(list);
-		searchProductForTmallGenieResponse.setData(data);
+		searchProductForTmallGenieResponse.setList(list);
 	 
 	 	return searchProductForTmallGenieResponse;
 	}

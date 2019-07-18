@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class UpdateThingTemplateServiceForTmallGenieResponseUnmarshaller {
 
-	public static UpdateThingTemplateServiceForTmallGenieResponse unmarshall(UpdateThingTemplateServiceForTmallGenieResponse updateThingTemplateServiceForTmallGenieResponse, UnmarshallerContext context) {
+	public static UpdateThingTemplateServiceForTmallGenieResponse unmarshall(UpdateThingTemplateServiceForTmallGenieResponse updateThingTemplateServiceForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		updateThingTemplateServiceForTmallGenieResponse.setRequestId(context.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.RequestId"));
-		updateThingTemplateServiceForTmallGenieResponse.setSuccess(context.booleanValue("UpdateThingTemplateServiceForTmallGenieResponse.Success"));
-		updateThingTemplateServiceForTmallGenieResponse.setCode(context.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.Code"));
-		updateThingTemplateServiceForTmallGenieResponse.setErrorMessage(context.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.ErrorMessage"));
+		updateThingTemplateServiceForTmallGenieResponse.setRequestId(_ctx.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.RequestId"));
+		updateThingTemplateServiceForTmallGenieResponse.setSuccess(_ctx.booleanValue("UpdateThingTemplateServiceForTmallGenieResponse.Success"));
+		updateThingTemplateServiceForTmallGenieResponse.setCode(_ctx.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.Code"));
+		updateThingTemplateServiceForTmallGenieResponse.setErrorMessage(_ctx.stringValue("UpdateThingTemplateServiceForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return updateThingTemplateServiceForTmallGenieResponse;
 	}

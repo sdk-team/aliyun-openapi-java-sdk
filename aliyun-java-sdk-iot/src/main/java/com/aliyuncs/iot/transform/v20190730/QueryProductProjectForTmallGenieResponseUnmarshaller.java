@@ -20,16 +20,16 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class QueryProductProjectForTmallGenieResponseUnmarshaller {
 
-	public static QueryProductProjectForTmallGenieResponse unmarshall(QueryProductProjectForTmallGenieResponse queryProductProjectForTmallGenieResponse, UnmarshallerContext context) {
+	public static QueryProductProjectForTmallGenieResponse unmarshall(QueryProductProjectForTmallGenieResponse queryProductProjectForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		queryProductProjectForTmallGenieResponse.setRequestId(context.stringValue("QueryProductProjectForTmallGenieResponse.RequestId"));
-		queryProductProjectForTmallGenieResponse.setSuccess(context.booleanValue("QueryProductProjectForTmallGenieResponse.Success"));
-		queryProductProjectForTmallGenieResponse.setCode(context.stringValue("QueryProductProjectForTmallGenieResponse.Code"));
-		queryProductProjectForTmallGenieResponse.setErrorMessage(context.stringValue("QueryProductProjectForTmallGenieResponse.ErrorMessage"));
-		queryProductProjectForTmallGenieResponse.setProjectId(context.stringValue("QueryProductProjectForTmallGenieResponse.ProjectId"));
-		queryProductProjectForTmallGenieResponse.setIsolateId(context.stringValue("QueryProductProjectForTmallGenieResponse.IsolateId"));
-		queryProductProjectForTmallGenieResponse.setDevIsolateId(context.stringValue("QueryProductProjectForTmallGenieResponse.DevIsolateId"));
-		queryProductProjectForTmallGenieResponse.setISVTaobaoId(context.stringValue("QueryProductProjectForTmallGenieResponse.ISVTaobaoId"));
+		queryProductProjectForTmallGenieResponse.setRequestId(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.RequestId"));
+		queryProductProjectForTmallGenieResponse.setSuccess(_ctx.booleanValue("QueryProductProjectForTmallGenieResponse.Success"));
+		queryProductProjectForTmallGenieResponse.setCode(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.Code"));
+		queryProductProjectForTmallGenieResponse.setErrorMessage(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.ErrorMessage"));
+		queryProductProjectForTmallGenieResponse.setProjectId(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.ProjectId"));
+		queryProductProjectForTmallGenieResponse.setIsolateId(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.IsolateId"));
+		queryProductProjectForTmallGenieResponse.setDevIsolateId(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.DevIsolateId"));
+		queryProductProjectForTmallGenieResponse.setISVTaobaoId(_ctx.stringValue("QueryProductProjectForTmallGenieResponse.ISVTaobaoId"));
 	 
 	 	return queryProductProjectForTmallGenieResponse;
 	}

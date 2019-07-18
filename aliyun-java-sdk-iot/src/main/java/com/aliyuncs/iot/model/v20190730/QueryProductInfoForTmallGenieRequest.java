@@ -16,7 +16,6 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
-import com.google.gson.Gson;
 
 /**
  * @author auto create
@@ -25,14 +24,40 @@ import com.google.gson.Gson;
 public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryProductInfoForTmallGenieResponse> {
 	
 	public QueryProductInfoForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie", "Iot");
 	}
+
+	private List<String> fields;
+
+	private String eagleEyeTraceId;
 
 	private String iotInstanceId;
 
 	private String productKey;
 
-	private List<Object> fields;
+	public List<String> getFields() {
+		return this.fields;
+	}
+
+	public void setFields(List<String> fields) {
+		this.fields = fields;	
+		if (fields != null) {
+			for (int i = 0; i < fields.size(); i++) {
+				putQueryParameter("Field." + (i + 1) , fields.get(i));
+			}
+		}	
+	}
+
+	public String getEagleEyeTraceId() {
+		return this.eagleEyeTraceId;
+	}
+
+	public void setEagleEyeTraceId(String eagleEyeTraceId) {
+		this.eagleEyeTraceId = eagleEyeTraceId;
+		if(eagleEyeTraceId != null){
+			putQueryParameter("EagleEyeTraceId", eagleEyeTraceId);
+		}
+	}
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -53,17 +78,6 @@ public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryPro
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
-		}
-	}
-
-	public List<Object> getFields() {
-		return this.fields;
-	}
-
-	public void setFields(List<Object> fields) {
-		this.fields = fields;
-		if(fields != null){
-			putQueryParameter("Fields", new Gson().toJson(fields));
 		}
 	}
 

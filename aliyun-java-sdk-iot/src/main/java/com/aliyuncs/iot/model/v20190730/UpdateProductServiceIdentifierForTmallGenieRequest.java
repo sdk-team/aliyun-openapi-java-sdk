@@ -26,7 +26,7 @@ import com.google.gson.Gson;
 public class UpdateProductServiceIdentifierForTmallGenieRequest extends RpcAcsRequest<UpdateProductServiceIdentifierForTmallGenieResponse> {
 	
 	public UpdateProductServiceIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductServiceIdentifierForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateProductServiceIdentifierForTmallGenie", "Iot");
 	}
 
 	private String identifier;
@@ -41,7 +41,7 @@ public class UpdateProductServiceIdentifierForTmallGenieRequest extends RpcAcsRe
 
 	private String productKey;
 
-	private Integer callType;
+	private String callType;
 
 	private List<OutputParams> outputParamss;
 
@@ -121,14 +121,14 @@ public class UpdateProductServiceIdentifierForTmallGenieRequest extends RpcAcsRe
 		}
 	}
 
-	public Integer getCallType() {
+	public String getCallType() {
 		return this.callType;
 	}
 
-	public void setCallType(Integer callType) {
+	public void setCallType(String callType) {
 		this.callType = callType;
 		if(callType != null){
-			putBodyParameter("CallType", callType.toString());
+			putBodyParameter("CallType", callType);
 		}
 	}
 

@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class EventMigrateToProdResponseUnmarshaller {
 
-	public static EventMigrateToProdResponse unmarshall(EventMigrateToProdResponse eventMigrateToProdResponse, UnmarshallerContext context) {
+	public static EventMigrateToProdResponse unmarshall(EventMigrateToProdResponse eventMigrateToProdResponse, UnmarshallerContext _ctx) {
 		
-		eventMigrateToProdResponse.setRequestId(context.stringValue("EventMigrateToProdResponse.RequestId"));
-		eventMigrateToProdResponse.setSuccess(context.booleanValue("EventMigrateToProdResponse.Success"));
-		eventMigrateToProdResponse.setCode(context.stringValue("EventMigrateToProdResponse.Code"));
-		eventMigrateToProdResponse.setErrorMessage(context.stringValue("EventMigrateToProdResponse.ErrorMessage"));
+		eventMigrateToProdResponse.setRequestId(_ctx.stringValue("EventMigrateToProdResponse.RequestId"));
+		eventMigrateToProdResponse.setSuccess(_ctx.booleanValue("EventMigrateToProdResponse.Success"));
+		eventMigrateToProdResponse.setCode(_ctx.stringValue("EventMigrateToProdResponse.Code"));
+		eventMigrateToProdResponse.setErrorMessage(_ctx.stringValue("EventMigrateToProdResponse.ErrorMessage"));
 	 
 	 	return eventMigrateToProdResponse;
 	}

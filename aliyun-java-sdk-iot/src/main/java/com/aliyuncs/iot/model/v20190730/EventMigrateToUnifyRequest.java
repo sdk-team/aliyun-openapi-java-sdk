@@ -24,7 +24,7 @@ import java.util.List;
 public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnifyResponse> {
 	
 	public EventMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "EventMigrateToUnify", "Iot");
 	}
 
 	private String identifier;
@@ -32,6 +32,8 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 	private String creator;
 
 	private String thingTemplateKey;
+
+	private List<ArgsDTO> argsDTOs;
 
 	private String modifier;
 
@@ -41,13 +43,11 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 
 	private String type;
 
+	private String deviceType;
+
 	private Boolean required;
 
 	private String thingTemplateName;
-
-	private List<Tags> tagss;
-
-	private List<OutputData> outputDatas;
 
 	private String templateType;
 
@@ -60,6 +60,8 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 	private String categoryName;
 
 	private Integer state;
+
+	private List<Tag> tags;
 
 	private String bizTenantId;
 
@@ -94,6 +96,27 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
 		}
+	}
+
+	public List<ArgsDTO> getArgsDTOs() {
+		return this.argsDTOs;
+	}
+
+	public void setArgsDTOs(List<ArgsDTO> argsDTOs) {
+		this.argsDTOs = argsDTOs;	
+		if (argsDTOs != null) {
+			for (int depth1 = 0; depth1 < argsDTOs.size(); depth1++) {
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Identifier" , argsDTOs.get(depth1).getIdentifier());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionId" , argsDTOs.get(depth1).getInteractionId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionType" , argsDTOs.get(depth1).getInteractionType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataType" , argsDTOs.get(depth1).getDataType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Name" , argsDTOs.get(depth1).getName());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Definition" , argsDTOs.get(depth1).getDefinition());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".ParaOrder" , argsDTOs.get(depth1).getParaOrder());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataSpecsId" , argsDTOs.get(depth1).getDataSpecsId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Direction" , argsDTOs.get(depth1).getDirection());
+			}
+		}	
 	}
 
 	public String getModifier() {
@@ -140,6 +163,17 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		}
 	}
 
+	public String getDeviceType() {
+		return this.deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+		if(deviceType != null){
+			putQueryParameter("DeviceType", deviceType);
+		}
+	}
+
 	public Boolean getRequired() {
 		return this.required;
 	}
@@ -160,41 +194,6 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		if(thingTemplateName != null){
 			putQueryParameter("ThingTemplateName", thingTemplateName);
 		}
-	}
-
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
-
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
-	}
-
-	public List<OutputData> getOutputDatas() {
-		return this.outputDatas;
-	}
-
-	public void setOutputDatas(List<OutputData> outputDatas) {
-		this.outputDatas = outputDatas;	
-		if (outputDatas != null) {
-			for (int depth1 = 0; depth1 < outputDatas.size(); depth1++) {
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Identifier" , outputDatas.get(depth1).getIdentifier());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionId" , outputDatas.get(depth1).getInteractionId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionType" , outputDatas.get(depth1).getInteractionType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataType" , outputDatas.get(depth1).getDataType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Name" , outputDatas.get(depth1).getName());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Definition" , outputDatas.get(depth1).getDefinition());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".ParaOrder" , outputDatas.get(depth1).getParaOrder());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataSpecsId" , outputDatas.get(depth1).getDataSpecsId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Direction" , outputDatas.get(depth1).getDirection());
-			}
-		}	
 	}
 
 	public String getTemplateType() {
@@ -263,6 +262,20 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		}
 	}
 
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
 	public String getBizTenantId() {
 		return this.bizTenantId;
 	}
@@ -274,30 +287,7 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		}
 	}
 
-	public static class Tags {
-
-		private String tagValue;
-
-		private String tagKey;
-
-		public String getTagValue() {
-			return this.tagValue;
-		}
-
-		public void setTagValue(String tagValue) {
-			this.tagValue = tagValue;
-		}
-
-		public String getTagKey() {
-			return this.tagKey;
-		}
-
-		public void setTagKey(String tagKey) {
-			this.tagKey = tagKey;
-		}
-	}
-
-	public static class OutputData {
+	public static class ArgsDTO {
 
 		private String identifier;
 
@@ -387,6 +377,29 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 
 		public void setDirection(String direction) {
 			this.direction = direction;
+		}
+	}
+
+	public static class Tag {
+
+		private String tagValue;
+
+		private String tagKey;
+
+		public String getTagValue() {
+			return this.tagValue;
+		}
+
+		public void setTagValue(String tagValue) {
+			this.tagValue = tagValue;
+		}
+
+		public String getTagKey() {
+			return this.tagKey;
+		}
+
+		public void setTagKey(String tagKey) {
+			this.tagKey = tagKey;
 		}
 	}
 

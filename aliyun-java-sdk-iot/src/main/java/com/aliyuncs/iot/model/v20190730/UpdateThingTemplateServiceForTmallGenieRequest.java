@@ -24,7 +24,7 @@ import java.util.List;
 public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateServiceForTmallGenieResponse> {
 	
 	public UpdateThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie", "Iot");
 	}
 
 	private String identifier;
@@ -32,6 +32,8 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 	private String thingTemplateKey;
 
 	private List<InputParams> inputParamss;
+
+	private Long tmallFunctionId;
 
 	private String iotInstanceId;
 
@@ -82,6 +84,17 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 				putQueryParameter("InputParams." + (depth1 + 1) + ".Direction" , inputParamss.get(depth1).getDirection());
 			}
 		}	
+	}
+
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
+	}
+
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
 	}
 
 	public String getIotInstanceId() {

@@ -25,28 +25,28 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ListThingTemplateForTmallGenieResponseUnmarshaller {
 
-	public static ListThingTemplateForTmallGenieResponse unmarshall(ListThingTemplateForTmallGenieResponse listThingTemplateForTmallGenieResponse, UnmarshallerContext context) {
+	public static ListThingTemplateForTmallGenieResponse unmarshall(ListThingTemplateForTmallGenieResponse listThingTemplateForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		listThingTemplateForTmallGenieResponse.setRequestId(context.stringValue("ListThingTemplateForTmallGenieResponse.RequestId"));
-		listThingTemplateForTmallGenieResponse.setSuccess(context.booleanValue("ListThingTemplateForTmallGenieResponse.Success"));
-		listThingTemplateForTmallGenieResponse.setErrorMessage(context.stringValue("ListThingTemplateForTmallGenieResponse.ErrorMessage"));
-		listThingTemplateForTmallGenieResponse.setCode(context.stringValue("ListThingTemplateForTmallGenieResponse.Code"));
-		listThingTemplateForTmallGenieResponse.setPage(context.integerValue("ListThingTemplateForTmallGenieResponse.Page"));
-		listThingTemplateForTmallGenieResponse.setPageSize(context.integerValue("ListThingTemplateForTmallGenieResponse.PageSize"));
-		listThingTemplateForTmallGenieResponse.setTotal(context.integerValue("ListThingTemplateForTmallGenieResponse.Total"));
+		listThingTemplateForTmallGenieResponse.setRequestId(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.RequestId"));
+		listThingTemplateForTmallGenieResponse.setSuccess(_ctx.booleanValue("ListThingTemplateForTmallGenieResponse.Success"));
+		listThingTemplateForTmallGenieResponse.setErrorMessage(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.ErrorMessage"));
+		listThingTemplateForTmallGenieResponse.setCode(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Code"));
+		listThingTemplateForTmallGenieResponse.setPage(_ctx.integerValue("ListThingTemplateForTmallGenieResponse.Page"));
+		listThingTemplateForTmallGenieResponse.setPageSize(_ctx.integerValue("ListThingTemplateForTmallGenieResponse.PageSize"));
+		listThingTemplateForTmallGenieResponse.setTotal(_ctx.integerValue("ListThingTemplateForTmallGenieResponse.Total"));
 
 		List<ThingTemplate> data = new ArrayList<ThingTemplate>();
-		for (int i = 0; i < context.lengthValue("ListThingTemplateForTmallGenieResponse.Data.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("ListThingTemplateForTmallGenieResponse.Data.Length"); i++) {
 			ThingTemplate thingTemplate = new ThingTemplate();
-			thingTemplate.setThingTemplateKey(context.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateKey"));
-			thingTemplate.setThingTemplateName(context.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateName"));
-			thingTemplate.setThingTemplateId(context.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateId"));
+			thingTemplate.setThingTemplateKey(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateKey"));
+			thingTemplate.setThingTemplateName(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateName"));
+			thingTemplate.setThingTemplateId(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].ThingTemplateId"));
 
 			List<Tag> tags = new ArrayList<Tag>();
-			for (int j = 0; j < context.lengthValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags.Length"); j++) {
+			for (int j = 0; j < _ctx.lengthValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags.Length"); j++) {
 				Tag tag = new Tag();
-				tag.setTagKey(context.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags["+ j +"].TagKey"));
-				tag.setTagValue(context.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags["+ j +"].TagValue"));
+				tag.setTagKey(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags["+ j +"].TagKey"));
+				tag.setTagValue(_ctx.stringValue("ListThingTemplateForTmallGenieResponse.Data["+ i +"].Tags["+ j +"].TagValue"));
 
 				tags.add(tag);
 			}

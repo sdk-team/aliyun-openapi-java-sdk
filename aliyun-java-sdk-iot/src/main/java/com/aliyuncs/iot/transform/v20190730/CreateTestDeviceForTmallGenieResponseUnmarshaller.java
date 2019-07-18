@@ -20,12 +20,16 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateTestDeviceForTmallGenieResponseUnmarshaller {
 
-	public static CreateTestDeviceForTmallGenieResponse unmarshall(CreateTestDeviceForTmallGenieResponse createTestDeviceForTmallGenieResponse, UnmarshallerContext context) {
+	public static CreateTestDeviceForTmallGenieResponse unmarshall(CreateTestDeviceForTmallGenieResponse createTestDeviceForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		createTestDeviceForTmallGenieResponse.setRequestId(context.stringValue("CreateTestDeviceForTmallGenieResponse.RequestId"));
-		createTestDeviceForTmallGenieResponse.setSuccess(context.booleanValue("CreateTestDeviceForTmallGenieResponse.Success"));
-		createTestDeviceForTmallGenieResponse.setErrorMessage(context.stringValue("CreateTestDeviceForTmallGenieResponse.ErrorMessage"));
-		createTestDeviceForTmallGenieResponse.setCode(context.stringValue("CreateTestDeviceForTmallGenieResponse.Code"));
+		createTestDeviceForTmallGenieResponse.setRequestId(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.RequestId"));
+		createTestDeviceForTmallGenieResponse.setSuccess(_ctx.booleanValue("CreateTestDeviceForTmallGenieResponse.Success"));
+		createTestDeviceForTmallGenieResponse.setErrorMessage(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.ErrorMessage"));
+		createTestDeviceForTmallGenieResponse.setCode(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.Code"));
+		createTestDeviceForTmallGenieResponse.setApplyId(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.ApplyId"));
+		createTestDeviceForTmallGenieResponse.setIotId(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.IotId"));
+		createTestDeviceForTmallGenieResponse.setProductKey(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.ProductKey"));
+		createTestDeviceForTmallGenieResponse.setDeviceName(_ctx.stringValue("CreateTestDeviceForTmallGenieResponse.DeviceName"));
 	 
 	 	return createTestDeviceForTmallGenieResponse;
 	}

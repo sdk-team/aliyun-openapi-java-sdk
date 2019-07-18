@@ -16,7 +16,6 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
-import com.google.gson.Gson;
 
 /**
  * @author auto create
@@ -25,24 +24,26 @@ import com.google.gson.Gson;
 public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<RemoveProductIdentifierForTmallGenieResponse> {
 	
 	public RemoveProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie", "Iot");
 	}
 
-	private List<Object> identifier;
+	private List<String> identifiers;
 
 	private String iotInstanceId;
 
 	private String productKey;
 
-	public List<Object> getIdentifier() {
-		return this.identifier;
+	public List<String> getIdentifiers() {
+		return this.identifiers;
 	}
 
-	public void setIdentifier(List<Object> identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", new Gson().toJson(identifier));
-		}
+	public void setIdentifiers(List<String> identifiers) {
+		this.identifiers = identifiers;	
+		if (identifiers != null) {
+			for (int i = 0; i < identifiers.size(); i++) {
+				putQueryParameter("Identifier." + (i + 1) , identifiers.get(i));
+			}
+		}	
 	}
 
 	public String getIotInstanceId() {

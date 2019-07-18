@@ -24,22 +24,22 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class QueryProductApplyListResponseUnmarshaller {
 
-	public static QueryProductApplyListResponse unmarshall(QueryProductApplyListResponse queryProductApplyListResponse, UnmarshallerContext context) {
+	public static QueryProductApplyListResponse unmarshall(QueryProductApplyListResponse queryProductApplyListResponse, UnmarshallerContext _ctx) {
 		
-		queryProductApplyListResponse.setRequestId(context.stringValue("QueryProductApplyListResponse.RequestId"));
-		queryProductApplyListResponse.setSuccess(context.booleanValue("QueryProductApplyListResponse.Success"));
-		queryProductApplyListResponse.setErrorMessage(context.stringValue("QueryProductApplyListResponse.ErrorMessage"));
-		queryProductApplyListResponse.setCode(context.stringValue("QueryProductApplyListResponse.Code"));
-		queryProductApplyListResponse.setTotal(context.stringValue("QueryProductApplyListResponse.Total"));
+		queryProductApplyListResponse.setRequestId(_ctx.stringValue("QueryProductApplyListResponse.RequestId"));
+		queryProductApplyListResponse.setSuccess(_ctx.booleanValue("QueryProductApplyListResponse.Success"));
+		queryProductApplyListResponse.setErrorMessage(_ctx.stringValue("QueryProductApplyListResponse.ErrorMessage"));
+		queryProductApplyListResponse.setCode(_ctx.stringValue("QueryProductApplyListResponse.Code"));
+		queryProductApplyListResponse.setTotal(_ctx.stringValue("QueryProductApplyListResponse.Total"));
 
 		List<ApplyInfoDTO> data = new ArrayList<ApplyInfoDTO>();
-		for (int i = 0; i < context.lengthValue("QueryProductApplyListResponse.Data.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("QueryProductApplyListResponse.Data.Length"); i++) {
 			ApplyInfoDTO applyInfoDTO = new ApplyInfoDTO();
-			applyInfoDTO.setApplyId(context.longValue("QueryProductApplyListResponse.Data["+ i +"].ApplyId"));
-			applyInfoDTO.setProductKey(context.stringValue("QueryProductApplyListResponse.Data["+ i +"].ProductKey"));
-			applyInfoDTO.setApplyStatus(context.stringValue("QueryProductApplyListResponse.Data["+ i +"].ApplyStatus"));
-			applyInfoDTO.setApplyCount(context.stringValue("QueryProductApplyListResponse.Data["+ i +"].ApplyCount"));
-			applyInfoDTO.setSuccessCount(context.stringValue("QueryProductApplyListResponse.Data["+ i +"].SuccessCount"));
+			applyInfoDTO.setApplyId(_ctx.longValue("QueryProductApplyListResponse.Data["+ i +"].ApplyId"));
+			applyInfoDTO.setProductKey(_ctx.stringValue("QueryProductApplyListResponse.Data["+ i +"].ProductKey"));
+			applyInfoDTO.setApplyStatus(_ctx.stringValue("QueryProductApplyListResponse.Data["+ i +"].ApplyStatus"));
+			applyInfoDTO.setApplyCount(_ctx.stringValue("QueryProductApplyListResponse.Data["+ i +"].ApplyCount"));
+			applyInfoDTO.setSuccessCount(_ctx.stringValue("QueryProductApplyListResponse.Data["+ i +"].SuccessCount"));
 
 			data.add(applyInfoDTO);
 		}

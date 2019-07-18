@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class SearchProductForTmallGenieRequest extends RpcAcsRequest<SearchProductForTmallGenieResponse> {
 	
 	public SearchProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "SearchProductForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "SearchProductForTmallGenie", "Iot");
 	}
 
 	private String fuzzyName;

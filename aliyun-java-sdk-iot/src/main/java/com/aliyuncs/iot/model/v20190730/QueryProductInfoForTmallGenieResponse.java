@@ -15,7 +15,6 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import java.util.List;
-import java.util.Map;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.iot.transform.v20190730.QueryProductInfoForTmallGenieResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -35,8 +34,6 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 	private String errorMessage;
 
 	private String dslString;
-
-	private Map<Object,Object> mapping;
 
 	private List<Property> properties;
 
@@ -86,14 +83,6 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 		this.dslString = dslString;
 	}
 
-	public Map<Object,Object> getMapping() {
-		return this.mapping;
-	}
-
-	public void setMapping(Map<Object,Object> mapping) {
-		this.mapping = mapping;
-	}
-
 	public List<Property> getProperties() {
 		return this.properties;
 	}
@@ -139,6 +128,10 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 		private String name;
 
 		private String dataSpecs;
+
+		private String identifier;
+
+		private String description;
 
 		private String dataSpecsList;
 
@@ -190,6 +183,22 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		public void setDataSpecs(String dataSpecs) {
 			this.dataSpecs = dataSpecs;
+		}
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
 		}
 
 		public String getDataSpecsList() {
@@ -244,6 +253,8 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		private String identifier;
 
+		private String description;
+
 		private List<Argument> outputData;
 
 		private List<Tag2> tags1;
@@ -288,6 +299,14 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 			this.identifier = identifier;
 		}
 
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
 		public List<Argument> getOutputData() {
 			return this.outputData;
 		}
@@ -314,7 +333,7 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 			private String name;
 
-			private Long paraOrder;
+			private Integer paraOrder;
 
 			private String dataSpecs;
 
@@ -352,11 +371,11 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 				this.name = name;
 			}
 
-			public Long getParaOrder() {
+			public Integer getParaOrder() {
 				return this.paraOrder;
 			}
 
-			public void setParaOrder(Long paraOrder) {
+			public void setParaOrder(Integer paraOrder) {
 				this.paraOrder = paraOrder;
 			}
 
@@ -413,9 +432,13 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		private String identifier;
 
-		private List<Argument3> inputParams;
+		private String description;
 
-		private List<Argument4> outputParams;
+		private List<Argument4> inputParams;
+
+		private List<Argument5> outputParams;
+
+		private List<Tag6> tags3;
 
 		public Long getTmallFunctionId() {
 			return this.tmallFunctionId;
@@ -457,103 +480,36 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 			this.identifier = identifier;
 		}
 
-		public List<Argument3> getInputParams() {
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public List<Argument4> getInputParams() {
 			return this.inputParams;
 		}
 
-		public void setInputParams(List<Argument3> inputParams) {
+		public void setInputParams(List<Argument4> inputParams) {
 			this.inputParams = inputParams;
 		}
 
-		public List<Argument4> getOutputParams() {
+		public List<Argument5> getOutputParams() {
 			return this.outputParams;
 		}
 
-		public void setOutputParams(List<Argument4> outputParams) {
+		public void setOutputParams(List<Argument5> outputParams) {
 			this.outputParams = outputParams;
 		}
 
-		public static class Argument3 {
+		public List<Tag6> getTags3() {
+			return this.tags3;
+		}
 
-			private Long id;
-
-			private String dataType;
-
-			private String identifier;
-
-			private String name;
-
-			private Long paraOrder;
-
-			private String direction;
-
-			private String dataSpecs;
-
-			private String dataSpecsList;
-
-			public Long getId() {
-				return this.id;
-			}
-
-			public void setId(Long id) {
-				this.id = id;
-			}
-
-			public String getDataType() {
-				return this.dataType;
-			}
-
-			public void setDataType(String dataType) {
-				this.dataType = dataType;
-			}
-
-			public String getIdentifier() {
-				return this.identifier;
-			}
-
-			public void setIdentifier(String identifier) {
-				this.identifier = identifier;
-			}
-
-			public String getName() {
-				return this.name;
-			}
-
-			public void setName(String name) {
-				this.name = name;
-			}
-
-			public Long getParaOrder() {
-				return this.paraOrder;
-			}
-
-			public void setParaOrder(Long paraOrder) {
-				this.paraOrder = paraOrder;
-			}
-
-			public String getDirection() {
-				return this.direction;
-			}
-
-			public void setDirection(String direction) {
-				this.direction = direction;
-			}
-
-			public String getDataSpecs() {
-				return this.dataSpecs;
-			}
-
-			public void setDataSpecs(String dataSpecs) {
-				this.dataSpecs = dataSpecs;
-			}
-
-			public String getDataSpecsList() {
-				return this.dataSpecsList;
-			}
-
-			public void setDataSpecsList(String dataSpecsList) {
-				this.dataSpecsList = dataSpecsList;
-			}
+		public void setTags3(List<Tag6> tags3) {
+			this.tags3 = tags3;
 		}
 
 		public static class Argument4 {
@@ -564,7 +520,90 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 			private String identifier;
 
-			private Long paraOrder;
+			private String name;
+
+			private Integer paraOrder;
+
+			private String direction;
+
+			private String dataSpecs;
+
+			private String dataSpecsList;
+
+			public Long getId() {
+				return this.id;
+			}
+
+			public void setId(Long id) {
+				this.id = id;
+			}
+
+			public String getDataType() {
+				return this.dataType;
+			}
+
+			public void setDataType(String dataType) {
+				this.dataType = dataType;
+			}
+
+			public String getIdentifier() {
+				return this.identifier;
+			}
+
+			public void setIdentifier(String identifier) {
+				this.identifier = identifier;
+			}
+
+			public String getName() {
+				return this.name;
+			}
+
+			public void setName(String name) {
+				this.name = name;
+			}
+
+			public Integer getParaOrder() {
+				return this.paraOrder;
+			}
+
+			public void setParaOrder(Integer paraOrder) {
+				this.paraOrder = paraOrder;
+			}
+
+			public String getDirection() {
+				return this.direction;
+			}
+
+			public void setDirection(String direction) {
+				this.direction = direction;
+			}
+
+			public String getDataSpecs() {
+				return this.dataSpecs;
+			}
+
+			public void setDataSpecs(String dataSpecs) {
+				this.dataSpecs = dataSpecs;
+			}
+
+			public String getDataSpecsList() {
+				return this.dataSpecsList;
+			}
+
+			public void setDataSpecsList(String dataSpecsList) {
+				this.dataSpecsList = dataSpecsList;
+			}
+		}
+
+		public static class Argument5 {
+
+			private Long id;
+
+			private String dataType;
+
+			private String identifier;
+
+			private Integer paraOrder;
 
 			private String direction;
 
@@ -598,11 +637,11 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 				this.identifier = identifier;
 			}
 
-			public Long getParaOrder() {
+			public Integer getParaOrder() {
 				return this.paraOrder;
 			}
 
-			public void setParaOrder(Long paraOrder) {
+			public void setParaOrder(Integer paraOrder) {
 				this.paraOrder = paraOrder;
 			}
 
@@ -638,23 +677,48 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 				this.dataSpecsList = dataSpecsList;
 			}
 		}
+
+		public static class Tag6 {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+		}
 	}
 
 	public static class ProductInfo {
 
-		private Long gmtCreate;
+		private String gmtCreate;
 
 		private Integer dataFormat;
 
 		private String description;
-
-		private Integer deviceCount;
 
 		private Integer nodeType;
 
 		private String productKey;
 
 		private String productName;
+
+		private String brand;
+
+		private String productModel;
 
 		private String productSecret;
 
@@ -670,15 +734,17 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		private String productStatus;
 
+		private Long scriptId;
+
 		private Boolean owner;
 
 		private Integer netType;
 
-		public Long getGmtCreate() {
+		public String getGmtCreate() {
 			return this.gmtCreate;
 		}
 
-		public void setGmtCreate(Long gmtCreate) {
+		public void setGmtCreate(String gmtCreate) {
 			this.gmtCreate = gmtCreate;
 		}
 
@@ -696,14 +762,6 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		public void setDescription(String description) {
 			this.description = description;
-		}
-
-		public Integer getDeviceCount() {
-			return this.deviceCount;
-		}
-
-		public void setDeviceCount(Integer deviceCount) {
-			this.deviceCount = deviceCount;
 		}
 
 		public Integer getNodeType() {
@@ -728,6 +786,22 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		public void setProductName(String productName) {
 			this.productName = productName;
+		}
+
+		public String getBrand() {
+			return this.brand;
+		}
+
+		public void setBrand(String brand) {
+			this.brand = brand;
+		}
+
+		public String getProductModel() {
+			return this.productModel;
+		}
+
+		public void setProductModel(String productModel) {
+			this.productModel = productModel;
 		}
 
 		public String getProductSecret() {
@@ -784,6 +858,14 @@ public class QueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 		public void setProductStatus(String productStatus) {
 			this.productStatus = productStatus;
+		}
+
+		public Long getScriptId() {
+			return this.scriptId;
+		}
+
+		public void setScriptId(Long scriptId) {
+			this.scriptId = scriptId;
 		}
 
 		public Boolean getOwner() {

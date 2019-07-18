@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DeleteThingTemplateForTmallGenieResponseUnmarshaller {
 
-	public static DeleteThingTemplateForTmallGenieResponse unmarshall(DeleteThingTemplateForTmallGenieResponse deleteThingTemplateForTmallGenieResponse, UnmarshallerContext context) {
+	public static DeleteThingTemplateForTmallGenieResponse unmarshall(DeleteThingTemplateForTmallGenieResponse deleteThingTemplateForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		deleteThingTemplateForTmallGenieResponse.setRequestId(context.stringValue("DeleteThingTemplateForTmallGenieResponse.RequestId"));
-		deleteThingTemplateForTmallGenieResponse.setSuccess(context.booleanValue("DeleteThingTemplateForTmallGenieResponse.Success"));
-		deleteThingTemplateForTmallGenieResponse.setCode(context.stringValue("DeleteThingTemplateForTmallGenieResponse.Code"));
-		deleteThingTemplateForTmallGenieResponse.setErrorMessage(context.stringValue("DeleteThingTemplateForTmallGenieResponse.ErrorMessage"));
+		deleteThingTemplateForTmallGenieResponse.setRequestId(_ctx.stringValue("DeleteThingTemplateForTmallGenieResponse.RequestId"));
+		deleteThingTemplateForTmallGenieResponse.setSuccess(_ctx.booleanValue("DeleteThingTemplateForTmallGenieResponse.Success"));
+		deleteThingTemplateForTmallGenieResponse.setCode(_ctx.stringValue("DeleteThingTemplateForTmallGenieResponse.Code"));
+		deleteThingTemplateForTmallGenieResponse.setErrorMessage(_ctx.stringValue("DeleteThingTemplateForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return deleteThingTemplateForTmallGenieResponse;
 	}

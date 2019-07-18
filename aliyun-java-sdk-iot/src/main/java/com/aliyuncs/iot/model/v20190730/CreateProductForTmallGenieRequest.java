@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProductForTmallGenieResponse> {
 	
 	public CreateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateProductForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "CreateProductForTmallGenie", "Iot");
 	}
 
 	private String productModel;
@@ -34,7 +34,7 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 
 	private String iotInstanceId;
 
-	private String netType;
+	private Integer netType;
 
 	private String taoBaoId;
 
@@ -44,7 +44,7 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 
 	private String productBrand;
 
-	private String categoryId;
+	private Long categoryId;
 
 	public String getProductModel() {
 		return this.productModel;
@@ -90,14 +90,14 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		}
 	}
 
-	public String getNetType() {
+	public Integer getNetType() {
 		return this.netType;
 	}
 
-	public void setNetType(String netType) {
+	public void setNetType(Integer netType) {
 		this.netType = netType;
 		if(netType != null){
-			putBodyParameter("NetType", netType);
+			putBodyParameter("NetType", netType.toString());
 		}
 	}
 
@@ -145,14 +145,14 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		}
 	}
 
-	public String getCategoryId() {
+	public Long getCategoryId() {
 		return this.categoryId;
 	}
 
-	public void setCategoryId(String categoryId) {
+	public void setCategoryId(Long categoryId) {
 		this.categoryId = categoryId;
 		if(categoryId != null){
-			putBodyParameter("CategoryId", categoryId);
+			putBodyParameter("CategoryId", categoryId.toString());
 		}
 	}
 

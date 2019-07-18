@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateProductUsedWirelessModuleForTmallGenieRequest extends RpcAcsRequest<UpdateProductUsedWirelessModuleForTmallGenieResponse> {
 	
 	public UpdateProductUsedWirelessModuleForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductUsedWirelessModuleForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateProductUsedWirelessModuleForTmallGenie", "Iot");
 	}
 
 	private Boolean isStandardNetwork;

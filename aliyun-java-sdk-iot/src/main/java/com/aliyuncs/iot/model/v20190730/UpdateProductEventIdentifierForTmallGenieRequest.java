@@ -26,7 +26,7 @@ import com.google.gson.Gson;
 public class UpdateProductEventIdentifierForTmallGenieRequest extends RpcAcsRequest<UpdateProductEventIdentifierForTmallGenieResponse> {
 	
 	public UpdateProductEventIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductEventIdentifierForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateProductEventIdentifierForTmallGenie", "Iot");
 	}
 
 	private String identifier;
@@ -37,7 +37,7 @@ public class UpdateProductEventIdentifierForTmallGenieRequest extends RpcAcsRequ
 
 	private String description;
 
-	private Integer eventType;
+	private String eventType;
 
 	private String productKey;
 
@@ -97,14 +97,14 @@ public class UpdateProductEventIdentifierForTmallGenieRequest extends RpcAcsRequ
 		}
 	}
 
-	public Integer getEventType() {
+	public String getEventType() {
 		return this.eventType;
 	}
 
-	public void setEventType(Integer eventType) {
+	public void setEventType(String eventType) {
 		this.eventType = eventType;
 		if(eventType != null){
-			putBodyParameter("EventType", eventType.toString());
+			putBodyParameter("EventType", eventType);
 		}
 	}
 

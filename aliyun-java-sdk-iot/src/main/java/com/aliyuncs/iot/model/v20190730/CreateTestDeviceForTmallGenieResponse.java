@@ -32,6 +32,14 @@ public class CreateTestDeviceForTmallGenieResponse extends AcsResponse {
 
 	private String code;
 
+	private String applyId;
+
+	private String iotId;
+
+	private String productKey;
+
+	private String deviceName;
+
 	public String getRequestId() {
 		return this.requestId;
 	}
@@ -62,6 +70,38 @@ public class CreateTestDeviceForTmallGenieResponse extends AcsResponse {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public String getApplyId() {
+		return this.applyId;
+	}
+
+	public void setApplyId(String applyId) {
+		this.applyId = applyId;
+	}
+
+	public String getIotId() {
+		return this.iotId;
+	}
+
+	public void setIotId(String iotId) {
+		this.iotId = iotId;
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+	}
+
+	public String getDeviceName() {
+		return this.deviceName;
+	}
+
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
 	}
 
 	@Override

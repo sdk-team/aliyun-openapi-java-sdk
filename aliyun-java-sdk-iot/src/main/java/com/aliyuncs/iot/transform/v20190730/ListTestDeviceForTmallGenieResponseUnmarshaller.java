@@ -24,23 +24,23 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ListTestDeviceForTmallGenieResponseUnmarshaller {
 
-	public static ListTestDeviceForTmallGenieResponse unmarshall(ListTestDeviceForTmallGenieResponse listTestDeviceForTmallGenieResponse, UnmarshallerContext context) {
+	public static ListTestDeviceForTmallGenieResponse unmarshall(ListTestDeviceForTmallGenieResponse listTestDeviceForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		listTestDeviceForTmallGenieResponse.setRequestId(context.stringValue("ListTestDeviceForTmallGenieResponse.RequestId"));
-		listTestDeviceForTmallGenieResponse.setSuccess(context.booleanValue("ListTestDeviceForTmallGenieResponse.Success"));
-		listTestDeviceForTmallGenieResponse.setCode(context.stringValue("ListTestDeviceForTmallGenieResponse.Code"));
-		listTestDeviceForTmallGenieResponse.setErrorMessage(context.stringValue("ListTestDeviceForTmallGenieResponse.ErrorMessage"));
-		listTestDeviceForTmallGenieResponse.setPageNo(context.integerValue("ListTestDeviceForTmallGenieResponse.PageNo"));
-		listTestDeviceForTmallGenieResponse.setTotal(context.integerValue("ListTestDeviceForTmallGenieResponse.Total"));
-		listTestDeviceForTmallGenieResponse.setPageSize(context.integerValue("ListTestDeviceForTmallGenieResponse.PageSize"));
+		listTestDeviceForTmallGenieResponse.setRequestId(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.RequestId"));
+		listTestDeviceForTmallGenieResponse.setSuccess(_ctx.booleanValue("ListTestDeviceForTmallGenieResponse.Success"));
+		listTestDeviceForTmallGenieResponse.setCode(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.Code"));
+		listTestDeviceForTmallGenieResponse.setErrorMessage(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.ErrorMessage"));
+		listTestDeviceForTmallGenieResponse.setPageNo(_ctx.integerValue("ListTestDeviceForTmallGenieResponse.PageNo"));
+		listTestDeviceForTmallGenieResponse.setTotal(_ctx.integerValue("ListTestDeviceForTmallGenieResponse.Total"));
+		listTestDeviceForTmallGenieResponse.setPageSize(_ctx.integerValue("ListTestDeviceForTmallGenieResponse.PageSize"));
 
 		List<DeviceInfo> data = new ArrayList<DeviceInfo>();
-		for (int i = 0; i < context.lengthValue("ListTestDeviceForTmallGenieResponse.Data.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("ListTestDeviceForTmallGenieResponse.Data.Length"); i++) {
 			DeviceInfo deviceInfo = new DeviceInfo();
-			deviceInfo.setIotId(context.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].IotId"));
-			deviceInfo.setProductKey(context.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].ProductKey"));
-			deviceInfo.setDeviceName(context.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].DeviceName"));
-			deviceInfo.setDeviceSecret(context.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].DeviceSecret"));
+			deviceInfo.setIotId(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].IotId"));
+			deviceInfo.setProductKey(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].ProductKey"));
+			deviceInfo.setDeviceName(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].DeviceName"));
+			deviceInfo.setDeviceSecret(_ctx.stringValue("ListTestDeviceForTmallGenieResponse.Data["+ i +"].DeviceSecret"));
 
 			data.add(deviceInfo);
 		}

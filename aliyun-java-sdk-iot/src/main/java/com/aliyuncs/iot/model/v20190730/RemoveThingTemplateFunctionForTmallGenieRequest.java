@@ -15,7 +15,6 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
-import java.util.List;
 
 /**
  * @author auto create
@@ -24,18 +23,29 @@ import java.util.List;
 public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsRequest<RemoveThingTemplateFunctionForTmallGenieResponse> {
 	
 	public RemoveThingTemplateFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveThingTemplateFunctionForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "RemoveThingTemplateFunctionForTmallGenie", "Iot");
 	}
+
+	private String identifier;
 
 	private String thingTemplateKey;
 
-	private List<Long> tmallServiceFunctionIdss;
+	private Long tmallFunctionId;
 
 	private String iotInstanceId;
 
-	private List<Long> tmallEventFunctionIdss;
+	private String tmallFunctionType;
 
-	private List<Long> tmallPropertyFunctionIdss;
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -48,17 +58,15 @@ public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
-	public List<Long> getTmallServiceFunctionIdss() {
-		return this.tmallServiceFunctionIdss;
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
 	}
 
-	public void setTmallServiceFunctionIdss(List<Long> tmallServiceFunctionIdss) {
-		this.tmallServiceFunctionIdss = tmallServiceFunctionIdss;	
-		if (tmallServiceFunctionIdss != null) {
-			for (int i = 0; i < tmallServiceFunctionIdss.size(); i++) {
-				putQueryParameter("TmallServiceFunctionIds." + (i + 1) , tmallServiceFunctionIdss.get(i));
-			}
-		}	
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
 	}
 
 	public String getIotInstanceId() {
@@ -72,30 +80,15 @@ public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
-	public List<Long> getTmallEventFunctionIdss() {
-		return this.tmallEventFunctionIdss;
+	public String getTmallFunctionType() {
+		return this.tmallFunctionType;
 	}
 
-	public void setTmallEventFunctionIdss(List<Long> tmallEventFunctionIdss) {
-		this.tmallEventFunctionIdss = tmallEventFunctionIdss;	
-		if (tmallEventFunctionIdss != null) {
-			for (int i = 0; i < tmallEventFunctionIdss.size(); i++) {
-				putQueryParameter("TmallEventFunctionIds." + (i + 1) , tmallEventFunctionIdss.get(i));
-			}
-		}	
-	}
-
-	public List<Long> getTmallPropertyFunctionIdss() {
-		return this.tmallPropertyFunctionIdss;
-	}
-
-	public void setTmallPropertyFunctionIdss(List<Long> tmallPropertyFunctionIdss) {
-		this.tmallPropertyFunctionIdss = tmallPropertyFunctionIdss;	
-		if (tmallPropertyFunctionIdss != null) {
-			for (int i = 0; i < tmallPropertyFunctionIdss.size(); i++) {
-				putQueryParameter("TmallPropertyFunctionIds." + (i + 1) , tmallPropertyFunctionIdss.get(i));
-			}
-		}	
+	public void setTmallFunctionType(String tmallFunctionType) {
+		this.tmallFunctionType = tmallFunctionType;
+		if(tmallFunctionType != null){
+			putQueryParameter("TmallFunctionType", tmallFunctionType);
+		}
 	}
 
 	@Override

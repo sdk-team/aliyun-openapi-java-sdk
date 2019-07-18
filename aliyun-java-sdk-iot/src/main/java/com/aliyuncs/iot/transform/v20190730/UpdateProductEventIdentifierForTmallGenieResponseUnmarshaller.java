@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class UpdateProductEventIdentifierForTmallGenieResponseUnmarshaller {
 
-	public static UpdateProductEventIdentifierForTmallGenieResponse unmarshall(UpdateProductEventIdentifierForTmallGenieResponse updateProductEventIdentifierForTmallGenieResponse, UnmarshallerContext context) {
+	public static UpdateProductEventIdentifierForTmallGenieResponse unmarshall(UpdateProductEventIdentifierForTmallGenieResponse updateProductEventIdentifierForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		updateProductEventIdentifierForTmallGenieResponse.setRequestId(context.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.RequestId"));
-		updateProductEventIdentifierForTmallGenieResponse.setSuccess(context.booleanValue("UpdateProductEventIdentifierForTmallGenieResponse.Success"));
-		updateProductEventIdentifierForTmallGenieResponse.setCode(context.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.Code"));
-		updateProductEventIdentifierForTmallGenieResponse.setErrorMessage(context.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.ErrorMessage"));
+		updateProductEventIdentifierForTmallGenieResponse.setRequestId(_ctx.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.RequestId"));
+		updateProductEventIdentifierForTmallGenieResponse.setSuccess(_ctx.booleanValue("UpdateProductEventIdentifierForTmallGenieResponse.Success"));
+		updateProductEventIdentifierForTmallGenieResponse.setCode(_ctx.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.Code"));
+		updateProductEventIdentifierForTmallGenieResponse.setErrorMessage(_ctx.stringValue("UpdateProductEventIdentifierForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return updateProductEventIdentifierForTmallGenieResponse;
 	}

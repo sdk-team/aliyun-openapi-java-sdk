@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ToggleVirtualDeviceSwitchRequest extends RpcAcsRequest<ToggleVirtualDeviceSwitchResponse> {
 	
 	public ToggleVirtualDeviceSwitchRequest() {
-		super("Iot", "2019-07-30", "ToggleVirtualDeviceSwitch", "iot");
+		super("Iot", "2019-07-30", "ToggleVirtualDeviceSwitch", "Iot");
 	}
 
 	private String iotId;

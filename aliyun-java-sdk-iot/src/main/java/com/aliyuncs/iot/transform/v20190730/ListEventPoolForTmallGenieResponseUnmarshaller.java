@@ -26,45 +26,45 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ListEventPoolForTmallGenieResponseUnmarshaller {
 
-	public static ListEventPoolForTmallGenieResponse unmarshall(ListEventPoolForTmallGenieResponse listEventPoolForTmallGenieResponse, UnmarshallerContext context) {
+	public static ListEventPoolForTmallGenieResponse unmarshall(ListEventPoolForTmallGenieResponse listEventPoolForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		listEventPoolForTmallGenieResponse.setRequestId(context.stringValue("ListEventPoolForTmallGenieResponse.RequestId"));
-		listEventPoolForTmallGenieResponse.setSuccess(context.booleanValue("ListEventPoolForTmallGenieResponse.Success"));
-		listEventPoolForTmallGenieResponse.setCode(context.stringValue("ListEventPoolForTmallGenieResponse.Code"));
-		listEventPoolForTmallGenieResponse.setErrorMessage(context.stringValue("ListEventPoolForTmallGenieResponse.ErrorMessage"));
-		listEventPoolForTmallGenieResponse.setPageNo(context.integerValue("ListEventPoolForTmallGenieResponse.PageNo"));
-		listEventPoolForTmallGenieResponse.setTotal(context.integerValue("ListEventPoolForTmallGenieResponse.Total"));
-		listEventPoolForTmallGenieResponse.setPageSize(context.integerValue("ListEventPoolForTmallGenieResponse.PageSize"));
+		listEventPoolForTmallGenieResponse.setRequestId(_ctx.stringValue("ListEventPoolForTmallGenieResponse.RequestId"));
+		listEventPoolForTmallGenieResponse.setSuccess(_ctx.booleanValue("ListEventPoolForTmallGenieResponse.Success"));
+		listEventPoolForTmallGenieResponse.setCode(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Code"));
+		listEventPoolForTmallGenieResponse.setErrorMessage(_ctx.stringValue("ListEventPoolForTmallGenieResponse.ErrorMessage"));
+		listEventPoolForTmallGenieResponse.setPageNo(_ctx.integerValue("ListEventPoolForTmallGenieResponse.PageNo"));
+		listEventPoolForTmallGenieResponse.setTotal(_ctx.integerValue("ListEventPoolForTmallGenieResponse.Total"));
+		listEventPoolForTmallGenieResponse.setPageSize(_ctx.integerValue("ListEventPoolForTmallGenieResponse.PageSize"));
 
 		List<Event> events = new ArrayList<Event>();
-		for (int i = 0; i < context.lengthValue("ListEventPoolForTmallGenieResponse.Events.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("ListEventPoolForTmallGenieResponse.Events.Length"); i++) {
 			Event event = new Event();
-			event.setTmallFunctionId(context.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].TmallFunctionId"));
-			event.setThingTemplateKey(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].ThingTemplateKey"));
-			event.setEventType(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].EventType"));
-			event.setName(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Name"));
-			event.setIdentifier(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Identifier"));
+			event.setTmallFunctionId(_ctx.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].TmallFunctionId"));
+			event.setThingTemplateKey(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].ThingTemplateKey"));
+			event.setEventType(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].EventType"));
+			event.setName(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Name"));
+			event.setIdentifier(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Identifier"));
 
 			List<Argument> outputData = new ArrayList<Argument>();
-			for (int j = 0; j < context.lengthValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData.Length"); j++) {
+			for (int j = 0; j < _ctx.lengthValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData.Length"); j++) {
 				Argument argument = new Argument();
-				argument.setId(context.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Id"));
-				argument.setDataType(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataType"));
-				argument.setIdentifier(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Identifier"));
-				argument.setName(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Name"));
-				argument.setParaOrder(context.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].ParaOrder"));
-				argument.setDataSpecs(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecs"));
-				argument.setDataSpecsList(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecsList"));
+				argument.setId(_ctx.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Id"));
+				argument.setDataType(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataType"));
+				argument.setIdentifier(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Identifier"));
+				argument.setName(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].Name"));
+				argument.setParaOrder(_ctx.integerValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].ParaOrder"));
+				argument.setDataSpecs(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecs"));
+				argument.setDataSpecsList(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecsList"));
 
 				outputData.add(argument);
 			}
 			event.setOutputData(outputData);
 
 			List<Tag> tags = new ArrayList<Tag>();
-			for (int j = 0; j < context.lengthValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags.Length"); j++) {
+			for (int j = 0; j < _ctx.lengthValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags.Length"); j++) {
 				Tag tag = new Tag();
-				tag.setTagKey(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags["+ j +"].TagKey"));
-				tag.setTagValue(context.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags["+ j +"].TagValue"));
+				tag.setTagKey(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags["+ j +"].TagKey"));
+				tag.setTagValue(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].Tags["+ j +"].TagValue"));
 
 				tags.add(tag);
 			}

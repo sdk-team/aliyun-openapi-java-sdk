@@ -24,7 +24,7 @@ import java.util.List;
 public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplatePropertyForTmallGenieResponse> {
 	
 	public UpdateThingTemplatePropertyForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplatePropertyForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplatePropertyForTmallGenie", "Iot");
 	}
 
 	private String identifier;
@@ -33,7 +33,9 @@ public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsReque
 
 	private String thingTemplateKey;
 
-	private String rwtype;
+	private Long tmallFunctionId;
+
+	private String rwType;
 
 	private String iotInstanceId;
 
@@ -78,14 +80,25 @@ public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
-	public String getRwtype() {
-		return this.rwtype;
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
 	}
 
-	public void setRwtype(String rwtype) {
-		this.rwtype = rwtype;
-		if(rwtype != null){
-			putQueryParameter("Rwtype", rwtype);
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
+	}
+
+	public String getRwType() {
+		return this.rwType;
+	}
+
+	public void setRwType(String rwType) {
+		this.rwType = rwType;
+		if(rwType != null){
+			putQueryParameter("RwType", rwType);
 		}
 	}
 

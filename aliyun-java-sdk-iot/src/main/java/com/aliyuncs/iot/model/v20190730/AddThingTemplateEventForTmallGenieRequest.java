@@ -24,14 +24,12 @@ import java.util.List;
 public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateEventForTmallGenieResponse> {
 	
 	public AddThingTemplateEventForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie", "Iot");
 	}
 
 	private String identifier;
 
-	private String outputData;
-
-	private String thingTemplateKey;
+	private List<OutputData> outputDatas;
 
 	private Long tmallFunctionId;
 
@@ -54,26 +52,23 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 		}
 	}
 
-	public String getOutputData() {
-		return this.outputData;
+	public List<OutputData> getOutputDatas() {
+		return this.outputDatas;
 	}
 
-	public void setOutputData(String outputData) {
-		this.outputData = outputData;
-		if(outputData != null){
-			putQueryParameter("OutputData", outputData);
-		}
-	}
-
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
-	}
-
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
-		}
+	public void setOutputDatas(List<OutputData> outputDatas) {
+		this.outputDatas = outputDatas;	
+		if (outputDatas != null) {
+			for (int depth1 = 0; depth1 < outputDatas.size(); depth1++) {
+				putQueryParameter("OutputData." + (depth1 + 1) + ".Identifier" , outputDatas.get(depth1).getIdentifier());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".DataSpecs" , outputDatas.get(depth1).getDataSpecs());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".DataType" , outputDatas.get(depth1).getDataType());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".Name" , outputDatas.get(depth1).getName());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".DataSpecsList" , outputDatas.get(depth1).getDataSpecsList());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".ParaOrder" , outputDatas.get(depth1).getParaOrder());
+				putQueryParameter("OutputData." + (depth1 + 1) + ".Direction" , outputDatas.get(depth1).getDirection());
+			}
+		}	
 	}
 
 	public Long getTmallFunctionId() {
@@ -132,6 +127,79 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public static class OutputData {
+
+		private String identifier;
+
+		private String dataSpecs;
+
+		private String dataType;
+
+		private String name;
+
+		private String dataSpecsList;
+
+		private Integer paraOrder;
+
+		private String direction;
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public String getDataSpecs() {
+			return this.dataSpecs;
+		}
+
+		public void setDataSpecs(String dataSpecs) {
+			this.dataSpecs = dataSpecs;
+		}
+
+		public String getDataType() {
+			return this.dataType;
+		}
+
+		public void setDataType(String dataType) {
+			this.dataType = dataType;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getDataSpecsList() {
+			return this.dataSpecsList;
+		}
+
+		public void setDataSpecsList(String dataSpecsList) {
+			this.dataSpecsList = dataSpecsList;
+		}
+
+		public Integer getParaOrder() {
+			return this.paraOrder;
+		}
+
+		public void setParaOrder(Integer paraOrder) {
+			this.paraOrder = paraOrder;
+		}
+
+		public String getDirection() {
+			return this.direction;
+		}
+
+		public void setDirection(String direction) {
+			this.direction = direction;
+		}
 	}
 
 	public static class Tags {

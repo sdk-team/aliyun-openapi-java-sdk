@@ -24,7 +24,7 @@ import java.util.List;
 public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateResponse> {
 	
 	public CategoryMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryMigrate", "iot");
+		super("Iot", "2019-07-30", "CategoryMigrate", "Iot");
 	}
 
 	private String iotInstanceId;
@@ -37,9 +37,9 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 
 	private String categoryName;
 
-	private String bizTenantId;
+	private List<Tag> tags;
 
-	private List<Tags> tagss;
+	private String bizTenantId;
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -96,6 +96,22 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 		}
 	}
 
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagName" , tags.get(depth1).getTagName());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".Namespace" , tags.get(depth1).getNamespace());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
 	public String getBizTenantId() {
 		return this.bizTenantId;
 	}
@@ -107,25 +123,23 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 		}
 	}
 
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
+	public static class Tag {
 
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
-	}
-
-	public static class Tags {
+		private String tagName;
 
 		private String tagValue;
 
+		private String namespace;
+
 		private String tagKey;
+
+		public String getTagName() {
+			return this.tagName;
+		}
+
+		public void setTagName(String tagName) {
+			this.tagName = tagName;
+		}
 
 		public String getTagValue() {
 			return this.tagValue;
@@ -133,6 +147,14 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 
 		public void setTagValue(String tagValue) {
 			this.tagValue = tagValue;
+		}
+
+		public String getNamespace() {
+			return this.namespace;
+		}
+
+		public void setNamespace(String namespace) {
+			this.namespace = namespace;
 		}
 
 		public String getTagKey() {

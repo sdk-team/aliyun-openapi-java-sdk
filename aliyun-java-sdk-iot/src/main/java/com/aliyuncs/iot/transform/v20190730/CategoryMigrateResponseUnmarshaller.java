@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CategoryMigrateResponseUnmarshaller {
 
-	public static CategoryMigrateResponse unmarshall(CategoryMigrateResponse categoryMigrateResponse, UnmarshallerContext context) {
+	public static CategoryMigrateResponse unmarshall(CategoryMigrateResponse categoryMigrateResponse, UnmarshallerContext _ctx) {
 		
-		categoryMigrateResponse.setRequestId(context.stringValue("CategoryMigrateResponse.RequestId"));
-		categoryMigrateResponse.setSuccess(context.booleanValue("CategoryMigrateResponse.Success"));
-		categoryMigrateResponse.setCode(context.stringValue("CategoryMigrateResponse.Code"));
-		categoryMigrateResponse.setErrorMessage(context.stringValue("CategoryMigrateResponse.ErrorMessage"));
+		categoryMigrateResponse.setRequestId(_ctx.stringValue("CategoryMigrateResponse.RequestId"));
+		categoryMigrateResponse.setSuccess(_ctx.booleanValue("CategoryMigrateResponse.Success"));
+		categoryMigrateResponse.setCode(_ctx.stringValue("CategoryMigrateResponse.Code"));
+		categoryMigrateResponse.setErrorMessage(_ctx.stringValue("CategoryMigrateResponse.ErrorMessage"));
 	 
 	 	return categoryMigrateResponse;
 	}

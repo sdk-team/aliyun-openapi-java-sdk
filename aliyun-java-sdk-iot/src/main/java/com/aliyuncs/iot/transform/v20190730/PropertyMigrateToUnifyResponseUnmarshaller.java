@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class PropertyMigrateToUnifyResponseUnmarshaller {
 
-	public static PropertyMigrateToUnifyResponse unmarshall(PropertyMigrateToUnifyResponse propertyMigrateToUnifyResponse, UnmarshallerContext context) {
+	public static PropertyMigrateToUnifyResponse unmarshall(PropertyMigrateToUnifyResponse propertyMigrateToUnifyResponse, UnmarshallerContext _ctx) {
 		
-		propertyMigrateToUnifyResponse.setRequestId(context.stringValue("PropertyMigrateToUnifyResponse.RequestId"));
-		propertyMigrateToUnifyResponse.setSuccess(context.booleanValue("PropertyMigrateToUnifyResponse.Success"));
-		propertyMigrateToUnifyResponse.setCode(context.stringValue("PropertyMigrateToUnifyResponse.Code"));
-		propertyMigrateToUnifyResponse.setErrorMessage(context.stringValue("PropertyMigrateToUnifyResponse.ErrorMessage"));
+		propertyMigrateToUnifyResponse.setRequestId(_ctx.stringValue("PropertyMigrateToUnifyResponse.RequestId"));
+		propertyMigrateToUnifyResponse.setSuccess(_ctx.booleanValue("PropertyMigrateToUnifyResponse.Success"));
+		propertyMigrateToUnifyResponse.setCode(_ctx.stringValue("PropertyMigrateToUnifyResponse.Code"));
+		propertyMigrateToUnifyResponse.setErrorMessage(_ctx.stringValue("PropertyMigrateToUnifyResponse.ErrorMessage"));
 	 
 	 	return propertyMigrateToUnifyResponse;
 	}

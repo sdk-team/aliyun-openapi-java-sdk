@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class RemoveThingTemplateFunctionForTmallGenieResponseUnmarshaller {
 
-	public static RemoveThingTemplateFunctionForTmallGenieResponse unmarshall(RemoveThingTemplateFunctionForTmallGenieResponse removeThingTemplateFunctionForTmallGenieResponse, UnmarshallerContext context) {
+	public static RemoveThingTemplateFunctionForTmallGenieResponse unmarshall(RemoveThingTemplateFunctionForTmallGenieResponse removeThingTemplateFunctionForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		removeThingTemplateFunctionForTmallGenieResponse.setRequestId(context.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.RequestId"));
-		removeThingTemplateFunctionForTmallGenieResponse.setSuccess(context.booleanValue("RemoveThingTemplateFunctionForTmallGenieResponse.Success"));
-		removeThingTemplateFunctionForTmallGenieResponse.setCode(context.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.Code"));
-		removeThingTemplateFunctionForTmallGenieResponse.setErrorMessage(context.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.ErrorMessage"));
+		removeThingTemplateFunctionForTmallGenieResponse.setRequestId(_ctx.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.RequestId"));
+		removeThingTemplateFunctionForTmallGenieResponse.setSuccess(_ctx.booleanValue("RemoveThingTemplateFunctionForTmallGenieResponse.Success"));
+		removeThingTemplateFunctionForTmallGenieResponse.setCode(_ctx.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.Code"));
+		removeThingTemplateFunctionForTmallGenieResponse.setErrorMessage(_ctx.stringValue("RemoveThingTemplateFunctionForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return removeThingTemplateFunctionForTmallGenieResponse;
 	}

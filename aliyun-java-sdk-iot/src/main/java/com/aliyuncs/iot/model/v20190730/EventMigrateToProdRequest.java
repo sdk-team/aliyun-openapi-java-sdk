@@ -24,28 +24,32 @@ import java.util.List;
 public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdResponse> {
 	
 	public EventMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToProd", "iot");
+		super("Iot", "2019-07-30", "EventMigrateToProd", "Iot");
 	}
 
 	private String identifier;
 
-	private List<OutputData> outputDatas;
-
-	private String iotInstanceId;
-
-	private String name;
+	private List<ArgsDTO> argsDTOs;
 
 	private String description;
-
-	private List<Tag> tags;
 
 	private String productKey;
 
 	private String type;
 
-	private String bizTenantId;
+	private String deviceType;
 
 	private Boolean required;
+
+	private String iotInstanceId;
+
+	private String name;
+
+	private String categoryName;
+
+	private List<Tag> tags;
+
+	private String bizTenantId;
 
 	public String getIdentifier() {
 		return this.identifier;
@@ -58,47 +62,25 @@ public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdR
 		}
 	}
 
-	public List<OutputData> getOutputDatas() {
-		return this.outputDatas;
+	public List<ArgsDTO> getArgsDTOs() {
+		return this.argsDTOs;
 	}
 
-	public void setOutputDatas(List<OutputData> outputDatas) {
-		this.outputDatas = outputDatas;	
-		if (outputDatas != null) {
-			for (int depth1 = 0; depth1 < outputDatas.size(); depth1++) {
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Identifier" , outputDatas.get(depth1).getIdentifier());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionId" , outputDatas.get(depth1).getInteractionId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionType" , outputDatas.get(depth1).getInteractionType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataType" , outputDatas.get(depth1).getDataType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Name" , outputDatas.get(depth1).getName());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Definition" , outputDatas.get(depth1).getDefinition());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".ParaOrder" , outputDatas.get(depth1).getParaOrder());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataSpecsId" , outputDatas.get(depth1).getDataSpecsId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Direction" , outputDatas.get(depth1).getDirection());
+	public void setArgsDTOs(List<ArgsDTO> argsDTOs) {
+		this.argsDTOs = argsDTOs;	
+		if (argsDTOs != null) {
+			for (int depth1 = 0; depth1 < argsDTOs.size(); depth1++) {
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Identifier" , argsDTOs.get(depth1).getIdentifier());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionId" , argsDTOs.get(depth1).getInteractionId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionType" , argsDTOs.get(depth1).getInteractionType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataType" , argsDTOs.get(depth1).getDataType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Name" , argsDTOs.get(depth1).getName());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Definition" , argsDTOs.get(depth1).getDefinition());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".ParaOrder" , argsDTOs.get(depth1).getParaOrder());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataSpecsId" , argsDTOs.get(depth1).getDataSpecsId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Direction" , argsDTOs.get(depth1).getDirection());
 			}
 		}	
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
-		}
 	}
 
 	public String getDescription() {
@@ -110,20 +92,6 @@ public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdR
 		if(description != null){
 			putQueryParameter("Description", description);
 		}
-	}
-
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public String getProductKey() {
@@ -148,14 +116,14 @@ public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdR
 		}
 	}
 
-	public String getBizTenantId() {
-		return this.bizTenantId;
+	public String getDeviceType() {
+		return this.deviceType;
 	}
 
-	public void setBizTenantId(String bizTenantId) {
-		this.bizTenantId = bizTenantId;
-		if(bizTenantId != null){
-			putQueryParameter("BizTenantId", bizTenantId);
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+		if(deviceType != null){
+			putQueryParameter("DeviceType", deviceType);
 		}
 	}
 
@@ -170,7 +138,65 @@ public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdR
 		}
 	}
 
-	public static class OutputData {
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getCategoryName() {
+		return this.categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+		if(categoryName != null){
+			putQueryParameter("CategoryName", categoryName);
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
+	public String getBizTenantId() {
+		return this.bizTenantId;
+	}
+
+	public void setBizTenantId(String bizTenantId) {
+		this.bizTenantId = bizTenantId;
+		if(bizTenantId != null){
+			putQueryParameter("BizTenantId", bizTenantId);
+		}
+	}
+
+	public static class ArgsDTO {
 
 		private String identifier;
 

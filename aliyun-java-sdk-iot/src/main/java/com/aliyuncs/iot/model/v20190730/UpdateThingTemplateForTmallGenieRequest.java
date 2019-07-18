@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
 
 /**
  * @author auto create
@@ -23,12 +24,16 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateForTmallGenieResponse> {
 	
 	public UpdateThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie", "Iot");
 	}
 
 	private String thingTemplateKey;
 
 	private String iotInstanceId;
+
+	private String thingTemplateName;
+
+	private List<Tags> tagss;
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -49,6 +54,54 @@ public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<Updat
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public String getThingTemplateName() {
+		return this.thingTemplateName;
+	}
+
+	public void setThingTemplateName(String thingTemplateName) {
+		this.thingTemplateName = thingTemplateName;
+		if(thingTemplateName != null){
+			putQueryParameter("ThingTemplateName", thingTemplateName);
+		}
+	}
+
+	public List<Tags> getTagss() {
+		return this.tagss;
+	}
+
+	public void setTagss(List<Tags> tagss) {
+		this.tagss = tagss;	
+		if (tagss != null) {
+			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
+			}
+		}	
+	}
+
+	public static class Tags {
+
+		private String tagValue;
+
+		private String tagKey;
+
+		public String getTagValue() {
+			return this.tagValue;
+		}
+
+		public void setTagValue(String tagValue) {
+			this.tagValue = tagValue;
+		}
+
+		public String getTagKey() {
+			return this.tagKey;
+		}
+
+		public void setTagKey(String tagKey) {
+			this.tagKey = tagKey;
 		}
 	}
 

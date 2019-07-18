@@ -24,7 +24,7 @@ import java.util.List;
 public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateToProdResponse> {
 	
 	public PropertyMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToProd", "iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToProd", "Iot");
 	}
 
 	private String identifier;
@@ -33,11 +33,11 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 
 	private String productKey;
 
+	private String deviceType;
+
 	private Boolean required;
 
 	private String dataSpecsId;
-
-	private List<Tags> tagss;
 
 	private String dataType;
 
@@ -47,7 +47,11 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 
 	private String namespace;
 
+	private String categoryName;
+
 	private String definition;
+
+	private List<Tag> tags;
 
 	private String bizTenantId;
 
@@ -86,6 +90,17 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		}
 	}
 
+	public String getDeviceType() {
+		return this.deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+		if(deviceType != null){
+			putQueryParameter("DeviceType", deviceType);
+		}
+	}
+
 	public Boolean getRequired() {
 		return this.required;
 	}
@@ -106,20 +121,6 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		if(dataSpecsId != null){
 			putQueryParameter("DataSpecsId", dataSpecsId);
 		}
-	}
-
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
-
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public String getDataType() {
@@ -166,6 +167,17 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		}
 	}
 
+	public String getCategoryName() {
+		return this.categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+		if(categoryName != null){
+			putQueryParameter("CategoryName", categoryName);
+		}
+	}
+
 	public String getDefinition() {
 		return this.definition;
 	}
@@ -175,6 +187,20 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		if(definition != null){
 			putQueryParameter("Definition", definition);
 		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
 	}
 
 	public String getBizTenantId() {
@@ -199,7 +225,7 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		}
 	}
 
-	public static class Tags {
+	public static class Tag {
 
 		private String tagValue;
 

@@ -24,7 +24,7 @@ import java.util.List;
 public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateToUnifyResponse> {
 	
 	public ServiceMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "ServiceMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "ServiceMigrateToUnify", "Iot");
 	}
 
 	private String identifier;
@@ -33,21 +33,19 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 
 	private String thingTemplateKey;
 
+	private List<ArgsDTO> argsDTOs;
+
 	private String modifier;
 
 	private String categoryKey;
 
 	private String description;
 
+	private String deviceType;
+
 	private Boolean required;
 
 	private String thingTemplateName;
-
-	private List<Tags> tagss;
-
-	private List<InputData> inputDatas;
-
-	private List<OutputData> outputDatas;
 
 	private String templateType;
 
@@ -60,6 +58,8 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 	private String categoryName;
 
 	private Integer state;
+
+	private List<Tag> tags;
 
 	private String callType;
 
@@ -98,6 +98,27 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 		}
 	}
 
+	public List<ArgsDTO> getArgsDTOs() {
+		return this.argsDTOs;
+	}
+
+	public void setArgsDTOs(List<ArgsDTO> argsDTOs) {
+		this.argsDTOs = argsDTOs;	
+		if (argsDTOs != null) {
+			for (int depth1 = 0; depth1 < argsDTOs.size(); depth1++) {
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Identifier" , argsDTOs.get(depth1).getIdentifier());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionId" , argsDTOs.get(depth1).getInteractionId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".InteractionType" , argsDTOs.get(depth1).getInteractionType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataType" , argsDTOs.get(depth1).getDataType());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Name" , argsDTOs.get(depth1).getName());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Definition" , argsDTOs.get(depth1).getDefinition());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".ParaOrder" , argsDTOs.get(depth1).getParaOrder());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".DataSpecsId" , argsDTOs.get(depth1).getDataSpecsId());
+				putQueryParameter("ArgsDTO." + (depth1 + 1) + ".Direction" , argsDTOs.get(depth1).getDirection());
+			}
+		}	
+	}
+
 	public String getModifier() {
 		return this.modifier;
 	}
@@ -131,6 +152,17 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 		}
 	}
 
+	public String getDeviceType() {
+		return this.deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+		if(deviceType != null){
+			putQueryParameter("DeviceType", deviceType);
+		}
+	}
+
 	public Boolean getRequired() {
 		return this.required;
 	}
@@ -151,62 +183,6 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 		if(thingTemplateName != null){
 			putQueryParameter("ThingTemplateName", thingTemplateName);
 		}
-	}
-
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
-
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
-	}
-
-	public List<InputData> getInputDatas() {
-		return this.inputDatas;
-	}
-
-	public void setInputDatas(List<InputData> inputDatas) {
-		this.inputDatas = inputDatas;	
-		if (inputDatas != null) {
-			for (int depth1 = 0; depth1 < inputDatas.size(); depth1++) {
-				putQueryParameter("InputData." + (depth1 + 1) + ".Identifier" , inputDatas.get(depth1).getIdentifier());
-				putQueryParameter("InputData." + (depth1 + 1) + ".InteractionId" , inputDatas.get(depth1).getInteractionId());
-				putQueryParameter("InputData." + (depth1 + 1) + ".InteractionType" , inputDatas.get(depth1).getInteractionType());
-				putQueryParameter("InputData." + (depth1 + 1) + ".DataType" , inputDatas.get(depth1).getDataType());
-				putQueryParameter("InputData." + (depth1 + 1) + ".Name" , inputDatas.get(depth1).getName());
-				putQueryParameter("InputData." + (depth1 + 1) + ".Definition" , inputDatas.get(depth1).getDefinition());
-				putQueryParameter("InputData." + (depth1 + 1) + ".ParaOrder" , inputDatas.get(depth1).getParaOrder());
-				putQueryParameter("InputData." + (depth1 + 1) + ".DataSpecsId" , inputDatas.get(depth1).getDataSpecsId());
-				putQueryParameter("InputData." + (depth1 + 1) + ".Direction" , inputDatas.get(depth1).getDirection());
-			}
-		}	
-	}
-
-	public List<OutputData> getOutputDatas() {
-		return this.outputDatas;
-	}
-
-	public void setOutputDatas(List<OutputData> outputDatas) {
-		this.outputDatas = outputDatas;	
-		if (outputDatas != null) {
-			for (int depth1 = 0; depth1 < outputDatas.size(); depth1++) {
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Identifier" , outputDatas.get(depth1).getIdentifier());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionId" , outputDatas.get(depth1).getInteractionId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".InteractionType" , outputDatas.get(depth1).getInteractionType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataType" , outputDatas.get(depth1).getDataType());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Name" , outputDatas.get(depth1).getName());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Definition" , outputDatas.get(depth1).getDefinition());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".ParaOrder" , outputDatas.get(depth1).getParaOrder());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".DataSpecsId" , outputDatas.get(depth1).getDataSpecsId());
-				putQueryParameter("OutputData." + (depth1 + 1) + ".Direction" , outputDatas.get(depth1).getDirection());
-			}
-		}	
 	}
 
 	public String getTemplateType() {
@@ -275,6 +251,20 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 		}
 	}
 
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
 	public String getCallType() {
 		return this.callType;
 	}
@@ -297,7 +287,100 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 		}
 	}
 
-	public static class Tags {
+	public static class ArgsDTO {
+
+		private String identifier;
+
+		private Long interactionId;
+
+		private String interactionType;
+
+		private String dataType;
+
+		private String name;
+
+		private String definition;
+
+		private Integer paraOrder;
+
+		private String dataSpecsId;
+
+		private String direction;
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public Long getInteractionId() {
+			return this.interactionId;
+		}
+
+		public void setInteractionId(Long interactionId) {
+			this.interactionId = interactionId;
+		}
+
+		public String getInteractionType() {
+			return this.interactionType;
+		}
+
+		public void setInteractionType(String interactionType) {
+			this.interactionType = interactionType;
+		}
+
+		public String getDataType() {
+			return this.dataType;
+		}
+
+		public void setDataType(String dataType) {
+			this.dataType = dataType;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getDefinition() {
+			return this.definition;
+		}
+
+		public void setDefinition(String definition) {
+			this.definition = definition;
+		}
+
+		public Integer getParaOrder() {
+			return this.paraOrder;
+		}
+
+		public void setParaOrder(Integer paraOrder) {
+			this.paraOrder = paraOrder;
+		}
+
+		public String getDataSpecsId() {
+			return this.dataSpecsId;
+		}
+
+		public void setDataSpecsId(String dataSpecsId) {
+			this.dataSpecsId = dataSpecsId;
+		}
+
+		public String getDirection() {
+			return this.direction;
+		}
+
+		public void setDirection(String direction) {
+			this.direction = direction;
+		}
+	}
+
+	public static class Tag {
 
 		private String tagValue;
 
@@ -317,192 +400,6 @@ public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateTo
 
 		public void setTagKey(String tagKey) {
 			this.tagKey = tagKey;
-		}
-	}
-
-	public static class InputData {
-
-		private String identifier;
-
-		private Long interactionId;
-
-		private String interactionType;
-
-		private String dataType;
-
-		private String name;
-
-		private String definition;
-
-		private Integer paraOrder;
-
-		private String dataSpecsId;
-
-		private String direction;
-
-		public String getIdentifier() {
-			return this.identifier;
-		}
-
-		public void setIdentifier(String identifier) {
-			this.identifier = identifier;
-		}
-
-		public Long getInteractionId() {
-			return this.interactionId;
-		}
-
-		public void setInteractionId(Long interactionId) {
-			this.interactionId = interactionId;
-		}
-
-		public String getInteractionType() {
-			return this.interactionType;
-		}
-
-		public void setInteractionType(String interactionType) {
-			this.interactionType = interactionType;
-		}
-
-		public String getDataType() {
-			return this.dataType;
-		}
-
-		public void setDataType(String dataType) {
-			this.dataType = dataType;
-		}
-
-		public String getName() {
-			return this.name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getDefinition() {
-			return this.definition;
-		}
-
-		public void setDefinition(String definition) {
-			this.definition = definition;
-		}
-
-		public Integer getParaOrder() {
-			return this.paraOrder;
-		}
-
-		public void setParaOrder(Integer paraOrder) {
-			this.paraOrder = paraOrder;
-		}
-
-		public String getDataSpecsId() {
-			return this.dataSpecsId;
-		}
-
-		public void setDataSpecsId(String dataSpecsId) {
-			this.dataSpecsId = dataSpecsId;
-		}
-
-		public String getDirection() {
-			return this.direction;
-		}
-
-		public void setDirection(String direction) {
-			this.direction = direction;
-		}
-	}
-
-	public static class OutputData {
-
-		private String identifier;
-
-		private Long interactionId;
-
-		private String interactionType;
-
-		private String dataType;
-
-		private String name;
-
-		private String definition;
-
-		private Integer paraOrder;
-
-		private String dataSpecsId;
-
-		private String direction;
-
-		public String getIdentifier() {
-			return this.identifier;
-		}
-
-		public void setIdentifier(String identifier) {
-			this.identifier = identifier;
-		}
-
-		public Long getInteractionId() {
-			return this.interactionId;
-		}
-
-		public void setInteractionId(Long interactionId) {
-			this.interactionId = interactionId;
-		}
-
-		public String getInteractionType() {
-			return this.interactionType;
-		}
-
-		public void setInteractionType(String interactionType) {
-			this.interactionType = interactionType;
-		}
-
-		public String getDataType() {
-			return this.dataType;
-		}
-
-		public void setDataType(String dataType) {
-			this.dataType = dataType;
-		}
-
-		public String getName() {
-			return this.name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public String getDefinition() {
-			return this.definition;
-		}
-
-		public void setDefinition(String definition) {
-			this.definition = definition;
-		}
-
-		public Integer getParaOrder() {
-			return this.paraOrder;
-		}
-
-		public void setParaOrder(Integer paraOrder) {
-			this.paraOrder = paraOrder;
-		}
-
-		public String getDataSpecsId() {
-			return this.dataSpecsId;
-		}
-
-		public void setDataSpecsId(String dataSpecsId) {
-			this.dataSpecsId = dataSpecsId;
-		}
-
-		public String getDirection() {
-			return this.direction;
-		}
-
-		public void setDirection(String direction) {
-			this.direction = direction;
 		}
 	}
 

@@ -20,13 +20,13 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ToggleVirtualDeviceSwitchResponseUnmarshaller {
 
-	public static ToggleVirtualDeviceSwitchResponse unmarshall(ToggleVirtualDeviceSwitchResponse toggleVirtualDeviceSwitchResponse, UnmarshallerContext context) {
+	public static ToggleVirtualDeviceSwitchResponse unmarshall(ToggleVirtualDeviceSwitchResponse toggleVirtualDeviceSwitchResponse, UnmarshallerContext _ctx) {
 		
-		toggleVirtualDeviceSwitchResponse.setRequestId(context.stringValue("ToggleVirtualDeviceSwitchResponse.RequestId"));
-		toggleVirtualDeviceSwitchResponse.setSuccess(context.booleanValue("ToggleVirtualDeviceSwitchResponse.Success"));
-		toggleVirtualDeviceSwitchResponse.setCode(context.stringValue("ToggleVirtualDeviceSwitchResponse.Code"));
-		toggleVirtualDeviceSwitchResponse.setErrorMessage(context.stringValue("ToggleVirtualDeviceSwitchResponse.ErrorMessage"));
-		toggleVirtualDeviceSwitchResponse.setStatus(context.stringValue("ToggleVirtualDeviceSwitchResponse.Status"));
+		toggleVirtualDeviceSwitchResponse.setRequestId(_ctx.stringValue("ToggleVirtualDeviceSwitchResponse.RequestId"));
+		toggleVirtualDeviceSwitchResponse.setSuccess(_ctx.booleanValue("ToggleVirtualDeviceSwitchResponse.Success"));
+		toggleVirtualDeviceSwitchResponse.setCode(_ctx.stringValue("ToggleVirtualDeviceSwitchResponse.Code"));
+		toggleVirtualDeviceSwitchResponse.setErrorMessage(_ctx.stringValue("ToggleVirtualDeviceSwitchResponse.ErrorMessage"));
+		toggleVirtualDeviceSwitchResponse.setStatus(_ctx.stringValue("ToggleVirtualDeviceSwitchResponse.Status"));
 	 
 	 	return toggleVirtualDeviceSwitchResponse;
 	}

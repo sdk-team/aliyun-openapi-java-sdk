@@ -20,12 +20,12 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class AddPoolFunctionsForTmallGenieResponseUnmarshaller {
 
-	public static AddPoolFunctionsForTmallGenieResponse unmarshall(AddPoolFunctionsForTmallGenieResponse addPoolFunctionsForTmallGenieResponse, UnmarshallerContext context) {
+	public static AddPoolFunctionsForTmallGenieResponse unmarshall(AddPoolFunctionsForTmallGenieResponse addPoolFunctionsForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		addPoolFunctionsForTmallGenieResponse.setRequestId(context.stringValue("AddPoolFunctionsForTmallGenieResponse.RequestId"));
-		addPoolFunctionsForTmallGenieResponse.setSuccess(context.booleanValue("AddPoolFunctionsForTmallGenieResponse.Success"));
-		addPoolFunctionsForTmallGenieResponse.setCode(context.stringValue("AddPoolFunctionsForTmallGenieResponse.Code"));
-		addPoolFunctionsForTmallGenieResponse.setErrorMessage(context.stringValue("AddPoolFunctionsForTmallGenieResponse.ErrorMessage"));
+		addPoolFunctionsForTmallGenieResponse.setRequestId(_ctx.stringValue("AddPoolFunctionsForTmallGenieResponse.RequestId"));
+		addPoolFunctionsForTmallGenieResponse.setSuccess(_ctx.booleanValue("AddPoolFunctionsForTmallGenieResponse.Success"));
+		addPoolFunctionsForTmallGenieResponse.setCode(_ctx.stringValue("AddPoolFunctionsForTmallGenieResponse.Code"));
+		addPoolFunctionsForTmallGenieResponse.setErrorMessage(_ctx.stringValue("AddPoolFunctionsForTmallGenieResponse.ErrorMessage"));
 	 
 	 	return addPoolFunctionsForTmallGenieResponse;
 	}

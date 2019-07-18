@@ -16,7 +16,6 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
-import com.google.gson.Gson;
 
 /**
  * @author auto create
@@ -25,23 +24,12 @@ import com.google.gson.Gson;
 public class BulkQueryProductInfoForTmallGenieRequest extends RpcAcsRequest<BulkQueryProductInfoForTmallGenieResponse> {
 	
 	public BulkQueryProductInfoForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "BulkQueryProductInfoForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "BulkQueryProductInfoForTmallGenie", "Iot");
 	}
-
-	private List<Object> productKeys;
 
 	private String iotInstanceId;
 
-	public List<Object> getProductKeys() {
-		return this.productKeys;
-	}
-
-	public void setProductKeys(List<Object> productKeys) {
-		this.productKeys = productKeys;
-		if(productKeys != null){
-			putBodyParameter("ProductKeys", new Gson().toJson(productKeys));
-		}
-	}
+	private List<String> productKeys;
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -52,6 +40,19 @@ public class BulkQueryProductInfoForTmallGenieRequest extends RpcAcsRequest<Bulk
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
+	}
+
+	public List<String> getProductKeys() {
+		return this.productKeys;
+	}
+
+	public void setProductKeys(List<String> productKeys) {
+		this.productKeys = productKeys;	
+		if (productKeys != null) {
+			for (int i = 0; i < productKeys.size(); i++) {
+				putQueryParameter("ProductKey." + (i + 1) , productKeys.get(i));
+			}
+		}	
 	}
 
 	@Override

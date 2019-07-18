@@ -31,7 +31,13 @@ public class SearchProductForTmallGenieResponse extends AcsResponse {
 
 	private String errorMessage;
 
-	private Data data;
+	private Integer page;
+
+	private Integer pageSize;
+
+	private Integer total;
+
+	private List<ProductInfo> list;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -57,157 +63,138 @@ public class SearchProductForTmallGenieResponse extends AcsResponse {
 		this.errorMessage = errorMessage;
 	}
 
-	public Data getData() {
-		return this.data;
+	public Integer getPage() {
+		return this.page;
 	}
 
-	public void setData(Data data) {
-		this.data = data;
+	public void setPage(Integer page) {
+		this.page = page;
 	}
 
-	public static class Data {
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
 
-		private Integer page;
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
 
-		private Integer pageCount;
+	public Integer getTotal() {
+		return this.total;
+	}
 
-		private Integer pageSize;
+	public void setTotal(Integer total) {
+		this.total = total;
+	}
 
-		private Integer total;
+	public List<ProductInfo> getList() {
+		return this.list;
+	}
 
-		private List<ProductInfo> list;
+	public void setList(List<ProductInfo> list) {
+		this.list = list;
+	}
 
-		public Integer getPage() {
-			return this.page;
+	public static class ProductInfo {
+
+		private String gmtCreate;
+
+		private Integer dataFormat;
+
+		private String description;
+
+		private Integer deviceCount;
+
+		private Integer nodeType;
+
+		private Integer netType;
+
+		private String productKey;
+
+		private String productName;
+
+		private Long scriptId;
+
+		private String scriptDraftCode;
+
+		public String getGmtCreate() {
+			return this.gmtCreate;
 		}
 
-		public void setPage(Integer page) {
-			this.page = page;
+		public void setGmtCreate(String gmtCreate) {
+			this.gmtCreate = gmtCreate;
 		}
 
-		public Integer getPageCount() {
-			return this.pageCount;
+		public Integer getDataFormat() {
+			return this.dataFormat;
 		}
 
-		public void setPageCount(Integer pageCount) {
-			this.pageCount = pageCount;
+		public void setDataFormat(Integer dataFormat) {
+			this.dataFormat = dataFormat;
 		}
 
-		public Integer getPageSize() {
-			return this.pageSize;
+		public String getDescription() {
+			return this.description;
 		}
 
-		public void setPageSize(Integer pageSize) {
-			this.pageSize = pageSize;
+		public void setDescription(String description) {
+			this.description = description;
 		}
 
-		public Integer getTotal() {
-			return this.total;
+		public Integer getDeviceCount() {
+			return this.deviceCount;
 		}
 
-		public void setTotal(Integer total) {
-			this.total = total;
+		public void setDeviceCount(Integer deviceCount) {
+			this.deviceCount = deviceCount;
 		}
 
-		public List<ProductInfo> getList() {
-			return this.list;
+		public Integer getNodeType() {
+			return this.nodeType;
 		}
 
-		public void setList(List<ProductInfo> list) {
-			this.list = list;
+		public void setNodeType(Integer nodeType) {
+			this.nodeType = nodeType;
 		}
 
-		public static class ProductInfo {
+		public Integer getNetType() {
+			return this.netType;
+		}
 
-			private String gmtCreate;
+		public void setNetType(Integer netType) {
+			this.netType = netType;
+		}
 
-			private Integer dataFormat;
+		public String getProductKey() {
+			return this.productKey;
+		}
 
-			private String description;
+		public void setProductKey(String productKey) {
+			this.productKey = productKey;
+		}
 
-			private Integer deviceCount;
+		public String getProductName() {
+			return this.productName;
+		}
 
-			private Integer nodeType;
+		public void setProductName(String productName) {
+			this.productName = productName;
+		}
 
-			private String productKey;
+		public Long getScriptId() {
+			return this.scriptId;
+		}
 
-			private String productName;
+		public void setScriptId(Long scriptId) {
+			this.scriptId = scriptId;
+		}
 
-			private Long scriptId;
+		public String getScriptDraftCode() {
+			return this.scriptDraftCode;
+		}
 
-			private String scriptDraftCode;
-
-			public String getGmtCreate() {
-				return this.gmtCreate;
-			}
-
-			public void setGmtCreate(String gmtCreate) {
-				this.gmtCreate = gmtCreate;
-			}
-
-			public Integer getDataFormat() {
-				return this.dataFormat;
-			}
-
-			public void setDataFormat(Integer dataFormat) {
-				this.dataFormat = dataFormat;
-			}
-
-			public String getDescription() {
-				return this.description;
-			}
-
-			public void setDescription(String description) {
-				this.description = description;
-			}
-
-			public Integer getDeviceCount() {
-				return this.deviceCount;
-			}
-
-			public void setDeviceCount(Integer deviceCount) {
-				this.deviceCount = deviceCount;
-			}
-
-			public Integer getNodeType() {
-				return this.nodeType;
-			}
-
-			public void setNodeType(Integer nodeType) {
-				this.nodeType = nodeType;
-			}
-
-			public String getProductKey() {
-				return this.productKey;
-			}
-
-			public void setProductKey(String productKey) {
-				this.productKey = productKey;
-			}
-
-			public String getProductName() {
-				return this.productName;
-			}
-
-			public void setProductName(String productName) {
-				this.productName = productName;
-			}
-
-			public Long getScriptId() {
-				return this.scriptId;
-			}
-
-			public void setScriptId(Long scriptId) {
-				this.scriptId = scriptId;
-			}
-
-			public String getScriptDraftCode() {
-				return this.scriptDraftCode;
-			}
-
-			public void setScriptDraftCode(String scriptDraftCode) {
-				this.scriptDraftCode = scriptDraftCode;
-			}
+		public void setScriptDraftCode(String scriptDraftCode) {
+			this.scriptDraftCode = scriptDraftCode;
 		}
 	}
 

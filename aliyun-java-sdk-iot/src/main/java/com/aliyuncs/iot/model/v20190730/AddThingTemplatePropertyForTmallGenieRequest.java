@@ -24,14 +24,12 @@ import java.util.List;
 public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<AddThingTemplatePropertyForTmallGenieResponse> {
 	
 	public AddThingTemplatePropertyForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie", "Iot");
 	}
 
 	private String identifier;
 
 	private String dataSpecs;
-
-	private String thingTemplateKey;
 
 	private Long tmallFunctionId;
 
@@ -68,17 +66,6 @@ public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<
 		this.dataSpecs = dataSpecs;
 		if(dataSpecs != null){
 			putQueryParameter("DataSpecs", dataSpecs);
-		}
-	}
-
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
-	}
-
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
 		}
 	}
 

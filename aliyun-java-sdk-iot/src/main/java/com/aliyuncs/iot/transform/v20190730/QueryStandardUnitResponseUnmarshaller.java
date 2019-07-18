@@ -24,18 +24,18 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class QueryStandardUnitResponseUnmarshaller {
 
-	public static QueryStandardUnitResponse unmarshall(QueryStandardUnitResponse queryStandardUnitResponse, UnmarshallerContext context) {
+	public static QueryStandardUnitResponse unmarshall(QueryStandardUnitResponse queryStandardUnitResponse, UnmarshallerContext _ctx) {
 		
-		queryStandardUnitResponse.setRequestId(context.stringValue("QueryStandardUnitResponse.RequestId"));
-		queryStandardUnitResponse.setSuccess(context.booleanValue("QueryStandardUnitResponse.Success"));
-		queryStandardUnitResponse.setErrorMessage(context.stringValue("QueryStandardUnitResponse.ErrorMessage"));
-		queryStandardUnitResponse.setCode(context.stringValue("QueryStandardUnitResponse.Code"));
+		queryStandardUnitResponse.setRequestId(_ctx.stringValue("QueryStandardUnitResponse.RequestId"));
+		queryStandardUnitResponse.setSuccess(_ctx.booleanValue("QueryStandardUnitResponse.Success"));
+		queryStandardUnitResponse.setErrorMessage(_ctx.stringValue("QueryStandardUnitResponse.ErrorMessage"));
+		queryStandardUnitResponse.setCode(_ctx.stringValue("QueryStandardUnitResponse.Code"));
 
 		List<UnifyUnitSpecsDTO> models = new ArrayList<UnifyUnitSpecsDTO>();
-		for (int i = 0; i < context.lengthValue("QueryStandardUnitResponse.Models.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("QueryStandardUnitResponse.Models.Length"); i++) {
 			UnifyUnitSpecsDTO unifyUnitSpecsDTO = new UnifyUnitSpecsDTO();
-			unifyUnitSpecsDTO.setName(context.stringValue("QueryStandardUnitResponse.Models["+ i +"].Name"));
-			unifyUnitSpecsDTO.setSymbol(context.stringValue("QueryStandardUnitResponse.Models["+ i +"].Symbol"));
+			unifyUnitSpecsDTO.setName(_ctx.stringValue("QueryStandardUnitResponse.Models["+ i +"].Name"));
+			unifyUnitSpecsDTO.setSymbol(_ctx.stringValue("QueryStandardUnitResponse.Models["+ i +"].Symbol"));
 
 			models.add(unifyUnitSpecsDTO);
 		}

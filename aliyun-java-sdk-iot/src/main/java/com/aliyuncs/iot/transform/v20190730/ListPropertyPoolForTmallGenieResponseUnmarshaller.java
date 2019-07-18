@@ -25,34 +25,34 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ListPropertyPoolForTmallGenieResponseUnmarshaller {
 
-	public static ListPropertyPoolForTmallGenieResponse unmarshall(ListPropertyPoolForTmallGenieResponse listPropertyPoolForTmallGenieResponse, UnmarshallerContext context) {
+	public static ListPropertyPoolForTmallGenieResponse unmarshall(ListPropertyPoolForTmallGenieResponse listPropertyPoolForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		listPropertyPoolForTmallGenieResponse.setRequestId(context.stringValue("ListPropertyPoolForTmallGenieResponse.RequestId"));
-		listPropertyPoolForTmallGenieResponse.setSuccess(context.booleanValue("ListPropertyPoolForTmallGenieResponse.Success"));
-		listPropertyPoolForTmallGenieResponse.setCode(context.stringValue("ListPropertyPoolForTmallGenieResponse.Code"));
-		listPropertyPoolForTmallGenieResponse.setErrorMessage(context.stringValue("ListPropertyPoolForTmallGenieResponse.ErrorMessage"));
-		listPropertyPoolForTmallGenieResponse.setTotal(context.integerValue("ListPropertyPoolForTmallGenieResponse.Total"));
-		listPropertyPoolForTmallGenieResponse.setPageId(context.integerValue("ListPropertyPoolForTmallGenieResponse.PageId"));
-		listPropertyPoolForTmallGenieResponse.setPageSize(context.integerValue("ListPropertyPoolForTmallGenieResponse.PageSize"));
+		listPropertyPoolForTmallGenieResponse.setRequestId(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.RequestId"));
+		listPropertyPoolForTmallGenieResponse.setSuccess(_ctx.booleanValue("ListPropertyPoolForTmallGenieResponse.Success"));
+		listPropertyPoolForTmallGenieResponse.setCode(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Code"));
+		listPropertyPoolForTmallGenieResponse.setErrorMessage(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.ErrorMessage"));
+		listPropertyPoolForTmallGenieResponse.setTotal(_ctx.integerValue("ListPropertyPoolForTmallGenieResponse.Total"));
+		listPropertyPoolForTmallGenieResponse.setPageId(_ctx.integerValue("ListPropertyPoolForTmallGenieResponse.PageId"));
+		listPropertyPoolForTmallGenieResponse.setPageSize(_ctx.integerValue("ListPropertyPoolForTmallGenieResponse.PageSize"));
 
 		List<Property> properties = new ArrayList<Property>();
-		for (int i = 0; i < context.lengthValue("ListPropertyPoolForTmallGenieResponse.Properties.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("ListPropertyPoolForTmallGenieResponse.Properties.Length"); i++) {
 			Property property = new Property();
-			property.setTmallFunctionId(context.longValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].TmallFunctionId"));
-			property.setThingTemplateKey(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].ThingTemplateKey"));
-			property.setDataType(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataType"));
-			property.setIdentifier(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Identifier"));
-			property.setDescription(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Description"));
-			property.setRwType(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].RwType"));
-			property.setName(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Name"));
-			property.setDataSpecs(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataSpecs"));
-			property.setDataSpecsList(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataSpecsList"));
+			property.setTmallFunctionId(_ctx.longValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].TmallFunctionId"));
+			property.setThingTemplateKey(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].ThingTemplateKey"));
+			property.setDataType(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataType"));
+			property.setIdentifier(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Identifier"));
+			property.setDescription(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Description"));
+			property.setRwType(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].RwType"));
+			property.setName(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Name"));
+			property.setDataSpecs(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataSpecs"));
+			property.setDataSpecsList(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].DataSpecsList"));
 
 			List<Tag> tags = new ArrayList<Tag>();
-			for (int j = 0; j < context.lengthValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags.Length"); j++) {
+			for (int j = 0; j < _ctx.lengthValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags.Length"); j++) {
 				Tag tag = new Tag();
-				tag.setTagKey(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags["+ j +"].TagKey"));
-				tag.setTagValue(context.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags["+ j +"].TagValue"));
+				tag.setTagKey(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags["+ j +"].TagKey"));
+				tag.setTagValue(_ctx.stringValue("ListPropertyPoolForTmallGenieResponse.Properties["+ i +"].Tags["+ j +"].TagValue"));
 
 				tags.add(tag);
 			}

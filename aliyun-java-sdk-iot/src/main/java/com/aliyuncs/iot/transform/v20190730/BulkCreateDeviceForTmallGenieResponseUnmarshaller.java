@@ -20,13 +20,13 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class BulkCreateDeviceForTmallGenieResponseUnmarshaller {
 
-	public static BulkCreateDeviceForTmallGenieResponse unmarshall(BulkCreateDeviceForTmallGenieResponse bulkCreateDeviceForTmallGenieResponse, UnmarshallerContext context) {
+	public static BulkCreateDeviceForTmallGenieResponse unmarshall(BulkCreateDeviceForTmallGenieResponse bulkCreateDeviceForTmallGenieResponse, UnmarshallerContext _ctx) {
 		
-		bulkCreateDeviceForTmallGenieResponse.setRequestId(context.stringValue("BulkCreateDeviceForTmallGenieResponse.RequestId"));
-		bulkCreateDeviceForTmallGenieResponse.setSuccess(context.booleanValue("BulkCreateDeviceForTmallGenieResponse.Success"));
-		bulkCreateDeviceForTmallGenieResponse.setErrorMessage(context.stringValue("BulkCreateDeviceForTmallGenieResponse.ErrorMessage"));
-		bulkCreateDeviceForTmallGenieResponse.setApplyId(context.longValue("BulkCreateDeviceForTmallGenieResponse.ApplyId"));
-		bulkCreateDeviceForTmallGenieResponse.setCode(context.stringValue("BulkCreateDeviceForTmallGenieResponse.Code"));
+		bulkCreateDeviceForTmallGenieResponse.setRequestId(_ctx.stringValue("BulkCreateDeviceForTmallGenieResponse.RequestId"));
+		bulkCreateDeviceForTmallGenieResponse.setSuccess(_ctx.booleanValue("BulkCreateDeviceForTmallGenieResponse.Success"));
+		bulkCreateDeviceForTmallGenieResponse.setErrorMessage(_ctx.stringValue("BulkCreateDeviceForTmallGenieResponse.ErrorMessage"));
+		bulkCreateDeviceForTmallGenieResponse.setApplyId(_ctx.longValue("BulkCreateDeviceForTmallGenieResponse.ApplyId"));
+		bulkCreateDeviceForTmallGenieResponse.setCode(_ctx.stringValue("BulkCreateDeviceForTmallGenieResponse.Code"));
 	 
 	 	return bulkCreateDeviceForTmallGenieResponse;
 	}

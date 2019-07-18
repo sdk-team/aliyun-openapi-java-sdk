@@ -24,12 +24,10 @@ import java.util.List;
 public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateServiceForTmallGenieResponse> {
 	
 	public AddThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie", "Iot");
 	}
 
 	private String identifier;
-
-	private String thingTemplateKey;
 
 	private List<InputParams> inputParamss;
 
@@ -53,17 +51,6 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 		this.identifier = identifier;
 		if(identifier != null){
 			putQueryParameter("Identifier", identifier);
-		}
-	}
-
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
-	}
-
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
 		}
 	}
 

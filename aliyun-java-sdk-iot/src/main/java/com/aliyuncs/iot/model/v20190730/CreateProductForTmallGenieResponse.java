@@ -34,6 +34,8 @@ public class CreateProductForTmallGenieResponse extends AcsResponse {
 
 	private String productKey;
 
+	private String productSecret;
+
 	public String getRequestId() {
 		return this.requestId;
 	}
@@ -72,6 +74,14 @@ public class CreateProductForTmallGenieResponse extends AcsResponse {
 
 	public void setProductKey(String productKey) {
 		this.productKey = productKey;
+	}
+
+	public String getProductSecret() {
+		return this.productSecret;
+	}
+
+	public void setProductSecret(String productSecret) {
+		this.productSecret = productSecret;
 	}
 
 	@Override

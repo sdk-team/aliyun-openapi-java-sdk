@@ -24,7 +24,7 @@ import java.util.List;
 public class GetPoolFunctionsByIdListForTmallGenieRequest extends RpcAcsRequest<GetPoolFunctionsByIdListForTmallGenieResponse> {
 	
 	public GetPoolFunctionsByIdListForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetPoolFunctionsByIdListForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "GetPoolFunctionsByIdListForTmallGenie", "Iot");
 	}
 
 	private List<Long> tmallFunctionIdLists;

@@ -33,7 +33,11 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 
 	private String errorMessage;
 
-	private Data data;
+	private PropertyInfo propertyInfo;
+
+	private ServiceInfo serviceInfo;
+
+	private EventInfos eventInfos;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -67,82 +71,262 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 		this.errorMessage = errorMessage;
 	}
 
-	public Data getData() {
-		return this.data;
+	public PropertyInfo getPropertyInfo() {
+		return this.propertyInfo;
 	}
 
-	public void setData(Data data) {
-		this.data = data;
+	public void setPropertyInfo(PropertyInfo propertyInfo) {
+		this.propertyInfo = propertyInfo;
 	}
 
-	public static class Data {
+	public ServiceInfo getServiceInfo() {
+		return this.serviceInfo;
+	}
 
-		private PropertyInfo propertyInfo;
+	public void setServiceInfo(ServiceInfo serviceInfo) {
+		this.serviceInfo = serviceInfo;
+	}
 
-		private ServiceInfo serviceInfo;
+	public EventInfos getEventInfos() {
+		return this.eventInfos;
+	}
 
-		private EventInfos eventInfos;
+	public void setEventInfos(EventInfos eventInfos) {
+		this.eventInfos = eventInfos;
+	}
 
-		public PropertyInfo getPropertyInfo() {
-			return this.propertyInfo;
+	public static class PropertyInfo {
+
+		private Long tmallFunctionId;
+
+		private String thingTemplateKey;
+
+		private String dataType;
+
+		private String rwType;
+
+		private String identifier;
+
+		private String description;
+
+		private String name;
+
+		private String dataSpecs;
+
+		private String dataSpecsList;
+
+		private List<Tag> tags;
+
+		public Long getTmallFunctionId() {
+			return this.tmallFunctionId;
 		}
 
-		public void setPropertyInfo(PropertyInfo propertyInfo) {
-			this.propertyInfo = propertyInfo;
+		public void setTmallFunctionId(Long tmallFunctionId) {
+			this.tmallFunctionId = tmallFunctionId;
 		}
 
-		public ServiceInfo getServiceInfo() {
-			return this.serviceInfo;
+		public String getThingTemplateKey() {
+			return this.thingTemplateKey;
 		}
 
-		public void setServiceInfo(ServiceInfo serviceInfo) {
-			this.serviceInfo = serviceInfo;
+		public void setThingTemplateKey(String thingTemplateKey) {
+			this.thingTemplateKey = thingTemplateKey;
 		}
 
-		public EventInfos getEventInfos() {
-			return this.eventInfos;
+		public String getDataType() {
+			return this.dataType;
 		}
 
-		public void setEventInfos(EventInfos eventInfos) {
-			this.eventInfos = eventInfos;
+		public void setDataType(String dataType) {
+			this.dataType = dataType;
 		}
 
-		public static class PropertyInfo {
+		public String getRwType() {
+			return this.rwType;
+		}
 
-			private Long tmallFunctionId;
+		public void setRwType(String rwType) {
+			this.rwType = rwType;
+		}
 
-			private String thingTemplateKey;
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getDataSpecs() {
+			return this.dataSpecs;
+		}
+
+		public void setDataSpecs(String dataSpecs) {
+			this.dataSpecs = dataSpecs;
+		}
+
+		public String getDataSpecsList() {
+			return this.dataSpecsList;
+		}
+
+		public void setDataSpecsList(String dataSpecsList) {
+			this.dataSpecsList = dataSpecsList;
+		}
+
+		public List<Tag> getTags() {
+			return this.tags;
+		}
+
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
+		}
+
+		public static class Tag {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+		}
+	}
+
+	public static class ServiceInfo {
+
+		private Long tmallFunctionId;
+
+		private String thingTemplateKey;
+
+		private String callType;
+
+		private String name;
+
+		private String identifier;
+
+		private List<Argument> inputParams;
+
+		private List<Argument2> outputParams;
+
+		private List<Tag3> tags1;
+
+		public Long getTmallFunctionId() {
+			return this.tmallFunctionId;
+		}
+
+		public void setTmallFunctionId(Long tmallFunctionId) {
+			this.tmallFunctionId = tmallFunctionId;
+		}
+
+		public String getThingTemplateKey() {
+			return this.thingTemplateKey;
+		}
+
+		public void setThingTemplateKey(String thingTemplateKey) {
+			this.thingTemplateKey = thingTemplateKey;
+		}
+
+		public String getCallType() {
+			return this.callType;
+		}
+
+		public void setCallType(String callType) {
+			this.callType = callType;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public List<Argument> getInputParams() {
+			return this.inputParams;
+		}
+
+		public void setInputParams(List<Argument> inputParams) {
+			this.inputParams = inputParams;
+		}
+
+		public List<Argument2> getOutputParams() {
+			return this.outputParams;
+		}
+
+		public void setOutputParams(List<Argument2> outputParams) {
+			this.outputParams = outputParams;
+		}
+
+		public List<Tag3> getTags1() {
+			return this.tags1;
+		}
+
+		public void setTags1(List<Tag3> tags1) {
+			this.tags1 = tags1;
+		}
+
+		public static class Argument {
+
+			private Long id;
 
 			private String dataType;
 
-			private String rwType;
-
 			private String identifier;
 
-			private String description;
-
 			private String name;
+
+			private Integer paraOrder;
+
+			private String direction;
 
 			private String dataSpecs;
 
 			private String dataSpecsList;
 
-			private List<Tag> tags;
-
-			public Long getTmallFunctionId() {
-				return this.tmallFunctionId;
+			public Long getId() {
+				return this.id;
 			}
 
-			public void setTmallFunctionId(Long tmallFunctionId) {
-				this.tmallFunctionId = tmallFunctionId;
-			}
-
-			public String getThingTemplateKey() {
-				return this.thingTemplateKey;
-			}
-
-			public void setThingTemplateKey(String thingTemplateKey) {
-				this.thingTemplateKey = thingTemplateKey;
+			public void setId(Long id) {
+				this.id = id;
 			}
 
 			public String getDataType() {
@@ -153,12 +337,87 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 				this.dataType = dataType;
 			}
 
-			public String getRwType() {
-				return this.rwType;
+			public String getIdentifier() {
+				return this.identifier;
 			}
 
-			public void setRwType(String rwType) {
-				this.rwType = rwType;
+			public void setIdentifier(String identifier) {
+				this.identifier = identifier;
+			}
+
+			public String getName() {
+				return this.name;
+			}
+
+			public void setName(String name) {
+				this.name = name;
+			}
+
+			public Integer getParaOrder() {
+				return this.paraOrder;
+			}
+
+			public void setParaOrder(Integer paraOrder) {
+				this.paraOrder = paraOrder;
+			}
+
+			public String getDirection() {
+				return this.direction;
+			}
+
+			public void setDirection(String direction) {
+				this.direction = direction;
+			}
+
+			public String getDataSpecs() {
+				return this.dataSpecs;
+			}
+
+			public void setDataSpecs(String dataSpecs) {
+				this.dataSpecs = dataSpecs;
+			}
+
+			public String getDataSpecsList() {
+				return this.dataSpecsList;
+			}
+
+			public void setDataSpecsList(String dataSpecsList) {
+				this.dataSpecsList = dataSpecsList;
+			}
+		}
+
+		public static class Argument2 {
+
+			private Long id;
+
+			private String dataType;
+
+			private String identifier;
+
+			private Integer paraOrder;
+
+			private String direction;
+
+			private String name;
+
+			private String dataSpecs;
+
+			private String dataSpecsList;
+
+			public Long getId() {
+				return this.id;
+			}
+
+			public void setId(Long id) {
+				this.id = id;
+			}
+
+			public String getDataType() {
+				return this.dataType;
+			}
+
+			public void setDataType(String dataType) {
+				this.dataType = dataType;
 			}
 
 			public String getIdentifier() {
@@ -169,12 +428,20 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 				this.identifier = identifier;
 			}
 
-			public String getDescription() {
-				return this.description;
+			public Integer getParaOrder() {
+				return this.paraOrder;
 			}
 
-			public void setDescription(String description) {
-				this.description = description;
+			public void setParaOrder(Integer paraOrder) {
+				this.paraOrder = paraOrder;
+			}
+
+			public String getDirection() {
+				return this.direction;
+			}
+
+			public void setDirection(String direction) {
+				this.direction = direction;
 			}
 
 			public String getName() {
@@ -200,87 +467,134 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 			public void setDataSpecsList(String dataSpecsList) {
 				this.dataSpecsList = dataSpecsList;
 			}
-
-			public List<Tag> getTags() {
-				return this.tags;
-			}
-
-			public void setTags(List<Tag> tags) {
-				this.tags = tags;
-			}
-
-			public static class Tag {
-
-				private String tagKey;
-
-				private String tagValue;
-
-				public String getTagKey() {
-					return this.tagKey;
-				}
-
-				public void setTagKey(String tagKey) {
-					this.tagKey = tagKey;
-				}
-
-				public String getTagValue() {
-					return this.tagValue;
-				}
-
-				public void setTagValue(String tagValue) {
-					this.tagValue = tagValue;
-				}
-			}
 		}
 
-		public static class ServiceInfo {
+		public static class Tag3 {
 
-			private Long tmallFunctionId;
+			private String tagKey;
 
-			private String thingTemplateKey;
+			private String tagValue;
 
-			private String callType;
+			public String getTagKey() {
+				return this.tagKey;
+			}
 
-			private String name;
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+		}
+	}
+
+	public static class EventInfos {
+
+		private Long tmallFunctionId;
+
+		private String thingTemplateKey;
+
+		private String eventType;
+
+		private String name;
+
+		private String identifier;
+
+		private List<Argument5> outputData;
+
+		private List<Tag6> tags4;
+
+		public Long getTmallFunctionId() {
+			return this.tmallFunctionId;
+		}
+
+		public void setTmallFunctionId(Long tmallFunctionId) {
+			this.tmallFunctionId = tmallFunctionId;
+		}
+
+		public String getThingTemplateKey() {
+			return this.thingTemplateKey;
+		}
+
+		public void setThingTemplateKey(String thingTemplateKey) {
+			this.thingTemplateKey = thingTemplateKey;
+		}
+
+		public String getEventType() {
+			return this.eventType;
+		}
+
+		public void setEventType(String eventType) {
+			this.eventType = eventType;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getIdentifier() {
+			return this.identifier;
+		}
+
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+
+		public List<Argument5> getOutputData() {
+			return this.outputData;
+		}
+
+		public void setOutputData(List<Argument5> outputData) {
+			this.outputData = outputData;
+		}
+
+		public List<Tag6> getTags4() {
+			return this.tags4;
+		}
+
+		public void setTags4(List<Tag6> tags4) {
+			this.tags4 = tags4;
+		}
+
+		public static class Argument5 {
+
+			private Long id;
+
+			private String dataType;
 
 			private String identifier;
 
-			private List<Argument> inputParams;
+			private String name;
 
-			private List<Argument2> outputParams;
+			private Integer paraOrder;
 
-			private List<Tag3> tags1;
+			private String dataSpecs;
 
-			public Long getTmallFunctionId() {
-				return this.tmallFunctionId;
+			private String dataSpecsList;
+
+			public Long getId() {
+				return this.id;
 			}
 
-			public void setTmallFunctionId(Long tmallFunctionId) {
-				this.tmallFunctionId = tmallFunctionId;
+			public void setId(Long id) {
+				this.id = id;
 			}
 
-			public String getThingTemplateKey() {
-				return this.thingTemplateKey;
+			public String getDataType() {
+				return this.dataType;
 			}
 
-			public void setThingTemplateKey(String thingTemplateKey) {
-				this.thingTemplateKey = thingTemplateKey;
-			}
-
-			public String getCallType() {
-				return this.callType;
-			}
-
-			public void setCallType(String callType) {
-				this.callType = callType;
-			}
-
-			public String getName() {
-				return this.name;
-			}
-
-			public void setName(String name) {
-				this.name = name;
+			public void setDataType(String dataType) {
+				this.dataType = dataType;
 			}
 
 			public String getIdentifier() {
@@ -291,260 +605,6 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 				this.identifier = identifier;
 			}
 
-			public List<Argument> getInputParams() {
-				return this.inputParams;
-			}
-
-			public void setInputParams(List<Argument> inputParams) {
-				this.inputParams = inputParams;
-			}
-
-			public List<Argument2> getOutputParams() {
-				return this.outputParams;
-			}
-
-			public void setOutputParams(List<Argument2> outputParams) {
-				this.outputParams = outputParams;
-			}
-
-			public List<Tag3> getTags1() {
-				return this.tags1;
-			}
-
-			public void setTags1(List<Tag3> tags1) {
-				this.tags1 = tags1;
-			}
-
-			public static class Argument {
-
-				private Long id;
-
-				private String dataType;
-
-				private String identifier;
-
-				private String name;
-
-				private Long paraOrder;
-
-				private String direction;
-
-				private String dataSpecs;
-
-				private String dataSpecsList;
-
-				public Long getId() {
-					return this.id;
-				}
-
-				public void setId(Long id) {
-					this.id = id;
-				}
-
-				public String getDataType() {
-					return this.dataType;
-				}
-
-				public void setDataType(String dataType) {
-					this.dataType = dataType;
-				}
-
-				public String getIdentifier() {
-					return this.identifier;
-				}
-
-				public void setIdentifier(String identifier) {
-					this.identifier = identifier;
-				}
-
-				public String getName() {
-					return this.name;
-				}
-
-				public void setName(String name) {
-					this.name = name;
-				}
-
-				public Long getParaOrder() {
-					return this.paraOrder;
-				}
-
-				public void setParaOrder(Long paraOrder) {
-					this.paraOrder = paraOrder;
-				}
-
-				public String getDirection() {
-					return this.direction;
-				}
-
-				public void setDirection(String direction) {
-					this.direction = direction;
-				}
-
-				public String getDataSpecs() {
-					return this.dataSpecs;
-				}
-
-				public void setDataSpecs(String dataSpecs) {
-					this.dataSpecs = dataSpecs;
-				}
-
-				public String getDataSpecsList() {
-					return this.dataSpecsList;
-				}
-
-				public void setDataSpecsList(String dataSpecsList) {
-					this.dataSpecsList = dataSpecsList;
-				}
-			}
-
-			public static class Argument2 {
-
-				private Long id;
-
-				private String dataType;
-
-				private String identifier;
-
-				private Long paraOrder;
-
-				private String direction;
-
-				private String name;
-
-				private String dataSpecs;
-
-				private String dataSpecsList;
-
-				public Long getId() {
-					return this.id;
-				}
-
-				public void setId(Long id) {
-					this.id = id;
-				}
-
-				public String getDataType() {
-					return this.dataType;
-				}
-
-				public void setDataType(String dataType) {
-					this.dataType = dataType;
-				}
-
-				public String getIdentifier() {
-					return this.identifier;
-				}
-
-				public void setIdentifier(String identifier) {
-					this.identifier = identifier;
-				}
-
-				public Long getParaOrder() {
-					return this.paraOrder;
-				}
-
-				public void setParaOrder(Long paraOrder) {
-					this.paraOrder = paraOrder;
-				}
-
-				public String getDirection() {
-					return this.direction;
-				}
-
-				public void setDirection(String direction) {
-					this.direction = direction;
-				}
-
-				public String getName() {
-					return this.name;
-				}
-
-				public void setName(String name) {
-					this.name = name;
-				}
-
-				public String getDataSpecs() {
-					return this.dataSpecs;
-				}
-
-				public void setDataSpecs(String dataSpecs) {
-					this.dataSpecs = dataSpecs;
-				}
-
-				public String getDataSpecsList() {
-					return this.dataSpecsList;
-				}
-
-				public void setDataSpecsList(String dataSpecsList) {
-					this.dataSpecsList = dataSpecsList;
-				}
-			}
-
-			public static class Tag3 {
-
-				private String tagKey;
-
-				private String tagValue;
-
-				public String getTagKey() {
-					return this.tagKey;
-				}
-
-				public void setTagKey(String tagKey) {
-					this.tagKey = tagKey;
-				}
-
-				public String getTagValue() {
-					return this.tagValue;
-				}
-
-				public void setTagValue(String tagValue) {
-					this.tagValue = tagValue;
-				}
-			}
-		}
-
-		public static class EventInfos {
-
-			private Long tmallFunctionId;
-
-			private String thingTemplateKey;
-
-			private String eventType;
-
-			private String name;
-
-			private String identifier;
-
-			private List<Argument5> outputData;
-
-			private List<Tag6> tags4;
-
-			public Long getTmallFunctionId() {
-				return this.tmallFunctionId;
-			}
-
-			public void setTmallFunctionId(Long tmallFunctionId) {
-				this.tmallFunctionId = tmallFunctionId;
-			}
-
-			public String getThingTemplateKey() {
-				return this.thingTemplateKey;
-			}
-
-			public void setThingTemplateKey(String thingTemplateKey) {
-				this.thingTemplateKey = thingTemplateKey;
-			}
-
-			public String getEventType() {
-				return this.eventType;
-			}
-
-			public void setEventType(String eventType) {
-				this.eventType = eventType;
-			}
-
 			public String getName() {
 				return this.name;
 			}
@@ -553,124 +613,51 @@ public class GetProductFunctionForTmallGenieResponse extends AcsResponse {
 				this.name = name;
 			}
 
-			public String getIdentifier() {
-				return this.identifier;
+			public Integer getParaOrder() {
+				return this.paraOrder;
 			}
 
-			public void setIdentifier(String identifier) {
-				this.identifier = identifier;
+			public void setParaOrder(Integer paraOrder) {
+				this.paraOrder = paraOrder;
 			}
 
-			public List<Argument5> getOutputData() {
-				return this.outputData;
+			public String getDataSpecs() {
+				return this.dataSpecs;
 			}
 
-			public void setOutputData(List<Argument5> outputData) {
-				this.outputData = outputData;
+			public void setDataSpecs(String dataSpecs) {
+				this.dataSpecs = dataSpecs;
 			}
 
-			public List<Tag6> getTags4() {
-				return this.tags4;
+			public String getDataSpecsList() {
+				return this.dataSpecsList;
 			}
 
-			public void setTags4(List<Tag6> tags4) {
-				this.tags4 = tags4;
+			public void setDataSpecsList(String dataSpecsList) {
+				this.dataSpecsList = dataSpecsList;
+			}
+		}
+
+		public static class Tag6 {
+
+			private String tagKey;
+
+			private String tagValue;
+
+			public String getTagKey() {
+				return this.tagKey;
 			}
 
-			public static class Argument5 {
-
-				private Long id;
-
-				private String dataType;
-
-				private String identifier;
-
-				private String name;
-
-				private Long paraOrder;
-
-				private String dataSpecs;
-
-				private String dataSpecsList;
-
-				public Long getId() {
-					return this.id;
-				}
-
-				public void setId(Long id) {
-					this.id = id;
-				}
-
-				public String getDataType() {
-					return this.dataType;
-				}
-
-				public void setDataType(String dataType) {
-					this.dataType = dataType;
-				}
-
-				public String getIdentifier() {
-					return this.identifier;
-				}
-
-				public void setIdentifier(String identifier) {
-					this.identifier = identifier;
-				}
-
-				public String getName() {
-					return this.name;
-				}
-
-				public void setName(String name) {
-					this.name = name;
-				}
-
-				public Long getParaOrder() {
-					return this.paraOrder;
-				}
-
-				public void setParaOrder(Long paraOrder) {
-					this.paraOrder = paraOrder;
-				}
-
-				public String getDataSpecs() {
-					return this.dataSpecs;
-				}
-
-				public void setDataSpecs(String dataSpecs) {
-					this.dataSpecs = dataSpecs;
-				}
-
-				public String getDataSpecsList() {
-					return this.dataSpecsList;
-				}
-
-				public void setDataSpecsList(String dataSpecsList) {
-					this.dataSpecsList = dataSpecsList;
-				}
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
 			}
 
-			public static class Tag6 {
+			public String getTagValue() {
+				return this.tagValue;
+			}
 
-				private String tagKey;
-
-				private String tagValue;
-
-				public String getTagKey() {
-					return this.tagKey;
-				}
-
-				public void setTagKey(String tagKey) {
-					this.tagKey = tagKey;
-				}
-
-				public String getTagValue() {
-					return this.tagValue;
-				}
-
-				public void setTagValue(String tagValue) {
-					this.tagValue = tagValue;
-				}
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
 			}
 		}
 	}

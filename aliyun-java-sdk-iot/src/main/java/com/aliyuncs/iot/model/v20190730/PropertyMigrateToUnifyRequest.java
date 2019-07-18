@@ -24,7 +24,7 @@ import java.util.List;
 public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrateToUnifyResponse> {
 	
 	public PropertyMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToUnify", "Iot");
 	}
 
 	private String identifier;
@@ -39,13 +39,13 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 
 	private String description;
 
+	private String deviceType;
+
 	private Boolean required;
 
 	private String dataSpecsId;
 
 	private String thingTemplateName;
-
-	private List<Tags> tagss;
 
 	private String dataType;
 
@@ -57,9 +57,13 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 
 	private String namespace;
 
+	private String categoryName;
+
 	private String definition;
 
 	private Integer state;
+
+	private List<Tag> tags;
 
 	private String bizTenantId;
 
@@ -131,6 +135,17 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		}
 	}
 
+	public String getDeviceType() {
+		return this.deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+		if(deviceType != null){
+			putQueryParameter("DeviceType", deviceType);
+		}
+	}
+
 	public Boolean getRequired() {
 		return this.required;
 	}
@@ -162,20 +177,6 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		if(thingTemplateName != null){
 			putQueryParameter("ThingTemplateName", thingTemplateName);
 		}
-	}
-
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
-
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public String getDataType() {
@@ -233,6 +234,17 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		}
 	}
 
+	public String getCategoryName() {
+		return this.categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+		if(categoryName != null){
+			putQueryParameter("CategoryName", categoryName);
+		}
+	}
+
 	public String getDefinition() {
 		return this.definition;
 	}
@@ -253,6 +265,20 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		if(state != null){
 			putQueryParameter("State", state.toString());
 		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
 	}
 
 	public String getBizTenantId() {
@@ -277,7 +303,7 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		}
 	}
 
-	public static class Tags {
+	public static class Tag {
 
 		private String tagValue;
 
