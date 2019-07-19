@@ -15,14 +15,14 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.iot.transform.v20190730.CategoryPropertyMigrateResponseUnmarshaller;
+import com.aliyuncs.iot.transform.v20190730.GetThingModelInfoResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class CategoryPropertyMigrateResponse extends AcsResponse {
+public class GetThingModelInfoResponse extends AcsResponse {
 
 	private String requestId;
 
@@ -31,6 +31,8 @@ public class CategoryPropertyMigrateResponse extends AcsResponse {
 	private String code;
 
 	private String errorMessage;
+
+	private String dslStr;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -64,8 +66,16 @@ public class CategoryPropertyMigrateResponse extends AcsResponse {
 		this.errorMessage = errorMessage;
 	}
 
+	public String getDslStr() {
+		return this.dslStr;
+	}
+
+	public void setDslStr(String dslStr) {
+		this.dslStr = dslStr;
+	}
+
 	@Override
-	public CategoryPropertyMigrateResponse getInstance(UnmarshallerContext context) {
-		return	CategoryPropertyMigrateResponseUnmarshaller.unmarshall(this, context);
+	public GetThingModelInfoResponse getInstance(UnmarshallerContext context) {
+		return	GetThingModelInfoResponseUnmarshaller.unmarshall(this, context);
 	}
 }

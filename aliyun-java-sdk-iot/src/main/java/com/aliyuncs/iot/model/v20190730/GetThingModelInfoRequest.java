@@ -15,36 +15,22 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
-import java.util.List;
 
 /**
  * @author auto create
  * @version 
  */
-public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<RemoveProductIdentifierForTmallGenieResponse> {
+public class GetThingModelInfoRequest extends RpcAcsRequest<GetThingModelInfoResponse> {
 	
-	public RemoveProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie", "Iot");
+	public GetThingModelInfoRequest() {
+		super("Iot", "2019-07-30", "GetThingModelInfo", "Iot");
 	}
-
-	private List<String> identifiers;
 
 	private String iotInstanceId;
 
 	private String productKey;
 
-	public List<String> getIdentifiers() {
-		return this.identifiers;
-	}
-
-	public void setIdentifiers(List<String> identifiers) {
-		this.identifiers = identifiers;	
-		if (identifiers != null) {
-			for (int i = 0; i < identifiers.size(); i++) {
-				putQueryParameter("Identifier." + (i + 1) , identifiers.get(i));
-			}
-		}	
-	}
+	private String bizTenantId;
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -68,9 +54,20 @@ public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<R
 		}
 	}
 
+	public String getBizTenantId() {
+		return this.bizTenantId;
+	}
+
+	public void setBizTenantId(String bizTenantId) {
+		this.bizTenantId = bizTenantId;
+		if(bizTenantId != null){
+			putQueryParameter("BizTenantId", bizTenantId);
+		}
+	}
+
 	@Override
-	public Class<RemoveProductIdentifierForTmallGenieResponse> getResponseClass() {
-		return RemoveProductIdentifierForTmallGenieResponse.class;
+	public Class<GetThingModelInfoResponse> getResponseClass() {
+		return GetThingModelInfoResponse.class;
 	}
 
 }
