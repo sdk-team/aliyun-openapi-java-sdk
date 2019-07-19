@@ -31,6 +31,8 @@ public class BulkQueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 	private String errorMessage;
 
+	private String code;
+
 	private List<ProductInfo> list;
 
 	public String getRequestId() {
@@ -55,6 +57,14 @@ public class BulkQueryProductInfoForTmallGenieResponse extends AcsResponse {
 
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
+	}
+
+	public String getCode() {
+		return this.code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public List<ProductInfo> getList() {

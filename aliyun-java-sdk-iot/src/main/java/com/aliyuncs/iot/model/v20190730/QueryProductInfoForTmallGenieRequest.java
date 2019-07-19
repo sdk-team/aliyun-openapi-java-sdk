@@ -29,8 +29,6 @@ public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryPro
 
 	private List<String> fields;
 
-	private String eagleEyeTraceId;
-
 	private String iotInstanceId;
 
 	private String productKey;
@@ -46,17 +44,6 @@ public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryPro
 				putQueryParameter("Field." + (i + 1) , fields.get(i));
 			}
 		}	
-	}
-
-	public String getEagleEyeTraceId() {
-		return this.eagleEyeTraceId;
-	}
-
-	public void setEagleEyeTraceId(String eagleEyeTraceId) {
-		this.eagleEyeTraceId = eagleEyeTraceId;
-		if(eagleEyeTraceId != null){
-			putQueryParameter("EagleEyeTraceId", eagleEyeTraceId);
-		}
 	}
 
 	public String getIotInstanceId() {

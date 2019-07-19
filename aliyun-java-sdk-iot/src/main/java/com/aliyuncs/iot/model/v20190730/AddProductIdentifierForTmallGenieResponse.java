@@ -14,6 +14,7 @@
 
 package com.aliyuncs.iot.model.v20190730;
 
+import java.util.List;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.iot.transform.v20190730.AddProductIdentifierForTmallGenieResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -31,6 +32,8 @@ public class AddProductIdentifierForTmallGenieResponse extends AcsResponse {
 	private String errorMessage;
 
 	private String code;
+
+	private List<String> successList;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -62,6 +65,14 @@ public class AddProductIdentifierForTmallGenieResponse extends AcsResponse {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public List<String> getSuccessList() {
+		return this.successList;
+	}
+
+	public void setSuccessList(List<String> successList) {
+		this.successList = successList;
 	}
 
 	@Override

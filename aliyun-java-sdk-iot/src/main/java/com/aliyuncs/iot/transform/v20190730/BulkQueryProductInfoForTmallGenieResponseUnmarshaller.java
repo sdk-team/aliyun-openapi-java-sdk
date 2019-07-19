@@ -29,6 +29,7 @@ public class BulkQueryProductInfoForTmallGenieResponseUnmarshaller {
 		bulkQueryProductInfoForTmallGenieResponse.setRequestId(_ctx.stringValue("BulkQueryProductInfoForTmallGenieResponse.RequestId"));
 		bulkQueryProductInfoForTmallGenieResponse.setSuccess(_ctx.booleanValue("BulkQueryProductInfoForTmallGenieResponse.Success"));
 		bulkQueryProductInfoForTmallGenieResponse.setErrorMessage(_ctx.stringValue("BulkQueryProductInfoForTmallGenieResponse.ErrorMessage"));
+		bulkQueryProductInfoForTmallGenieResponse.setCode(_ctx.stringValue("BulkQueryProductInfoForTmallGenieResponse.Code"));
 
 		List<ProductInfo> list = new ArrayList<ProductInfo>();
 		for (int i = 0; i < _ctx.lengthValue("BulkQueryProductInfoForTmallGenieResponse.List.Length"); i++) {

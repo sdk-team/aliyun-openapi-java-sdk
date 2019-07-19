@@ -14,6 +14,9 @@
 
 package com.aliyuncs.iot.transform.v20190730;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.aliyuncs.iot.model.v20190730.AddProductIdentifierForTmallGenieResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
@@ -26,6 +29,12 @@ public class AddProductIdentifierForTmallGenieResponseUnmarshaller {
 		addProductIdentifierForTmallGenieResponse.setSuccess(_ctx.booleanValue("AddProductIdentifierForTmallGenieResponse.Success"));
 		addProductIdentifierForTmallGenieResponse.setErrorMessage(_ctx.stringValue("AddProductIdentifierForTmallGenieResponse.ErrorMessage"));
 		addProductIdentifierForTmallGenieResponse.setCode(_ctx.stringValue("AddProductIdentifierForTmallGenieResponse.Code"));
+
+		List<String> successList = new ArrayList<String>();
+		for (int i = 0; i < _ctx.lengthValue("AddProductIdentifierForTmallGenieResponse.SuccessList.Length"); i++) {
+			successList.add(_ctx.stringValue("AddProductIdentifierForTmallGenieResponse.SuccessList["+ i +"]"));
+		}
+		addProductIdentifierForTmallGenieResponse.setSuccessList(successList);
 	 
 	 	return addProductIdentifierForTmallGenieResponse;
 	}
