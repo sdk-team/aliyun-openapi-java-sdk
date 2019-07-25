@@ -24,37 +24,37 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeCouponListResponseUnmarshaller {
 
-	public static DescribeCouponListResponse unmarshall(DescribeCouponListResponse describeCouponListResponse, UnmarshallerContext context) {
+	public static DescribeCouponListResponse unmarshall(DescribeCouponListResponse describeCouponListResponse, UnmarshallerContext _ctx) {
 		
-		describeCouponListResponse.setRequestId(context.stringValue("DescribeCouponListResponse.RequestId"));
+		describeCouponListResponse.setRequestId(_ctx.stringValue("DescribeCouponListResponse.RequestId"));
 
 		List<Coupon> coupons = new ArrayList<Coupon>();
-		for (int i = 0; i < context.lengthValue("DescribeCouponListResponse.Coupons.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribeCouponListResponse.Coupons.Length"); i++) {
 			Coupon coupon = new Coupon();
-			coupon.setCouponTemplateId(context.longValue("DescribeCouponListResponse.Coupons["+ i +"].CouponTemplateId"));
-			coupon.setTotalAmount(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].TotalAmount"));
-			coupon.setBalanceAmount(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].BalanceAmount"));
-			coupon.setFrozenAmount(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].FrozenAmount"));
-			coupon.setExpiredAmount(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ExpiredAmount"));
-			coupon.setDeliveryTime(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].DeliveryTime"));
-			coupon.setExpiredTime(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ExpiredTime"));
-			coupon.setCouponNumber(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].CouponNumber"));
-			coupon.setStatus(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Status"));
-			coupon.setDescription(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Description"));
-			coupon.setCreationTime(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].CreationTime"));
-			coupon.setModificationTime(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ModificationTime"));
-			coupon.setPriceLimit(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].PriceLimit"));
-			coupon.setApplication(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Application"));
+			coupon.setCouponTemplateId(_ctx.longValue("DescribeCouponListResponse.Coupons["+ i +"].CouponTemplateId"));
+			coupon.setTotalAmount(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].TotalAmount"));
+			coupon.setBalanceAmount(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].BalanceAmount"));
+			coupon.setFrozenAmount(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].FrozenAmount"));
+			coupon.setExpiredAmount(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ExpiredAmount"));
+			coupon.setDeliveryTime(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].DeliveryTime"));
+			coupon.setExpiredTime(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ExpiredTime"));
+			coupon.setCouponNumber(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].CouponNumber"));
+			coupon.setStatus(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Status"));
+			coupon.setDescription(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Description"));
+			coupon.setCreationTime(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].CreationTime"));
+			coupon.setModificationTime(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ModificationTime"));
+			coupon.setPriceLimit(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].PriceLimit"));
+			coupon.setApplication(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].Application"));
 
 			List<String> productCodes = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeCouponListResponse.Coupons["+ i +"].ProductCodes.Length"); j++) {
-				productCodes.add(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ProductCodes["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeCouponListResponse.Coupons["+ i +"].ProductCodes.Length"); j++) {
+				productCodes.add(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].ProductCodes["+ j +"]"));
 			}
 			coupon.setProductCodes(productCodes);
 
 			List<String> tradeTypes = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeCouponListResponse.Coupons["+ i +"].TradeTypes.Length"); j++) {
-				tradeTypes.add(context.stringValue("DescribeCouponListResponse.Coupons["+ i +"].TradeTypes["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeCouponListResponse.Coupons["+ i +"].TradeTypes.Length"); j++) {
+				tradeTypes.add(_ctx.stringValue("DescribeCouponListResponse.Coupons["+ i +"].TradeTypes["+ j +"]"));
 			}
 			coupon.setTradeTypes(tradeTypes);
 

@@ -20,18 +20,18 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeCashDetailResponseUnmarshaller {
 
-	public static DescribeCashDetailResponse unmarshall(DescribeCashDetailResponse describeCashDetailResponse, UnmarshallerContext context) {
+	public static DescribeCashDetailResponse unmarshall(DescribeCashDetailResponse describeCashDetailResponse, UnmarshallerContext _ctx) {
 		
-		describeCashDetailResponse.setRequestId(context.stringValue("DescribeCashDetailResponse.RequestId"));
-		describeCashDetailResponse.setBalanceAmount(context.stringValue("DescribeCashDetailResponse.BalanceAmount"));
-		describeCashDetailResponse.setAmountOwed(context.stringValue("DescribeCashDetailResponse.AmountOwed"));
-		describeCashDetailResponse.setEnableThresholdAlert(context.stringValue("DescribeCashDetailResponse.EnableThresholdAlert"));
-		describeCashDetailResponse.setMiniAlertThreshold(context.longValue("DescribeCashDetailResponse.MiniAlertThreshold"));
-		describeCashDetailResponse.setFrozenAmount(context.stringValue("DescribeCashDetailResponse.FrozenAmount"));
-		describeCashDetailResponse.setCreditCardAmount(context.stringValue("DescribeCashDetailResponse.CreditCardAmount"));
-		describeCashDetailResponse.setRemmitanceAmount(context.stringValue("DescribeCashDetailResponse.RemmitanceAmount"));
-		describeCashDetailResponse.setCreditLimit(context.stringValue("DescribeCashDetailResponse.CreditLimit"));
-		describeCashDetailResponse.setAvailableCredit(context.stringValue("DescribeCashDetailResponse.AvailableCredit"));
+		describeCashDetailResponse.setRequestId(_ctx.stringValue("DescribeCashDetailResponse.RequestId"));
+		describeCashDetailResponse.setBalanceAmount(_ctx.stringValue("DescribeCashDetailResponse.BalanceAmount"));
+		describeCashDetailResponse.setAmountOwed(_ctx.stringValue("DescribeCashDetailResponse.AmountOwed"));
+		describeCashDetailResponse.setEnableThresholdAlert(_ctx.stringValue("DescribeCashDetailResponse.EnableThresholdAlert"));
+		describeCashDetailResponse.setMiniAlertThreshold(_ctx.longValue("DescribeCashDetailResponse.MiniAlertThreshold"));
+		describeCashDetailResponse.setFrozenAmount(_ctx.stringValue("DescribeCashDetailResponse.FrozenAmount"));
+		describeCashDetailResponse.setCreditCardAmount(_ctx.stringValue("DescribeCashDetailResponse.CreditCardAmount"));
+		describeCashDetailResponse.setRemmitanceAmount(_ctx.stringValue("DescribeCashDetailResponse.RemmitanceAmount"));
+		describeCashDetailResponse.setCreditLimit(_ctx.stringValue("DescribeCashDetailResponse.CreditLimit"));
+		describeCashDetailResponse.setAvailableCredit(_ctx.stringValue("DescribeCashDetailResponse.AvailableCredit"));
 	 
 	 	return describeCashDetailResponse;
 	}

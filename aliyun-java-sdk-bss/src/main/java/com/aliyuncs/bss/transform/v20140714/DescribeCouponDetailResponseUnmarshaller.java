@@ -23,33 +23,33 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeCouponDetailResponseUnmarshaller {
 
-	public static DescribeCouponDetailResponse unmarshall(DescribeCouponDetailResponse describeCouponDetailResponse, UnmarshallerContext context) {
+	public static DescribeCouponDetailResponse unmarshall(DescribeCouponDetailResponse describeCouponDetailResponse, UnmarshallerContext _ctx) {
 		
-		describeCouponDetailResponse.setRequestId(context.stringValue("DescribeCouponDetailResponse.RequestId"));
-		describeCouponDetailResponse.setCouponTemplateId(context.longValue("DescribeCouponDetailResponse.CouponTemplateId"));
-		describeCouponDetailResponse.setTotalAmount(context.stringValue("DescribeCouponDetailResponse.TotalAmount"));
-		describeCouponDetailResponse.setBalanceAmount(context.stringValue("DescribeCouponDetailResponse.BalanceAmount"));
-		describeCouponDetailResponse.setFrozenAmount(context.stringValue("DescribeCouponDetailResponse.FrozenAmount"));
-		describeCouponDetailResponse.setExpiredAmount(context.stringValue("DescribeCouponDetailResponse.ExpiredAmount"));
-		describeCouponDetailResponse.setDeliveryTime(context.stringValue("DescribeCouponDetailResponse.DeliveryTime"));
-		describeCouponDetailResponse.setExpiredTime(context.stringValue("DescribeCouponDetailResponse.ExpiredTime"));
-		describeCouponDetailResponse.setCouponNumber(context.stringValue("DescribeCouponDetailResponse.CouponNumber"));
-		describeCouponDetailResponse.setStatus(context.stringValue("DescribeCouponDetailResponse.Status"));
-		describeCouponDetailResponse.setDescription(context.stringValue("DescribeCouponDetailResponse.Description"));
-		describeCouponDetailResponse.setCreationTime(context.stringValue("DescribeCouponDetailResponse.CreationTime"));
-		describeCouponDetailResponse.setModificationTime(context.stringValue("DescribeCouponDetailResponse.ModificationTime"));
-		describeCouponDetailResponse.setPriceLimit(context.stringValue("DescribeCouponDetailResponse.PriceLimit"));
-		describeCouponDetailResponse.setApplication(context.stringValue("DescribeCouponDetailResponse.Application"));
+		describeCouponDetailResponse.setRequestId(_ctx.stringValue("DescribeCouponDetailResponse.RequestId"));
+		describeCouponDetailResponse.setCouponTemplateId(_ctx.longValue("DescribeCouponDetailResponse.CouponTemplateId"));
+		describeCouponDetailResponse.setTotalAmount(_ctx.stringValue("DescribeCouponDetailResponse.TotalAmount"));
+		describeCouponDetailResponse.setBalanceAmount(_ctx.stringValue("DescribeCouponDetailResponse.BalanceAmount"));
+		describeCouponDetailResponse.setFrozenAmount(_ctx.stringValue("DescribeCouponDetailResponse.FrozenAmount"));
+		describeCouponDetailResponse.setExpiredAmount(_ctx.stringValue("DescribeCouponDetailResponse.ExpiredAmount"));
+		describeCouponDetailResponse.setDeliveryTime(_ctx.stringValue("DescribeCouponDetailResponse.DeliveryTime"));
+		describeCouponDetailResponse.setExpiredTime(_ctx.stringValue("DescribeCouponDetailResponse.ExpiredTime"));
+		describeCouponDetailResponse.setCouponNumber(_ctx.stringValue("DescribeCouponDetailResponse.CouponNumber"));
+		describeCouponDetailResponse.setStatus(_ctx.stringValue("DescribeCouponDetailResponse.Status"));
+		describeCouponDetailResponse.setDescription(_ctx.stringValue("DescribeCouponDetailResponse.Description"));
+		describeCouponDetailResponse.setCreationTime(_ctx.stringValue("DescribeCouponDetailResponse.CreationTime"));
+		describeCouponDetailResponse.setModificationTime(_ctx.stringValue("DescribeCouponDetailResponse.ModificationTime"));
+		describeCouponDetailResponse.setPriceLimit(_ctx.stringValue("DescribeCouponDetailResponse.PriceLimit"));
+		describeCouponDetailResponse.setApplication(_ctx.stringValue("DescribeCouponDetailResponse.Application"));
 
 		List<String> productCodes = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("DescribeCouponDetailResponse.ProductCodes.Length"); i++) {
-			productCodes.add(context.stringValue("DescribeCouponDetailResponse.ProductCodes["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("DescribeCouponDetailResponse.ProductCodes.Length"); i++) {
+			productCodes.add(_ctx.stringValue("DescribeCouponDetailResponse.ProductCodes["+ i +"]"));
 		}
 		describeCouponDetailResponse.setProductCodes(productCodes);
 
 		List<String> tradeTypes = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("DescribeCouponDetailResponse.TradeTypes.Length"); i++) {
-			tradeTypes.add(context.stringValue("DescribeCouponDetailResponse.TradeTypes["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("DescribeCouponDetailResponse.TradeTypes.Length"); i++) {
+			tradeTypes.add(_ctx.stringValue("DescribeCouponDetailResponse.TradeTypes["+ i +"]"));
 		}
 		describeCouponDetailResponse.setTradeTypes(tradeTypes);
 	 
