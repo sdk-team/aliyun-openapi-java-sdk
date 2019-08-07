@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
 
 /**
  * @author auto create
@@ -30,9 +31,9 @@ public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteLis
 
 	private String manufacture;
 
-	private String devices;
-
 	private String iotInstanceId;
+
+	private List<Device> devices;
 
 	public String getActionType() {
 		return this.actionType;
@@ -56,17 +57,6 @@ public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteLis
 		}
 	}
 
-	public String getDevices() {
-		return this.devices;
-	}
-
-	public void setDevices(String devices) {
-		this.devices = devices;
-		if(devices != null){
-			putQueryParameter("Devices", devices);
-		}
-	}
-
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
 	}
@@ -75,6 +65,43 @@ public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteLis
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public List<Device> getDevices() {
+		return this.devices;
+	}
+
+	public void setDevices(List<Device> devices) {
+		this.devices = devices;	
+		if (devices != null) {
+			for (int depth1 = 0; depth1 < devices.size(); depth1++) {
+				putBodyParameter("Device." + (depth1 + 1) + ".Secret" , devices.get(depth1).getSecret());
+				putBodyParameter("Device." + (depth1 + 1) + ".Mac" , devices.get(depth1).getMac());
+			}
+		}	
+	}
+
+	public static class Device {
+
+		private String secret;
+
+		private String mac;
+
+		public String getSecret() {
+			return this.secret;
+		}
+
+		public void setSecret(String secret) {
+			this.secret = secret;
+		}
+
+		public String getMac() {
+			return this.mac;
+		}
+
+		public void setMac(String mac) {
+			this.mac = mac;
 		}
 	}
 

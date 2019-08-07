@@ -83,7 +83,12 @@ public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryProper
 				putQueryParameter("Property." + (depth1 + 1) + ".CategoryName" , propertys.get(depth1).getCategoryName());
 				putQueryParameter("Property." + (depth1 + 1) + ".Definition" , propertys.get(depth1).getDefinition());
 				putQueryParameter("Property." + (depth1 + 1) + ".State" , propertys.get(depth1).getState());
-				putQueryParameter("Property." + (depth1 + 1) + ".Tag" , propertys.get(depth1).getTag());
+				if (propertys.get(depth1).getTags() != null) {
+					for (int depth2 = 0; depth2 < propertys.get(depth1).getTags().size(); depth2++) {
+						putQueryParameter("Property." + (depth1 + 1) + ".Tag." + (depth2 + 1) + ".TagValue" , propertys.get(depth1).getTags().get(depth2).getTagValue());
+						putQueryParameter("Property." + (depth1 + 1) + ".Tag." + (depth2 + 1) + ".TagKey" , propertys.get(depth1).getTags().get(depth2).getTagKey());
+					}
+				}
 				putQueryParameter("Property." + (depth1 + 1) + ".AccessMode" , propertys.get(depth1).getAccessMode());
 			}
 		}	
@@ -145,7 +150,7 @@ public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryProper
 
 		private Integer state;
 
-		private String tag;
+		private List<Tag> tags;
 
 		private String accessMode;
 
@@ -277,12 +282,12 @@ public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryProper
 			this.state = state;
 		}
 
-		public String getTag() {
-			return this.tag;
+		public List<Tag> getTags() {
+			return this.tags;
 		}
 
-		public void setTag(String tag) {
-			this.tag = tag;
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
 		}
 
 		public String getAccessMode() {
@@ -291,6 +296,29 @@ public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryProper
 
 		public void setAccessMode(String accessMode) {
 			this.accessMode = accessMode;
+		}
+
+		public static class Tag {
+
+			private String tagValue;
+
+			private String tagKey;
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
 		}
 	}
 

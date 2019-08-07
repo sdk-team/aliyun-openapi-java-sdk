@@ -48,7 +48,19 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 				putQueryParameter("Service." + (depth1 + 1) + ".Identifier" , services.get(depth1).getIdentifier());
 				putQueryParameter("Service." + (depth1 + 1) + ".Creator" , services.get(depth1).getCreator());
 				putQueryParameter("Service." + (depth1 + 1) + ".ThingTemplateKey" , services.get(depth1).getThingTemplateKey());
-				putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO" , services.get(depth1).getArgsDTO());
+				if (services.get(depth1).getArgsDTOs() != null) {
+					for (int depth2 = 0; depth2 < services.get(depth1).getArgsDTOs().size(); depth2++) {
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".Identifier" , services.get(depth1).getArgsDTOs().get(depth2).getIdentifier());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".InteractionId" , services.get(depth1).getArgsDTOs().get(depth2).getInteractionId());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".InteractionType" , services.get(depth1).getArgsDTOs().get(depth2).getInteractionType());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".DataType" , services.get(depth1).getArgsDTOs().get(depth2).getDataType());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".Name" , services.get(depth1).getArgsDTOs().get(depth2).getName());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".Definition" , services.get(depth1).getArgsDTOs().get(depth2).getDefinition());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".ParaOrder" , services.get(depth1).getArgsDTOs().get(depth2).getParaOrder());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".DataSpecsId" , services.get(depth1).getArgsDTOs().get(depth2).getDataSpecsId());
+						putQueryParameter("Service." + (depth1 + 1) + ".ArgsDTO." + (depth2 + 1) + ".Direction" , services.get(depth1).getArgsDTOs().get(depth2).getDirection());
+					}
+				}
 				putQueryParameter("Service." + (depth1 + 1) + ".Modifier" , services.get(depth1).getModifier());
 				putQueryParameter("Service." + (depth1 + 1) + ".Description" , services.get(depth1).getDescription());
 				putQueryParameter("Service." + (depth1 + 1) + ".DeviceType" , services.get(depth1).getDeviceType());
@@ -60,7 +72,12 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 				putQueryParameter("Service." + (depth1 + 1) + ".Namespace" , services.get(depth1).getNamespace());
 				putQueryParameter("Service." + (depth1 + 1) + ".CategoryName" , services.get(depth1).getCategoryName());
 				putQueryParameter("Service." + (depth1 + 1) + ".State" , services.get(depth1).getState());
-				putQueryParameter("Service." + (depth1 + 1) + ".Tag" , services.get(depth1).getTag());
+				if (services.get(depth1).getTags() != null) {
+					for (int depth2 = 0; depth2 < services.get(depth1).getTags().size(); depth2++) {
+						putQueryParameter("Service." + (depth1 + 1) + ".Tag." + (depth2 + 1) + ".TagValue" , services.get(depth1).getTags().get(depth2).getTagValue());
+						putQueryParameter("Service." + (depth1 + 1) + ".Tag." + (depth2 + 1) + ".TagKey" , services.get(depth1).getTags().get(depth2).getTagKey());
+					}
+				}
 				putQueryParameter("Service." + (depth1 + 1) + ".CallType" , services.get(depth1).getCallType());
 				putQueryParameter("Service." + (depth1 + 1) + ".AccessMode" , services.get(depth1).getAccessMode());
 			}
@@ -119,7 +136,7 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 
 		private String thingTemplateKey;
 
-		private String argsDTO;
+		private List<ArgsDTO> argsDTOs;
 
 		private String modifier;
 
@@ -143,7 +160,7 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 
 		private Integer state;
 
-		private String tag;
+		private List<Tag> tags;
 
 		private String callType;
 
@@ -173,12 +190,12 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 			this.thingTemplateKey = thingTemplateKey;
 		}
 
-		public String getArgsDTO() {
-			return this.argsDTO;
+		public List<ArgsDTO> getArgsDTOs() {
+			return this.argsDTOs;
 		}
 
-		public void setArgsDTO(String argsDTO) {
-			this.argsDTO = argsDTO;
+		public void setArgsDTOs(List<ArgsDTO> argsDTOs) {
+			this.argsDTOs = argsDTOs;
 		}
 
 		public String getModifier() {
@@ -269,12 +286,12 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 			this.state = state;
 		}
 
-		public String getTag() {
-			return this.tag;
+		public List<Tag> getTags() {
+			return this.tags;
 		}
 
-		public void setTag(String tag) {
-			this.tag = tag;
+		public void setTags(List<Tag> tags) {
+			this.tags = tags;
 		}
 
 		public String getCallType() {
@@ -291,6 +308,122 @@ public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryService
 
 		public void setAccessMode(String accessMode) {
 			this.accessMode = accessMode;
+		}
+
+		public static class ArgsDTO {
+
+			private String identifier;
+
+			private Long interactionId;
+
+			private String interactionType;
+
+			private String dataType;
+
+			private String name;
+
+			private String definition;
+
+			private Integer paraOrder;
+
+			private String dataSpecsId;
+
+			private String direction;
+
+			public String getIdentifier() {
+				return this.identifier;
+			}
+
+			public void setIdentifier(String identifier) {
+				this.identifier = identifier;
+			}
+
+			public Long getInteractionId() {
+				return this.interactionId;
+			}
+
+			public void setInteractionId(Long interactionId) {
+				this.interactionId = interactionId;
+			}
+
+			public String getInteractionType() {
+				return this.interactionType;
+			}
+
+			public void setInteractionType(String interactionType) {
+				this.interactionType = interactionType;
+			}
+
+			public String getDataType() {
+				return this.dataType;
+			}
+
+			public void setDataType(String dataType) {
+				this.dataType = dataType;
+			}
+
+			public String getName() {
+				return this.name;
+			}
+
+			public void setName(String name) {
+				this.name = name;
+			}
+
+			public String getDefinition() {
+				return this.definition;
+			}
+
+			public void setDefinition(String definition) {
+				this.definition = definition;
+			}
+
+			public Integer getParaOrder() {
+				return this.paraOrder;
+			}
+
+			public void setParaOrder(Integer paraOrder) {
+				this.paraOrder = paraOrder;
+			}
+
+			public String getDataSpecsId() {
+				return this.dataSpecsId;
+			}
+
+			public void setDataSpecsId(String dataSpecsId) {
+				this.dataSpecsId = dataSpecsId;
+			}
+
+			public String getDirection() {
+				return this.direction;
+			}
+
+			public void setDirection(String direction) {
+				this.direction = direction;
+			}
+		}
+
+		public static class Tag {
+
+			private String tagValue;
+
+			private String tagKey;
+
+			public String getTagValue() {
+				return this.tagValue;
+			}
+
+			public void setTagValue(String tagValue) {
+				this.tagValue = tagValue;
+			}
+
+			public String getTagKey() {
+				return this.tagKey;
+			}
+
+			public void setTagKey(String tagKey) {
+				this.tagKey = tagKey;
+			}
 		}
 	}
 
