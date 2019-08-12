@@ -32,6 +32,8 @@ public class DeviceWhiteListMaintainResponse extends AcsResponse {
 
 	private String code;
 
+	private Integer count;
+
 	public String getRequestId() {
 		return this.requestId;
 	}
@@ -62,6 +64,14 @@ public class DeviceWhiteListMaintainResponse extends AcsResponse {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public Integer getCount() {
+		return this.count;
+	}
+
+	public void setCount(Integer count) {
+		this.count = count;
 	}
 
 	@Override

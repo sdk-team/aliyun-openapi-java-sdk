@@ -26,6 +26,7 @@ public class DeviceWhiteListMaintainResponseUnmarshaller {
 		deviceWhiteListMaintainResponse.setSuccess(_ctx.booleanValue("DeviceWhiteListMaintainResponse.Success"));
 		deviceWhiteListMaintainResponse.setErrorMessage(_ctx.stringValue("DeviceWhiteListMaintainResponse.ErrorMessage"));
 		deviceWhiteListMaintainResponse.setCode(_ctx.stringValue("DeviceWhiteListMaintainResponse.Code"));
+		deviceWhiteListMaintainResponse.setCount(_ctx.integerValue("DeviceWhiteListMaintainResponse.Count"));
 	 
 	 	return deviceWhiteListMaintainResponse;
 	}
