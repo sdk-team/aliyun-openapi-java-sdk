@@ -24,7 +24,7 @@ import java.util.List;
 public class BatchPropertyMigrateToUnifyRequest extends RpcAcsRequest<BatchPropertyMigrateToUnifyResponse> {
 	
 	public BatchPropertyMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "BatchPropertyMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "BatchPropertyMigrateToUnify", "Iot");
 	}
 
 	private String iotInstanceId;

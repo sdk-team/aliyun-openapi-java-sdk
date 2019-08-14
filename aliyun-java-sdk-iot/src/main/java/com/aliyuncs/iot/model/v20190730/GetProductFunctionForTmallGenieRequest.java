@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetProductFunctionForTmallGenieRequest extends RpcAcsRequest<GetProductFunctionForTmallGenieResponse> {
 	
 	public GetProductFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetProductFunctionForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "GetProductFunctionForTmallGenie", "Iot");
 	}
 
 	private String identifier;

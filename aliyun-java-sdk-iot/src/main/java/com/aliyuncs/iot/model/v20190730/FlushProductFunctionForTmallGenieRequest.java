@@ -24,7 +24,7 @@ import java.util.List;
 public class FlushProductFunctionForTmallGenieRequest extends RpcAcsRequest<FlushProductFunctionForTmallGenieResponse> {
 	
 	public FlushProductFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "FlushProductFunctionForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "FlushProductFunctionForTmallGenie", "Iot");
 	}
 
 	private List<String> fields;
