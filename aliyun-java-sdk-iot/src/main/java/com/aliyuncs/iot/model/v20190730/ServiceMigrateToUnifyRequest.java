@@ -24,7 +24,7 @@ import java.util.List;
 public class ServiceMigrateToUnifyRequest extends RpcAcsRequest<ServiceMigrateToUnifyResponse> {
 	
 	public ServiceMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "ServiceMigrateToUnify", "Iot");
+		super("Iot", "2019-07-30", "ServiceMigrateToUnify", "iot");
 	}
 
 	private String identifier;

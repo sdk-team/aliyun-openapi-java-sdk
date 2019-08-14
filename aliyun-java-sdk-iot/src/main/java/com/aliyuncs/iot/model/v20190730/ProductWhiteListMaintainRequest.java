@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteListMaintainResponse> {
 	
 	public ProductWhiteListMaintainRequest() {
-		super("Iot", "2019-07-30", "ProductWhiteListMaintain", "Iot");
+		super("Iot", "2019-07-30", "ProductWhiteListMaintain", "iot");
 	}
 
 	private String actionType;

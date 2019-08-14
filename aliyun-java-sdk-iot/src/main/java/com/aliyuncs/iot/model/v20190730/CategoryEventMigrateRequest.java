@@ -24,7 +24,7 @@ import java.util.List;
 public class CategoryEventMigrateRequest extends RpcAcsRequest<CategoryEventMigrateResponse> {
 	
 	public CategoryEventMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryEventMigrate", "Iot");
+		super("Iot", "2019-07-30", "CategoryEventMigrate", "iot");
 	}
 
 	private String iotInstanceId;

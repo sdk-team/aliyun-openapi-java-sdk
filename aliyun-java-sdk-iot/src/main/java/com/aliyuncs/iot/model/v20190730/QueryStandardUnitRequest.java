@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryStandardUnitRequest extends RpcAcsRequest<QueryStandardUnitResponse> {
 	
 	public QueryStandardUnitRequest() {
-		super("Iot", "2019-07-30", "QueryStandardUnit", "Iot");
+		super("Iot", "2019-07-30", "QueryStandardUnit", "iot");
 	}
 
 	private String iotInstanceId;

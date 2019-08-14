@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class BulkCreateDeviceForTmallGenieRequest extends RpcAcsRequest<BulkCreateDeviceForTmallGenieResponse> {
 	
 	public BulkCreateDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "BulkCreateDeviceForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "BulkCreateDeviceForTmallGenie", "iot");
 	}
 
 	private String iotInstanceId;

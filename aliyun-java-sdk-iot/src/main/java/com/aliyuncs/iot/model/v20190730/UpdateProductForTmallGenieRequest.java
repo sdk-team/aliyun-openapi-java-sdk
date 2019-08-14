@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProductForTmallGenieResponse> {
 	
 	public UpdateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "UpdateProductForTmallGenie", "iot");
 	}
 
 	private String productModel;

@@ -24,7 +24,7 @@ import java.util.List;
 public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryProductInfoForTmallGenieResponse> {
 	
 	public QueryProductInfoForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie", "iot");
 	}
 
 	private List<String> fields;
