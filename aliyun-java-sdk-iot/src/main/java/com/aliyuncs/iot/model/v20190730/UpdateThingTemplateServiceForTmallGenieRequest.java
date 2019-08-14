@@ -24,7 +24,7 @@ import java.util.List;
 public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateServiceForTmallGenieResponse> {
 	
 	public UpdateThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie", "iot");
 	}
 
 	private String identifier;
