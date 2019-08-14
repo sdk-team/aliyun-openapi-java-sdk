@@ -24,7 +24,7 @@ import java.util.List;
 public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteListMaintainResponse> {
 	
 	public DeviceWhiteListMaintainRequest() {
-		super("Iot", "2019-07-30", "DeviceWhiteListMaintain", "iot");
+		super("Iot", "2019-07-30", "DeviceWhiteListMaintain", "Iot");
 	}
 
 	private String actionType;

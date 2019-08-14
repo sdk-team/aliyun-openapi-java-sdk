@@ -24,7 +24,7 @@ import java.util.List;
 public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<AddThingTemplatePropertyForTmallGenieResponse> {
 	
 	public AddThingTemplatePropertyForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie", "Iot");
 	}
 
 	private String identifier;

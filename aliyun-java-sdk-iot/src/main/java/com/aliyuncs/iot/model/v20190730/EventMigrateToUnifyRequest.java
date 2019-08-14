@@ -24,7 +24,7 @@ import java.util.List;
 public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnifyResponse> {
 	
 	public EventMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "EventMigrateToUnify", "Iot");
 	}
 
 	private String identifier;
