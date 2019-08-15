@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductApplyListResponse> {
 	
 	public QueryProductApplyListRequest() {
-		super("Iot", "2019-07-30", "QueryProductApplyList", "Iot");
+		super("Iot", "2019-07-30", "QueryProductApplyList", "iot");
 	}
 
 	private Long pageNo;

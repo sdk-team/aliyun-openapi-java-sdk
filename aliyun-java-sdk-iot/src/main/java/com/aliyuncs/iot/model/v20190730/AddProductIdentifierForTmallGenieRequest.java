@@ -24,7 +24,7 @@ import java.util.List;
 public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddProductIdentifierForTmallGenieResponse> {
 	
 	public AddProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie", "iot");
 	}
 
 	private List<String> identifiers;

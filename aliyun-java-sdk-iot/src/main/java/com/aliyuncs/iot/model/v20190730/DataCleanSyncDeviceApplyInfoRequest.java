@@ -24,7 +24,7 @@ import java.util.List;
 public class DataCleanSyncDeviceApplyInfoRequest extends RpcAcsRequest<DataCleanSyncDeviceApplyInfoResponse> {
 	
 	public DataCleanSyncDeviceApplyInfoRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDeviceApplyInfo", "Iot");
+		super("Iot", "2019-07-30", "DataCleanSyncDeviceApplyInfo", "iot");
 	}
 
 	private String applyId;

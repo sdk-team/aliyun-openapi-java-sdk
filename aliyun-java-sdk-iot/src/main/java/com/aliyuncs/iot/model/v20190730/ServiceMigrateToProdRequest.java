@@ -24,7 +24,7 @@ import java.util.List;
 public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToProdResponse> {
 	
 	public ServiceMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "ServiceMigrateToProd", "Iot");
+		super("Iot", "2019-07-30", "ServiceMigrateToProd", "iot");
 	}
 
 	private String identifier;

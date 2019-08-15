@@ -24,7 +24,7 @@ import java.util.List;
 public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateEventForTmallGenieResponse> {
 	
 	public AddThingTemplateEventForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie", "iot");
 	}
 
 	private String identifier;

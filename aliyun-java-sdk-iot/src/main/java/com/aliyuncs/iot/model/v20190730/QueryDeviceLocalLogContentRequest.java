@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDeviceLocalLogContentResponse> {
 	
 	public QueryDeviceLocalLogContentRequest() {
-		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent", "Iot");
+		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent", "iot");
 	}
 
 	private String keywords;
