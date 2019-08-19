@@ -15,16 +15,20 @@
 package com.aliyuncs.drds.transform.v20190123;
 
 import com.aliyuncs.drds.model.v20190123.DescribeGlobalBroadcastTypeResponse;
+import com.aliyuncs.drds.model.v20190123.DescribeGlobalBroadcastTypeResponse.Data;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
 public class DescribeGlobalBroadcastTypeResponseUnmarshaller {
 
-	public static DescribeGlobalBroadcastTypeResponse unmarshall(DescribeGlobalBroadcastTypeResponse describeGlobalBroadcastTypeResponse, UnmarshallerContext context) {
+	public static DescribeGlobalBroadcastTypeResponse unmarshall(DescribeGlobalBroadcastTypeResponse describeGlobalBroadcastTypeResponse, UnmarshallerContext _ctx) {
 		
-		describeGlobalBroadcastTypeResponse.setRequestId(context.stringValue("DescribeGlobalBroadcastTypeResponse.RequestId"));
-		describeGlobalBroadcastTypeResponse.setSuccess(context.booleanValue("DescribeGlobalBroadcastTypeResponse.Success"));
-		describeGlobalBroadcastTypeResponse.setData(context.stringValue("DescribeGlobalBroadcastTypeResponse.Data"));
+		describeGlobalBroadcastTypeResponse.setRequestId(_ctx.stringValue("DescribeGlobalBroadcastTypeResponse.RequestId"));
+		describeGlobalBroadcastTypeResponse.setSuccess(_ctx.booleanValue("DescribeGlobalBroadcastTypeResponse.Success"));
+
+		Data data = new Data();
+		data.setIsSyncType(_ctx.booleanValue("DescribeGlobalBroadcastTypeResponse.Data.IsSyncType"));
+		describeGlobalBroadcastTypeResponse.setData(data);
 	 
 	 	return describeGlobalBroadcastTypeResponse;
 	}

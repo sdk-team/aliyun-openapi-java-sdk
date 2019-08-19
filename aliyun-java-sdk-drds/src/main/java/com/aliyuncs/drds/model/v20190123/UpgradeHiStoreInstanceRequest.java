@@ -20,24 +20,24 @@ import com.aliyuncs.RpcAcsRequest;
  * @author auto create
  * @version 
  */
-public class DescribeRdsListRequest extends RpcAcsRequest<DescribeRdsListResponse> {
+public class UpgradeHiStoreInstanceRequest extends RpcAcsRequest<UpgradeHiStoreInstanceResponse> {
 	
-	public DescribeRdsListRequest() {
-		super("Drds", "2019-01-23", "DescribeRdsList");
+	public UpgradeHiStoreInstanceRequest() {
+		super("Drds", "2019-01-23", "UpgradeHiStoreInstance", "drds");
 	}
 
-	private String dbName;
+	private String historeInstanceId;
 
 	private String drdsInstanceId;
 
-	public String getDbName() {
-		return this.dbName;
+	public String getHistoreInstanceId() {
+		return this.historeInstanceId;
 	}
 
-	public void setDbName(String dbName) {
-		this.dbName = dbName;
-		if(dbName != null){
-			putQueryParameter("DbName", dbName);
+	public void setHistoreInstanceId(String historeInstanceId) {
+		this.historeInstanceId = historeInstanceId;
+		if(historeInstanceId != null){
+			putQueryParameter("HistoreInstanceId", historeInstanceId);
 		}
 	}
 
@@ -53,8 +53,8 @@ public class DescribeRdsListRequest extends RpcAcsRequest<DescribeRdsListRespons
 	}
 
 	@Override
-	public Class<DescribeRdsListResponse> getResponseClass() {
-		return DescribeRdsListResponse.class;
+	public Class<UpgradeHiStoreInstanceResponse> getResponseClass() {
+		return UpgradeHiStoreInstanceResponse.class;
 	}
 
 }
