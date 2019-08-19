@@ -24,7 +24,7 @@ import java.util.List;
 public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<RemoveProductIdentifierForTmallGenieResponse> {
 	
 	public RemoveProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie", "iot");
 	}
 
 	private List<String> identifiers;

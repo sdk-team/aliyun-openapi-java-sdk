@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDeviceForTmallGenieResponse> {
 	
 	public ListTestDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListTestDeviceForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "ListTestDeviceForTmallGenie", "iot");
 	}
 
 	private Long pageNo;

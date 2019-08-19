@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListEventPoolForTmallGenieRequest extends RpcAcsRequest<ListEventPoolForTmallGenieResponse> {
 	
 	public ListEventPoolForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListEventPoolForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "ListEventPoolForTmallGenie", "iot");
 	}
 
 	private String keywords;

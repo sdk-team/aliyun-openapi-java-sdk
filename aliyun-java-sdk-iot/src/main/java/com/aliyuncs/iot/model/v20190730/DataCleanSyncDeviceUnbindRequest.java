@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyncDeviceUnbindResponse> {
 	
 	public DataCleanSyncDeviceUnbindRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind", "Iot");
+		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind", "iot");
 	}
 
 	private String iotId;

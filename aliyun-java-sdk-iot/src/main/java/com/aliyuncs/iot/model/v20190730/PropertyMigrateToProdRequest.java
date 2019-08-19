@@ -24,7 +24,7 @@ import java.util.List;
 public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateToProdResponse> {
 	
 	public PropertyMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToProd", "Iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToProd", "iot");
 	}
 
 	private String identifier;

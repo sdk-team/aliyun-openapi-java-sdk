@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetThingTemplateFunctionForTmallGenieRequest extends RpcAcsRequest<GetThingTemplateFunctionForTmallGenieResponse> {
 	
 	public GetThingTemplateFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetThingTemplateFunctionForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "GetThingTemplateFunctionForTmallGenie", "iot");
 	}
 
 	private String identifier;
