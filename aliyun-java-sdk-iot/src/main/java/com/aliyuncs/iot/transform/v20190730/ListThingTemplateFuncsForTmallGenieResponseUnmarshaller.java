@@ -86,6 +86,7 @@ public class ListThingTemplateFuncsForTmallGenieResponseUnmarshaller {
 				argument.setDirection(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].Direction"));
 				argument.setDataSpecs(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].DataSpecs"));
 				argument.setDataSpecsList(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].DataSpecsList"));
+				argument.setTmallFunctionId(_ctx.longValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].TmallFunctionId"));
 
 				inputParams.add(argument);
 			}
@@ -101,6 +102,7 @@ public class ListThingTemplateFuncsForTmallGenieResponseUnmarshaller {
 				argument2.setName(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].Name"));
 				argument2.setDataSpecs(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].DataSpecs"));
 				argument2.setDataSpecsList(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].DataSpecsList"));
+				argument2.setTmallFunctionId(_ctx.longValue("ListThingTemplateFuncsForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].TmallFunctionId"));
 
 				outputParams.add(argument2);
 			}
@@ -139,6 +141,7 @@ public class ListThingTemplateFuncsForTmallGenieResponseUnmarshaller {
 				argument5.setParaOrder(_ctx.integerValue("ListThingTemplateFuncsForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].ParaOrder"));
 				argument5.setDataSpecs(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].DataSpecs"));
 				argument5.setDataSpecsList(_ctx.stringValue("ListThingTemplateFuncsForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].DataSpecsList"));
+				argument5.setTmallFunctionId(_ctx.longValue("ListThingTemplateFuncsForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].TmallFunctionId"));
 
 				outputData.add(argument5);
 			}

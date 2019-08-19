@@ -55,6 +55,7 @@ public class ListEventPoolForTmallGenieResponseUnmarshaller {
 				argument.setParaOrder(_ctx.integerValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].ParaOrder"));
 				argument.setDataSpecs(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecs"));
 				argument.setDataSpecsList(_ctx.stringValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecsList"));
+				argument.setTmallFunctionId(_ctx.longValue("ListEventPoolForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].TmallFunctionId"));
 
 				outputData.add(argument);
 			}

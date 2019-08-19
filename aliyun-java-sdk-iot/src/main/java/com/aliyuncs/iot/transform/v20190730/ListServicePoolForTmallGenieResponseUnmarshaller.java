@@ -57,6 +57,7 @@ public class ListServicePoolForTmallGenieResponseUnmarshaller {
 				argument.setDirection(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].Direction"));
 				argument.setDataSpecs(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].DataSpecs"));
 				argument.setDataSpecsList(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].DataSpecsList"));
+				argument.setTmallFunctionId(_ctx.longValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].TmallFunctionId"));
 
 				inputParams.add(argument);
 			}
@@ -73,6 +74,7 @@ public class ListServicePoolForTmallGenieResponseUnmarshaller {
 				argument1.setName(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].Name"));
 				argument1.setDataSpecs(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].DataSpecs"));
 				argument1.setDataSpecsList(_ctx.stringValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].DataSpecsList"));
+				argument1.setTmallFunctionId(_ctx.longValue("ListServicePoolForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].TmallFunctionId"));
 
 				outputParams.add(argument1);
 			}

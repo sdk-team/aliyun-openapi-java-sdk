@@ -24,7 +24,7 @@ import java.util.List;
 public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrateToUnifyResponse> {
 	
 	public PropertyMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToUnify", "Iot");
 	}
 
 	private String identifier;

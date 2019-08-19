@@ -24,7 +24,7 @@ import java.util.List;
 public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryPropertyMigrateResponse> {
 	
 	public CategoryPropertyMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryPropertyMigrate", "iot");
+		super("Iot", "2019-07-30", "CategoryPropertyMigrate", "Iot");
 	}
 
 	private String iotInstanceId;

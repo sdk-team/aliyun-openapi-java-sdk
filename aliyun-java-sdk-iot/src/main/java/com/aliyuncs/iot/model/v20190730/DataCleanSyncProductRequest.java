@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProductResponse> {
 	
 	public DataCleanSyncProductRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncProduct", "iot");
+		super("Iot", "2019-07-30", "DataCleanSyncProduct", "Iot");
 	}
 
 	private String productModel;

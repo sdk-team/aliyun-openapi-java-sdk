@@ -24,7 +24,7 @@ import java.util.List;
 public class BatchServiceMigrateToUnifyRequest extends RpcAcsRequest<BatchServiceMigrateToUnifyResponse> {
 	
 	public BatchServiceMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "BatchServiceMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "BatchServiceMigrateToUnify", "Iot");
 	}
 
 	private List<Service> services;

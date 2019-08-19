@@ -85,6 +85,7 @@ public class GetPoolFunctionsByIdListForTmallGenieResponseUnmarshaller {
 				argument.setDirection(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].Direction"));
 				argument.setDataSpecs(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].DataSpecs"));
 				argument.setDataSpecsList(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].DataSpecsList"));
+				argument.setTmallFunctionId(_ctx.longValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].InputParams["+ j +"].TmallFunctionId"));
 
 				inputParams.add(argument);
 			}
@@ -100,6 +101,7 @@ public class GetPoolFunctionsByIdListForTmallGenieResponseUnmarshaller {
 				argument2.setName(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].Name"));
 				argument2.setDataSpecs(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].DataSpecs"));
 				argument2.setDataSpecsList(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].DataSpecsList"));
+				argument2.setTmallFunctionId(_ctx.longValue("GetPoolFunctionsByIdListForTmallGenieResponse.ServiceInfos["+ i +"].OutputParams["+ j +"].TmallFunctionId"));
 
 				outputParams.add(argument2);
 			}
@@ -137,6 +139,7 @@ public class GetPoolFunctionsByIdListForTmallGenieResponseUnmarshaller {
 				argument5.setParaOrder(_ctx.integerValue("GetPoolFunctionsByIdListForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].ParaOrder"));
 				argument5.setDataSpecs(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].DataSpecs"));
 				argument5.setDataSpecsList(_ctx.stringValue("GetPoolFunctionsByIdListForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].DataSpecsList"));
+				argument5.setTmallFunctionId(_ctx.longValue("GetPoolFunctionsByIdListForTmallGenieResponse.EventInfos["+ i +"].OutputData["+ j +"].TmallFunctionId"));
 
 				outputData.add(argument5);
 			}

@@ -79,6 +79,7 @@ public class GetProductFunctionForTmallGenieResponseUnmarshaller {
 			argument.setDirection(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].Direction"));
 			argument.setDataSpecs(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].DataSpecs"));
 			argument.setDataSpecsList(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].DataSpecsList"));
+			argument.setTmallFunctionId(_ctx.longValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.InputParams["+ i +"].TmallFunctionId"));
 
 			inputParams.add(argument);
 		}
@@ -95,6 +96,7 @@ public class GetProductFunctionForTmallGenieResponseUnmarshaller {
 			argument2.setName(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].Name"));
 			argument2.setDataSpecs(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].DataSpecs"));
 			argument2.setDataSpecsList(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].DataSpecsList"));
+			argument2.setTmallFunctionId(_ctx.longValue("GetProductFunctionForTmallGenieResponse.ServiceInfo.OutputParams["+ i +"].TmallFunctionId"));
 
 			outputParams.add(argument2);
 		}
@@ -128,6 +130,7 @@ public class GetProductFunctionForTmallGenieResponseUnmarshaller {
 			argument5.setParaOrder(_ctx.integerValue("GetProductFunctionForTmallGenieResponse.EventInfos.OutputData["+ i +"].ParaOrder"));
 			argument5.setDataSpecs(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.EventInfos.OutputData["+ i +"].DataSpecs"));
 			argument5.setDataSpecsList(_ctx.stringValue("GetProductFunctionForTmallGenieResponse.EventInfos.OutputData["+ i +"].DataSpecsList"));
+			argument5.setTmallFunctionId(_ctx.longValue("GetProductFunctionForTmallGenieResponse.EventInfos.OutputData["+ i +"].TmallFunctionId"));
 
 			outputData.add(argument5);
 		}

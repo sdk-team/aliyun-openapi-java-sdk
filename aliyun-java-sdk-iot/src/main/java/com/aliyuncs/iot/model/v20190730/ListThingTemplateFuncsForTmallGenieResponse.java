@@ -329,6 +329,8 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			private String dataSpecsList;
 
+			private Long tmallFunctionId;
+
 			public String getDataType() {
 				return this.dataType;
 			}
@@ -383,6 +385,14 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			public void setDataSpecsList(String dataSpecsList) {
 				this.dataSpecsList = dataSpecsList;
+			}
+
+			public Long getTmallFunctionId() {
+				return this.tmallFunctionId;
+			}
+
+			public void setTmallFunctionId(Long tmallFunctionId) {
+				this.tmallFunctionId = tmallFunctionId;
 			}
 		}
 
@@ -402,6 +412,8 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			private String dataSpecsList;
 
+			private Long tmallFunctionId;
+
 			public String getDataType() {
 				return this.dataType;
 			}
@@ -456,6 +468,14 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			public void setDataSpecsList(String dataSpecsList) {
 				this.dataSpecsList = dataSpecsList;
+			}
+
+			public Long getTmallFunctionId() {
+				return this.tmallFunctionId;
+			}
+
+			public void setTmallFunctionId(Long tmallFunctionId) {
+				this.tmallFunctionId = tmallFunctionId;
 			}
 		}
 
@@ -579,6 +599,8 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			private String dataSpecsList;
 
+			private Long tmallFunctionId;
+
 			public String getDataType() {
 				return this.dataType;
 			}
@@ -625,6 +647,14 @@ public class ListThingTemplateFuncsForTmallGenieResponse extends AcsResponse {
 
 			public void setDataSpecsList(String dataSpecsList) {
 				this.dataSpecsList = dataSpecsList;
+			}
+
+			public Long getTmallFunctionId() {
+				return this.tmallFunctionId;
+			}
+
+			public void setTmallFunctionId(Long tmallFunctionId) {
+				this.tmallFunctionId = tmallFunctionId;
 			}
 		}
 

@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListThingTemplateForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateForTmallGenieResponse> {
 	
 	public ListThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "ListThingTemplateForTmallGenie", "Iot");
 	}
 
 	private String keywords;
