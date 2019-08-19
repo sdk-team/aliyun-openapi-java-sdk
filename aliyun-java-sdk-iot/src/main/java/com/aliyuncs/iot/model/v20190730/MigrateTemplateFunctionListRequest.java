@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class MigrateTemplateFunctionListRequest extends RpcAcsRequest<MigrateTemplateFunctionListResponse> {
 	
 	public MigrateTemplateFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigrateTemplateFunctionList", "iot");
+		super("Iot", "2019-07-30", "MigrateTemplateFunctionList", "Iot");
 	}
 
 	private String packInfo;

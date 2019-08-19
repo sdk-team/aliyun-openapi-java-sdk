@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class MigratePoolFunctionListRequest extends RpcAcsRequest<MigratePoolFunctionListResponse> {
 	
 	public MigratePoolFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigratePoolFunctionList", "iot");
+		super("Iot", "2019-07-30", "MigratePoolFunctionList", "Iot");
 	}
 
 	private String packInfo;
