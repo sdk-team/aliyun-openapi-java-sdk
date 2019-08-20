@@ -109,6 +109,7 @@ public class QueryProductInfoForTmallGenieResponseUnmarshaller {
 				argument.setParaOrder(_ctx.integerValue("QueryProductInfoForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].ParaOrder"));
 				argument.setDataSpecs(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecs"));
 				argument.setDataSpecsList(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].DataSpecsList"));
+				argument.setTmallFunctionId(_ctx.longValue("QueryProductInfoForTmallGenieResponse.Events["+ i +"].OutputData["+ j +"].TmallFunctionId"));
 
 				outputData.add(argument);
 			}
@@ -149,6 +150,7 @@ public class QueryProductInfoForTmallGenieResponseUnmarshaller {
 				argument4.setDirection(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].Direction"));
 				argument4.setDataSpecs(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].DataSpecs"));
 				argument4.setDataSpecsList(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].DataSpecsList"));
+				argument4.setTmallFunctionId(_ctx.longValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].InputParams["+ j +"].TmallFunctionId"));
 
 				inputParams.add(argument4);
 			}
@@ -165,6 +167,7 @@ public class QueryProductInfoForTmallGenieResponseUnmarshaller {
 				argument5.setName(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].Name"));
 				argument5.setDataSpecs(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].DataSpecs"));
 				argument5.setDataSpecsList(_ctx.stringValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].DataSpecsList"));
+				argument5.setTmallFunctionId(_ctx.longValue("QueryProductInfoForTmallGenieResponse.Services["+ i +"].OutputParams["+ j +"].TmallFunctionId"));
 
 				outputParams.add(argument5);
 			}
