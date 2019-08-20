@@ -12,21 +12,21 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.model.v20180713;
+package com.aliyuncs.ft.model.v20190802;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.ft.transform.v20180713.FtGatedLaunchPolicy4ResponseUnmarshaller;
+import com.aliyuncs.ft.transform.v20190802.TestPortalResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class FtGatedLaunchPolicy4Response extends AcsResponse {
+public class TestPortalResponse extends AcsResponse {
 
 	private String requestId;
 
-	private String isGatedLaunch;
+	private String code;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -36,16 +36,16 @@ public class FtGatedLaunchPolicy4Response extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public String getIsGatedLaunch() {
-		return this.isGatedLaunch;
+	public String getCode() {
+		return this.code;
 	}
 
-	public void setIsGatedLaunch(String isGatedLaunch) {
-		this.isGatedLaunch = isGatedLaunch;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	@Override
-	public FtGatedLaunchPolicy4Response getInstance(UnmarshallerContext context) {
-		return	FtGatedLaunchPolicy4ResponseUnmarshaller.unmarshall(this, context);
+	public TestPortalResponse getInstance(UnmarshallerContext context) {
+		return	TestPortalResponseUnmarshaller.unmarshall(this, context);
 	}
 }

@@ -12,20 +12,19 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.transform.v20180713;
+package com.aliyuncs.ft.transform.v20190802;
 
-import com.aliyuncs.ft.model.v20180713.FtEagleEyeResponse;
+import com.aliyuncs.ft.model.v20190802.TestPortalResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class FtEagleEyeResponseUnmarshaller {
+public class TestPortalResponseUnmarshaller {
 
-	public static FtEagleEyeResponse unmarshall(FtEagleEyeResponse ftEagleEyeResponse, UnmarshallerContext context) {
+	public static TestPortalResponse unmarshall(TestPortalResponse testPortalResponse, UnmarshallerContext _ctx) {
 		
-		ftEagleEyeResponse.setRequestId(context.stringValue("FtEagleEyeResponse.RequestId"));
-		ftEagleEyeResponse.setName(context.stringValue("FtEagleEyeResponse.Name"));
-		ftEagleEyeResponse.setEagleEyeTraceId(context.stringValue("FtEagleEyeResponse.eagleEyeTraceId"));
+		testPortalResponse.setRequestId(_ctx.stringValue("TestPortalResponse.RequestId"));
+		testPortalResponse.setCode(_ctx.stringValue("TestPortalResponse.Code"));
 	 
-	 	return ftEagleEyeResponse;
+	 	return testPortalResponse;
 	}
 }

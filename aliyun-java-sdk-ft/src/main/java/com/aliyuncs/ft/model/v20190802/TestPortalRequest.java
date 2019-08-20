@@ -12,18 +12,21 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.model.v20180713;
+package com.aliyuncs.ft.model.v20190802;
 
-import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.RoaAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
  * @version 
  */
-public class FtFlowSpecialRequest extends RpcAcsRequest<FtFlowSpecialResponse> {
+public class TestPortalRequest extends RoaAcsRequest<TestPortalResponse> {
 	
-	public FtFlowSpecialRequest() {
-		super("Ft", "2018-07-13", "FtFlowSpecial", "ft");
+	public TestPortalRequest() {
+		super("Ft", "2019-08-02", "TestPortal", "ft");
+		setUriPattern("/portal");
+		setMethod(MethodType.POST);
 	}
 
 	private String name;
@@ -40,8 +43,8 @@ public class FtFlowSpecialRequest extends RpcAcsRequest<FtFlowSpecialResponse> {
 	}
 
 	@Override
-	public Class<FtFlowSpecialResponse> getResponseClass() {
-		return FtFlowSpecialResponse.class;
+	public Class<TestPortalResponse> getResponseClass() {
+		return TestPortalResponse.class;
 	}
 
 }

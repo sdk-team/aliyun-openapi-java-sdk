@@ -12,21 +12,21 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.model.v20180713;
+package com.aliyuncs.ft.model.v20190802;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.ft.transform.v20180713.FTApiAliasApiResponseUnmarshaller;
+import com.aliyuncs.ft.transform.v20190802.RoaHttpStringResponseTestResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class FTApiAliasApiResponse extends AcsResponse {
+public class RoaHttpStringResponseTestResponse extends AcsResponse {
 
 	private String requestId;
 
-	private String name;
+	private Params params;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -36,16 +36,29 @@ public class FTApiAliasApiResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public String getName() {
-		return this.name;
+	public Params getParams() {
+		return this.params;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setParams(Params params) {
+		this.params = params;
+	}
+
+	public static class Params {
+
+		private String queryParam;
+
+		public String getQueryParam() {
+			return this.queryParam;
+		}
+
+		public void setQueryParam(String queryParam) {
+			this.queryParam = queryParam;
+		}
 	}
 
 	@Override
-	public FTApiAliasApiResponse getInstance(UnmarshallerContext context) {
-		return	FTApiAliasApiResponseUnmarshaller.unmarshall(this, context);
+	public RoaHttpStringResponseTestResponse getInstance(UnmarshallerContext context) {
+		return	RoaHttpStringResponseTestResponseUnmarshaller.unmarshall(this, context);
 	}
 }
