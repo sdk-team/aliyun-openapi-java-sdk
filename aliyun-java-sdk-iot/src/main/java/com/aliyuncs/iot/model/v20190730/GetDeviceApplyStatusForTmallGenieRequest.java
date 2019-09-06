@@ -21,15 +21,13 @@ import java.util.List;
  * @author auto create
  * @version 
  */
-public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddProductIdentifierForTmallGenieResponse> {
+public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetDeviceApplyStatusForTmallGenieResponse> {
 	
-	public AddProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie", "iot");
+	public GetDeviceApplyStatusForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "GetDeviceApplyStatusForTmallGenie", "iot");
 	}
 
-	private List<String> identifiers;
-
-	private String tmallGenieTraceId;
+	private List<String> applyIds;
 
 	private String apiProduct;
 
@@ -37,28 +35,17 @@ public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddP
 
 	private String productKey;
 
-	public List<String> getIdentifiers() {
-		return this.identifiers;
+	public List<String> getApplyIds() {
+		return this.applyIds;
 	}
 
-	public void setIdentifiers(List<String> identifiers) {
-		this.identifiers = identifiers;	
-		if (identifiers != null) {
-			for (int i = 0; i < identifiers.size(); i++) {
-				putQueryParameter("Identifier." + (i + 1) , identifiers.get(i));
+	public void setApplyIds(List<String> applyIds) {
+		this.applyIds = applyIds;	
+		if (applyIds != null) {
+			for (int i = 0; i < applyIds.size(); i++) {
+				putQueryParameter("ApplyId." + (i + 1) , applyIds.get(i));
 			}
 		}	
-	}
-
-	public String getTmallGenieTraceId() {
-		return this.tmallGenieTraceId;
-	}
-
-	public void setTmallGenieTraceId(String tmallGenieTraceId) {
-		this.tmallGenieTraceId = tmallGenieTraceId;
-		if(tmallGenieTraceId != null){
-			putQueryParameter("TmallGenieTraceId", tmallGenieTraceId);
-		}
 	}
 
 	public String getApiProduct() {
@@ -95,8 +82,8 @@ public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddP
 	}
 
 	@Override
-	public Class<AddProductIdentifierForTmallGenieResponse> getResponseClass() {
-		return AddProductIdentifierForTmallGenieResponse.class;
+	public Class<GetDeviceApplyStatusForTmallGenieResponse> getResponseClass() {
+		return GetDeviceApplyStatusForTmallGenieResponse.class;
 	}
 
 }

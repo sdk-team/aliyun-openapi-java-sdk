@@ -24,7 +24,7 @@ import java.util.List;
 public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdResponse> {
 	
 	public EventMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToProd", "Iot");
+		super("Iot", "2019-07-30", "EventMigrateToProd", "iot");
 	}
 
 	private String identifier;

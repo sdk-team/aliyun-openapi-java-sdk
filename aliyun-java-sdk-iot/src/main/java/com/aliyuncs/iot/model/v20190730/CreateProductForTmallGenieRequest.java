@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProductForTmallGenieResponse> {
 	
 	public CreateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateProductForTmallGenie", "Iot");
+		super("Iot", "2019-07-30", "CreateProductForTmallGenie", "iot");
 	}
 
 	private String productModel;
@@ -32,15 +32,19 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 
 	private Integer nodeType;
 
-	private String iotInstanceId;
+	private String tmallGenieTraceId;
 
 	private Integer netType;
+
+	private String apiProduct;
 
 	private String taoBaoId;
 
 	private String productName;
 
 	private String description;
+
+	private String apiRevision;
 
 	private String productBrand;
 
@@ -79,14 +83,14 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getTmallGenieTraceId() {
+		return this.tmallGenieTraceId;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setTmallGenieTraceId(String tmallGenieTraceId) {
+		this.tmallGenieTraceId = tmallGenieTraceId;
+		if(tmallGenieTraceId != null){
+			putQueryParameter("TmallGenieTraceId", tmallGenieTraceId);
 		}
 	}
 
@@ -98,6 +102,17 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.netType = netType;
 		if(netType != null){
 			putBodyParameter("NetType", netType.toString());
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
@@ -131,6 +146,17 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.description = description;
 		if(description != null){
 			putBodyParameter("Description", description);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

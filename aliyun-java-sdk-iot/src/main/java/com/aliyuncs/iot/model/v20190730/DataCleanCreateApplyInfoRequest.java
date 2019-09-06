@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanCreateApplyInfoRequest extends RpcAcsRequest<DataCleanCreateApplyInfoResponse> {
 	
 	public DataCleanCreateApplyInfoRequest() {
-		super("Iot", "2019-07-30", "DataCleanCreateApplyInfo", "Iot");
+		super("Iot", "2019-07-30", "DataCleanCreateApplyInfo", "iot");
 	}
 
 	private String iotInstanceId;

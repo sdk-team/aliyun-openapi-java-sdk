@@ -23,7 +23,7 @@ import com.aliyuncs.RpcAcsRequest;
 public class GetThingModelInfoRequest extends RpcAcsRequest<GetThingModelInfoResponse> {
 	
 	public GetThingModelInfoRequest() {
-		super("Iot", "2019-07-30", "GetThingModelInfo", "Iot");
+		super("Iot", "2019-07-30", "GetThingModelInfo", "iot");
 	}
 
 	private String iotInstanceId;

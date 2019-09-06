@@ -24,7 +24,7 @@ import java.util.List;
 public class CategoryServiceMigrateRequest extends RpcAcsRequest<CategoryServiceMigrateResponse> {
 	
 	public CategoryServiceMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryServiceMigrate", "Iot");
+		super("Iot", "2019-07-30", "CategoryServiceMigrate", "iot");
 	}
 
 	private List<Service> services;
