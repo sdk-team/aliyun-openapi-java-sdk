@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,8 +24,19 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProductResponse> {
 	
 	public DataCleanSyncProductRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncProduct", "iot");
+		super("Iot", "2019-07-30", "DataCleanSyncProduct");
+		setMethod(MethodType.POST);
 	}
+
+	private Integer deviceCount;
+
+	private String taobaoId;
+
+	private String resourceGroupId;
+
+	private String iotInstanceId;
+
+	private Long categoryId;
 
 	private String productModel;
 
@@ -32,23 +44,68 @@ public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProd
 
 	private Integer dataFormat;
 
-	private Integer deviceCount;
-
-	private String taobaoId;
-
 	private String actionStr;
 
 	private String productKey;
-
-	private String resourceGroupId;
-
-	private String iotInstanceId;
 
 	private Integer netType;
 
 	private String name;
 
-	private Long categoryId;
+	public Integer getDeviceCount() {
+		return this.deviceCount;
+	}
+
+	public void setDeviceCount(Integer deviceCount) {
+		this.deviceCount = deviceCount;
+		if(deviceCount != null){
+			putQueryParameter("DeviceCount", deviceCount.toString());
+		}
+	}
+
+	public String getTaobaoId() {
+		return this.taobaoId;
+	}
+
+	public void setTaobaoId(String taobaoId) {
+		this.taobaoId = taobaoId;
+		if(taobaoId != null){
+			putQueryParameter("TaobaoId", taobaoId);
+		}
+	}
+
+	public String getResourceGroupId() {
+		return this.resourceGroupId;
+	}
+
+	public void setResourceGroupId(String resourceGroupId) {
+		this.resourceGroupId = resourceGroupId;
+		if(resourceGroupId != null){
+			putQueryParameter("ResourceGroupId", resourceGroupId);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Long getCategoryId() {
+		return this.categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+		if(categoryId != null){
+			putQueryParameter("CategoryId", categoryId.toString());
+		}
+	}
 
 	public String getProductModel() {
 		return this.productModel;
@@ -83,28 +140,6 @@ public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProd
 		}
 	}
 
-	public Integer getDeviceCount() {
-		return this.deviceCount;
-	}
-
-	public void setDeviceCount(Integer deviceCount) {
-		this.deviceCount = deviceCount;
-		if(deviceCount != null){
-			putQueryParameter("DeviceCount", deviceCount.toString());
-		}
-	}
-
-	public String getTaobaoId() {
-		return this.taobaoId;
-	}
-
-	public void setTaobaoId(String taobaoId) {
-		this.taobaoId = taobaoId;
-		if(taobaoId != null){
-			putQueryParameter("TaobaoId", taobaoId);
-		}
-	}
-
 	public String getActionStr() {
 		return this.actionStr;
 	}
@@ -127,28 +162,6 @@ public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProd
 		}
 	}
 
-	public String getResourceGroupId() {
-		return this.resourceGroupId;
-	}
-
-	public void setResourceGroupId(String resourceGroupId) {
-		this.resourceGroupId = resourceGroupId;
-		if(resourceGroupId != null){
-			putQueryParameter("ResourceGroupId", resourceGroupId);
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
 	public Integer getNetType() {
 		return this.netType;
 	}
@@ -168,17 +181,6 @@ public class DataCleanSyncProductRequest extends RpcAcsRequest<DataCleanSyncProd
 		this.name = name;
 		if(name != null){
 			putQueryParameter("Name", name);
-		}
-	}
-
-	public Long getCategoryId() {
-		return this.categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
-		if(categoryId != null){
-			putQueryParameter("CategoryId", categoryId.toString());
 		}
 	}
 

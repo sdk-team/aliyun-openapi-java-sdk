@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,7 +24,8 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateFuncsForTmallGenieResponse> {
 	
 	public ListThingTemplateFuncsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String thingTemplateKey;

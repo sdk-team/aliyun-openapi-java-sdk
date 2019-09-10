@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,8 +24,11 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductApplyListResponse> {
 	
 	public QueryProductApplyListRequest() {
-		super("Iot", "2019-07-30", "QueryProductApplyList", "iot");
+		super("Iot", "2019-07-30", "QueryProductApplyList");
+		setMethod(MethodType.POST);
 	}
+
+	private String productKey;
 
 	private Long pageNo;
 
@@ -32,7 +36,16 @@ public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductAppl
 
 	private Long pageSize;
 
-	private String productKey;
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
 
 	public Long getPageNo() {
 		return this.pageNo;
@@ -64,17 +77,6 @@ public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductAppl
 		this.pageSize = pageSize;
 		if(pageSize != null){
 			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

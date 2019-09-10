@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,10 +25,13 @@ import java.util.List;
 public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateEventForTmallGenieResponse> {
 	
 	public AddThingTemplateEventForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String identifier;
+
+	private List<Tags> tagss;
 
 	private List<OutputData> outputDatas;
 
@@ -39,8 +43,6 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 
 	private String eventType;
 
-	private List<Tags> tagss;
-
 	public String getIdentifier() {
 		return this.identifier;
 	}
@@ -50,6 +52,20 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 		if(identifier != null){
 			putQueryParameter("Identifier", identifier);
 		}
+	}
+
+	public List<Tags> getTagss() {
+		return this.tagss;
+	}
+
+	public void setTagss(List<Tags> tagss) {
+		this.tagss = tagss;	
+		if (tagss != null) {
+			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
+			}
+		}	
 	}
 
 	public List<OutputData> getOutputDatas() {
@@ -115,18 +131,27 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 		}
 	}
 
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
+	public static class Tags {
 
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
+		private String tagValue;
+
+		private String tagKey;
+
+		public String getTagValue() {
+			return this.tagValue;
+		}
+
+		public void setTagValue(String tagValue) {
+			this.tagValue = tagValue;
+		}
+
+		public String getTagKey() {
+			return this.tagKey;
+		}
+
+		public void setTagKey(String tagKey) {
+			this.tagKey = tagKey;
+		}
 	}
 
 	public static class OutputData {
@@ -199,29 +224,6 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 
 		public void setDirection(String direction) {
 			this.direction = direction;
-		}
-	}
-
-	public static class Tags {
-
-		private String tagValue;
-
-		private String tagKey;
-
-		public String getTagValue() {
-			return this.tagValue;
-		}
-
-		public void setTagValue(String tagValue) {
-			this.tagValue = tagValue;
-		}
-
-		public String getTagKey() {
-			return this.tagKey;
-		}
-
-		public void setTagKey(String tagKey) {
-			this.tagKey = tagKey;
 		}
 	}
 

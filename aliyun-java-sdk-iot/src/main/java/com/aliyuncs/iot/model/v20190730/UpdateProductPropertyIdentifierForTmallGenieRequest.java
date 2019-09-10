@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,37 +24,27 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateProductPropertyIdentifierForTmallGenieRequest extends RpcAcsRequest<UpdateProductPropertyIdentifierForTmallGenieResponse> {
 	
 	public UpdateProductPropertyIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductPropertyIdentifierForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateProductPropertyIdentifierForTmallGenie");
+		setMethod(MethodType.POST);
 	}
-
-	private String identifier;
 
 	private String dataSpecs;
 
-	private String rwType;
+	private String description;
+
+	private String dataSpecsList;
 
 	private String dataType;
 
 	private String iotInstanceId;
 
-	private String name;
-
-	private String description;
+	private String identifier;
 
 	private String productKey;
 
-	private String dataSpecsList;
+	private String rwType;
 
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
+	private String name;
 
 	public String getDataSpecs() {
 		return this.dataSpecs;
@@ -66,14 +57,25 @@ public class UpdateProductPropertyIdentifierForTmallGenieRequest extends RpcAcsR
 		}
 	}
 
-	public String getRwType() {
-		return this.rwType;
+	public String getDescription() {
+		return this.description;
 	}
 
-	public void setRwType(String rwType) {
-		this.rwType = rwType;
-		if(rwType != null){
-			putBodyParameter("RwType", rwType);
+	public void setDescription(String description) {
+		this.description = description;
+		if(description != null){
+			putBodyParameter("Description", description);
+		}
+	}
+
+	public String getDataSpecsList() {
+		return this.dataSpecsList;
+	}
+
+	public void setDataSpecsList(String dataSpecsList) {
+		this.dataSpecsList = dataSpecsList;
+		if(dataSpecsList != null){
+			putBodyParameter("DataSpecsList", dataSpecsList);
 		}
 	}
 
@@ -99,25 +101,14 @@ public class UpdateProductPropertyIdentifierForTmallGenieRequest extends RpcAcsR
 		}
 	}
 
-	public String getName() {
-		return this.name;
+	public String getIdentifier() {
+		return this.identifier;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putBodyParameter("Name", name);
-		}
-	}
-
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-		if(description != null){
-			putBodyParameter("Description", description);
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
 		}
 	}
 
@@ -132,14 +123,25 @@ public class UpdateProductPropertyIdentifierForTmallGenieRequest extends RpcAcsR
 		}
 	}
 
-	public String getDataSpecsList() {
-		return this.dataSpecsList;
+	public String getRwType() {
+		return this.rwType;
 	}
 
-	public void setDataSpecsList(String dataSpecsList) {
-		this.dataSpecsList = dataSpecsList;
-		if(dataSpecsList != null){
-			putBodyParameter("DataSpecsList", dataSpecsList);
+	public void setRwType(String rwType) {
+		this.rwType = rwType;
+		if(rwType != null){
+			putBodyParameter("RwType", rwType);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putBodyParameter("Name", name);
 		}
 	}
 

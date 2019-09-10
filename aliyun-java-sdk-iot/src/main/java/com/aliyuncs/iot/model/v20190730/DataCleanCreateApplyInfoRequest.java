@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,25 +24,15 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanCreateApplyInfoRequest extends RpcAcsRequest<DataCleanCreateApplyInfoResponse> {
 	
 	public DataCleanCreateApplyInfoRequest() {
-		super("Iot", "2019-07-30", "DataCleanCreateApplyInfo", "iot");
+		super("Iot", "2019-07-30", "DataCleanCreateApplyInfo");
+		setMethod(MethodType.POST);
 	}
-
-	private String iotInstanceId;
 
 	private Long applyCount;
 
 	private String productKey;
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
+	private String iotInstanceId;
 
 	public Long getApplyCount() {
 		return this.applyCount;
@@ -62,6 +53,17 @@ public class DataCleanCreateApplyInfoRequest extends RpcAcsRequest<DataCleanCrea
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 

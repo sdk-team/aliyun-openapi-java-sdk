@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,25 +25,15 @@ import java.util.List;
 public class DataCleanSyncDeviceApplyInfoRequest extends RpcAcsRequest<DataCleanSyncDeviceApplyInfoResponse> {
 	
 	public DataCleanSyncDeviceApplyInfoRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDeviceApplyInfo", "iot");
+		super("Iot", "2019-07-30", "DataCleanSyncDeviceApplyInfo");
+		setMethod(MethodType.POST);
 	}
-
-	private String applyId;
 
 	private List<Devices> devicess;
 
+	private String applyId;
+
 	private String iotInstanceId;
-
-	public String getApplyId() {
-		return this.applyId;
-	}
-
-	public void setApplyId(String applyId) {
-		this.applyId = applyId;
-		if(applyId != null){
-			putQueryParameter("ApplyId", applyId);
-		}
-	}
 
 	public List<Devices> getDevicess() {
 		return this.devicess;
@@ -56,6 +47,17 @@ public class DataCleanSyncDeviceApplyInfoRequest extends RpcAcsRequest<DataClean
 				putQueryParameter("Devices." + (depth1 + 1) + ".ProductKey" , devicess.get(depth1).getProductKey());
 			}
 		}	
+	}
+
+	public String getApplyId() {
+		return this.applyId;
+	}
+
+	public void setApplyId(String applyId) {
+		this.applyId = applyId;
+		if(applyId != null){
+			putQueryParameter("ApplyId", applyId);
+		}
 	}
 
 	public String getIotInstanceId() {

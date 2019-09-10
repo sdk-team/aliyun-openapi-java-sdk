@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,39 +25,29 @@ import java.util.List;
 public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<AddThingTemplatePropertyForTmallGenieResponse> {
 	
 	public AddThingTemplatePropertyForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplatePropertyForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
-	private String identifier;
-
 	private String dataSpecs;
-
-	private Long tmallFunctionId;
-
-	private String rwType;
-
-	private String dataType;
-
-	private String iotInstanceId;
-
-	private String name;
 
 	private String description;
 
 	private String dataSpecsList;
 
+	private Long tmallFunctionId;
+
+	private String dataType;
+
+	private String iotInstanceId;
+
+	private String identifier;
+
 	private List<Tags> tagss;
 
-	public String getIdentifier() {
-		return this.identifier;
-	}
+	private String rwType;
 
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
+	private String name;
 
 	public String getDataSpecs() {
 		return this.dataSpecs;
@@ -66,61 +57,6 @@ public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<
 		this.dataSpecs = dataSpecs;
 		if(dataSpecs != null){
 			putQueryParameter("DataSpecs", dataSpecs);
-		}
-	}
-
-	public Long getTmallFunctionId() {
-		return this.tmallFunctionId;
-	}
-
-	public void setTmallFunctionId(Long tmallFunctionId) {
-		this.tmallFunctionId = tmallFunctionId;
-		if(tmallFunctionId != null){
-			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
-		}
-	}
-
-	public String getRwType() {
-		return this.rwType;
-	}
-
-	public void setRwType(String rwType) {
-		this.rwType = rwType;
-		if(rwType != null){
-			putQueryParameter("RwType", rwType);
-		}
-	}
-
-	public String getDataType() {
-		return this.dataType;
-	}
-
-	public void setDataType(String dataType) {
-		this.dataType = dataType;
-		if(dataType != null){
-			putQueryParameter("DataType", dataType);
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
 		}
 	}
 
@@ -146,6 +82,50 @@ public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<
 		}
 	}
 
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
+	}
+
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
+	}
+
+	public String getDataType() {
+		return this.dataType;
+	}
+
+	public void setDataType(String dataType) {
+		this.dataType = dataType;
+		if(dataType != null){
+			putQueryParameter("DataType", dataType);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
 	public List<Tags> getTagss() {
 		return this.tagss;
 	}
@@ -158,6 +138,28 @@ public class AddThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<
 				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public String getRwType() {
+		return this.rwType;
+	}
+
+	public void setRwType(String rwType) {
+		this.rwType = rwType;
+		if(rwType != null){
+			putQueryParameter("RwType", rwType);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
 	}
 
 	public static class Tags {

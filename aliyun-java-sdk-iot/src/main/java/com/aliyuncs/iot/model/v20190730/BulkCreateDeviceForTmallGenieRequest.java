@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,14 +24,26 @@ import com.aliyuncs.RpcAcsRequest;
 public class BulkCreateDeviceForTmallGenieRequest extends RpcAcsRequest<BulkCreateDeviceForTmallGenieResponse> {
 	
 	public BulkCreateDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "BulkCreateDeviceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "BulkCreateDeviceForTmallGenie");
+		setMethod(MethodType.POST);
 	}
+
+	private String productKey;
 
 	private String iotInstanceId;
 
 	private Integer quota;
 
-	private String productKey;
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -51,17 +64,6 @@ public class BulkCreateDeviceForTmallGenieRequest extends RpcAcsRequest<BulkCrea
 		this.quota = quota;
 		if(quota != null){
 			putQueryParameter("Quota", quota.toString());
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

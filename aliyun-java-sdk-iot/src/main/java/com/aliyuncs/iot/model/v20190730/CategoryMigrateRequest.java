@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,8 +25,11 @@ import java.util.List;
 public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateResponse> {
 	
 	public CategoryMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryMigrate", "iot");
+		super("Iot", "2019-07-30", "CategoryMigrate");
+		setMethod(MethodType.POST);
 	}
+
+	private String categoryKey;
 
 	private String iotInstanceId;
 
@@ -33,13 +37,22 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 
 	private String namespace;
 
-	private String categoryKey;
-
 	private String categoryName;
 
 	private List<Tag> tags;
 
 	private String bizTenantId;
+
+	public String getCategoryKey() {
+		return this.categoryKey;
+	}
+
+	public void setCategoryKey(String categoryKey) {
+		this.categoryKey = categoryKey;
+		if(categoryKey != null){
+			putQueryParameter("CategoryKey", categoryKey);
+		}
+	}
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -71,17 +84,6 @@ public class CategoryMigrateRequest extends RpcAcsRequest<CategoryMigrateRespons
 		this.namespace = namespace;
 		if(namespace != null){
 			putQueryParameter("Namespace", namespace);
-		}
-	}
-
-	public String getCategoryKey() {
-		return this.categoryKey;
-	}
-
-	public void setCategoryKey(String categoryKey) {
-		this.categoryKey = categoryKey;
-		if(categoryKey != null){
-			putQueryParameter("CategoryKey", categoryKey);
 		}
 	}
 

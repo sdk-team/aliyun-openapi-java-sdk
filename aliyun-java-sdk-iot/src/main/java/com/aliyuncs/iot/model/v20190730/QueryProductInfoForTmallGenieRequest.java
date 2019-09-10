@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,14 +25,26 @@ import java.util.List;
 public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryProductInfoForTmallGenieResponse> {
 	
 	public QueryProductInfoForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "QueryProductInfoForTmallGenie");
+		setMethod(MethodType.POST);
 	}
+
+	private String productKey;
 
 	private List<String> fields;
 
 	private String iotInstanceId;
 
-	private String productKey;
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
 
 	public List<String> getFields() {
 		return this.fields;
@@ -54,17 +67,6 @@ public class QueryProductInfoForTmallGenieRequest extends RpcAcsRequest<QueryPro
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

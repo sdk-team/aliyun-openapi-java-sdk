@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,18 +25,19 @@ import java.util.List;
 public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateForTmallGenieResponse> {
 	
 	public AddThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String thingTemplateKey;
 
-	private Long thingTemplateId;
-
-	private String iotInstanceId;
-
 	private String thingTemplateName;
 
 	private List<Tags> tagss;
+
+	private Long thingTemplateId;
+
+	private String iotInstanceId;
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -45,28 +47,6 @@ public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThing
 		this.thingTemplateKey = thingTemplateKey;
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
-		}
-	}
-
-	public Long getThingTemplateId() {
-		return this.thingTemplateId;
-	}
-
-	public void setThingTemplateId(Long thingTemplateId) {
-		this.thingTemplateId = thingTemplateId;
-		if(thingTemplateId != null){
-			putQueryParameter("ThingTemplateId", thingTemplateId.toString());
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -93,6 +73,28 @@ public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThing
 				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public Long getThingTemplateId() {
+		return this.thingTemplateId;
+	}
+
+	public void setThingTemplateId(Long thingTemplateId) {
+		this.thingTemplateId = thingTemplateId;
+		if(thingTemplateId != null){
+			putQueryParameter("ThingTemplateId", thingTemplateId.toString());
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
 	}
 
 	public static class Tags {

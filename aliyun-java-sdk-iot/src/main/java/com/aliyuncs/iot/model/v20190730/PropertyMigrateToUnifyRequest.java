@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,12 +25,9 @@ import java.util.List;
 public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrateToUnifyResponse> {
 	
 	public PropertyMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToUnify");
+		setMethod(MethodType.POST);
 	}
-
-	private String identifier;
-
-	private String creator;
 
 	private String thingTemplateKey;
 
@@ -45,19 +43,11 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 
 	private String dataSpecsId;
 
-	private String thingTemplateName;
-
 	private String dataType;
 
 	private String templateType;
 
 	private String iotInstanceId;
-
-	private String name;
-
-	private String namespace;
-
-	private String categoryName;
 
 	private String definition;
 
@@ -65,31 +55,21 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 
 	private List<Tag> tags;
 
+	private String identifier;
+
+	private String creator;
+
+	private String thingTemplateName;
+
+	private String name;
+
+	private String namespace;
+
+	private String categoryName;
+
 	private String bizTenantId;
 
 	private String accessMode;
-
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
-
-	public String getCreator() {
-		return this.creator;
-	}
-
-	public void setCreator(String creator) {
-		this.creator = creator;
-		if(creator != null){
-			putQueryParameter("Creator", creator);
-		}
-	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -168,17 +148,6 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		}
 	}
 
-	public String getThingTemplateName() {
-		return this.thingTemplateName;
-	}
-
-	public void setThingTemplateName(String thingTemplateName) {
-		this.thingTemplateName = thingTemplateName;
-		if(thingTemplateName != null){
-			putQueryParameter("ThingTemplateName", thingTemplateName);
-		}
-	}
-
 	public String getDataType() {
 		return this.dataType;
 	}
@@ -209,39 +178,6 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
-		}
-	}
-
-	public String getNamespace() {
-		return this.namespace;
-	}
-
-	public void setNamespace(String namespace) {
-		this.namespace = namespace;
-		if(namespace != null){
-			putQueryParameter("Namespace", namespace);
-		}
-	}
-
-	public String getCategoryName() {
-		return this.categoryName;
-	}
-
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
-		if(categoryName != null){
-			putQueryParameter("CategoryName", categoryName);
 		}
 	}
 
@@ -279,6 +215,72 @@ public class PropertyMigrateToUnifyRequest extends RpcAcsRequest<PropertyMigrate
 				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getCreator() {
+		return this.creator;
+	}
+
+	public void setCreator(String creator) {
+		this.creator = creator;
+		if(creator != null){
+			putQueryParameter("Creator", creator);
+		}
+	}
+
+	public String getThingTemplateName() {
+		return this.thingTemplateName;
+	}
+
+	public void setThingTemplateName(String thingTemplateName) {
+		this.thingTemplateName = thingTemplateName;
+		if(thingTemplateName != null){
+			putQueryParameter("ThingTemplateName", thingTemplateName);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getNamespace() {
+		return this.namespace;
+	}
+
+	public void setNamespace(String namespace) {
+		this.namespace = namespace;
+		if(namespace != null){
+			putQueryParameter("Namespace", namespace);
+		}
+	}
+
+	public String getCategoryName() {
+		return this.categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+		if(categoryName != null){
+			putQueryParameter("CategoryName", categoryName);
+		}
 	}
 
 	public String getBizTenantId() {

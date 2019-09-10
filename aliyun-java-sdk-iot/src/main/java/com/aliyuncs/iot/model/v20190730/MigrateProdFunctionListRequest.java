@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,16 +24,17 @@ import com.aliyuncs.RpcAcsRequest;
 public class MigrateProdFunctionListRequest extends RpcAcsRequest<MigrateProdFunctionListResponse> {
 	
 	public MigrateProdFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigrateProdFunctionList", "iot");
+		super("Iot", "2019-07-30", "MigrateProdFunctionList");
+		setMethod(MethodType.POST);
 	}
 
 	private String packInfo;
 
 	private String extension;
 
-	private String iotInstanceId;
-
 	private String productKey;
+
+	private String iotInstanceId;
 
 	private String bizTenantId;
 
@@ -58,17 +60,6 @@ public class MigrateProdFunctionListRequest extends RpcAcsRequest<MigrateProdFun
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
 	public String getProductKey() {
 		return this.productKey;
 	}
@@ -77,6 +68,17 @@ public class MigrateProdFunctionListRequest extends RpcAcsRequest<MigrateProdFun
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 

@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,7 +24,8 @@ import com.aliyuncs.RpcAcsRequest;
 public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProductForTmallGenieResponse> {
 	
 	public UpdateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateProductForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String productModel;
@@ -32,17 +34,17 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 
 	private Integer nodeType;
 
+	private String description;
+
+	private String productKey;
+
 	private String iotInstanceId;
 
 	private Integer netType;
 
 	private String productName;
 
-	private String description;
-
 	private String productBrand;
-
-	private String productKey;
 
 	public String getProductModel() {
 		return this.productModel;
@@ -74,6 +76,28 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		this.nodeType = nodeType;
 		if(nodeType != null){
 			putBodyParameter("NodeType", nodeType.toString());
+		}
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		if(description != null){
+			putQueryParameter("Description", description);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
 		}
 	}
 
@@ -110,17 +134,6 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		}
 	}
 
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-		if(description != null){
-			putQueryParameter("Description", description);
-		}
-	}
-
 	public String getProductBrand() {
 		return this.productBrand;
 	}
@@ -129,17 +142,6 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		this.productBrand = productBrand;
 		if(productBrand != null){
 			putBodyParameter("ProductBrand", productBrand);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,16 +25,13 @@ import java.util.List;
 public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToProdResponse> {
 	
 	public ServiceMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "ServiceMigrateToProd", "iot");
+		super("Iot", "2019-07-30", "ServiceMigrateToProd");
+		setMethod(MethodType.POST);
 	}
-
-	private String identifier;
 
 	private List<ArgsDTO> argsDTOs;
 
 	private String description;
-
-	private String productKey;
 
 	private String deviceType;
 
@@ -41,26 +39,19 @@ public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToP
 
 	private String iotInstanceId;
 
-	private String name;
-
-	private String categoryName;
-
 	private List<Tag> tags;
 
 	private String callType;
 
+	private String identifier;
+
+	private String productKey;
+
+	private String name;
+
+	private String categoryName;
+
 	private String bizTenantId;
-
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
 
 	public List<ArgsDTO> getArgsDTOs() {
 		return this.argsDTOs;
@@ -91,17 +82,6 @@ public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToP
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 
@@ -138,28 +118,6 @@ public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToP
 		}
 	}
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
-		}
-	}
-
-	public String getCategoryName() {
-		return this.categoryName;
-	}
-
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
-		if(categoryName != null){
-			putQueryParameter("CategoryName", categoryName);
-		}
-	}
-
 	public List<Tag> getTags() {
 		return this.tags;
 	}
@@ -182,6 +140,50 @@ public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToP
 		this.callType = callType;
 		if(callType != null){
 			putQueryParameter("CallType", callType);
+		}
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getCategoryName() {
+		return this.categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+		if(categoryName != null){
+			putQueryParameter("CategoryName", categoryName);
 		}
 	}
 

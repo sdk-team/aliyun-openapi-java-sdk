@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,31 +24,21 @@ import com.aliyuncs.RpcAcsRequest;
 public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyncDeviceUnbindResponse> {
 	
 	public DataCleanSyncDeviceUnbindRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind", "iot");
+		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind");
+		setMethod(MethodType.POST);
 	}
 
-	private String iotId;
-
 	private String taobaoId;
+
+	private String productKey;
+
+	private String iotId;
 
 	private String appkey;
 
 	private String deviceName;
 
 	private String from;
-
-	private String productKey;
-
-	public String getIotId() {
-		return this.iotId;
-	}
-
-	public void setIotId(String iotId) {
-		this.iotId = iotId;
-		if(iotId != null){
-			putQueryParameter("IotId", iotId);
-		}
-	}
 
 	public String getTaobaoId() {
 		return this.taobaoId;
@@ -57,6 +48,28 @@ public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyn
 		this.taobaoId = taobaoId;
 		if(taobaoId != null){
 			putQueryParameter("TaobaoId", taobaoId);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotId() {
+		return this.iotId;
+	}
+
+	public void setIotId(String iotId) {
+		this.iotId = iotId;
+		if(iotId != null){
+			putQueryParameter("IotId", iotId);
 		}
 	}
 
@@ -90,17 +103,6 @@ public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyn
 		this.from = from;
 		if(from != null){
 			putQueryParameter("From", from);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

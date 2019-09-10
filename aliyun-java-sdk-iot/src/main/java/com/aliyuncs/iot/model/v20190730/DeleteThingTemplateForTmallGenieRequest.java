@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,7 +24,8 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteThingTemplateForTmallGenieRequest extends RpcAcsRequest<DeleteThingTemplateForTmallGenieResponse> {
 	
 	public DeleteThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "DeleteThingTemplateForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "DeleteThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String thingTemplateKey;

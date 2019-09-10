@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,14 +25,11 @@ import java.util.List;
 public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateToProdResponse> {
 	
 	public PropertyMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToProd", "iot");
+		super("Iot", "2019-07-30", "PropertyMigrateToProd");
+		setMethod(MethodType.POST);
 	}
 
-	private String identifier;
-
 	private String description;
-
-	private String productKey;
 
 	private String deviceType;
 
@@ -43,30 +41,23 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 
 	private String iotInstanceId;
 
+	private String definition;
+
+	private List<Tag> tags;
+
+	private String identifier;
+
+	private String productKey;
+
 	private String name;
 
 	private String namespace;
 
 	private String categoryName;
 
-	private String definition;
-
-	private List<Tag> tags;
-
 	private String bizTenantId;
 
 	private String accessMode;
-
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
 
 	public String getDescription() {
 		return this.description;
@@ -76,17 +67,6 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 
@@ -145,6 +125,53 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		}
 	}
 
+	public String getDefinition() {
+		return this.definition;
+	}
+
+	public void setDefinition(String definition) {
+		this.definition = definition;
+		if(definition != null){
+			putQueryParameter("Definition", definition);
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
 	public String getName() {
 		return this.name;
 	}
@@ -176,31 +203,6 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 		if(categoryName != null){
 			putQueryParameter("CategoryName", categoryName);
 		}
-	}
-
-	public String getDefinition() {
-		return this.definition;
-	}
-
-	public void setDefinition(String definition) {
-		this.definition = definition;
-		if(definition != null){
-			putQueryParameter("Definition", definition);
-		}
-	}
-
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public String getBizTenantId() {

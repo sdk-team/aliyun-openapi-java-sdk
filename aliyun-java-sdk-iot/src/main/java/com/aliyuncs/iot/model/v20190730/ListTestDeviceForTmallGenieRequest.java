@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,8 +24,13 @@ import com.aliyuncs.RpcAcsRequest;
 public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDeviceForTmallGenieResponse> {
 	
 	public ListTestDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListTestDeviceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "ListTestDeviceForTmallGenie");
+		setMethod(MethodType.POST);
 	}
+
+	private String thingType;
+
+	private String productKey;
 
 	private Long pageNo;
 
@@ -32,9 +38,27 @@ public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDe
 
 	private Long pageSize;
 
-	private String thingType;
+	public String getThingType() {
+		return this.thingType;
+	}
 
-	private String productKey;
+	public void setThingType(String thingType) {
+		this.thingType = thingType;
+		if(thingType != null){
+			putQueryParameter("ThingType", thingType);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
 
 	public Long getPageNo() {
 		return this.pageNo;
@@ -66,28 +90,6 @@ public class ListTestDeviceForTmallGenieRequest extends RpcAcsRequest<ListTestDe
 		this.pageSize = pageSize;
 		if(pageSize != null){
 			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
-	public String getThingType() {
-		return this.thingType;
-	}
-
-	public void setThingType(String thingType) {
-		this.thingType = thingType;
-		if(thingType != null){
-			putQueryParameter("ThingType", thingType);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

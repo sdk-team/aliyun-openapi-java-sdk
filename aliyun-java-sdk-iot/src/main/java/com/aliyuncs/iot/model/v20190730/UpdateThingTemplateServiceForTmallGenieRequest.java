@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,37 +25,27 @@ import java.util.List;
 public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateServiceForTmallGenieResponse> {
 	
 	public UpdateThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplateServiceForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
-	private String identifier;
-
 	private String thingTemplateKey;
-
-	private List<InputParams> inputParamss;
 
 	private Long tmallFunctionId;
 
 	private String iotInstanceId;
 
-	private String name;
-
 	private String callType;
+
+	private String identifier;
+
+	private List<InputParams> inputParamss;
 
 	private List<OutputParams> outputParamss;
 
 	private List<Tags> tagss;
 
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
+	private String name;
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -65,25 +56,6 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
 		}
-	}
-
-	public List<InputParams> getInputParamss() {
-		return this.inputParamss;
-	}
-
-	public void setInputParamss(List<InputParams> inputParamss) {
-		this.inputParamss = inputParamss;	
-		if (inputParamss != null) {
-			for (int depth1 = 0; depth1 < inputParamss.size(); depth1++) {
-				putQueryParameter("InputParams." + (depth1 + 1) + ".Identifier" , inputParamss.get(depth1).getIdentifier());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".DataSpecs" , inputParamss.get(depth1).getDataSpecs());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".DataType" , inputParamss.get(depth1).getDataType());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".Name" , inputParamss.get(depth1).getName());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".DataSpecsList" , inputParamss.get(depth1).getDataSpecsList());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".ParaOrder" , inputParamss.get(depth1).getParaOrder());
-				putQueryParameter("InputParams." + (depth1 + 1) + ".Direction" , inputParamss.get(depth1).getDirection());
-			}
-		}	
 	}
 
 	public Long getTmallFunctionId() {
@@ -108,17 +80,6 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 		}
 	}
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
-		}
-	}
-
 	public String getCallType() {
 		return this.callType;
 	}
@@ -128,6 +89,36 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 		if(callType != null){
 			putQueryParameter("CallType", callType);
 		}
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public List<InputParams> getInputParamss() {
+		return this.inputParamss;
+	}
+
+	public void setInputParamss(List<InputParams> inputParamss) {
+		this.inputParamss = inputParamss;	
+		if (inputParamss != null) {
+			for (int depth1 = 0; depth1 < inputParamss.size(); depth1++) {
+				putQueryParameter("InputParams." + (depth1 + 1) + ".Identifier" , inputParamss.get(depth1).getIdentifier());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".DataSpecs" , inputParamss.get(depth1).getDataSpecs());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".DataType" , inputParamss.get(depth1).getDataType());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".Name" , inputParamss.get(depth1).getName());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".DataSpecsList" , inputParamss.get(depth1).getDataSpecsList());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".ParaOrder" , inputParamss.get(depth1).getParaOrder());
+				putQueryParameter("InputParams." + (depth1 + 1) + ".Direction" , inputParamss.get(depth1).getDirection());
+			}
+		}	
 	}
 
 	public List<OutputParams> getOutputParamss() {
@@ -161,6 +152,17 @@ public class UpdateThingTemplateServiceForTmallGenieRequest extends RpcAcsReques
 				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
 	}
 
 	public static class InputParams {

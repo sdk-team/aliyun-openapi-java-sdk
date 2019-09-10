@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,12 +25,9 @@ import java.util.List;
 public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnifyResponse> {
 	
 	public EventMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "EventMigrateToUnify");
+		setMethod(MethodType.POST);
 	}
-
-	private String identifier;
-
-	private String creator;
 
 	private String thingTemplateKey;
 
@@ -47,11 +45,19 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 
 	private Boolean required;
 
-	private String thingTemplateName;
-
 	private String templateType;
 
 	private String iotInstanceId;
+
+	private Integer state;
+
+	private List<Tag> tags;
+
+	private String identifier;
+
+	private String creator;
+
+	private String thingTemplateName;
 
 	private String name;
 
@@ -59,33 +65,7 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 
 	private String categoryName;
 
-	private Integer state;
-
-	private List<Tag> tags;
-
 	private String bizTenantId;
-
-	public String getIdentifier() {
-		return this.identifier;
-	}
-
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
-
-	public String getCreator() {
-		return this.creator;
-	}
-
-	public void setCreator(String creator) {
-		this.creator = creator;
-		if(creator != null){
-			putQueryParameter("Creator", creator);
-		}
-	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -185,17 +165,6 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		}
 	}
 
-	public String getThingTemplateName() {
-		return this.thingTemplateName;
-	}
-
-	public void setThingTemplateName(String thingTemplateName) {
-		this.thingTemplateName = thingTemplateName;
-		if(thingTemplateName != null){
-			putQueryParameter("ThingTemplateName", thingTemplateName);
-		}
-	}
-
 	public String getTemplateType() {
 		return this.templateType;
 	}
@@ -215,6 +184,64 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Integer getState() {
+		return this.state;
+	}
+
+	public void setState(Integer state) {
+		this.state = state;
+		if(state != null){
+			putQueryParameter("State", state.toString());
+		}
+	}
+
+	public List<Tag> getTags() {
+		return this.tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;	
+		if (tags != null) {
+			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
+				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
+			}
+		}	
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getCreator() {
+		return this.creator;
+	}
+
+	public void setCreator(String creator) {
+		this.creator = creator;
+		if(creator != null){
+			putQueryParameter("Creator", creator);
+		}
+	}
+
+	public String getThingTemplateName() {
+		return this.thingTemplateName;
+	}
+
+	public void setThingTemplateName(String thingTemplateName) {
+		this.thingTemplateName = thingTemplateName;
+		if(thingTemplateName != null){
+			putQueryParameter("ThingTemplateName", thingTemplateName);
 		}
 	}
 
@@ -249,31 +276,6 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 		if(categoryName != null){
 			putQueryParameter("CategoryName", categoryName);
 		}
-	}
-
-	public Integer getState() {
-		return this.state;
-	}
-
-	public void setState(Integer state) {
-		this.state = state;
-		if(state != null){
-			putQueryParameter("State", state.toString());
-		}
-	}
-
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagValue" , tags.get(depth1).getTagValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".TagKey" , tags.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public String getBizTenantId() {

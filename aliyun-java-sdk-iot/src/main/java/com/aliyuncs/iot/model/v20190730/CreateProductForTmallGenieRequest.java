@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,14 +24,25 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProductForTmallGenieResponse> {
 	
 	public CreateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateProductForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "CreateProductForTmallGenie");
+		setMethod(MethodType.POST);
 	}
+
+	private Integer nodeType;
+
+	private String taoBaoId;
+
+	private String description;
+
+	private String productName;
+
+	private String productBrand;
+
+	private Long categoryId;
 
 	private String productModel;
 
 	private Integer dataFormat;
-
-	private Integer nodeType;
 
 	private String tmallGenieTraceId;
 
@@ -38,17 +50,73 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 
 	private String apiProduct;
 
-	private String taoBaoId;
-
-	private String productName;
-
-	private String description;
-
 	private String apiRevision;
 
-	private String productBrand;
+	public Integer getNodeType() {
+		return this.nodeType;
+	}
 
-	private Long categoryId;
+	public void setNodeType(Integer nodeType) {
+		this.nodeType = nodeType;
+		if(nodeType != null){
+			putBodyParameter("NodeType", nodeType.toString());
+		}
+	}
+
+	public String getTaoBaoId() {
+		return this.taoBaoId;
+	}
+
+	public void setTaoBaoId(String taoBaoId) {
+		this.taoBaoId = taoBaoId;
+		if(taoBaoId != null){
+			putBodyParameter("TaoBaoId", taoBaoId);
+		}
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		if(description != null){
+			putBodyParameter("Description", description);
+		}
+	}
+
+	public String getProductName() {
+		return this.productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+		if(productName != null){
+			putBodyParameter("ProductName", productName);
+		}
+	}
+
+	public String getProductBrand() {
+		return this.productBrand;
+	}
+
+	public void setProductBrand(String productBrand) {
+		this.productBrand = productBrand;
+		if(productBrand != null){
+			putBodyParameter("ProductBrand", productBrand);
+		}
+	}
+
+	public Long getCategoryId() {
+		return this.categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+		this.categoryId = categoryId;
+		if(categoryId != null){
+			putBodyParameter("CategoryId", categoryId.toString());
+		}
+	}
 
 	public String getProductModel() {
 		return this.productModel;
@@ -69,17 +137,6 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.dataFormat = dataFormat;
 		if(dataFormat != null){
 			putBodyParameter("DataFormat", dataFormat.toString());
-		}
-	}
-
-	public Integer getNodeType() {
-		return this.nodeType;
-	}
-
-	public void setNodeType(Integer nodeType) {
-		this.nodeType = nodeType;
-		if(nodeType != null){
-			putBodyParameter("NodeType", nodeType.toString());
 		}
 	}
 
@@ -116,39 +173,6 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		}
 	}
 
-	public String getTaoBaoId() {
-		return this.taoBaoId;
-	}
-
-	public void setTaoBaoId(String taoBaoId) {
-		this.taoBaoId = taoBaoId;
-		if(taoBaoId != null){
-			putBodyParameter("TaoBaoId", taoBaoId);
-		}
-	}
-
-	public String getProductName() {
-		return this.productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-		if(productName != null){
-			putBodyParameter("ProductName", productName);
-		}
-	}
-
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-		if(description != null){
-			putBodyParameter("Description", description);
-		}
-	}
-
 	public String getApiRevision() {
 		return this.apiRevision;
 	}
@@ -157,28 +181,6 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.apiRevision = apiRevision;
 		if(apiRevision != null){
 			putBodyParameter("ApiRevision", apiRevision);
-		}
-	}
-
-	public String getProductBrand() {
-		return this.productBrand;
-	}
-
-	public void setProductBrand(String productBrand) {
-		this.productBrand = productBrand;
-		if(productBrand != null){
-			putBodyParameter("ProductBrand", productBrand);
-		}
-	}
-
-	public Long getCategoryId() {
-		return this.categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
-		if(categoryId != null){
-			putBodyParameter("CategoryId", categoryId.toString());
 		}
 	}
 

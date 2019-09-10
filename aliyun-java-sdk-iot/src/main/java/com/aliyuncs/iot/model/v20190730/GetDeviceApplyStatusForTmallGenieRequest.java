@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,8 +25,11 @@ import java.util.List;
 public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetDeviceApplyStatusForTmallGenieResponse> {
 	
 	public GetDeviceApplyStatusForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetDeviceApplyStatusForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "GetDeviceApplyStatusForTmallGenie");
+		setMethod(MethodType.POST);
 	}
+
+	private String productKey;
 
 	private List<String> applyIds;
 
@@ -33,7 +37,16 @@ public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetD
 
 	private String apiRevision;
 
-	private String productKey;
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
 
 	public List<String> getApplyIds() {
 		return this.applyIds;
@@ -67,17 +80,6 @@ public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetD
 		this.apiRevision = apiRevision;
 		if(apiRevision != null){
 			putBodyParameter("ApiRevision", apiRevision);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

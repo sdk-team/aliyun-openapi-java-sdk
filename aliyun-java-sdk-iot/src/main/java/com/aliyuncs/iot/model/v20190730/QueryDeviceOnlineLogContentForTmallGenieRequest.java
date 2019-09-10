@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,12 +24,17 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsRequest<QueryDeviceOnlineLogContentForTmallGenieResponse> {
 	
 	public QueryDeviceOnlineLogContentForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryDeviceOnlineLogContentForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "QueryDeviceOnlineLogContentForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
-	private String iotId;
-
 	private String keywords;
+
+	private Long startTime;
+
+	private String type;
+
+	private String iotId;
 
 	private String iotInstanceId;
 
@@ -36,28 +42,13 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 
 	private Long endTime;
 
-	private String deviceName;
-
 	private Integer currentPage;
-
-	private Long startTime;
 
 	private String productKey;
 
-	private String type;
+	private String deviceName;
 
 	private String bizTenantId;
-
-	public String getIotId() {
-		return this.iotId;
-	}
-
-	public void setIotId(String iotId) {
-		this.iotId = iotId;
-		if(iotId != null){
-			putQueryParameter("IotId", iotId);
-		}
-	}
 
 	public String getKeywords() {
 		return this.keywords;
@@ -67,6 +58,39 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 		this.keywords = keywords;
 		if(keywords != null){
 			putQueryParameter("Keywords", keywords);
+		}
+	}
+
+	public Long getStartTime() {
+		return this.startTime;
+	}
+
+	public void setStartTime(Long startTime) {
+		this.startTime = startTime;
+		if(startTime != null){
+			putQueryParameter("StartTime", startTime.toString());
+		}
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+		if(type != null){
+			putQueryParameter("Type", type);
+		}
+	}
+
+	public String getIotId() {
+		return this.iotId;
+	}
+
+	public void setIotId(String iotId) {
+		this.iotId = iotId;
+		if(iotId != null){
+			putQueryParameter("IotId", iotId);
 		}
 	}
 
@@ -103,17 +127,6 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
-	public String getDeviceName() {
-		return this.deviceName;
-	}
-
-	public void setDeviceName(String deviceName) {
-		this.deviceName = deviceName;
-		if(deviceName != null){
-			putQueryParameter("DeviceName", deviceName);
-		}
-	}
-
 	public Integer getCurrentPage() {
 		return this.currentPage;
 	}
@@ -122,17 +135,6 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 		this.currentPage = currentPage;
 		if(currentPage != null){
 			putQueryParameter("CurrentPage", currentPage.toString());
-		}
-	}
-
-	public Long getStartTime() {
-		return this.startTime;
-	}
-
-	public void setStartTime(Long startTime) {
-		this.startTime = startTime;
-		if(startTime != null){
-			putQueryParameter("StartTime", startTime.toString());
 		}
 	}
 
@@ -147,14 +149,14 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
-	public String getType() {
-		return this.type;
+	public String getDeviceName() {
+		return this.deviceName;
 	}
 
-	public void setType(String type) {
-		this.type = type;
-		if(type != null){
-			putQueryParameter("Type", type);
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+		if(deviceName != null){
+			putQueryParameter("DeviceName", deviceName);
 		}
 	}
 

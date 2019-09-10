@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,12 +25,17 @@ import java.util.List;
 public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateServiceForTmallGenieResponse> {
 	
 	public AddThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String identifier;
 
 	private List<InputParams> inputParamss;
+
+	private List<OutputParams> outputParamss;
+
+	private List<Tags> tagss;
 
 	private Long tmallFunctionId;
 
@@ -38,10 +44,6 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 	private String name;
 
 	private String callType;
-
-	private List<OutputParams> outputParamss;
-
-	private List<Tags> tagss;
 
 	public String getIdentifier() {
 		return this.identifier;
@@ -69,6 +71,39 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 				putQueryParameter("InputParams." + (depth1 + 1) + ".DataSpecsList" , inputParamss.get(depth1).getDataSpecsList());
 				putQueryParameter("InputParams." + (depth1 + 1) + ".ParaOrder" , inputParamss.get(depth1).getParaOrder());
 				putQueryParameter("InputParams." + (depth1 + 1) + ".Direction" , inputParamss.get(depth1).getDirection());
+			}
+		}	
+	}
+
+	public List<OutputParams> getOutputParamss() {
+		return this.outputParamss;
+	}
+
+	public void setOutputParamss(List<OutputParams> outputParamss) {
+		this.outputParamss = outputParamss;	
+		if (outputParamss != null) {
+			for (int depth1 = 0; depth1 < outputParamss.size(); depth1++) {
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".Identifier" , outputParamss.get(depth1).getIdentifier());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataSpecs" , outputParamss.get(depth1).getDataSpecs());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataType" , outputParamss.get(depth1).getDataType());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".Name" , outputParamss.get(depth1).getName());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataSpecsList" , outputParamss.get(depth1).getDataSpecsList());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".ParaOrder" , outputParamss.get(depth1).getParaOrder());
+				putQueryParameter("OutputParams." + (depth1 + 1) + ".Direction" , outputParamss.get(depth1).getDirection());
+			}
+		}	
+	}
+
+	public List<Tags> getTagss() {
+		return this.tagss;
+	}
+
+	public void setTagss(List<Tags> tagss) {
+		this.tagss = tagss;	
+		if (tagss != null) {
+			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
+				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
 	}
@@ -115,39 +150,6 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 		if(callType != null){
 			putQueryParameter("CallType", callType);
 		}
-	}
-
-	public List<OutputParams> getOutputParamss() {
-		return this.outputParamss;
-	}
-
-	public void setOutputParamss(List<OutputParams> outputParamss) {
-		this.outputParamss = outputParamss;	
-		if (outputParamss != null) {
-			for (int depth1 = 0; depth1 < outputParamss.size(); depth1++) {
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".Identifier" , outputParamss.get(depth1).getIdentifier());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataSpecs" , outputParamss.get(depth1).getDataSpecs());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataType" , outputParamss.get(depth1).getDataType());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".Name" , outputParamss.get(depth1).getName());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".DataSpecsList" , outputParamss.get(depth1).getDataSpecsList());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".ParaOrder" , outputParamss.get(depth1).getParaOrder());
-				putQueryParameter("OutputParams." + (depth1 + 1) + ".Direction" , outputParamss.get(depth1).getDirection());
-			}
-		}	
-	}
-
-	public List<Tags> getTagss() {
-		return this.tagss;
-	}
-
-	public void setTagss(List<Tags> tagss) {
-		this.tagss = tagss;	
-		if (tagss != null) {
-			for (int depth1 = 0; depth1 < tagss.size(); depth1++) {
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagValue" , tagss.get(depth1).getTagValue());
-				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
-			}
-		}	
 	}
 
 	public static class InputParams {

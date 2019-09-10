@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,18 +25,19 @@ import java.util.List;
 public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddProductIdentifierForTmallGenieResponse> {
 	
 	public AddProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private List<String> identifiers;
 
 	private String tmallGenieTraceId;
 
+	private String productKey;
+
 	private String apiProduct;
 
 	private String apiRevision;
-
-	private String productKey;
 
 	public List<String> getIdentifiers() {
 		return this.identifiers;
@@ -61,6 +63,17 @@ public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddP
 		}
 	}
 
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
 	public String getApiProduct() {
 		return this.apiProduct;
 	}
@@ -80,17 +93,6 @@ public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddP
 		this.apiRevision = apiRevision;
 		if(apiRevision != null){
 			putBodyParameter("ApiRevision", apiRevision);
-		}
-	}
-
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
 		}
 	}
 

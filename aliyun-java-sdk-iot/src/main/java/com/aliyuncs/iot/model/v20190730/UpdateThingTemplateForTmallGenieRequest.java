@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,16 +25,17 @@ import java.util.List;
 public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateForTmallGenieResponse> {
 	
 	public UpdateThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	private String thingTemplateKey;
 
-	private String iotInstanceId;
-
 	private String thingTemplateName;
 
 	private List<Tags> tagss;
+
+	private String iotInstanceId;
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -43,17 +45,6 @@ public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<Updat
 		this.thingTemplateKey = thingTemplateKey;
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -80,6 +71,17 @@ public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<Updat
 				putQueryParameter("Tags." + (depth1 + 1) + ".TagKey" , tagss.get(depth1).getTagKey());
 			}
 		}	
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
 	}
 
 	public static class Tags {

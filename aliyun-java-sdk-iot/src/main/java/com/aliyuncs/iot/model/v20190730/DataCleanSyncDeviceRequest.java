@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,14 +25,34 @@ import java.util.List;
 public class DataCleanSyncDeviceRequest extends RpcAcsRequest<DataCleanSyncDeviceResponse> {
 	
 	public DataCleanSyncDeviceRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDevice", "iot");
+		super("Iot", "2019-07-30", "DataCleanSyncDevice");
+		setMethod(MethodType.POST);
 	}
+
+	private List<SyncDeviceInfos> syncDeviceInfoss;
 
 	private String resourceGroupId;
 
 	private String iotInstanceId;
 
-	private List<SyncDeviceInfos> syncDeviceInfoss;
+	public List<SyncDeviceInfos> getSyncDeviceInfoss() {
+		return this.syncDeviceInfoss;
+	}
+
+	public void setSyncDeviceInfoss(List<SyncDeviceInfos> syncDeviceInfoss) {
+		this.syncDeviceInfoss = syncDeviceInfoss;	
+		if (syncDeviceInfoss != null) {
+			for (int depth1 = 0; depth1 < syncDeviceInfoss.size(); depth1++) {
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ActiveTime" , syncDeviceInfoss.get(depth1).getActiveTime());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".FirmVersion" , syncDeviceInfoss.get(depth1).getFirmVersion());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".Name" , syncDeviceInfoss.get(depth1).getName());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".DeviceSecret" , syncDeviceInfoss.get(depth1).getDeviceSecret());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ActionStr" , syncDeviceInfoss.get(depth1).getActionStr());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ProductKey" , syncDeviceInfoss.get(depth1).getProductKey());
+				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".DeviceType" , syncDeviceInfoss.get(depth1).getDeviceType());
+			}
+		}	
+	}
 
 	public String getResourceGroupId() {
 		return this.resourceGroupId;
@@ -53,25 +74,6 @@ public class DataCleanSyncDeviceRequest extends RpcAcsRequest<DataCleanSyncDevic
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
-	}
-
-	public List<SyncDeviceInfos> getSyncDeviceInfoss() {
-		return this.syncDeviceInfoss;
-	}
-
-	public void setSyncDeviceInfoss(List<SyncDeviceInfos> syncDeviceInfoss) {
-		this.syncDeviceInfoss = syncDeviceInfoss;	
-		if (syncDeviceInfoss != null) {
-			for (int depth1 = 0; depth1 < syncDeviceInfoss.size(); depth1++) {
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ActiveTime" , syncDeviceInfoss.get(depth1).getActiveTime());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".FirmVersion" , syncDeviceInfoss.get(depth1).getFirmVersion());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".Name" , syncDeviceInfoss.get(depth1).getName());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".DeviceSecret" , syncDeviceInfoss.get(depth1).getDeviceSecret());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ActionStr" , syncDeviceInfoss.get(depth1).getActionStr());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".ProductKey" , syncDeviceInfoss.get(depth1).getProductKey());
-				putQueryParameter("SyncDeviceInfos." + (depth1 + 1) + ".DeviceType" , syncDeviceInfoss.get(depth1).getDeviceType());
-			}
-		}	
 	}
 
 	public static class SyncDeviceInfos {

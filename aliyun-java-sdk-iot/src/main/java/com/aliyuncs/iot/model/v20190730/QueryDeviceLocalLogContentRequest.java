@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,24 +24,25 @@ import com.aliyuncs.RpcAcsRequest;
 public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDeviceLocalLogContentResponse> {
 	
 	public QueryDeviceLocalLogContentRequest() {
-		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent", "iot");
+		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent");
+		setMethod(MethodType.POST);
 	}
 
 	private String keywords;
 
-	private String iotInstanceId;
-
-	private Integer pageSize;
-
 	private Long endTime;
-
-	private String deviceName;
 
 	private Integer currentPage;
 
 	private Long startTime;
 
 	private String productKey;
+
+	private String iotInstanceId;
+
+	private Integer pageSize;
+
+	private String deviceName;
 
 	private String bizTenantId;
 
@@ -55,28 +57,6 @@ public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDevice
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
 	public Long getEndTime() {
 		return this.endTime;
 	}
@@ -85,17 +65,6 @@ public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDevice
 		this.endTime = endTime;
 		if(endTime != null){
 			putQueryParameter("EndTime", endTime.toString());
-		}
-	}
-
-	public String getDeviceName() {
-		return this.deviceName;
-	}
-
-	public void setDeviceName(String deviceName) {
-		this.deviceName = deviceName;
-		if(deviceName != null){
-			putQueryParameter("DeviceName", deviceName);
 		}
 	}
 
@@ -129,6 +98,39 @@ public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDevice
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public String getDeviceName() {
+		return this.deviceName;
+	}
+
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+		if(deviceName != null){
+			putQueryParameter("DeviceName", deviceName);
 		}
 	}
 

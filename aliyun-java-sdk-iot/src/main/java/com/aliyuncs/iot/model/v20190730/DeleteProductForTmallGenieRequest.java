@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,23 +24,13 @@ import com.aliyuncs.RpcAcsRequest;
 public class DeleteProductForTmallGenieRequest extends RpcAcsRequest<DeleteProductForTmallGenieResponse> {
 	
 	public DeleteProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "DeleteProductForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "DeleteProductForTmallGenie");
+		setMethod(MethodType.POST);
 	}
-
-	private String iotInstanceId;
 
 	private String productKey;
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
+	private String iotInstanceId;
 
 	public String getProductKey() {
 		return this.productKey;
@@ -49,6 +40,17 @@ public class DeleteProductForTmallGenieRequest extends RpcAcsRequest<DeleteProdu
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 

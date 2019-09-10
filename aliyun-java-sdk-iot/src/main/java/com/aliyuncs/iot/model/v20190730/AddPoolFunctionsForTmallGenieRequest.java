@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,33 +25,21 @@ import java.util.List;
 public class AddPoolFunctionsForTmallGenieRequest extends RpcAcsRequest<AddPoolFunctionsForTmallGenieResponse> {
 	
 	public AddPoolFunctionsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddPoolFunctionsForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "AddPoolFunctionsForTmallGenie");
+		setMethod(MethodType.POST);
 	}
-
-	private List<Long> tmallServiceIdLists;
 
 	private String thingTemplateKey;
 
 	private List<Long> tmallEventIdLists;
+
+	private List<Long> tmallServiceIdLists;
 
 	private String apiProduct;
 
 	private String apiRevision;
 
 	private List<Long> tmallPropertyIdLists;
-
-	public List<Long> getTmallServiceIdLists() {
-		return this.tmallServiceIdLists;
-	}
-
-	public void setTmallServiceIdLists(List<Long> tmallServiceIdLists) {
-		this.tmallServiceIdLists = tmallServiceIdLists;	
-		if (tmallServiceIdLists != null) {
-			for (int i = 0; i < tmallServiceIdLists.size(); i++) {
-				putQueryParameter("TmallServiceIdList." + (i + 1) , tmallServiceIdLists.get(i));
-			}
-		}	
-	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -72,6 +61,19 @@ public class AddPoolFunctionsForTmallGenieRequest extends RpcAcsRequest<AddPoolF
 		if (tmallEventIdLists != null) {
 			for (int i = 0; i < tmallEventIdLists.size(); i++) {
 				putQueryParameter("TmallEventIdList." + (i + 1) , tmallEventIdLists.get(i));
+			}
+		}	
+	}
+
+	public List<Long> getTmallServiceIdLists() {
+		return this.tmallServiceIdLists;
+	}
+
+	public void setTmallServiceIdLists(List<Long> tmallServiceIdLists) {
+		this.tmallServiceIdLists = tmallServiceIdLists;	
+		if (tmallServiceIdLists != null) {
+			for (int i = 0; i < tmallServiceIdLists.size(); i++) {
+				putQueryParameter("TmallServiceIdList." + (i + 1) , tmallServiceIdLists.get(i));
 			}
 		}	
 	}

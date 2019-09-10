@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,14 +24,15 @@ import com.aliyuncs.RpcAcsRequest;
 public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteListMaintainResponse> {
 	
 	public ProductWhiteListMaintainRequest() {
-		super("Iot", "2019-07-30", "ProductWhiteListMaintain", "iot");
+		super("Iot", "2019-07-30", "ProductWhiteListMaintain");
+		setMethod(MethodType.POST);
 	}
 
 	private String actionType;
 
-	private String manufacture;
-
 	private String product;
+
+	private String manufacture;
 
 	private String iotInstanceId;
 
@@ -42,17 +44,6 @@ public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteL
 		this.actionType = actionType;
 		if(actionType != null){
 			putQueryParameter("ActionType", actionType);
-		}
-	}
-
-	public String getManufacture() {
-		return this.manufacture;
-	}
-
-	public void setManufacture(String manufacture) {
-		this.manufacture = manufacture;
-		if(manufacture != null){
-			putQueryParameter("Manufacture", manufacture);
 		}
 	}
 
@@ -83,6 +74,17 @@ public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteL
 		this.product = product;
 		if(product != null){
 			putQueryParameter("Product", product);
+		}
+	}
+
+	public String getManufacture() {
+		return this.manufacture;
+	}
+
+	public void setManufacture(String manufacture) {
+		this.manufacture = manufacture;
+		if(manufacture != null){
+			putQueryParameter("Manufacture", manufacture);
 		}
 	}
 

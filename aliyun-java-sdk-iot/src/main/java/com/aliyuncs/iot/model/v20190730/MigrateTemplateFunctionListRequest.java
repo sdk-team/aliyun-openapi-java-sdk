@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,7 +24,8 @@ import com.aliyuncs.RpcAcsRequest;
 public class MigrateTemplateFunctionListRequest extends RpcAcsRequest<MigrateTemplateFunctionListResponse> {
 	
 	public MigrateTemplateFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigrateTemplateFunctionList", "iot");
+		super("Iot", "2019-07-30", "MigrateTemplateFunctionList");
+		setMethod(MethodType.POST);
 	}
 
 	private String packInfo;

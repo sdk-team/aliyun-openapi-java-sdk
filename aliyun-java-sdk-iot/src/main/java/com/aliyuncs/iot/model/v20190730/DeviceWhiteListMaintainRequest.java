@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,7 +25,8 @@ import java.util.List;
 public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteListMaintainResponse> {
 	
 	public DeviceWhiteListMaintainRequest() {
-		super("Iot", "2019-07-30", "DeviceWhiteListMaintain", "iot");
+		super("Iot", "2019-07-30", "DeviceWhiteListMaintain");
+		setMethod(MethodType.POST);
 	}
 
 	private String actionType;

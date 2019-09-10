@@ -15,6 +15,7 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -23,38 +24,17 @@ import com.aliyuncs.RpcAcsRequest;
 public class CreateTestDeviceForTmallGenieRequest extends RpcAcsRequest<CreateTestDeviceForTmallGenieResponse> {
 	
 	public CreateTestDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie", "iot");
+		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie");
+		setMethod(MethodType.POST);
 	}
-
-	private String iotInstanceId;
-
-	private Integer quota;
 
 	private String thingType;
 
 	private String productKey;
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
+	private String iotInstanceId;
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public Integer getQuota() {
-		return this.quota;
-	}
-
-	public void setQuota(Integer quota) {
-		this.quota = quota;
-		if(quota != null){
-			putQueryParameter("Quota", quota.toString());
-		}
-	}
+	private Integer quota;
 
 	public String getThingType() {
 		return this.thingType;
@@ -75,6 +55,28 @@ public class CreateTestDeviceForTmallGenieRequest extends RpcAcsRequest<CreateTe
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Integer getQuota() {
+		return this.quota;
+	}
+
+	public void setQuota(Integer quota) {
+		this.quota = quota;
+		if(quota != null){
+			putQueryParameter("Quota", quota.toString());
 		}
 	}
 

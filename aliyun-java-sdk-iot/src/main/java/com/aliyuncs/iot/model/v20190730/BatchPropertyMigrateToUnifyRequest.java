@@ -16,6 +16,7 @@ package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
@@ -24,8 +25,11 @@ import java.util.List;
 public class BatchPropertyMigrateToUnifyRequest extends RpcAcsRequest<BatchPropertyMigrateToUnifyResponse> {
 	
 	public BatchPropertyMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "BatchPropertyMigrateToUnify", "iot");
+		super("Iot", "2019-07-30", "BatchPropertyMigrateToUnify");
+		setMethod(MethodType.POST);
 	}
+
+	private String categoryKey;
 
 	private String iotInstanceId;
 
@@ -33,9 +37,18 @@ public class BatchPropertyMigrateToUnifyRequest extends RpcAcsRequest<BatchPrope
 
 	private List<Property> propertys;
 
-	private String categoryKey;
-
 	private String bizTenantId;
+
+	public String getCategoryKey() {
+		return this.categoryKey;
+	}
+
+	public void setCategoryKey(String categoryKey) {
+		this.categoryKey = categoryKey;
+		if(categoryKey != null){
+			putQueryParameter("CategoryKey", categoryKey);
+		}
+	}
 
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
@@ -92,17 +105,6 @@ public class BatchPropertyMigrateToUnifyRequest extends RpcAcsRequest<BatchPrope
 				putQueryParameter("Property." + (depth1 + 1) + ".AccessMode" , propertys.get(depth1).getAccessMode());
 			}
 		}	
-	}
-
-	public String getCategoryKey() {
-		return this.categoryKey;
-	}
-
-	public void setCategoryKey(String categoryKey) {
-		this.categoryKey = categoryKey;
-		if(categoryKey != null){
-			putQueryParameter("CategoryKey", categoryKey);
-		}
 	}
 
 	public String getBizTenantId() {
