@@ -29,10 +29,6 @@ public class CreateOrderResponse extends AcsResponse {
 
 	private String orderId;
 
-	private Float tradePrice;
-
-	private String taskId;
-
 	private List<RelatedOrderItemSet> relatedOrderItemSets;
 
 	private List<String> orderParams;
@@ -51,22 +47,6 @@ public class CreateOrderResponse extends AcsResponse {
 
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
-	}
-
-	public Float getTradePrice() {
-		return this.tradePrice;
-	}
-
-	public void setTradePrice(Float tradePrice) {
-		this.tradePrice = tradePrice;
-	}
-
-	public String getTaskId() {
-		return this.taskId;
-	}
-
-	public void setTaskId(String taskId) {
-		this.taskId = taskId;
 	}
 
 	public List<RelatedOrderItemSet> getRelatedOrderItemSets() {

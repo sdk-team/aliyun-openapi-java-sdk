@@ -16,22 +16,27 @@ package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
-	
-	public RunInstancesRequest() {
-		super("Ecs", "2016-03-14", "RunInstances");
-	}
+	   
+
+	private String tag4Value;
+
+	private String launchTemplateName;
 
 	private Long resourceOwnerId;
 
-	private Boolean uniqueSuffix;
+	private String tag2Key;
 
 	private String hpcClusterId;
+
+	private String tag3Key;
 
 	private String securityEnhancementStrategy;
 
@@ -43,7 +48,7 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private Float spotPriceLimit;
 
-	private Boolean deletionProtection;
+	private String tag1Value;
 
 	private String resourceGroupId;
 
@@ -51,21 +56,23 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private String password;
 
-	private List<Tag> tags;
-
 	private String businessInfo;
 
 	private String nodeControllerId;
 
 	private Boolean dryRun;
 
+	private String tag5Key;
+
 	private String fromApp;
 
-	private Integer ipv6AddressCount;
+	private String launchTemplateId;
 
 	private Integer maxAmount;
 
 	private Long ownerId;
+
+	private String capacityReservationPreference;
 
 	private String vSwitchId;
 
@@ -79,7 +86,7 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private String zoneId;
 
-	private List<String> ipv6Addresss;
+	private String tag4Key;
 
 	private Integer internetMaxBandwidthIn;
 
@@ -101,15 +108,19 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private String systemDiskCategory;
 
+	private String capacityReservationId;
+
+	private String systemDiskPerformanceLevel;
+
 	private String userData;
 
 	private Boolean passwordInherit;
 
 	private String instanceType;
 
-	private List<NetworkInterface> networkInterfaces;
+	private String tag3Value;
 
-	private String deploymentSetId;
+	private List<NetworkInterface> networkInterfaces;
 
 	private String resourceOwnerAccount;
 
@@ -131,17 +142,55 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 	private String creditSpecification;
 
-	private List<String> securityGroupIdss;
+	private Integer spotDuration;
 
 	private List<DataDisk> dataDisks;
+
+	private String tag5Value;
+
+	private Long launchTemplateVersion;
+
+	private String tag1Key;
 
 	private List<SecurityGroupRule> securityGroupRules;
 
 	private String systemDiskSize;
 
+	private String tag2Value;
+
 	private String defaultVpc;
 
 	private String systemDiskDescription;
+	public RunInstancesRequest() {
+		super("Ecs", "2016-03-14", "RunInstances", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getTag4Value() {
+		return this.tag4Value;
+	}
+
+	public void setTag4Value(String tag4Value) {
+		this.tag4Value = tag4Value;
+		if(tag4Value != null){
+			putQueryParameter("Tag.4.Value", tag4Value);
+		}
+	}
+
+	public String getLaunchTemplateName() {
+		return this.launchTemplateName;
+	}
+
+	public void setLaunchTemplateName(String launchTemplateName) {
+		this.launchTemplateName = launchTemplateName;
+		if(launchTemplateName != null){
+			putQueryParameter("LaunchTemplateName", launchTemplateName);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -154,14 +203,14 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public Boolean getUniqueSuffix() {
-		return this.uniqueSuffix;
+	public String getTag2Key() {
+		return this.tag2Key;
 	}
 
-	public void setUniqueSuffix(Boolean uniqueSuffix) {
-		this.uniqueSuffix = uniqueSuffix;
-		if(uniqueSuffix != null){
-			putQueryParameter("UniqueSuffix", uniqueSuffix.toString());
+	public void setTag2Key(String tag2Key) {
+		this.tag2Key = tag2Key;
+		if(tag2Key != null){
+			putQueryParameter("Tag.2.Key", tag2Key);
 		}
 	}
 
@@ -173,6 +222,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		this.hpcClusterId = hpcClusterId;
 		if(hpcClusterId != null){
 			putQueryParameter("HpcClusterId", hpcClusterId);
+		}
+	}
+
+	public String getTag3Key() {
+		return this.tag3Key;
+	}
+
+	public void setTag3Key(String tag3Key) {
+		this.tag3Key = tag3Key;
+		if(tag3Key != null){
+			putQueryParameter("Tag.3.Key", tag3Key);
 		}
 	}
 
@@ -231,14 +291,14 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public Boolean getDeletionProtection() {
-		return this.deletionProtection;
+	public String getTag1Value() {
+		return this.tag1Value;
 	}
 
-	public void setDeletionProtection(Boolean deletionProtection) {
-		this.deletionProtection = deletionProtection;
-		if(deletionProtection != null){
-			putQueryParameter("DeletionProtection", deletionProtection.toString());
+	public void setTag1Value(String tag1Value) {
+		this.tag1Value = tag1Value;
+		if(tag1Value != null){
+			putQueryParameter("Tag.1.Value", tag1Value);
 		}
 	}
 
@@ -275,20 +335,6 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
-			}
-		}	
-	}
-
 	public String getBusinessInfo() {
 		return this.businessInfo;
 	}
@@ -322,6 +368,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getTag5Key() {
+		return this.tag5Key;
+	}
+
+	public void setTag5Key(String tag5Key) {
+		this.tag5Key = tag5Key;
+		if(tag5Key != null){
+			putQueryParameter("Tag.5.Key", tag5Key);
+		}
+	}
+
 	public String getFromApp() {
 		return this.fromApp;
 	}
@@ -333,14 +390,14 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public Integer getIpv6AddressCount() {
-		return this.ipv6AddressCount;
+	public String getLaunchTemplateId() {
+		return this.launchTemplateId;
 	}
 
-	public void setIpv6AddressCount(Integer ipv6AddressCount) {
-		this.ipv6AddressCount = ipv6AddressCount;
-		if(ipv6AddressCount != null){
-			putQueryParameter("Ipv6AddressCount", ipv6AddressCount.toString());
+	public void setLaunchTemplateId(String launchTemplateId) {
+		this.launchTemplateId = launchTemplateId;
+		if(launchTemplateId != null){
+			putQueryParameter("LaunchTemplateId", launchTemplateId);
 		}
 	}
 
@@ -363,6 +420,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getCapacityReservationPreference() {
+		return this.capacityReservationPreference;
+	}
+
+	public void setCapacityReservationPreference(String capacityReservationPreference) {
+		this.capacityReservationPreference = capacityReservationPreference;
+		if(capacityReservationPreference != null){
+			putQueryParameter("CapacityReservationPreference", capacityReservationPreference);
 		}
 	}
 
@@ -432,17 +500,15 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public List<String> getIpv6Addresss() {
-		return this.ipv6Addresss;
+	public String getTag4Key() {
+		return this.tag4Key;
 	}
 
-	public void setIpv6Addresss(List<String> ipv6Addresss) {
-		this.ipv6Addresss = ipv6Addresss;	
-		if (ipv6Addresss != null) {
-			for (int i = 0; i < ipv6Addresss.size(); i++) {
-				putQueryParameter("Ipv6Address." + (i + 1) , ipv6Addresss.get(i));
-			}
-		}	
+	public void setTag4Key(String tag4Key) {
+		this.tag4Key = tag4Key;
+		if(tag4Key != null){
+			putQueryParameter("Tag.4.Key", tag4Key);
+		}
 	}
 
 	public Integer getInternetMaxBandwidthIn() {
@@ -555,6 +621,28 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getCapacityReservationId() {
+		return this.capacityReservationId;
+	}
+
+	public void setCapacityReservationId(String capacityReservationId) {
+		this.capacityReservationId = capacityReservationId;
+		if(capacityReservationId != null){
+			putQueryParameter("CapacityReservationId", capacityReservationId);
+		}
+	}
+
+	public String getSystemDiskPerformanceLevel() {
+		return this.systemDiskPerformanceLevel;
+	}
+
+	public void setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+		this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+		if(systemDiskPerformanceLevel != null){
+			putQueryParameter("SystemDisk.PerformanceLevel", systemDiskPerformanceLevel);
+		}
+	}
+
 	public String getUserData() {
 		return this.userData;
 	}
@@ -588,6 +676,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getTag3Value() {
+		return this.tag3Value;
+	}
+
+	public void setTag3Value(String tag3Value) {
+		this.tag3Value = tag3Value;
+		if(tag3Value != null){
+			putQueryParameter("Tag.3.Value", tag3Value);
+		}
+	}
+
 	public List<NetworkInterface> getNetworkInterfaces() {
 		return this.networkInterfaces;
 	}
@@ -603,17 +702,6 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 				putQueryParameter("NetworkInterface." + (depth1 + 1) + ".NetworkInterfaceName" , networkInterfaces.get(depth1).getNetworkInterfaceName());
 			}
 		}	
-	}
-
-	public String getDeploymentSetId() {
-		return this.deploymentSetId;
-	}
-
-	public void setDeploymentSetId(String deploymentSetId) {
-		this.deploymentSetId = deploymentSetId;
-		if(deploymentSetId != null){
-			putQueryParameter("DeploymentSetId", deploymentSetId);
-		}
 	}
 
 	public String getResourceOwnerAccount() {
@@ -726,17 +814,15 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
-	public List<String> getSecurityGroupIdss() {
-		return this.securityGroupIdss;
+	public Integer getSpotDuration() {
+		return this.spotDuration;
 	}
 
-	public void setSecurityGroupIdss(List<String> securityGroupIdss) {
-		this.securityGroupIdss = securityGroupIdss;	
-		if (securityGroupIdss != null) {
-			for (int i = 0; i < securityGroupIdss.size(); i++) {
-				putQueryParameter("SecurityGroupIds." + (i + 1) , securityGroupIdss.get(i));
-			}
-		}	
+	public void setSpotDuration(Integer spotDuration) {
+		this.spotDuration = spotDuration;
+		if(spotDuration != null){
+			putQueryParameter("SpotDuration", spotDuration.toString());
+		}
 	}
 
 	public List<DataDisk> getDataDisks() {
@@ -751,13 +837,46 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".SnapshotId" , dataDisks.get(depth1).getSnapshotId());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".Size" , dataDisks.get(depth1).getSize());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".Encrypted" , dataDisks.get(depth1).getEncrypted());
+				putQueryParameter("DataDisk." + (depth1 + 1) + ".PerformanceLevel" , dataDisks.get(depth1).getPerformanceLevel());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".Description" , dataDisks.get(depth1).getDescription());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".Category" , dataDisks.get(depth1).getCategory());
-				putQueryParameter("DataDisk." + (depth1 + 1) + ".KMSKeyId" , dataDisks.get(depth1).getKMSKeyId());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".Device" , dataDisks.get(depth1).getDevice());
 				putQueryParameter("DataDisk." + (depth1 + 1) + ".DeleteWithInstance" , dataDisks.get(depth1).getDeleteWithInstance());
 			}
 		}	
+	}
+
+	public String getTag5Value() {
+		return this.tag5Value;
+	}
+
+	public void setTag5Value(String tag5Value) {
+		this.tag5Value = tag5Value;
+		if(tag5Value != null){
+			putQueryParameter("Tag.5.Value", tag5Value);
+		}
+	}
+
+	public Long getLaunchTemplateVersion() {
+		return this.launchTemplateVersion;
+	}
+
+	public void setLaunchTemplateVersion(Long launchTemplateVersion) {
+		this.launchTemplateVersion = launchTemplateVersion;
+		if(launchTemplateVersion != null){
+			putQueryParameter("LaunchTemplateVersion", launchTemplateVersion.toString());
+		}
+	}
+
+	public String getTag1Key() {
+		return this.tag1Key;
+	}
+
+	public void setTag1Key(String tag1Key) {
+		this.tag1Key = tag1Key;
+		if(tag1Key != null){
+			putQueryParameter("Tag.1.Key", tag1Key);
+		}
 	}
 
 	public List<SecurityGroupRule> getSecurityGroupRules() {
@@ -788,6 +907,17 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		}
 	}
 
+	public String getTag2Value() {
+		return this.tag2Value;
+	}
+
+	public void setTag2Value(String tag2Value) {
+		this.tag2Value = tag2Value;
+		if(tag2Value != null){
+			putQueryParameter("Tag.2.Value", tag2Value);
+		}
+	}
+
 	public String getDefaultVpc() {
 		return this.defaultVpc;
 	}
@@ -807,29 +937,6 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 		this.systemDiskDescription = systemDiskDescription;
 		if(systemDiskDescription != null){
 			putQueryParameter("SystemDisk.Description", systemDiskDescription);
-		}
-	}
-
-	public static class Tag {
-
-		private String value;
-
-		private String key;
-
-		public String getValue() {
-			return this.value;
-		}
-
-		public void setValue(String value) {
-			this.value = value;
-		}
-
-		public String getKey() {
-			return this.key;
-		}
-
-		public void setKey(String key) {
-			this.key = key;
 		}
 	}
 
@@ -894,13 +1001,13 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 		private Integer size;
 
-		private Boolean encrypted;
+		private String encrypted;
+
+		private String performanceLevel;
 
 		private String description;
 
 		private String category;
-
-		private String kMSKeyId;
 
 		private String device;
 
@@ -930,12 +1037,20 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 			this.size = size;
 		}
 
-		public Boolean getEncrypted() {
+		public String getEncrypted() {
 			return this.encrypted;
 		}
 
-		public void setEncrypted(Boolean encrypted) {
+		public void setEncrypted(String encrypted) {
 			this.encrypted = encrypted;
+		}
+
+		public String getPerformanceLevel() {
+			return this.performanceLevel;
+		}
+
+		public void setPerformanceLevel(String performanceLevel) {
+			this.performanceLevel = performanceLevel;
 		}
 
 		public String getDescription() {
@@ -952,14 +1067,6 @@ public class RunInstancesRequest extends RpcAcsRequest<RunInstancesResponse> {
 
 		public void setCategory(String category) {
 			this.category = category;
-		}
-
-		public String getKMSKeyId() {
-			return this.kMSKeyId;
-		}
-
-		public void setKMSKeyId(String kMSKeyId) {
-			this.kMSKeyId = kMSKeyId;
 		}
 
 		public String getDevice() {

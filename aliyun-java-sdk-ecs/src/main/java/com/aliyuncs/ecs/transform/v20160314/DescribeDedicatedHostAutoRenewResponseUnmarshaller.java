@@ -24,18 +24,18 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeDedicatedHostAutoRenewResponseUnmarshaller {
 
-	public static DescribeDedicatedHostAutoRenewResponse unmarshall(DescribeDedicatedHostAutoRenewResponse describeDedicatedHostAutoRenewResponse, UnmarshallerContext context) {
+	public static DescribeDedicatedHostAutoRenewResponse unmarshall(DescribeDedicatedHostAutoRenewResponse describeDedicatedHostAutoRenewResponse, UnmarshallerContext _ctx) {
 		
-		describeDedicatedHostAutoRenewResponse.setRequestId(context.stringValue("DescribeDedicatedHostAutoRenewResponse.RequestId"));
+		describeDedicatedHostAutoRenewResponse.setRequestId(_ctx.stringValue("DescribeDedicatedHostAutoRenewResponse.RequestId"));
 
 		List<InstanceRenewAttribute> instanceRenewAttributes = new ArrayList<InstanceRenewAttribute>();
-		for (int i = 0; i < context.lengthValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes.Length"); i++) {
 			InstanceRenewAttribute instanceRenewAttribute = new InstanceRenewAttribute();
-			instanceRenewAttribute.setInstanceId(context.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].InstanceId"));
-			instanceRenewAttribute.setAutoRenewEnabled(context.booleanValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].AutoRenewEnabled"));
-			instanceRenewAttribute.setDuration(context.integerValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].Duration"));
-			instanceRenewAttribute.setPeriodUnit(context.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].PeriodUnit"));
-			instanceRenewAttribute.setRenewalStatus(context.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].RenewalStatus"));
+			instanceRenewAttribute.setInstanceId(_ctx.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].InstanceId"));
+			instanceRenewAttribute.setAutoRenewEnabled(_ctx.booleanValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].AutoRenewEnabled"));
+			instanceRenewAttribute.setDuration(_ctx.integerValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].Duration"));
+			instanceRenewAttribute.setPeriodUnit(_ctx.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].PeriodUnit"));
+			instanceRenewAttribute.setRenewalStatus(_ctx.stringValue("DescribeDedicatedHostAutoRenewResponse.InstanceRenewAttributes["+ i +"].RenewalStatus"));
 
 			instanceRenewAttributes.add(instanceRenewAttribute);
 		}

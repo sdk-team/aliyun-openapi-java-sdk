@@ -16,16 +16,15 @@ package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class CreateCapacityReservationRequest extends RpcAcsRequest<CreateCapacityReservationResponse> {
-	
-	public CreateCapacityReservationRequest() {
-		super("Ecs", "2016-03-14", "CreateCapacityReservation");
-	}
+	   
 
 	private Long resourceOwnerId;
 
@@ -58,6 +57,14 @@ public class CreateCapacityReservationRequest extends RpcAcsRequest<CreateCapaci
 	private String capacityReservationName;
 
 	private String zoneId;
+	public CreateCapacityReservationRequest() {
+		super("Ecs", "2016-03-14", "CreateCapacityReservation", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;

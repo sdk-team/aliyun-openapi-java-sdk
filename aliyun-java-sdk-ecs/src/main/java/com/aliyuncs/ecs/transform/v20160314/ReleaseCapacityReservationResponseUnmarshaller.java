@@ -20,9 +20,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ReleaseCapacityReservationResponseUnmarshaller {
 
-	public static ReleaseCapacityReservationResponse unmarshall(ReleaseCapacityReservationResponse releaseCapacityReservationResponse, UnmarshallerContext context) {
+	public static ReleaseCapacityReservationResponse unmarshall(ReleaseCapacityReservationResponse releaseCapacityReservationResponse, UnmarshallerContext _ctx) {
 		
-		releaseCapacityReservationResponse.setRequestId(context.stringValue("ReleaseCapacityReservationResponse.RequestId"));
+		releaseCapacityReservationResponse.setRequestId(_ctx.stringValue("ReleaseCapacityReservationResponse.RequestId"));
 	 
 	 	return releaseCapacityReservationResponse;
 	}

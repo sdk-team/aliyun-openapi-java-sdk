@@ -79,8 +79,6 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 
 		private String dedicatedHostId;
 
-		private String autoPlacement;
-
 		private String regionId;
 
 		private String zoneId;
@@ -97,11 +95,7 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 
 		private Integer totalPhysicalCores;
 
-		private Integer physicalGpus;
-
-		private String gPUSpec;
-
-		private String actionOnMaintenance;
+		private String autoPlacement;
 
 		private String status;
 
@@ -115,21 +109,13 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 
 		private String autoReleaseTime;
 
-		private String resourceGroupId;
-
 		private List<Instance> instances;
 
 		private List<OperationLock> operationLocks;
 
-		private List<Tag> tags;
-
 		private List<String> supportInstanceTypeFamilies;
 
-		private List<String> supportInstanceTypesList;
-
 		private Capacity capacity;
-
-		private NetworkAttributes networkAttributes;
 
 		public String getDedicatedHostId() {
 			return this.dedicatedHostId;
@@ -139,34 +125,10 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			this.dedicatedHostId = dedicatedHostId;
 		}
 
-		public String getAutoPlacement() {
-			return this.autoPlacement;
-		}
-
-		public void setAutoPlacement(String autoPlacement) {
-			this.autoPlacement = autoPlacement;
-		}
-
-		public String getBizRegionId() {
-			return this.regionId;
-		}
-
-		public void setBizRegionId(String regionId) {
-			this.regionId = regionId;
-		}
-
-		/**
-		 * @deprecated use getBizRegionId instead of this.
-		 */
-		@Deprecated
 		public String getRegionId() {
 			return this.regionId;
 		}
 
-		/**
-		 * @deprecated use setBizRegionId instead of this.
-		 */
-		@Deprecated
 		public void setRegionId(String regionId) {
 			this.regionId = regionId;
 		}
@@ -227,28 +189,12 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			this.totalPhysicalCores = totalPhysicalCores;
 		}
 
-		public Integer getPhysicalGpus() {
-			return this.physicalGpus;
+		public String getAutoPlacement() {
+			return this.autoPlacement;
 		}
 
-		public void setPhysicalGpus(Integer physicalGpus) {
-			this.physicalGpus = physicalGpus;
-		}
-
-		public String getGPUSpec() {
-			return this.gPUSpec;
-		}
-
-		public void setGPUSpec(String gPUSpec) {
-			this.gPUSpec = gPUSpec;
-		}
-
-		public String getActionOnMaintenance() {
-			return this.actionOnMaintenance;
-		}
-
-		public void setActionOnMaintenance(String actionOnMaintenance) {
-			this.actionOnMaintenance = actionOnMaintenance;
+		public void setAutoPlacement(String autoPlacement) {
+			this.autoPlacement = autoPlacement;
 		}
 
 		public String getStatus() {
@@ -299,14 +245,6 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			this.autoReleaseTime = autoReleaseTime;
 		}
 
-		public String getResourceGroupId() {
-			return this.resourceGroupId;
-		}
-
-		public void setResourceGroupId(String resourceGroupId) {
-			this.resourceGroupId = resourceGroupId;
-		}
-
 		public List<Instance> getInstances() {
 			return this.instances;
 		}
@@ -323,14 +261,6 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			this.operationLocks = operationLocks;
 		}
 
-		public List<Tag> getTags() {
-			return this.tags;
-		}
-
-		public void setTags(List<Tag> tags) {
-			this.tags = tags;
-		}
-
 		public List<String> getSupportInstanceTypeFamilies() {
 			return this.supportInstanceTypeFamilies;
 		}
@@ -339,28 +269,12 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			this.supportInstanceTypeFamilies = supportInstanceTypeFamilies;
 		}
 
-		public List<String> getSupportInstanceTypesList() {
-			return this.supportInstanceTypesList;
-		}
-
-		public void setSupportInstanceTypesList(List<String> supportInstanceTypesList) {
-			this.supportInstanceTypesList = supportInstanceTypesList;
-		}
-
 		public Capacity getCapacity() {
 			return this.capacity;
 		}
 
 		public void setCapacity(Capacity capacity) {
 			this.capacity = capacity;
-		}
-
-		public NetworkAttributes getNetworkAttributes() {
-			return this.networkAttributes;
-		}
-
-		public void setNetworkAttributes(NetworkAttributes networkAttributes) {
-			this.networkAttributes = networkAttributes;
 		}
 
 		public static class Instance {
@@ -399,38 +313,11 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 			}
 		}
 
-		public static class Tag {
-
-			private String tagKey;
-
-			private String tagValue;
-
-			public String getTagKey() {
-				return this.tagKey;
-			}
-
-			public void setTagKey(String tagKey) {
-				this.tagKey = tagKey;
-			}
-
-			public String getTagValue() {
-				return this.tagValue;
-			}
-
-			public void setTagValue(String tagValue) {
-				this.tagValue = tagValue;
-			}
-		}
-
 		public static class Capacity {
 
 			private Integer totalVcpus;
 
 			private Integer availableVcpus;
-
-			private Integer totalVgpus;
-
-			private Integer availableVgpus;
 
 			private Float totalMemory;
 
@@ -456,22 +343,6 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 
 			public void setAvailableVcpus(Integer availableVcpus) {
 				this.availableVcpus = availableVcpus;
-			}
-
-			public Integer getTotalVgpus() {
-				return this.totalVgpus;
-			}
-
-			public void setTotalVgpus(Integer totalVgpus) {
-				this.totalVgpus = totalVgpus;
-			}
-
-			public Integer getAvailableVgpus() {
-				return this.availableVgpus;
-			}
-
-			public void setAvailableVgpus(Integer availableVgpus) {
-				this.availableVgpus = availableVgpus;
 			}
 
 			public Float getTotalMemory() {
@@ -512,29 +383,6 @@ public class DescribeDedicatedHostsResponse extends AcsResponse {
 
 			public void setLocalStorageCategory(String localStorageCategory) {
 				this.localStorageCategory = localStorageCategory;
-			}
-		}
-
-		public static class NetworkAttributes {
-
-			private Integer slbUdpTimeout;
-
-			private Integer udpTimeout;
-
-			public Integer getSlbUdpTimeout() {
-				return this.slbUdpTimeout;
-			}
-
-			public void setSlbUdpTimeout(Integer slbUdpTimeout) {
-				this.slbUdpTimeout = slbUdpTimeout;
-			}
-
-			public Integer getUdpTimeout() {
-				return this.udpTimeout;
-			}
-
-			public void setUdpTimeout(Integer udpTimeout) {
-				this.udpTimeout = udpTimeout;
 			}
 		}
 	}

@@ -23,13 +23,13 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateDisksResponseUnmarshaller {
 
-	public static CreateDisksResponse unmarshall(CreateDisksResponse createDisksResponse, UnmarshallerContext context) {
+	public static CreateDisksResponse unmarshall(CreateDisksResponse createDisksResponse, UnmarshallerContext _ctx) {
 		
-		createDisksResponse.setRequestId(context.stringValue("CreateDisksResponse.RequestId"));
+		createDisksResponse.setRequestId(_ctx.stringValue("CreateDisksResponse.RequestId"));
 
 		List<String> diskId = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("CreateDisksResponse.DiskId.Length"); i++) {
-			diskId.add(context.stringValue("CreateDisksResponse.DiskId["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("CreateDisksResponse.DiskId.Length"); i++) {
+			diskId.add(_ctx.stringValue("CreateDisksResponse.DiskId["+ i +"]"));
 		}
 		createDisksResponse.setDiskId(diskId);
 	 

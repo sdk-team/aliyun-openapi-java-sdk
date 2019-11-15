@@ -15,29 +15,35 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
-import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
-	
-	public CreateVolumesRequest() {
-		super("Ecs", "2016-03-14", "CreateVolumes");
-	}
+	   
+
+	private String tag4Value;
 
 	private Long resourceOwnerId;
 
 	private String snapshotId;
 
+	private String tag2Key;
+
 	private String clientToken;
 
 	private String description;
 
+	private String tag3Key;
+
+	private String tag1Value;
+
 	private String volumeCategory;
 
-	private List<Tag> tags;
+	private String tag3Value;
 
 	private Integer amount;
 
@@ -45,17 +51,44 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 
 	private Boolean volumeEncrypted;
 
+	private String tag5Key;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
 
 	private Long ownerId;
 
+	private String tag5Value;
+
+	private String tag1Key;
+
 	private Integer size;
+
+	private String tag2Value;
 
 	private String zoneId;
 
-	private String kMSKeyId;
+	private String tag4Key;
+	public CreateVolumesRequest() {
+		super("Ecs", "2016-03-14", "CreateVolumes", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getTag4Value() {
+		return this.tag4Value;
+	}
+
+	public void setTag4Value(String tag4Value) {
+		this.tag4Value = tag4Value;
+		if(tag4Value != null){
+			putQueryParameter("Tag.4.Value", tag4Value);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -76,6 +109,17 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		this.snapshotId = snapshotId;
 		if(snapshotId != null){
 			putQueryParameter("SnapshotId", snapshotId);
+		}
+	}
+
+	public String getTag2Key() {
+		return this.tag2Key;
+	}
+
+	public void setTag2Key(String tag2Key) {
+		this.tag2Key = tag2Key;
+		if(tag2Key != null){
+			putQueryParameter("Tag.2.Key", tag2Key);
 		}
 	}
 
@@ -101,6 +145,28 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		}
 	}
 
+	public String getTag3Key() {
+		return this.tag3Key;
+	}
+
+	public void setTag3Key(String tag3Key) {
+		this.tag3Key = tag3Key;
+		if(tag3Key != null){
+			putQueryParameter("Tag.3.Key", tag3Key);
+		}
+	}
+
+	public String getTag1Value() {
+		return this.tag1Value;
+	}
+
+	public void setTag1Value(String tag1Value) {
+		this.tag1Value = tag1Value;
+		if(tag1Value != null){
+			putQueryParameter("Tag.1.Value", tag1Value);
+		}
+	}
+
 	public String getVolumeCategory() {
 		return this.volumeCategory;
 	}
@@ -112,18 +178,15 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		}
 	}
 
-	public List<Tag> getTags() {
-		return this.tags;
+	public String getTag3Value() {
+		return this.tag3Value;
 	}
 
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
-				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
-			}
-		}	
+	public void setTag3Value(String tag3Value) {
+		this.tag3Value = tag3Value;
+		if(tag3Value != null){
+			putQueryParameter("Tag.3.Value", tag3Value);
+		}
 	}
 
 	public Integer getAmount() {
@@ -156,6 +219,17 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		this.volumeEncrypted = volumeEncrypted;
 		if(volumeEncrypted != null){
 			putQueryParameter("VolumeEncrypted", volumeEncrypted.toString());
+		}
+	}
+
+	public String getTag5Key() {
+		return this.tag5Key;
+	}
+
+	public void setTag5Key(String tag5Key) {
+		this.tag5Key = tag5Key;
+		if(tag5Key != null){
+			putQueryParameter("Tag.5.Key", tag5Key);
 		}
 	}
 
@@ -192,6 +266,28 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		}
 	}
 
+	public String getTag5Value() {
+		return this.tag5Value;
+	}
+
+	public void setTag5Value(String tag5Value) {
+		this.tag5Value = tag5Value;
+		if(tag5Value != null){
+			putQueryParameter("Tag.5.Value", tag5Value);
+		}
+	}
+
+	public String getTag1Key() {
+		return this.tag1Key;
+	}
+
+	public void setTag1Key(String tag1Key) {
+		this.tag1Key = tag1Key;
+		if(tag1Key != null){
+			putQueryParameter("Tag.1.Key", tag1Key);
+		}
+	}
+
 	public Integer getSize() {
 		return this.size;
 	}
@@ -200,6 +296,17 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		this.size = size;
 		if(size != null){
 			putQueryParameter("Size", size.toString());
+		}
+	}
+
+	public String getTag2Value() {
+		return this.tag2Value;
+	}
+
+	public void setTag2Value(String tag2Value) {
+		this.tag2Value = tag2Value;
+		if(tag2Value != null){
+			putQueryParameter("Tag.2.Value", tag2Value);
 		}
 	}
 
@@ -214,37 +321,14 @@ public class CreateVolumesRequest extends RpcAcsRequest<CreateVolumesResponse> {
 		}
 	}
 
-	public String getKMSKeyId() {
-		return this.kMSKeyId;
+	public String getTag4Key() {
+		return this.tag4Key;
 	}
 
-	public void setKMSKeyId(String kMSKeyId) {
-		this.kMSKeyId = kMSKeyId;
-		if(kMSKeyId != null){
-			putQueryParameter("KMSKeyId", kMSKeyId);
-		}
-	}
-
-	public static class Tag {
-
-		private String value;
-
-		private String key;
-
-		public String getValue() {
-			return this.value;
-		}
-
-		public void setValue(String value) {
-			this.value = value;
-		}
-
-		public String getKey() {
-			return this.key;
-		}
-
-		public void setKey(String key) {
-			this.key = key;
+	public void setTag4Key(String tag4Key) {
+		this.tag4Key = tag4Key;
+		if(tag4Key != null){
+			putQueryParameter("Tag.4.Key", tag4Key);
 		}
 	}
 

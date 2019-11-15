@@ -20,10 +20,10 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateCapacityReservationResponseUnmarshaller {
 
-	public static CreateCapacityReservationResponse unmarshall(CreateCapacityReservationResponse createCapacityReservationResponse, UnmarshallerContext context) {
+	public static CreateCapacityReservationResponse unmarshall(CreateCapacityReservationResponse createCapacityReservationResponse, UnmarshallerContext _ctx) {
 		
-		createCapacityReservationResponse.setRequestId(context.stringValue("CreateCapacityReservationResponse.RequestId"));
-		createCapacityReservationResponse.setCapacityReservationId(context.stringValue("CreateCapacityReservationResponse.CapacityReservationId"));
+		createCapacityReservationResponse.setRequestId(_ctx.stringValue("CreateCapacityReservationResponse.RequestId"));
+		createCapacityReservationResponse.setCapacityReservationId(_ctx.stringValue("CreateCapacityReservationResponse.CapacityReservationId"));
 	 
 	 	return createCapacityReservationResponse;
 	}

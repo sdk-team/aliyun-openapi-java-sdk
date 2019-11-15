@@ -24,37 +24,28 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeDedicatedHostTypesResponseUnmarshaller {
 
-	public static DescribeDedicatedHostTypesResponse unmarshall(DescribeDedicatedHostTypesResponse describeDedicatedHostTypesResponse, UnmarshallerContext context) {
+	public static DescribeDedicatedHostTypesResponse unmarshall(DescribeDedicatedHostTypesResponse describeDedicatedHostTypesResponse, UnmarshallerContext _ctx) {
 		
-		describeDedicatedHostTypesResponse.setRequestId(context.stringValue("DescribeDedicatedHostTypesResponse.RequestId"));
+		describeDedicatedHostTypesResponse.setRequestId(_ctx.stringValue("DescribeDedicatedHostTypesResponse.RequestId"));
 
 		List<DedicatedHostType> dedicatedHostTypes = new ArrayList<DedicatedHostType>();
-		for (int i = 0; i < context.lengthValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes.Length"); i++) {
 			DedicatedHostType dedicatedHostType = new DedicatedHostType();
-			dedicatedHostType.setDedicatedHostType(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].DedicatedHostType"));
-			dedicatedHostType.setGeneration(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].Generation"));
-			dedicatedHostType.setTotalSockets(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalSockets"));
-			dedicatedHostType.setTotalVcpus(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalVcpus"));
-			dedicatedHostType.setTotalVgpus(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalVgpus"));
-			dedicatedHostType.setTotalPhysicalCores(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalPhysicalCores"));
-			dedicatedHostType.setPhysicalGpus(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].PhysicalGpus"));
-			dedicatedHostType.setMemorySize(context.floatValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].MemorySize"));
-			dedicatedHostType.setLocalStorageCapacity(context.longValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageCapacity"));
-			dedicatedHostType.setLocalStorageAmount(context.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageAmount"));
-			dedicatedHostType.setLocalStorageCategory(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageCategory"));
-			dedicatedHostType.setGPUSpec(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].GPUSpec"));
+			dedicatedHostType.setDedicatedHostType(_ctx.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].DedicatedHostType"));
+			dedicatedHostType.setGeneration(_ctx.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].Generation"));
+			dedicatedHostType.setTotalSockets(_ctx.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalSockets"));
+			dedicatedHostType.setTotalVcpus(_ctx.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalVcpus"));
+			dedicatedHostType.setTotalPhysicalCores(_ctx.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].TotalPhysicalCores"));
+			dedicatedHostType.setMemorySize(_ctx.floatValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].MemorySize"));
+			dedicatedHostType.setLocalStorageCapacity(_ctx.longValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageCapacity"));
+			dedicatedHostType.setLocalStorageAmount(_ctx.integerValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageAmount"));
+			dedicatedHostType.setLocalStorageCategory(_ctx.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].LocalStorageCategory"));
 
 			List<String> supportInstanceTypeFamilies = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypeFamilies.Length"); j++) {
-				supportInstanceTypeFamilies.add(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypeFamilies["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypeFamilies.Length"); j++) {
+				supportInstanceTypeFamilies.add(_ctx.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypeFamilies["+ j +"]"));
 			}
 			dedicatedHostType.setSupportInstanceTypeFamilies(supportInstanceTypeFamilies);
-
-			List<String> supportInstanceTypesList = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypesList.Length"); j++) {
-				supportInstanceTypesList.add(context.stringValue("DescribeDedicatedHostTypesResponse.DedicatedHostTypes["+ i +"].SupportInstanceTypesList["+ j +"]"));
-			}
-			dedicatedHostType.setSupportInstanceTypesList(supportInstanceTypesList);
 
 			dedicatedHostTypes.add(dedicatedHostType);
 		}

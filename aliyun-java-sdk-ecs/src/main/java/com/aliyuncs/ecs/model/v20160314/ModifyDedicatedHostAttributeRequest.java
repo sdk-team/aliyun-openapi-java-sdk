@@ -15,22 +15,19 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDedicatedHostAttributeResponse> {
-	
-	public ModifyDedicatedHostAttributeRequest() {
-		super("Ecs", "2016-03-14", "ModifyDedicatedHostAttribute");
-	}
+	   
 
 	private Long resourceOwnerId;
 
 	private String description;
-
-	private String actionOnMaintenance;
 
 	private String dedicatedHostName;
 
@@ -42,11 +39,15 @@ public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDed
 
 	private Long ownerId;
 
-	private Integer networkAttributesSlbUdpTimeout;
-
 	private String autoPlacement;
-
-	private Integer networkAttributesUdpTimeout;
+	public ModifyDedicatedHostAttributeRequest() {
+		super("Ecs", "2016-03-14", "ModifyDedicatedHostAttribute", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -67,17 +68,6 @@ public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDed
 		this.description = description;
 		if(description != null){
 			putQueryParameter("Description", description);
-		}
-	}
-
-	public String getActionOnMaintenance() {
-		return this.actionOnMaintenance;
-	}
-
-	public void setActionOnMaintenance(String actionOnMaintenance) {
-		this.actionOnMaintenance = actionOnMaintenance;
-		if(actionOnMaintenance != null){
-			putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
 		}
 	}
 
@@ -136,17 +126,6 @@ public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDed
 		}
 	}
 
-	public Integer getNetworkAttributesSlbUdpTimeout() {
-		return this.networkAttributesSlbUdpTimeout;
-	}
-
-	public void setNetworkAttributesSlbUdpTimeout(Integer networkAttributesSlbUdpTimeout) {
-		this.networkAttributesSlbUdpTimeout = networkAttributesSlbUdpTimeout;
-		if(networkAttributesSlbUdpTimeout != null){
-			putQueryParameter("NetworkAttributes.SlbUdpTimeout", networkAttributesSlbUdpTimeout.toString());
-		}
-	}
-
 	public String getAutoPlacement() {
 		return this.autoPlacement;
 	}
@@ -155,17 +134,6 @@ public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDed
 		this.autoPlacement = autoPlacement;
 		if(autoPlacement != null){
 			putQueryParameter("AutoPlacement", autoPlacement);
-		}
-	}
-
-	public Integer getNetworkAttributesUdpTimeout() {
-		return this.networkAttributesUdpTimeout;
-	}
-
-	public void setNetworkAttributesUdpTimeout(Integer networkAttributesUdpTimeout) {
-		this.networkAttributesUdpTimeout = networkAttributesUdpTimeout;
-		if(networkAttributesUdpTimeout != null){
-			putQueryParameter("NetworkAttributes.UdpTimeout", networkAttributesUdpTimeout.toString());
 		}
 	}
 

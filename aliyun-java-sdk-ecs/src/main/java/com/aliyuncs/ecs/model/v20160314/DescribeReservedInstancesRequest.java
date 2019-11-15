@@ -16,22 +16,19 @@ package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class DescribeReservedInstancesRequest extends RpcAcsRequest<DescribeReservedInstancesResponse> {
-	
-	public DescribeReservedInstancesRequest() {
-		super("Ecs", "2016-03-14", "DescribeReservedInstances");
-	}
+	   
 
 	private Long resourceOwnerId;
 
 	private Integer pageNumber;
-
-	private String lockReason;
 
 	private String scope;
 
@@ -60,6 +57,14 @@ public class DescribeReservedInstancesRequest extends RpcAcsRequest<DescribeRese
 	private String reservedInstanceName;
 
 	private List<String> statuss;
+	public DescribeReservedInstancesRequest() {
+		super("Ecs", "2016-03-14", "DescribeReservedInstances", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -80,17 +85,6 @@ public class DescribeReservedInstancesRequest extends RpcAcsRequest<DescribeRese
 		this.pageNumber = pageNumber;
 		if(pageNumber != null){
 			putQueryParameter("PageNumber", pageNumber.toString());
-		}
-	}
-
-	public String getLockReason() {
-		return this.lockReason;
-	}
-
-	public void setLockReason(String lockReason) {
-		this.lockReason = lockReason;
-		if(lockReason != null){
-			putQueryParameter("LockReason", lockReason);
 		}
 	}
 

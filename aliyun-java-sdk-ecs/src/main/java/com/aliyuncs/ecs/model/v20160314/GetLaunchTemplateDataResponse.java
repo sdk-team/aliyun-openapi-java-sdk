@@ -51,8 +51,6 @@ public class GetLaunchTemplateDataResponse extends AcsResponse {
 
 		private String imageOwnerAlias;
 
-		private Boolean passwordInherit;
-
 		private String instanceType;
 
 		private String securityGroupId;
@@ -133,14 +131,6 @@ public class GetLaunchTemplateDataResponse extends AcsResponse {
 
 		public void setImageOwnerAlias(String imageOwnerAlias) {
 			this.imageOwnerAlias = imageOwnerAlias;
-		}
-
-		public Boolean getPasswordInherit() {
-			return this.passwordInherit;
-		}
-
-		public void setPasswordInherit(Boolean passwordInherit) {
-			this.passwordInherit = passwordInherit;
 		}
 
 		public String getInstanceType() {
@@ -423,8 +413,6 @@ public class GetLaunchTemplateDataResponse extends AcsResponse {
 
 			private Boolean deleteWithInstance;
 
-			private String device;
-
 			public Integer getSize() {
 				return this.size;
 			}
@@ -479,14 +467,6 @@ public class GetLaunchTemplateDataResponse extends AcsResponse {
 
 			public void setDeleteWithInstance(Boolean deleteWithInstance) {
 				this.deleteWithInstance = deleteWithInstance;
-			}
-
-			public String getDevice() {
-				return this.device;
-			}
-
-			public void setDevice(String device) {
-				this.device = device;
 			}
 		}
 

@@ -55,11 +55,7 @@ public class DescribeDedicatedHostTypesResponse extends AcsResponse {
 
 		private Integer totalVcpus;
 
-		private Integer totalVgpus;
-
 		private Integer totalPhysicalCores;
-
-		private Integer physicalGpus;
 
 		private Float memorySize;
 
@@ -69,11 +65,7 @@ public class DescribeDedicatedHostTypesResponse extends AcsResponse {
 
 		private String localStorageCategory;
 
-		private String gPUSpec;
-
 		private List<String> supportInstanceTypeFamilies;
-
-		private List<String> supportInstanceTypesList;
 
 		public String getDedicatedHostType() {
 			return this.dedicatedHostType;
@@ -107,28 +99,12 @@ public class DescribeDedicatedHostTypesResponse extends AcsResponse {
 			this.totalVcpus = totalVcpus;
 		}
 
-		public Integer getTotalVgpus() {
-			return this.totalVgpus;
-		}
-
-		public void setTotalVgpus(Integer totalVgpus) {
-			this.totalVgpus = totalVgpus;
-		}
-
 		public Integer getTotalPhysicalCores() {
 			return this.totalPhysicalCores;
 		}
 
 		public void setTotalPhysicalCores(Integer totalPhysicalCores) {
 			this.totalPhysicalCores = totalPhysicalCores;
-		}
-
-		public Integer getPhysicalGpus() {
-			return this.physicalGpus;
-		}
-
-		public void setPhysicalGpus(Integer physicalGpus) {
-			this.physicalGpus = physicalGpus;
 		}
 
 		public Float getMemorySize() {
@@ -163,28 +139,12 @@ public class DescribeDedicatedHostTypesResponse extends AcsResponse {
 			this.localStorageCategory = localStorageCategory;
 		}
 
-		public String getGPUSpec() {
-			return this.gPUSpec;
-		}
-
-		public void setGPUSpec(String gPUSpec) {
-			this.gPUSpec = gPUSpec;
-		}
-
 		public List<String> getSupportInstanceTypeFamilies() {
 			return this.supportInstanceTypeFamilies;
 		}
 
 		public void setSupportInstanceTypeFamilies(List<String> supportInstanceTypeFamilies) {
 			this.supportInstanceTypeFamilies = supportInstanceTypeFamilies;
-		}
-
-		public List<String> getSupportInstanceTypesList() {
-			return this.supportInstanceTypesList;
-		}
-
-		public void setSupportInstanceTypesList(List<String> supportInstanceTypesList) {
-			this.supportInstanceTypesList = supportInstanceTypesList;
 		}
 	}
 

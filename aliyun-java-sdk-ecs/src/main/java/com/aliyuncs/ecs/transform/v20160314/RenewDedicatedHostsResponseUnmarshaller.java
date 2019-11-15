@@ -23,14 +23,14 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class RenewDedicatedHostsResponseUnmarshaller {
 
-	public static RenewDedicatedHostsResponse unmarshall(RenewDedicatedHostsResponse renewDedicatedHostsResponse, UnmarshallerContext context) {
+	public static RenewDedicatedHostsResponse unmarshall(RenewDedicatedHostsResponse renewDedicatedHostsResponse, UnmarshallerContext _ctx) {
 		
-		renewDedicatedHostsResponse.setRequestId(context.stringValue("RenewDedicatedHostsResponse.RequestId"));
-		renewDedicatedHostsResponse.setOrderId(context.stringValue("RenewDedicatedHostsResponse.OrderId"));
+		renewDedicatedHostsResponse.setRequestId(_ctx.stringValue("RenewDedicatedHostsResponse.RequestId"));
+		renewDedicatedHostsResponse.setOrderId(_ctx.stringValue("RenewDedicatedHostsResponse.OrderId"));
 
 		List<String> dedicatedHostIdSets = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("RenewDedicatedHostsResponse.DedicatedHostIdSets.Length"); i++) {
-			dedicatedHostIdSets.add(context.stringValue("RenewDedicatedHostsResponse.DedicatedHostIdSets["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("RenewDedicatedHostsResponse.DedicatedHostIdSets.Length"); i++) {
+			dedicatedHostIdSets.add(_ctx.stringValue("RenewDedicatedHostsResponse.DedicatedHostIdSets["+ i +"]"));
 		}
 		renewDedicatedHostsResponse.setDedicatedHostIdSets(dedicatedHostIdSets);
 	 

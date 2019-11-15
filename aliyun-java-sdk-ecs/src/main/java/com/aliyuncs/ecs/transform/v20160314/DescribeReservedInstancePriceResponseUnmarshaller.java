@@ -22,16 +22,16 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeReservedInstancePriceResponseUnmarshaller {
 
-	public static DescribeReservedInstancePriceResponse unmarshall(DescribeReservedInstancePriceResponse describeReservedInstancePriceResponse, UnmarshallerContext context) {
+	public static DescribeReservedInstancePriceResponse unmarshall(DescribeReservedInstancePriceResponse describeReservedInstancePriceResponse, UnmarshallerContext _ctx) {
 		
-		describeReservedInstancePriceResponse.setRequestId(context.stringValue("DescribeReservedInstancePriceResponse.RequestId"));
+		describeReservedInstancePriceResponse.setRequestId(_ctx.stringValue("DescribeReservedInstancePriceResponse.RequestId"));
 
 		PriceInfo priceInfo = new PriceInfo();
 
 		Order order = new Order();
-		order.setReservedInstanceHourPrice(context.floatValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.ReservedInstanceHourPrice"));
-		order.setTradePrice(context.floatValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.TradePrice"));
-		order.setCurrency(context.stringValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.Currency"));
+		order.setReservedInstanceHourPrice(_ctx.floatValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.ReservedInstanceHourPrice"));
+		order.setTradePrice(_ctx.floatValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.TradePrice"));
+		order.setCurrency(_ctx.stringValue("DescribeReservedInstancePriceResponse.PriceInfo.Order.Currency"));
 		priceInfo.setOrder(order);
 		describeReservedInstancePriceResponse.setPriceInfo(priceInfo);
 	 

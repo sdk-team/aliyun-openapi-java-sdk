@@ -16,16 +16,15 @@ package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
 import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<PurchaseReservedInstancesOfferingResponse> {
-	
-	public PurchaseReservedInstancesOfferingRequest() {
-		super("Ecs", "2016-03-14", "PurchaseReservedInstancesOffering");
-	}
+	   
 
 	private Long resourceOwnerId;
 
@@ -44,8 +43,6 @@ public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<Purc
 	private String businessInfo;
 
 	private Integer period;
-
-	private Boolean autoPay;
 
 	private String fromApp;
 
@@ -66,6 +63,14 @@ public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<Purc
 	private String chargeType;
 
 	private Integer instanceAmount;
+	public PurchaseReservedInstancesOfferingRequest() {
+		super("Ecs", "2016-03-14", "PurchaseReservedInstancesOffering", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -166,17 +171,6 @@ public class PurchaseReservedInstancesOfferingRequest extends RpcAcsRequest<Purc
 		this.period = period;
 		if(period != null){
 			putQueryParameter("Period", period.toString());
-		}
-	}
-
-	public Boolean getAutoPay() {
-		return this.autoPay;
-	}
-
-	public void setAutoPay(Boolean autoPay) {
-		this.autoPay = autoPay;
-		if(autoPay != null){
-			putQueryParameter("AutoPay", autoPay.toString());
 		}
 	}
 

@@ -28,40 +28,46 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribePriceResponseUnmarshaller {
 
-	public static DescribePriceResponse unmarshall(DescribePriceResponse describePriceResponse, UnmarshallerContext context) {
+	public static DescribePriceResponse unmarshall(DescribePriceResponse describePriceResponse, UnmarshallerContext _ctx) {
 		
-		describePriceResponse.setRequestId(context.stringValue("DescribePriceResponse.RequestId"));
+		describePriceResponse.setRequestId(_ctx.stringValue("DescribePriceResponse.RequestId"));
 
 		PriceInfo priceInfo = new PriceInfo();
 
 		List<String> orderParams = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("DescribePriceResponse.PriceInfo.OrderParams.Length"); i++) {
-			orderParams.add(context.stringValue("DescribePriceResponse.PriceInfo.OrderParams["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("DescribePriceResponse.PriceInfo.OrderParams.Length"); i++) {
+			orderParams.add(_ctx.stringValue("DescribePriceResponse.PriceInfo.OrderParams["+ i +"]"));
 		}
 		priceInfo.setOrderParams(orderParams);
 
 		Order order = new Order();
-		order.setOriginalPrice(context.floatValue("DescribePriceResponse.PriceInfo.Order.OriginalPrice"));
-		order.setDiscountPrice(context.floatValue("DescribePriceResponse.PriceInfo.Order.DiscountPrice"));
-		order.setSpotInstanceTypePrice(context.floatValue("DescribePriceResponse.PriceInfo.Order.SpotInstanceTypePrice"));
-		order.setSpotInstanceTypeOriginalPrice(context.floatValue("DescribePriceResponse.PriceInfo.Order.SpotInstanceTypeOriginalPrice"));
-		order.setTradePrice(context.floatValue("DescribePriceResponse.PriceInfo.Order.TradePrice"));
-		order.setCurrency(context.stringValue("DescribePriceResponse.PriceInfo.Order.Currency"));
+		order.setOriginalPrice(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.OriginalPrice"));
+		order.setDiscountPrice(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.DiscountPrice"));
+		order.setSpotInstanceTypePrice(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.SpotInstanceTypePrice"));
+		order.setSpotInstanceTypeOriginalPrice(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.SpotInstanceTypeOriginalPrice"));
+		order.setTradePrice(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.TradePrice"));
+		order.setCurrency(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.Currency"));
 
 		List<String> ruleIdSet = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("DescribePriceResponse.PriceInfo.Order.RuleIdSet.Length"); i++) {
-			ruleIdSet.add(context.stringValue("DescribePriceResponse.PriceInfo.Order.RuleIdSet["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("DescribePriceResponse.PriceInfo.Order.RuleIdSet.Length"); i++) {
+			ruleIdSet.add(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.RuleIdSet["+ i +"]"));
 		}
 		order.setRuleIdSet(ruleIdSet);
 
 		List<Coupon> coupons = new ArrayList<Coupon>();
-		for (int i = 0; i < context.lengthValue("DescribePriceResponse.PriceInfo.Order.Coupons.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribePriceResponse.PriceInfo.Order.Coupons.Length"); i++) {
 			Coupon coupon = new Coupon();
-			coupon.setCouponNo(context.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].CouponNo"));
-			coupon.setName(context.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].Name"));
-			coupon.setDescription(context.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].Description"));
-			coupon.setDiscountOff(context.floatValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].DiscountOff"));
-			coupon.setIsSelected(context.booleanValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].IsSelected"));
+			coupon.setCouponNo(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].CouponNo"));
+			coupon.setName(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].Name"));
+			coupon.setDescription(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].Description"));
+			coupon.setDiscountOff(_ctx.floatValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].DiscountOff"));
+			coupon.setIsSelected(_ctx.booleanValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].IsSelected"));
+
+			List<String> ruleIdSet1 = new ArrayList<String>();
+			for (int j = 0; j < _ctx.lengthValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].RuleIdSet.Length"); j++) {
+				ruleIdSet1.add(_ctx.stringValue("DescribePriceResponse.PriceInfo.Order.Coupons["+ i +"].RuleIdSet["+ j +"]"));
+			}
+			coupon.setRuleIdSet1(ruleIdSet1);
 
 			coupons.add(coupon);
 		}
@@ -69,16 +75,16 @@ public class DescribePriceResponseUnmarshaller {
 		priceInfo.setOrder(order);
 
 		PriceWarning priceWarning = new PriceWarning();
-		priceWarning.setCode(context.stringValue("DescribePriceResponse.PriceInfo.PriceWarning.Code"));
-		priceWarning.setMsg(context.stringValue("DescribePriceResponse.PriceInfo.PriceWarning.Msg"));
+		priceWarning.setCode(_ctx.stringValue("DescribePriceResponse.PriceInfo.PriceWarning.Code"));
+		priceWarning.setMsg(_ctx.stringValue("DescribePriceResponse.PriceInfo.PriceWarning.Msg"));
 		priceInfo.setPriceWarning(priceWarning);
 
 		List<Rule> rules = new ArrayList<Rule>();
-		for (int i = 0; i < context.lengthValue("DescribePriceResponse.PriceInfo.Rules.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribePriceResponse.PriceInfo.Rules.Length"); i++) {
 			Rule rule = new Rule();
-			rule.setRuleId(context.longValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].RuleId"));
-			rule.setTitle(context.stringValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].Title"));
-			rule.setName(context.stringValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].Name"));
+			rule.setRuleId(_ctx.longValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].RuleId"));
+			rule.setTitle(_ctx.stringValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].Title"));
+			rule.setName(_ctx.stringValue("DescribePriceResponse.PriceInfo.Rules["+ i +"].Name"));
 
 			rules.add(rule);
 		}

@@ -105,8 +105,6 @@ public class DescribeReservedInstancesResponse extends AcsResponse {
 
 		private String resourceGroupId;
 
-		private List<OperationLock> operationLocks;
-
 		private List<Tag> tags;
 
 		public String getReservedInstanceId() {
@@ -117,26 +115,10 @@ public class DescribeReservedInstancesResponse extends AcsResponse {
 			this.reservedInstanceId = reservedInstanceId;
 		}
 
-		public String getBizRegionId() {
-			return this.regionId;
-		}
-
-		public void setBizRegionId(String regionId) {
-			this.regionId = regionId;
-		}
-
-		/**
-		 * @deprecated use getBizRegionId instead of this.
-		 */
-		@Deprecated
 		public String getRegionId() {
 			return this.regionId;
 		}
 
-		/**
-		 * @deprecated use setBizRegionId instead of this.
-		 */
-		@Deprecated
 		public void setRegionId(String regionId) {
 			this.regionId = regionId;
 		}
@@ -237,33 +219,12 @@ public class DescribeReservedInstancesResponse extends AcsResponse {
 			this.resourceGroupId = resourceGroupId;
 		}
 
-		public List<OperationLock> getOperationLocks() {
-			return this.operationLocks;
-		}
-
-		public void setOperationLocks(List<OperationLock> operationLocks) {
-			this.operationLocks = operationLocks;
-		}
-
 		public List<Tag> getTags() {
 			return this.tags;
 		}
 
 		public void setTags(List<Tag> tags) {
 			this.tags = tags;
-		}
-
-		public static class OperationLock {
-
-			private String lockReason;
-
-			public String getLockReason() {
-				return this.lockReason;
-			}
-
-			public void setLockReason(String lockReason) {
-				this.lockReason = lockReason;
-			}
 		}
 
 		public static class Tag {

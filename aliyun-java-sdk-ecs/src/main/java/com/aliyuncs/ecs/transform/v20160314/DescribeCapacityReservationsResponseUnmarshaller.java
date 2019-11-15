@@ -24,30 +24,30 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeCapacityReservationsResponseUnmarshaller {
 
-	public static DescribeCapacityReservationsResponse unmarshall(DescribeCapacityReservationsResponse describeCapacityReservationsResponse, UnmarshallerContext context) {
+	public static DescribeCapacityReservationsResponse unmarshall(DescribeCapacityReservationsResponse describeCapacityReservationsResponse, UnmarshallerContext _ctx) {
 		
-		describeCapacityReservationsResponse.setRequestId(context.stringValue("DescribeCapacityReservationsResponse.RequestId"));
-		describeCapacityReservationsResponse.setTotalCount(context.integerValue("DescribeCapacityReservationsResponse.TotalCount"));
-		describeCapacityReservationsResponse.setPageNumber(context.integerValue("DescribeCapacityReservationsResponse.PageNumber"));
-		describeCapacityReservationsResponse.setPageSize(context.integerValue("DescribeCapacityReservationsResponse.PageSize"));
+		describeCapacityReservationsResponse.setRequestId(_ctx.stringValue("DescribeCapacityReservationsResponse.RequestId"));
+		describeCapacityReservationsResponse.setTotalCount(_ctx.integerValue("DescribeCapacityReservationsResponse.TotalCount"));
+		describeCapacityReservationsResponse.setPageNumber(_ctx.integerValue("DescribeCapacityReservationsResponse.PageNumber"));
+		describeCapacityReservationsResponse.setPageSize(_ctx.integerValue("DescribeCapacityReservationsResponse.PageSize"));
 
 		List<CapacityReservation> capacityReservations = new ArrayList<CapacityReservation>();
-		for (int i = 0; i < context.lengthValue("DescribeCapacityReservationsResponse.CapacityReservations.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribeCapacityReservationsResponse.CapacityReservations.Length"); i++) {
 			CapacityReservation capacityReservation = new CapacityReservation();
-			capacityReservation.setCapacityReservationId(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].CapacityReservationId"));
-			capacityReservation.setRegionId(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].RegionId"));
-			capacityReservation.setZoneId(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].ZoneId"));
-			capacityReservation.setCapacityReservationName(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].CapacityReservationName"));
-			capacityReservation.setStatus(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].Status"));
-			capacityReservation.setDescription(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].Description"));
-			capacityReservation.setInstancePlatform(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstancePlatform"));
-			capacityReservation.setTotalInstanceCount(context.integerValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].TotalInstanceCount"));
-			capacityReservation.setAvailableInstanceCount(context.integerValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].AvailableInstanceCount"));
-			capacityReservation.setNetworkType(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].NetworkType"));
-			capacityReservation.setEndDateType(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].EndDateType"));
-			capacityReservation.setInstanceMatchCriteria(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstanceMatchCriteria"));
-			capacityReservation.setInstanceType(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstanceType"));
-			capacityReservation.setTimeSlot(context.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].TimeSlot"));
+			capacityReservation.setCapacityReservationId(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].CapacityReservationId"));
+			capacityReservation.setRegionId(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].RegionId"));
+			capacityReservation.setZoneId(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].ZoneId"));
+			capacityReservation.setCapacityReservationName(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].CapacityReservationName"));
+			capacityReservation.setStatus(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].Status"));
+			capacityReservation.setDescription(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].Description"));
+			capacityReservation.setInstancePlatform(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstancePlatform"));
+			capacityReservation.setTotalInstanceCount(_ctx.integerValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].TotalInstanceCount"));
+			capacityReservation.setAvailableInstanceCount(_ctx.integerValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].AvailableInstanceCount"));
+			capacityReservation.setNetworkType(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].NetworkType"));
+			capacityReservation.setEndDateType(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].EndDateType"));
+			capacityReservation.setInstanceMatchCriteria(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstanceMatchCriteria"));
+			capacityReservation.setInstanceType(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].InstanceType"));
+			capacityReservation.setTimeSlot(_ctx.stringValue("DescribeCapacityReservationsResponse.CapacityReservations["+ i +"].TimeSlot"));
 
 			capacityReservations.add(capacityReservation);
 		}

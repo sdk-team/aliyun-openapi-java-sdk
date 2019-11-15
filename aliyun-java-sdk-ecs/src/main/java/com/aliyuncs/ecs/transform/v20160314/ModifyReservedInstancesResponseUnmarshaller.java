@@ -23,14 +23,14 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class ModifyReservedInstancesResponseUnmarshaller {
 
-	public static ModifyReservedInstancesResponse unmarshall(ModifyReservedInstancesResponse modifyReservedInstancesResponse, UnmarshallerContext context) {
+	public static ModifyReservedInstancesResponse unmarshall(ModifyReservedInstancesResponse modifyReservedInstancesResponse, UnmarshallerContext _ctx) {
 		
-		modifyReservedInstancesResponse.setRequestId(context.stringValue("ModifyReservedInstancesResponse.RequestId"));
-		modifyReservedInstancesResponse.setOrderId(context.stringValue("ModifyReservedInstancesResponse.OrderId"));
+		modifyReservedInstancesResponse.setRequestId(_ctx.stringValue("ModifyReservedInstancesResponse.RequestId"));
+		modifyReservedInstancesResponse.setOrderId(_ctx.stringValue("ModifyReservedInstancesResponse.OrderId"));
 
 		List<String> reservedInstanceIdSets = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("ModifyReservedInstancesResponse.ReservedInstanceIdSets.Length"); i++) {
-			reservedInstanceIdSets.add(context.stringValue("ModifyReservedInstancesResponse.ReservedInstanceIdSets["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("ModifyReservedInstancesResponse.ReservedInstanceIdSets.Length"); i++) {
+			reservedInstanceIdSets.add(_ctx.stringValue("ModifyReservedInstancesResponse.ReservedInstanceIdSets["+ i +"]"));
 		}
 		modifyReservedInstancesResponse.setReservedInstanceIdSets(reservedInstanceIdSets);
 	 

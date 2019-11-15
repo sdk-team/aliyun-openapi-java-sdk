@@ -15,16 +15,15 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class GetLaunchTemplateDataRequest extends RpcAcsRequest<GetLaunchTemplateDataResponse> {
-	
-	public GetLaunchTemplateDataRequest() {
-		super("Ecs", "2016-03-14", "GetLaunchTemplateData");
-	}
+	   
 
 	private Long resourceOwnerId;
 
@@ -33,6 +32,14 @@ public class GetLaunchTemplateDataRequest extends RpcAcsRequest<GetLaunchTemplat
 	private Long ownerId;
 
 	private String instanceId;
+	public GetLaunchTemplateDataRequest() {
+		super("Ecs", "2016-03-14", "GetLaunchTemplateData", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;

@@ -15,16 +15,15 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class DescribeBandwidthPriceRequest extends RpcAcsRequest<DescribeBandwidthPriceResponse> {
-	
-	public DescribeBandwidthPriceRequest() {
-		super("Ecs", "2016-03-14", "DescribeBandwidthPrice");
-	}
+	   
 
 	private Long resourceOwnerId;
 
@@ -37,6 +36,14 @@ public class DescribeBandwidthPriceRequest extends RpcAcsRequest<DescribeBandwid
 	private Long ownerId;
 
 	private Boolean verbose;
+	public DescribeBandwidthPriceRequest() {
+		super("Ecs", "2016-03-14", "DescribeBandwidthPrice", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;

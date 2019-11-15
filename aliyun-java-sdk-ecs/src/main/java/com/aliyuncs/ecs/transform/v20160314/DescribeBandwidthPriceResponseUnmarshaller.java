@@ -26,31 +26,31 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class DescribeBandwidthPriceResponseUnmarshaller {
 
-	public static DescribeBandwidthPriceResponse unmarshall(DescribeBandwidthPriceResponse describeBandwidthPriceResponse, UnmarshallerContext context) {
+	public static DescribeBandwidthPriceResponse unmarshall(DescribeBandwidthPriceResponse describeBandwidthPriceResponse, UnmarshallerContext _ctx) {
 		
-		describeBandwidthPriceResponse.setRequestId(context.stringValue("DescribeBandwidthPriceResponse.RequestId"));
+		describeBandwidthPriceResponse.setRequestId(_ctx.stringValue("DescribeBandwidthPriceResponse.RequestId"));
 
 		PriceInfo priceInfo = new PriceInfo();
 
 		Order order = new Order();
-		order.setOriginalPrice(context.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.OriginalPrice"));
-		order.setDiscountPrice(context.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.DiscountPrice"));
-		order.setTradePrice(context.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.TradePrice"));
-		order.setCurrency(context.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Order.Currency"));
+		order.setOriginalPrice(_ctx.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.OriginalPrice"));
+		order.setDiscountPrice(_ctx.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.DiscountPrice"));
+		order.setTradePrice(_ctx.floatValue("DescribeBandwidthPriceResponse.PriceInfo.Order.TradePrice"));
+		order.setCurrency(_ctx.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Order.Currency"));
 
 		List<String> ruleIdSet = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("DescribeBandwidthPriceResponse.PriceInfo.Order.RuleIdSet.Length"); i++) {
-			ruleIdSet.add(context.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Order.RuleIdSet["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("DescribeBandwidthPriceResponse.PriceInfo.Order.RuleIdSet.Length"); i++) {
+			ruleIdSet.add(_ctx.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Order.RuleIdSet["+ i +"]"));
 		}
 		order.setRuleIdSet(ruleIdSet);
 		priceInfo.setOrder(order);
 
 		List<Rule> rules = new ArrayList<Rule>();
-		for (int i = 0; i < context.lengthValue("DescribeBandwidthPriceResponse.PriceInfo.Rules.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("DescribeBandwidthPriceResponse.PriceInfo.Rules.Length"); i++) {
 			Rule rule = new Rule();
-			rule.setRuleId(context.longValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].RuleId"));
-			rule.setTitle(context.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].Title"));
-			rule.setName(context.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].Name"));
+			rule.setRuleId(_ctx.longValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].RuleId"));
+			rule.setTitle(_ctx.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].Title"));
+			rule.setName(_ctx.stringValue("DescribeBandwidthPriceResponse.PriceInfo.Rules["+ i +"].Name"));
 
 			rules.add(rule);
 		}

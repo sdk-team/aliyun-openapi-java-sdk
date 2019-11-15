@@ -15,31 +15,25 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
-import java.util.List;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicatedHostsResponse> {
-	
-	public AllocateDedicatedHostsRequest() {
-		super("Ecs", "2016-03-14", "AllocateDedicatedHosts");
-	}
+	   
+
+	private String tag4Value;
 
 	private Long resourceOwnerId;
 
-	private String clientToken;
+	private String tag2Key;
 
-	private String description;
+	private String tag3Key;
 
-	private String resourceGroupId;
-
-	private String actionOnMaintenance;
-
-	private List<Tag> tags;
-
-	private String dedicatedHostType;
+	private String tag1Value;
 
 	private String businessInfo;
 
@@ -47,17 +41,11 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 
 	private Integer period;
 
-	private Integer quantity;
+	private String tag5Key;
 
 	private String dedicatedHostName;
 
 	private String fromApp;
-
-	private String resourceOwnerAccount;
-
-	private String ownerAccount;
-
-	private String autoReleaseTime;
 
 	private Long ownerId;
 
@@ -65,15 +53,54 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 
 	private Boolean autoRenew;
 
-	private Integer networkAttributesSlbUdpTimeout;
+	private String tag4Key;
 
 	private String zoneId;
 
 	private String autoPlacement;
 
-	private String chargeType;
+	private String clientToken;
 
-	private Integer networkAttributesUdpTimeout;
+	private String description;
+
+	private String dedicatedHostType;
+
+	private String tag3Value;
+
+	private Integer quantity;
+
+	private String resourceOwnerAccount;
+
+	private String ownerAccount;
+
+	private String autoReleaseTime;
+
+	private String tag5Value;
+
+	private String tag1Key;
+
+	private String tag2Value;
+
+	private String chargeType;
+	public AllocateDedicatedHostsRequest() {
+		super("Ecs", "2016-03-14", "AllocateDedicatedHosts", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
+
+	public String getTag4Value() {
+		return this.tag4Value;
+	}
+
+	public void setTag4Value(String tag4Value) {
+		this.tag4Value = tag4Value;
+		if(tag4Value != null){
+			putQueryParameter("Tag.4.Value", tag4Value);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
@@ -86,72 +113,36 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		}
 	}
 
-	public String getClientToken() {
-		return this.clientToken;
+	public String getTag2Key() {
+		return this.tag2Key;
 	}
 
-	public void setClientToken(String clientToken) {
-		this.clientToken = clientToken;
-		if(clientToken != null){
-			putQueryParameter("ClientToken", clientToken);
+	public void setTag2Key(String tag2Key) {
+		this.tag2Key = tag2Key;
+		if(tag2Key != null){
+			putQueryParameter("Tag.2.Key", tag2Key);
 		}
 	}
 
-	public String getDescription() {
-		return this.description;
+	public String getTag3Key() {
+		return this.tag3Key;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
-		if(description != null){
-			putQueryParameter("Description", description);
+	public void setTag3Key(String tag3Key) {
+		this.tag3Key = tag3Key;
+		if(tag3Key != null){
+			putQueryParameter("Tag.3.Key", tag3Key);
 		}
 	}
 
-	public String getResourceGroupId() {
-		return this.resourceGroupId;
+	public String getTag1Value() {
+		return this.tag1Value;
 	}
 
-	public void setResourceGroupId(String resourceGroupId) {
-		this.resourceGroupId = resourceGroupId;
-		if(resourceGroupId != null){
-			putQueryParameter("ResourceGroupId", resourceGroupId);
-		}
-	}
-
-	public String getActionOnMaintenance() {
-		return this.actionOnMaintenance;
-	}
-
-	public void setActionOnMaintenance(String actionOnMaintenance) {
-		this.actionOnMaintenance = actionOnMaintenance;
-		if(actionOnMaintenance != null){
-			putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
-		}
-	}
-
-	public List<Tag> getTags() {
-		return this.tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;	
-		if (tags != null) {
-			for (int depth1 = 0; depth1 < tags.size(); depth1++) {
-				putQueryParameter("Tag." + (depth1 + 1) + ".Key" , tags.get(depth1).getKey());
-				putQueryParameter("Tag." + (depth1 + 1) + ".Value" , tags.get(depth1).getValue());
-			}
-		}	
-	}
-
-	public String getDedicatedHostType() {
-		return this.dedicatedHostType;
-	}
-
-	public void setDedicatedHostType(String dedicatedHostType) {
-		this.dedicatedHostType = dedicatedHostType;
-		if(dedicatedHostType != null){
-			putQueryParameter("DedicatedHostType", dedicatedHostType);
+	public void setTag1Value(String tag1Value) {
+		this.tag1Value = tag1Value;
+		if(tag1Value != null){
+			putQueryParameter("Tag.1.Value", tag1Value);
 		}
 	}
 
@@ -188,14 +179,14 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		}
 	}
 
-	public Integer getQuantity() {
-		return this.quantity;
+	public String getTag5Key() {
+		return this.tag5Key;
 	}
 
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-		if(quantity != null){
-			putQueryParameter("Quantity", quantity.toString());
+	public void setTag5Key(String tag5Key) {
+		this.tag5Key = tag5Key;
+		if(tag5Key != null){
+			putQueryParameter("Tag.5.Key", tag5Key);
 		}
 	}
 
@@ -218,39 +209,6 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		this.fromApp = fromApp;
 		if(fromApp != null){
 			putQueryParameter("FromApp", fromApp);
-		}
-	}
-
-	public String getResourceOwnerAccount() {
-		return this.resourceOwnerAccount;
-	}
-
-	public void setResourceOwnerAccount(String resourceOwnerAccount) {
-		this.resourceOwnerAccount = resourceOwnerAccount;
-		if(resourceOwnerAccount != null){
-			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-		}
-	}
-
-	public String getOwnerAccount() {
-		return this.ownerAccount;
-	}
-
-	public void setOwnerAccount(String ownerAccount) {
-		this.ownerAccount = ownerAccount;
-		if(ownerAccount != null){
-			putQueryParameter("OwnerAccount", ownerAccount);
-		}
-	}
-
-	public String getAutoReleaseTime() {
-		return this.autoReleaseTime;
-	}
-
-	public void setAutoReleaseTime(String autoReleaseTime) {
-		this.autoReleaseTime = autoReleaseTime;
-		if(autoReleaseTime != null){
-			putQueryParameter("AutoReleaseTime", autoReleaseTime);
 		}
 	}
 
@@ -287,14 +245,14 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		}
 	}
 
-	public Integer getNetworkAttributesSlbUdpTimeout() {
-		return this.networkAttributesSlbUdpTimeout;
+	public String getTag4Key() {
+		return this.tag4Key;
 	}
 
-	public void setNetworkAttributesSlbUdpTimeout(Integer networkAttributesSlbUdpTimeout) {
-		this.networkAttributesSlbUdpTimeout = networkAttributesSlbUdpTimeout;
-		if(networkAttributesSlbUdpTimeout != null){
-			putQueryParameter("NetworkAttributes.SlbUdpTimeout", networkAttributesSlbUdpTimeout.toString());
+	public void setTag4Key(String tag4Key) {
+		this.tag4Key = tag4Key;
+		if(tag4Key != null){
+			putQueryParameter("Tag.4.Key", tag4Key);
 		}
 	}
 
@@ -320,6 +278,127 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		}
 	}
 
+	public String getClientToken() {
+		return this.clientToken;
+	}
+
+	public void setClientToken(String clientToken) {
+		this.clientToken = clientToken;
+		if(clientToken != null){
+			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+		if(description != null){
+			putQueryParameter("Description", description);
+		}
+	}
+
+	public String getDedicatedHostType() {
+		return this.dedicatedHostType;
+	}
+
+	public void setDedicatedHostType(String dedicatedHostType) {
+		this.dedicatedHostType = dedicatedHostType;
+		if(dedicatedHostType != null){
+			putQueryParameter("DedicatedHostType", dedicatedHostType);
+		}
+	}
+
+	public String getTag3Value() {
+		return this.tag3Value;
+	}
+
+	public void setTag3Value(String tag3Value) {
+		this.tag3Value = tag3Value;
+		if(tag3Value != null){
+			putQueryParameter("Tag.3.Value", tag3Value);
+		}
+	}
+
+	public Integer getQuantity() {
+		return this.quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+		if(quantity != null){
+			putQueryParameter("Quantity", quantity.toString());
+		}
+	}
+
+	public String getResourceOwnerAccount() {
+		return this.resourceOwnerAccount;
+	}
+
+	public void setResourceOwnerAccount(String resourceOwnerAccount) {
+		this.resourceOwnerAccount = resourceOwnerAccount;
+		if(resourceOwnerAccount != null){
+			putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+		}
+	}
+
+	public String getOwnerAccount() {
+		return this.ownerAccount;
+	}
+
+	public void setOwnerAccount(String ownerAccount) {
+		this.ownerAccount = ownerAccount;
+		if(ownerAccount != null){
+			putQueryParameter("OwnerAccount", ownerAccount);
+		}
+	}
+
+	public String getAutoReleaseTime() {
+		return this.autoReleaseTime;
+	}
+
+	public void setAutoReleaseTime(String autoReleaseTime) {
+		this.autoReleaseTime = autoReleaseTime;
+		if(autoReleaseTime != null){
+			putQueryParameter("AutoReleaseTime", autoReleaseTime);
+		}
+	}
+
+	public String getTag5Value() {
+		return this.tag5Value;
+	}
+
+	public void setTag5Value(String tag5Value) {
+		this.tag5Value = tag5Value;
+		if(tag5Value != null){
+			putQueryParameter("Tag.5.Value", tag5Value);
+		}
+	}
+
+	public String getTag1Key() {
+		return this.tag1Key;
+	}
+
+	public void setTag1Key(String tag1Key) {
+		this.tag1Key = tag1Key;
+		if(tag1Key != null){
+			putQueryParameter("Tag.1.Key", tag1Key);
+		}
+	}
+
+	public String getTag2Value() {
+		return this.tag2Value;
+	}
+
+	public void setTag2Value(String tag2Value) {
+		this.tag2Value = tag2Value;
+		if(tag2Value != null){
+			putQueryParameter("Tag.2.Value", tag2Value);
+		}
+	}
+
 	public String getChargeType() {
 		return this.chargeType;
 	}
@@ -328,40 +407,6 @@ public class AllocateDedicatedHostsRequest extends RpcAcsRequest<AllocateDedicat
 		this.chargeType = chargeType;
 		if(chargeType != null){
 			putQueryParameter("ChargeType", chargeType);
-		}
-	}
-
-	public Integer getNetworkAttributesUdpTimeout() {
-		return this.networkAttributesUdpTimeout;
-	}
-
-	public void setNetworkAttributesUdpTimeout(Integer networkAttributesUdpTimeout) {
-		this.networkAttributesUdpTimeout = networkAttributesUdpTimeout;
-		if(networkAttributesUdpTimeout != null){
-			putQueryParameter("NetworkAttributes.UdpTimeout", networkAttributesUdpTimeout.toString());
-		}
-	}
-
-	public static class Tag {
-
-		private String key;
-
-		private String value;
-
-		public String getKey() {
-			return this.key;
-		}
-
-		public void setKey(String key) {
-			this.key = key;
-		}
-
-		public String getValue() {
-			return this.value;
-		}
-
-		public void setValue(String value) {
-			this.value = value;
 		}
 	}
 

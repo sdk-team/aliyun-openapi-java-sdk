@@ -23,13 +23,13 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateVolumesResponseUnmarshaller {
 
-	public static CreateVolumesResponse unmarshall(CreateVolumesResponse createVolumesResponse, UnmarshallerContext context) {
+	public static CreateVolumesResponse unmarshall(CreateVolumesResponse createVolumesResponse, UnmarshallerContext _ctx) {
 		
-		createVolumesResponse.setRequestId(context.stringValue("CreateVolumesResponse.RequestId"));
+		createVolumesResponse.setRequestId(_ctx.stringValue("CreateVolumesResponse.RequestId"));
 
 		List<String> volumeIds = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("CreateVolumesResponse.VolumeIds.Length"); i++) {
-			volumeIds.add(context.stringValue("CreateVolumesResponse.VolumeIds["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("CreateVolumesResponse.VolumeIds.Length"); i++) {
+			volumeIds.add(_ctx.stringValue("CreateVolumesResponse.VolumeIds["+ i +"]"));
 		}
 		createVolumesResponse.setVolumeIds(volumeIds);
 	 

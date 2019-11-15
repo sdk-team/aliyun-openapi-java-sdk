@@ -15,22 +15,19 @@
 package com.aliyuncs.ecs.model.v20160314;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
+import com.aliyuncs.ecs.Endpoint;
 
 /**
  * @author auto create
  * @version 
  */
 public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
-	
-	public CreateOrderRequest() {
-		super("Ecs", "2016-03-14", "CreateOrder");
-	}
+	   
 
 	private String commodity;
 
 	private Long resourceOwnerId;
-
-	private Boolean asyncPattern;
 
 	private String clientToken;
 
@@ -53,6 +50,14 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 	private String orderType;
 
 	private String affinity;
+	public CreateOrderRequest() {
+		super("Ecs", "2016-03-14", "CreateOrder", "ecs");
+		setMethod(MethodType.POST);
+		try {
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
+			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
+		} catch (Exception e) {}
+	}
 
 	public String getCommodity() {
 		return this.commodity;
@@ -73,17 +78,6 @@ public class CreateOrderRequest extends RpcAcsRequest<CreateOrderResponse> {
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
-		}
-	}
-
-	public Boolean getAsyncPattern() {
-		return this.asyncPattern;
-	}
-
-	public void setAsyncPattern(Boolean asyncPattern) {
-		this.asyncPattern = asyncPattern;
-		if(asyncPattern != null){
-			putQueryParameter("AsyncPattern", asyncPattern.toString());
 		}
 	}
 

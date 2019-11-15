@@ -214,6 +214,8 @@ public class DescribePriceResponse extends AcsResponse {
 
 				private Boolean isSelected;
 
+				private List<String> ruleIdSet1;
+
 				public String getCouponNo() {
 					return this.couponNo;
 				}
@@ -252,6 +254,14 @@ public class DescribePriceResponse extends AcsResponse {
 
 				public void setIsSelected(Boolean isSelected) {
 					this.isSelected = isSelected;
+				}
+
+				public List<String> getRuleIdSet1() {
+					return this.ruleIdSet1;
+				}
+
+				public void setRuleIdSet1(List<String> ruleIdSet1) {
+					this.ruleIdSet1 = ruleIdSet1;
 				}
 			}
 		}

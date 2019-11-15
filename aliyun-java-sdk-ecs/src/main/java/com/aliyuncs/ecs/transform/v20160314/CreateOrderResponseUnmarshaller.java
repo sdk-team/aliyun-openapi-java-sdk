@@ -24,32 +24,30 @@ import com.aliyuncs.transform.UnmarshallerContext;
 
 public class CreateOrderResponseUnmarshaller {
 
-	public static CreateOrderResponse unmarshall(CreateOrderResponse createOrderResponse, UnmarshallerContext context) {
+	public static CreateOrderResponse unmarshall(CreateOrderResponse createOrderResponse, UnmarshallerContext _ctx) {
 		
-		createOrderResponse.setRequestId(context.stringValue("CreateOrderResponse.RequestId"));
-		createOrderResponse.setOrderId(context.stringValue("CreateOrderResponse.OrderId"));
-		createOrderResponse.setTradePrice(context.floatValue("CreateOrderResponse.TradePrice"));
-		createOrderResponse.setTaskId(context.stringValue("CreateOrderResponse.TaskId"));
+		createOrderResponse.setRequestId(_ctx.stringValue("CreateOrderResponse.RequestId"));
+		createOrderResponse.setOrderId(_ctx.stringValue("CreateOrderResponse.OrderId"));
 
 		List<String> orderParams = new ArrayList<String>();
-		for (int i = 0; i < context.lengthValue("CreateOrderResponse.OrderParams.Length"); i++) {
-			orderParams.add(context.stringValue("CreateOrderResponse.OrderParams["+ i +"]"));
+		for (int i = 0; i < _ctx.lengthValue("CreateOrderResponse.OrderParams.Length"); i++) {
+			orderParams.add(_ctx.stringValue("CreateOrderResponse.OrderParams["+ i +"]"));
 		}
 		createOrderResponse.setOrderParams(orderParams);
 
 		List<RelatedOrderItemSet> relatedOrderItemSets = new ArrayList<RelatedOrderItemSet>();
-		for (int i = 0; i < context.lengthValue("CreateOrderResponse.RelatedOrderItemSets.Length"); i++) {
+		for (int i = 0; i < _ctx.lengthValue("CreateOrderResponse.RelatedOrderItemSets.Length"); i++) {
 			RelatedOrderItemSet relatedOrderItemSet = new RelatedOrderItemSet();
 
 			List<String> instanceIdSet = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].InstanceIdSet.Length"); j++) {
-				instanceIdSet.add(context.stringValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].InstanceIdSet["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].InstanceIdSet.Length"); j++) {
+				instanceIdSet.add(_ctx.stringValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].InstanceIdSet["+ j +"]"));
 			}
 			relatedOrderItemSet.setInstanceIdSet(instanceIdSet);
 
 			List<String> relatedOrderIds = new ArrayList<String>();
-			for (int j = 0; j < context.lengthValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].RelatedOrderIds.Length"); j++) {
-				relatedOrderIds.add(context.stringValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].RelatedOrderIds["+ j +"]"));
+			for (int j = 0; j < _ctx.lengthValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].RelatedOrderIds.Length"); j++) {
+				relatedOrderIds.add(_ctx.stringValue("CreateOrderResponse.RelatedOrderItemSets["+ i +"].RelatedOrderIds["+ j +"]"));
 			}
 			relatedOrderItemSet.setRelatedOrderIds(relatedOrderIds);
 
