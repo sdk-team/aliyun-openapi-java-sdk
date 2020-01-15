@@ -1,3 +1,6 @@
+2020-01-15 Version: 1.1.11
+- Debugger.
+
 2019-08-09 Version: 1.1.10
 - Debugger.
 

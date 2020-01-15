@@ -22,12 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class ModifyApiNameRequest extends RoaAcsRequest<ModifyApiNameResponse> {
-	
-	public ModifyApiNameRequest() {
-		super("Acs", "2015-01-01", "ModifyApiName", "12334");
-		setUriPattern("/modifyApiName");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String modifyName;
 
@@ -38,6 +33,11 @@ public class ModifyApiNameRequest extends RoaAcsRequest<ModifyApiNameResponse> {
 	private String changeId;
 
 	private String versionName;
+	public ModifyApiNameRequest() {
+		super("Acs", "2015-01-01", "ModifyApiName", "12334");
+		setUriPattern("/modifyApiName");
+		setMethod(MethodType.POST);
+	}
 
 	public String getModifyName() {
 		return this.modifyName;

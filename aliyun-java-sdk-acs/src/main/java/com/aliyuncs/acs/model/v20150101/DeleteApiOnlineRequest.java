@@ -22,12 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class DeleteApiOnlineRequest extends RoaAcsRequest<DeleteApiOnlineResponse> {
-	
-	public DeleteApiOnlineRequest() {
-		super("Acs", "2015-01-01", "DeleteApiOnline", "12334");
-		setUriPattern("/deleteApiOnline");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String environment;
 
@@ -36,6 +31,11 @@ public class DeleteApiOnlineRequest extends RoaAcsRequest<DeleteApiOnlineRespons
 	private String productName;
 
 	private String versionName;
+	public DeleteApiOnlineRequest() {
+		super("Acs", "2015-01-01", "DeleteApiOnline", "12334");
+		setUriPattern("/deleteApiOnline");
+		setMethod(MethodType.POST);
+	}
 
 	public String getEnvironment() {
 		return this.environment;

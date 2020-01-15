@@ -22,12 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class ResumePurchasedApiRequest extends RoaAcsRequest<ResumePurchasedApiResponse> {
-	
-	public ResumePurchasedApiRequest() {
-		super("Acs", "2015-01-01", "ResumePurchasedApi", "12334");
-		setUriPattern("/Api/ResumePurchasedApi");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String purchaseProduct;
 
@@ -36,6 +31,11 @@ public class ResumePurchasedApiRequest extends RoaAcsRequest<ResumePurchasedApiR
 	private String purchaseVersion;
 
 	private String purchaseApiName;
+	public ResumePurchasedApiRequest() {
+		super("Acs", "2015-01-01", "ResumePurchasedApi", "12334");
+		setUriPattern("/Api/ResumePurchasedApi");
+		setMethod(MethodType.POST);
+	}
 
 	public String getPurchaseProduct() {
 		return this.purchaseProduct;

@@ -22,16 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
-	
-	public PurchaseApiRequest() {
-		super("Acs", "2015-01-01", "PurchaseApi", "12334");
-		setUriPattern("/Api/PurchaseApi");
-		setMethod(MethodType.POST);
-	}
-
-	private String serviceDate;
-
-	private Long quota;
+	   
 
 	private String orgCode;
 
@@ -39,32 +30,19 @@ public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
 
 	private String channel;
 
-	private String purchaseVersion;
-
 	private String purchaseApiName;
 
+	private String serviceDate;
+
+	private Long quota;
+
+	private String purchaseVersion;
+
 	private String billingType;
-
-	public String getServiceDate() {
-		return this.serviceDate;
-	}
-
-	public void setServiceDate(String serviceDate) {
-		this.serviceDate = serviceDate;
-		if(serviceDate != null){
-			putQueryParameter("ServiceDate", serviceDate);
-		}
-	}
-
-	public Long getQuota() {
-		return this.quota;
-	}
-
-	public void setQuota(Long quota) {
-		this.quota = quota;
-		if(quota != null){
-			putQueryParameter("Quota", quota.toString());
-		}
+	public PurchaseApiRequest() {
+		super("Acs", "2015-01-01", "PurchaseApi", "12334");
+		setUriPattern("/Api/PurchaseApi");
+		setMethod(MethodType.POST);
 	}
 
 	public String getOrgCode() {
@@ -100,17 +78,6 @@ public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
 		}
 	}
 
-	public String getPurchaseVersion() {
-		return this.purchaseVersion;
-	}
-
-	public void setPurchaseVersion(String purchaseVersion) {
-		this.purchaseVersion = purchaseVersion;
-		if(purchaseVersion != null){
-			putQueryParameter("PurchaseVersion", purchaseVersion);
-		}
-	}
-
 	public String getPurchaseApiName() {
 		return this.purchaseApiName;
 	}
@@ -119,6 +86,39 @@ public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
 		this.purchaseApiName = purchaseApiName;
 		if(purchaseApiName != null){
 			putQueryParameter("PurchaseApiName", purchaseApiName);
+		}
+	}
+
+	public String getServiceDate() {
+		return this.serviceDate;
+	}
+
+	public void setServiceDate(String serviceDate) {
+		this.serviceDate = serviceDate;
+		if(serviceDate != null){
+			putQueryParameter("ServiceDate", serviceDate);
+		}
+	}
+
+	public Long getQuota() {
+		return this.quota;
+	}
+
+	public void setQuota(Long quota) {
+		this.quota = quota;
+		if(quota != null){
+			putQueryParameter("Quota", quota.toString());
+		}
+	}
+
+	public String getPurchaseVersion() {
+		return this.purchaseVersion;
+	}
+
+	public void setPurchaseVersion(String purchaseVersion) {
+		this.purchaseVersion = purchaseVersion;
+		if(purchaseVersion != null){
+			putQueryParameter("PurchaseVersion", purchaseVersion);
 		}
 	}
 

@@ -22,12 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse> {
-	
-	public PutFlowControlRequest() {
-		super("Acs", "2015-01-01", "PutFlowControl", "12334");
-		setUriPattern("/FlowControl/[ProductName]/[VersionName]/[ApiName]");
-		setMethod(MethodType.PUT);
-	}
+	   
 
 	private String bodyContent;
 
@@ -38,6 +33,11 @@ public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse>
 	private String versionName;
 
 	private String accept;
+	public PutFlowControlRequest() {
+		super("Acs", "2015-01-01", "PutFlowControl", "12334");
+		setUriPattern("/FlowControl/[ProductName]/[VersionName]/[ApiName]");
+		setMethod(MethodType.PUT);
+	}
 
 	public String getBodyContent() {
 		return this.bodyContent;
