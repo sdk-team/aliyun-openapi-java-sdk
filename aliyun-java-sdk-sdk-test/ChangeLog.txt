@@ -1,3 +1,6 @@
+2020-02-12 Version: 1.0.4-SNAPSHOT
+- Test for reactor sdk portal.
+
 2020-02-12 Version: 1.0.5-SNAPSHOT
 - Generated 2019-02-25 for `sdk-test`.
 
