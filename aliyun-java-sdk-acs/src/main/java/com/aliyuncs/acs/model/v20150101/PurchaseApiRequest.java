@@ -40,7 +40,7 @@ public class PurchaseApiRequest extends RoaAcsRequest<PurchaseApiResponse> {
 
 	private String billingType;
 	public PurchaseApiRequest() {
-		super("Acs", "2015-01-01", "PurchaseApi", "12334");
+		super("Acs", "2015-01-01", "PurchaseApi");
 		setUriPattern("/Api/PurchaseApi");
 		setMethod(MethodType.POST);
 	}

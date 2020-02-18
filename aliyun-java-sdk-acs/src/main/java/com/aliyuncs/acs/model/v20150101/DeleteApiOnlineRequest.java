@@ -32,7 +32,7 @@ public class DeleteApiOnlineRequest extends RoaAcsRequest<DeleteApiOnlineRespons
 
 	private String versionName;
 	public DeleteApiOnlineRequest() {
-		super("Acs", "2015-01-01", "DeleteApiOnline", "12334");
+		super("Acs", "2015-01-01", "DeleteApiOnline");
 		setUriPattern("/deleteApiOnline");
 		setMethod(MethodType.POST);
 	}

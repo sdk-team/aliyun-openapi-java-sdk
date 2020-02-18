@@ -32,7 +32,7 @@ public class DeleteApiInDailyRequest extends RoaAcsRequest<DeleteApiInDailyRespo
 
 	private String versionName;
 	public DeleteApiInDailyRequest() {
-		super("Acs", "2015-01-01", "DeleteApiInDaily", "12334");
+		super("Acs", "2015-01-01", "DeleteApiInDaily");
 		setUriPattern("/deleteApiInDaily");
 		setMethod(MethodType.POST);
 	}

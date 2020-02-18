@@ -32,7 +32,7 @@ public class ResumePurchasedApiRequest extends RoaAcsRequest<ResumePurchasedApiR
 
 	private String purchaseApiName;
 	public ResumePurchasedApiRequest() {
-		super("Acs", "2015-01-01", "ResumePurchasedApi", "12334");
+		super("Acs", "2015-01-01", "ResumePurchasedApi");
 		setUriPattern("/Api/ResumePurchasedApi");
 		setMethod(MethodType.POST);
 	}

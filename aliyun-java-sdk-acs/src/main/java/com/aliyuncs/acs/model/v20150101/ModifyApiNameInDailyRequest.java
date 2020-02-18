@@ -34,7 +34,7 @@ public class ModifyApiNameInDailyRequest extends RoaAcsRequest<ModifyApiNameInDa
 
 	private String versionName;
 	public ModifyApiNameInDailyRequest() {
-		super("Acs", "2015-01-01", "ModifyApiNameInDaily", "12334");
+		super("Acs", "2015-01-01", "ModifyApiNameInDaily");
 		setUriPattern("/modifyApiNameInDaily");
 		setMethod(MethodType.POST);
 	}

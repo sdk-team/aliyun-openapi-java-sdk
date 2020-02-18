@@ -34,7 +34,7 @@ public class PutFlowControlRequest extends RoaAcsRequest<PutFlowControlResponse>
 
 	private String accept;
 	public PutFlowControlRequest() {
-		super("Acs", "2015-01-01", "PutFlowControl", "12334");
+		super("Acs", "2015-01-01", "PutFlowControl");
 		setUriPattern("/FlowControl/[ProductName]/[VersionName]/[ApiName]");
 		setMethod(MethodType.PUT);
 	}

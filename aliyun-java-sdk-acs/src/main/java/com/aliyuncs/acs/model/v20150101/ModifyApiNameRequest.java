@@ -34,7 +34,7 @@ public class ModifyApiNameRequest extends RoaAcsRequest<ModifyApiNameResponse> {
 
 	private String versionName;
 	public ModifyApiNameRequest() {
-		super("Acs", "2015-01-01", "ModifyApiName", "12334");
+		super("Acs", "2015-01-01", "ModifyApiName");
 		setUriPattern("/modifyApiName");
 		setMethod(MethodType.POST);
 	}

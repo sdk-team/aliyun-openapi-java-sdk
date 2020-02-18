@@ -32,7 +32,7 @@ public class StopPurchasedApiRequest extends RoaAcsRequest<StopPurchasedApiRespo
 
 	private String purchaseApiName;
 	public StopPurchasedApiRequest() {
-		super("Acs", "2015-01-01", "StopPurchasedApi", "12334");
+		super("Acs", "2015-01-01", "StopPurchasedApi");
 		setUriPattern("/Api/StopPurchasedApi");
 		setMethod(MethodType.POST);
 	}
