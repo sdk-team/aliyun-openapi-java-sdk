@@ -7,6 +7,9 @@
 2020-02-19 Version: 1.0.3-SNAPSHOT
 - Generated 2019-02-25 for `sdk-test`.
 
+2020-02-19 Version: 1.0.3-SNAPSHOT
+- Generated 2019-02-25 for `sdk-test`.
+
 2020-02-19 Version: 1.0.2-SNAPSHOT
 - Generated 2019-02-25 for `sdk-test`.
 
