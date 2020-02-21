@@ -39,6 +39,7 @@ public class GetDeviceApplyStatusForTmallGenieResponseUnmarshaller {
 			applyStatus.setTotalCount(_ctx.integerValue("GetDeviceApplyStatusForTmallGenieResponse.Data["+ i +"].TotalCount"));
 			applyStatus.setDownloadHref(_ctx.stringValue("GetDeviceApplyStatusForTmallGenieResponse.Data["+ i +"].DownloadHref"));
 			applyStatus.setApplyId(_ctx.stringValue("GetDeviceApplyStatusForTmallGenieResponse.Data["+ i +"].ApplyId"));
+			applyStatus.setExist(_ctx.booleanValue("GetDeviceApplyStatusForTmallGenieResponse.Data["+ i +"].Exist"));
 
 			data.add(applyStatus);
 		}

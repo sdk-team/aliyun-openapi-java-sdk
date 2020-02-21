@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyncDeviceUnbindResponse> {
-	
-	public DataCleanSyncDeviceUnbindRequest() {
-		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String taobaoId;
 
@@ -39,6 +35,10 @@ public class DataCleanSyncDeviceUnbindRequest extends RpcAcsRequest<DataCleanSyn
 	private String deviceName;
 
 	private String from;
+	public DataCleanSyncDeviceUnbindRequest() {
+		super("Iot", "2019-07-30", "DataCleanSyncDeviceUnbind");
+		setMethod(MethodType.POST);
+	}
 
 	public String getTaobaoId() {
 		return this.taobaoId;

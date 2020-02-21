@@ -15,24 +15,24 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.iot.transform.v20190730.AddProductIdentifierForTmallGenieResponseUnmarshaller;
+import com.aliyuncs.iot.transform.v20190730.ExportProductForTmallGenieResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class AddProductIdentifierForTmallGenieResponse extends AcsResponse {
+public class ExportProductForTmallGenieResponse extends AcsResponse {
 
 	private String requestId;
 
 	private Boolean success;
 
-	private String errorMessage;
-
 	private String code;
 
-	private String successList;
+	private String errorMessage;
+
+	private String productDefinition;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -50,14 +50,6 @@ public class AddProductIdentifierForTmallGenieResponse extends AcsResponse {
 		this.success = success;
 	}
 
-	public String getErrorMessage() {
-		return this.errorMessage;
-	}
-
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
-	}
-
 	public String getCode() {
 		return this.code;
 	}
@@ -66,16 +58,24 @@ public class AddProductIdentifierForTmallGenieResponse extends AcsResponse {
 		this.code = code;
 	}
 
-	public String getSuccessList() {
-		return this.successList;
+	public String getErrorMessage() {
+		return this.errorMessage;
 	}
 
-	public void setSuccessList(String successList) {
-		this.successList = successList;
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+
+	public String getProductDefinition() {
+		return this.productDefinition;
+	}
+
+	public void setProductDefinition(String productDefinition) {
+		this.productDefinition = productDefinition;
 	}
 
 	@Override
-	public AddProductIdentifierForTmallGenieResponse getInstance(UnmarshallerContext context) {
-		return	AddProductIdentifierForTmallGenieResponseUnmarshaller.unmarshall(this, context);
+	public ExportProductForTmallGenieResponse getInstance(UnmarshallerContext context) {
+		return	ExportProductForTmallGenieResponseUnmarshaller.unmarshall(this, context);
 	}
 }

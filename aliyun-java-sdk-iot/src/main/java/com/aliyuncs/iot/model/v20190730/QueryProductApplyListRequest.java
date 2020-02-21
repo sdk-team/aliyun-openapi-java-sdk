@@ -22,19 +22,45 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductApplyListResponse> {
-	
-	public QueryProductApplyListRequest() {
-		super("Iot", "2019-07-30", "QueryProductApplyList");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private String iotInstanceId;
+
+	private Long pageSize;
 
 	private String productKey;
 
 	private Long pageNo;
 
-	private String iotInstanceId;
+	private String apiProduct;
 
-	private Long pageSize;
+	private String apiRevision;
+	public QueryProductApplyListRequest() {
+		super("Iot", "2019-07-30", "QueryProductApplyList");
+		setMethod(MethodType.POST);
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Long getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Long pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
 
 	public String getProductKey() {
 		return this.productKey;
@@ -58,25 +84,25 @@ public class QueryProductApplyListRequest extends RpcAcsRequest<QueryProductAppl
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
-	public Long getPageSize() {
-		return this.pageSize;
+	public String getApiRevision() {
+		return this.apiRevision;
 	}
 
-	public void setPageSize(Long pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetDeviceApplyStatusForTmallGenieResponse> {
-	
-	public GetDeviceApplyStatusForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetDeviceApplyStatusForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String productKey;
 
@@ -36,6 +32,12 @@ public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetD
 	private String apiProduct;
 
 	private String apiRevision;
+
+	private String fileFormat;
+	public GetDeviceApplyStatusForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "GetDeviceApplyStatusForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getProductKey() {
 		return this.productKey;
@@ -80,6 +82,17 @@ public class GetDeviceApplyStatusForTmallGenieRequest extends RpcAcsRequest<GetD
 		this.apiRevision = apiRevision;
 		if(apiRevision != null){
 			putBodyParameter("ApiRevision", apiRevision);
+		}
+	}
+
+	public String getFileFormat() {
+		return this.fileFormat;
+	}
+
+	public void setFileFormat(String fileFormat) {
+		this.fileFormat = fileFormat;
+		if(fileFormat != null){
+			putQueryParameter("FileFormat", fileFormat);
 		}
 	}
 

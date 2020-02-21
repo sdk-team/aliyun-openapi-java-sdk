@@ -21,40 +21,53 @@ import com.aliyuncs.http.MethodType;
  * @author auto create
  * @version 
  */
-public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateFuncsForTmallGenieResponse> {
+public class ImportProductForTmallGenieRequest extends RpcAcsRequest<ImportProductForTmallGenieResponse> {
 	   
 
-	private String thingTemplateKey;
+	private String taobaoId;
 
-	private String iotInstanceId;
+	private String productDefinition;
+
+	private String productKey;
 
 	private String apiProduct;
 
 	private String apiRevision;
-	public ListThingTemplateFuncsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie");
+	public ImportProductForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "ImportProductForTmallGenie");
 		setMethod(MethodType.POST);
 	}
 
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
+	public String getTaobaoId() {
+		return this.taobaoId;
 	}
 
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
+	public void setTaobaoId(String taobaoId) {
+		this.taobaoId = taobaoId;
+		if(taobaoId != null){
+			putBodyParameter("TaobaoId", taobaoId);
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getProductDefinition() {
+		return this.productDefinition;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setProductDefinition(String productDefinition) {
+		this.productDefinition = productDefinition;
+		if(productDefinition != null){
+			putBodyParameter("ProductDefinition", productDefinition);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putBodyParameter("ProductKey", productKey);
 		}
 	}
 
@@ -81,8 +94,8 @@ public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<Li
 	}
 
 	@Override
-	public Class<ListThingTemplateFuncsForTmallGenieResponse> getResponseClass() {
-		return ListThingTemplateFuncsForTmallGenieResponse.class;
+	public Class<ImportProductForTmallGenieResponse> getResponseClass() {
+		return ImportProductForTmallGenieResponse.class;
 	}
 
 }

@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class BatchServiceMigrateToUnifyRequest extends RpcAcsRequest<BatchServiceMigrateToUnifyResponse> {
-	
-	public BatchServiceMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "BatchServiceMigrateToUnify");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String categoryKey;
 
@@ -38,6 +34,10 @@ public class BatchServiceMigrateToUnifyRequest extends RpcAcsRequest<BatchServic
 	private String namespace;
 
 	private String bizTenantId;
+	public BatchServiceMigrateToUnifyRequest() {
+		super("Iot", "2019-07-30", "BatchServiceMigrateToUnify");
+		setMethod(MethodType.POST);
+	}
 
 	public String getCategoryKey() {
 		return this.categoryKey;

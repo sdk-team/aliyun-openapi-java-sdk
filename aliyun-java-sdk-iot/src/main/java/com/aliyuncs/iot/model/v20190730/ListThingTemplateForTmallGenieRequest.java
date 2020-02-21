@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class ListThingTemplateForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateForTmallGenieResponse> {
-	
-	public ListThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String keywords;
 
@@ -34,7 +30,15 @@ public class ListThingTemplateForTmallGenieRequest extends RpcAcsRequest<ListThi
 
 	private Integer pageSize;
 
+	private String apiProduct;
+
+	private String apiRevision;
+
 	private Integer page;
+	public ListThingTemplateForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "ListThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getKeywords() {
 		return this.keywords;
@@ -66,6 +70,28 @@ public class ListThingTemplateForTmallGenieRequest extends RpcAcsRequest<ListThi
 		this.pageSize = pageSize;
 		if(pageSize != null){
 			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

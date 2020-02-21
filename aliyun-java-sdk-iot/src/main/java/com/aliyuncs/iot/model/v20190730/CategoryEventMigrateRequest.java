@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class CategoryEventMigrateRequest extends RpcAcsRequest<CategoryEventMigrateResponse> {
-	
-	public CategoryEventMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryEventMigrate");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String categoryKey;
 
@@ -38,6 +34,10 @@ public class CategoryEventMigrateRequest extends RpcAcsRequest<CategoryEventMigr
 	private List<Event> events;
 
 	private String bizTenantId;
+	public CategoryEventMigrateRequest() {
+		super("Iot", "2019-07-30", "CategoryEventMigrate");
+		setMethod(MethodType.POST);
+	}
 
 	public String getCategoryKey() {
 		return this.categoryKey;

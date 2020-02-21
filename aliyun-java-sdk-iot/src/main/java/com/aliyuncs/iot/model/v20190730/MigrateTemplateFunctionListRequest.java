@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class MigrateTemplateFunctionListRequest extends RpcAcsRequest<MigrateTemplateFunctionListResponse> {
-	
-	public MigrateTemplateFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigrateTemplateFunctionList");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String packInfo;
 
@@ -39,6 +35,10 @@ public class MigrateTemplateFunctionListRequest extends RpcAcsRequest<MigrateTem
 	private String bizTenantId;
 
 	private String templateKey;
+	public MigrateTemplateFunctionListRequest() {
+		super("Iot", "2019-07-30", "MigrateTemplateFunctionList");
+		setMethod(MethodType.POST);
+	}
 
 	public String getPackInfo() {
 		return this.packInfo;

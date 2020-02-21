@@ -22,15 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class GetProductFunctionForTmallGenieRequest extends RpcAcsRequest<GetProductFunctionForTmallGenieResponse> {
-	
-	public GetProductFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetProductFunctionForTmallGenie");
-		setMethod(MethodType.POST);
-	}
-
-	private String identifier;
-
-	private String productKey;
+	   
 
 	private Long tmallFunctionId;
 
@@ -38,26 +30,16 @@ public class GetProductFunctionForTmallGenieRequest extends RpcAcsRequest<GetPro
 
 	private String tmallFunctionType;
 
-	public String getIdentifier() {
-		return this.identifier;
-	}
+	private String identifier;
 
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
-	}
+	private String productKey;
 
-	public String getProductKey() {
-		return this.productKey;
-	}
+	private String apiProduct;
 
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
-		}
+	private String apiRevision;
+	public GetProductFunctionForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "GetProductFunctionForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	public Long getTmallFunctionId() {
@@ -90,6 +72,50 @@ public class GetProductFunctionForTmallGenieRequest extends RpcAcsRequest<GetPro
 		this.tmallFunctionType = tmallFunctionType;
 		if(tmallFunctionType != null){
 			putQueryParameter("TmallFunctionType", tmallFunctionType);
+		}
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

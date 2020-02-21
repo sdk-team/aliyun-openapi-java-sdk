@@ -22,19 +22,45 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class CreateTestDeviceForTmallGenieRequest extends RpcAcsRequest<CreateTestDeviceForTmallGenieResponse> {
-	
-	public CreateTestDeviceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private String iotInstanceId;
+
+	private Integer quota;
 
 	private String thingType;
 
 	private String productKey;
 
-	private String iotInstanceId;
+	private String apiProduct;
 
-	private Integer quota;
+	private String apiRevision;
+	public CreateTestDeviceForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "CreateTestDeviceForTmallGenie");
+		setMethod(MethodType.POST);
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public Integer getQuota() {
+		return this.quota;
+	}
+
+	public void setQuota(Integer quota) {
+		this.quota = quota;
+		if(quota != null){
+			putQueryParameter("Quota", quota.toString());
+		}
+	}
 
 	public String getThingType() {
 		return this.thingType;
@@ -58,25 +84,25 @@ public class CreateTestDeviceForTmallGenieRequest extends RpcAcsRequest<CreateTe
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
-	public Integer getQuota() {
-		return this.quota;
+	public String getApiRevision() {
+		return this.apiRevision;
 	}
 
-	public void setQuota(Integer quota) {
-		this.quota = quota;
-		if(quota != null){
-			putQueryParameter("Quota", quota.toString());
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

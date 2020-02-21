@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateToProdResponse> {
-	
-	public PropertyMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "PropertyMigrateToProd");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String description;
 
@@ -58,6 +54,10 @@ public class PropertyMigrateToProdRequest extends RpcAcsRequest<PropertyMigrateT
 	private String bizTenantId;
 
 	private String accessMode;
+	public PropertyMigrateToProdRequest() {
+		super("Iot", "2019-07-30", "PropertyMigrateToProd");
+		setMethod(MethodType.POST);
+	}
 
 	public String getDescription() {
 		return this.description;

@@ -87,6 +87,8 @@ public class GetDeviceApplyStatusForTmallGenieResponse extends AcsResponse {
 
 		private String applyId;
 
+		private Boolean exist;
+
 		public String getStatus() {
 			return this.status;
 		}
@@ -125,6 +127,14 @@ public class GetDeviceApplyStatusForTmallGenieResponse extends AcsResponse {
 
 		public void setApplyId(String applyId) {
 			this.applyId = applyId;
+		}
+
+		public Boolean getExist() {
+			return this.exist;
+		}
+
+		public void setExist(Boolean exist) {
+			this.exist = exist;
 		}
 	}
 

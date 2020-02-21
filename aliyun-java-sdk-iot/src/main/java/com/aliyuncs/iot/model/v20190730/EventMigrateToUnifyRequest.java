@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnifyResponse> {
-	
-	public EventMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToUnify");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String thingTemplateKey;
 
@@ -66,6 +62,10 @@ public class EventMigrateToUnifyRequest extends RpcAcsRequest<EventMigrateToUnif
 	private String categoryName;
 
 	private String bizTenantId;
+	public EventMigrateToUnifyRequest() {
+		super("Iot", "2019-07-30", "EventMigrateToUnify");
+		setMethod(MethodType.POST);
+	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;

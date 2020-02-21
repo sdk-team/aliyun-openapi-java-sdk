@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsRequest<QueryDeviceOnlineLogContentForTmallGenieResponse> {
-	
-	public QueryDeviceOnlineLogContentForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryDeviceOnlineLogContentForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String keywords;
 
@@ -46,9 +42,17 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 
 	private String productKey;
 
+	private String apiProduct;
+
+	private String apiRevision;
+
 	private String deviceName;
 
 	private String bizTenantId;
+	public QueryDeviceOnlineLogContentForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "QueryDeviceOnlineLogContentForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getKeywords() {
 		return this.keywords;
@@ -146,6 +150,28 @@ public class QueryDeviceOnlineLogContentForTmallGenieRequest extends RpcAcsReque
 		this.productKey = productKey;
 		if(productKey != null){
 			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

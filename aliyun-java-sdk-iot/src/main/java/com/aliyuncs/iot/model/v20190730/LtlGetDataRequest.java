@@ -21,40 +21,53 @@ import com.aliyuncs.http.MethodType;
  * @author auto create
  * @version 
  */
-public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateFuncsForTmallGenieResponse> {
+public class LtlGetDataRequest extends RpcAcsRequest<LtlGetDataResponse> {
 	   
 
-	private String thingTemplateKey;
+	private String key;
 
-	private String iotInstanceId;
+	private String apiVersion;
+
+	private String productKey;
 
 	private String apiProduct;
 
 	private String apiRevision;
-	public ListThingTemplateFuncsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie");
+	public LtlGetDataRequest() {
+		super("Iot", "2019-07-30", "LtlGetData");
 		setMethod(MethodType.POST);
 	}
 
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
+	public String getKey() {
+		return this.key;
 	}
 
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
+	public void setKey(String key) {
+		this.key = key;
+		if(key != null){
+			putQueryParameter("Key", key);
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiVersion() {
+		return this.apiVersion;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiVersion(String apiVersion) {
+		this.apiVersion = apiVersion;
+		if(apiVersion != null){
+			putQueryParameter("ApiVersion", apiVersion);
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
 		}
 	}
 
@@ -81,8 +94,8 @@ public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<Li
 	}
 
 	@Override
-	public Class<ListThingTemplateFuncsForTmallGenieResponse> getResponseClass() {
-		return ListThingTemplateFuncsForTmallGenieResponse.class;
+	public Class<LtlGetDataResponse> getResponseClass() {
+		return LtlGetDataResponse.class;
 	}
 
 }

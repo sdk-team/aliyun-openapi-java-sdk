@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class MigratePoolFunctionListRequest extends RpcAcsRequest<MigratePoolFunctionListResponse> {
-	
-	public MigratePoolFunctionListRequest() {
-		super("Iot", "2019-07-30", "MigratePoolFunctionList");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String packInfo;
 
@@ -35,6 +31,10 @@ public class MigratePoolFunctionListRequest extends RpcAcsRequest<MigratePoolFun
 	private String iotInstanceId;
 
 	private String bizTenantId;
+	public MigratePoolFunctionListRequest() {
+		super("Iot", "2019-07-30", "MigratePoolFunctionList");
+		setMethod(MethodType.POST);
+	}
 
 	public String getPackInfo() {
 		return this.packInfo;

@@ -23,21 +23,25 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateForTmallGenieResponse> {
-	
-	public AddThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String thingTemplateKey;
+
+	private Long thingTemplateId;
+
+	private String iotInstanceId;
 
 	private String thingTemplateName;
 
 	private List<Tags> tagss;
 
-	private Long thingTemplateId;
+	private String apiProduct;
 
-	private String iotInstanceId;
+	private String apiRevision;
+	public AddThingTemplateForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "AddThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -47,6 +51,28 @@ public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThing
 		this.thingTemplateKey = thingTemplateKey;
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
+		}
+	}
+
+	public Long getThingTemplateId() {
+		return this.thingTemplateId;
+	}
+
+	public void setThingTemplateId(Long thingTemplateId) {
+		this.thingTemplateId = thingTemplateId;
+		if(thingTemplateId != null){
+			putQueryParameter("ThingTemplateId", thingTemplateId.toString());
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -75,25 +101,25 @@ public class AddThingTemplateForTmallGenieRequest extends RpcAcsRequest<AddThing
 		}	
 	}
 
-	public Long getThingTemplateId() {
-		return this.thingTemplateId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setThingTemplateId(Long thingTemplateId) {
-		this.thingTemplateId = thingTemplateId;
-		if(thingTemplateId != null){
-			putQueryParameter("ThingTemplateId", thingTemplateId.toString());
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiRevision() {
+		return this.apiRevision;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

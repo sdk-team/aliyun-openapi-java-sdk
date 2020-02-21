@@ -21,40 +21,27 @@ import com.aliyuncs.http.MethodType;
  * @author auto create
  * @version 
  */
-public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateFuncsForTmallGenieResponse> {
+public class ImportDeviceForTmallGenieRequest extends RpcAcsRequest<ImportDeviceForTmallGenieResponse> {
 	   
 
-	private String thingTemplateKey;
-
-	private String iotInstanceId;
+	private String deviceDefinition;
 
 	private String apiProduct;
 
 	private String apiRevision;
-	public ListThingTemplateFuncsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie");
+	public ImportDeviceForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "ImportDeviceForTmallGenie");
 		setMethod(MethodType.POST);
 	}
 
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
+	public String getDeviceDefinition() {
+		return this.deviceDefinition;
 	}
 
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setDeviceDefinition(String deviceDefinition) {
+		this.deviceDefinition = deviceDefinition;
+		if(deviceDefinition != null){
+			putBodyParameter("DeviceDefinition", deviceDefinition);
 		}
 	}
 
@@ -81,8 +68,8 @@ public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<Li
 	}
 
 	@Override
-	public Class<ListThingTemplateFuncsForTmallGenieResponse> getResponseClass() {
-		return ListThingTemplateFuncsForTmallGenieResponse.class;
+	public Class<ImportDeviceForTmallGenieResponse> getResponseClass() {
+		return ImportDeviceForTmallGenieResponse.class;
 	}
 
 }

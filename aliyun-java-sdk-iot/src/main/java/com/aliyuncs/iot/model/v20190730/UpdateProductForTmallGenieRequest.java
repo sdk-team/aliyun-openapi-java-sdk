@@ -22,50 +22,32 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProductForTmallGenieResponse> {
-	
-	public UpdateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateProductForTmallGenie");
-		setMethod(MethodType.POST);
-	}
-
-	private String productModel;
-
-	private Integer dataFormat;
+	   
 
 	private Integer nodeType;
 
 	private String description;
 
-	private String productKey;
-
 	private String iotInstanceId;
-
-	private Integer netType;
 
 	private String productName;
 
 	private String productBrand;
 
-	public String getProductModel() {
-		return this.productModel;
-	}
+	private String productModel;
 
-	public void setProductModel(String productModel) {
-		this.productModel = productModel;
-		if(productModel != null){
-			putBodyParameter("ProductModel", productModel);
-		}
-	}
+	private Integer dataFormat;
 
-	public Integer getDataFormat() {
-		return this.dataFormat;
-	}
+	private String productKey;
 
-	public void setDataFormat(Integer dataFormat) {
-		this.dataFormat = dataFormat;
-		if(dataFormat != null){
-			putBodyParameter("DataFormat", dataFormat.toString());
-		}
+	private Integer netType;
+
+	private String apiProduct;
+
+	private String apiRevision;
+	public UpdateProductForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "UpdateProductForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	public Integer getNodeType() {
@@ -90,17 +72,6 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		}
 	}
 
-	public String getProductKey() {
-		return this.productKey;
-	}
-
-	public void setProductKey(String productKey) {
-		this.productKey = productKey;
-		if(productKey != null){
-			putQueryParameter("ProductKey", productKey);
-		}
-	}
-
 	public String getIotInstanceId() {
 		return this.iotInstanceId;
 	}
@@ -109,17 +80,6 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
-		}
-	}
-
-	public Integer getNetType() {
-		return this.netType;
-	}
-
-	public void setNetType(Integer netType) {
-		this.netType = netType;
-		if(netType != null){
-			putBodyParameter("NetType", netType.toString());
 		}
 	}
 
@@ -142,6 +102,72 @@ public class UpdateProductForTmallGenieRequest extends RpcAcsRequest<UpdateProdu
 		this.productBrand = productBrand;
 		if(productBrand != null){
 			putBodyParameter("ProductBrand", productBrand);
+		}
+	}
+
+	public String getProductModel() {
+		return this.productModel;
+	}
+
+	public void setProductModel(String productModel) {
+		this.productModel = productModel;
+		if(productModel != null){
+			putBodyParameter("ProductModel", productModel);
+		}
+	}
+
+	public Integer getDataFormat() {
+		return this.dataFormat;
+	}
+
+	public void setDataFormat(Integer dataFormat) {
+		this.dataFormat = dataFormat;
+		if(dataFormat != null){
+			putBodyParameter("DataFormat", dataFormat.toString());
+		}
+	}
+
+	public String getProductKey() {
+		return this.productKey;
+	}
+
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
+		}
+	}
+
+	public Integer getNetType() {
+		return this.netType;
+	}
+
+	public void setNetType(Integer netType) {
+		this.netType = netType;
+		if(netType != null){
+			putBodyParameter("NetType", netType.toString());
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

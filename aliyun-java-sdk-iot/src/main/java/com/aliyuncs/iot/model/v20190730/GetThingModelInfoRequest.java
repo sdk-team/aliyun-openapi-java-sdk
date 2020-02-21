@@ -22,17 +22,17 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class GetThingModelInfoRequest extends RpcAcsRequest<GetThingModelInfoResponse> {
-	
-	public GetThingModelInfoRequest() {
-		super("Iot", "2019-07-30", "GetThingModelInfo");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String productKey;
 
 	private String iotInstanceId;
 
 	private String bizTenantId;
+	public GetThingModelInfoRequest() {
+		super("Iot", "2019-07-30", "GetThingModelInfo");
+		setMethod(MethodType.POST);
+	}
 
 	public String getProductKey() {
 		return this.productKey;

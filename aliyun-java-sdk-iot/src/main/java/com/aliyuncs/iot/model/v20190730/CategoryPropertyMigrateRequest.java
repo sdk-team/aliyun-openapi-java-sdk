@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryPropertyMigrateResponse> {
-	
-	public CategoryPropertyMigrateRequest() {
-		super("Iot", "2019-07-30", "CategoryPropertyMigrate");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String categoryKey;
 
@@ -38,6 +34,10 @@ public class CategoryPropertyMigrateRequest extends RpcAcsRequest<CategoryProper
 	private List<Property> propertys;
 
 	private String bizTenantId;
+	public CategoryPropertyMigrateRequest() {
+		super("Iot", "2019-07-30", "CategoryPropertyMigrate");
+		setMethod(MethodType.POST);
+	}
 
 	public String getCategoryKey() {
 		return this.categoryKey;

@@ -22,13 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsRequest<RemoveThingTemplateFunctionForTmallGenieResponse> {
-	
-	public RemoveThingTemplateFunctionForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveThingTemplateFunctionForTmallGenie");
-		setMethod(MethodType.POST);
-	}
-
-	private String identifier;
+	   
 
 	private String thingTemplateKey;
 
@@ -38,15 +32,14 @@ public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsReque
 
 	private String tmallFunctionType;
 
-	public String getIdentifier() {
-		return this.identifier;
-	}
+	private String identifier;
 
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
-		if(identifier != null){
-			putQueryParameter("Identifier", identifier);
-		}
+	private String apiProduct;
+
+	private String apiRevision;
+	public RemoveThingTemplateFunctionForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "RemoveThingTemplateFunctionForTmallGenie");
+		setMethod(MethodType.POST);
 	}
 
 	public String getThingTemplateKey() {
@@ -90,6 +83,39 @@ public class RemoveThingTemplateFunctionForTmallGenieRequest extends RpcAcsReque
 		this.tmallFunctionType = tmallFunctionType;
 		if(tmallFunctionType != null){
 			putQueryParameter("TmallFunctionType", tmallFunctionType);
+		}
+	}
+
+	public String getIdentifier() {
+		return this.identifier;
+	}
+
+	public void setIdentifier(String identifier) {
+		this.identifier = identifier;
+		if(identifier != null){
+			putQueryParameter("Identifier", identifier);
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

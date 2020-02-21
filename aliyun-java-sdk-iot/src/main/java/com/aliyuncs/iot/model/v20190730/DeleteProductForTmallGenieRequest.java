@@ -22,15 +22,30 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class DeleteProductForTmallGenieRequest extends RpcAcsRequest<DeleteProductForTmallGenieResponse> {
-	
+	   
+
+	private String iotInstanceId;
+
+	private String productKey;
+
+	private String apiProduct;
+
+	private String apiRevision;
 	public DeleteProductForTmallGenieRequest() {
 		super("Iot", "2019-07-30", "DeleteProductForTmallGenie");
 		setMethod(MethodType.POST);
 	}
 
-	private String productKey;
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
 
-	private String iotInstanceId;
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
 
 	public String getProductKey() {
 		return this.productKey;
@@ -43,14 +58,25 @@ public class DeleteProductForTmallGenieRequest extends RpcAcsRequest<DeleteProdu
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

@@ -23,21 +23,32 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddProductIdentifierForTmallGenieResponse> {
-	
-	public AddProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private String iotInstanceId;
 
 	private List<String> identifiers;
-
-	private String tmallGenieTraceId;
 
 	private String productKey;
 
 	private String apiProduct;
 
 	private String apiRevision;
+	public AddProductIdentifierForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "AddProductIdentifierForTmallGenie");
+		setMethod(MethodType.POST);
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
 
 	public List<String> getIdentifiers() {
 		return this.identifiers;
@@ -50,17 +61,6 @@ public class AddProductIdentifierForTmallGenieRequest extends RpcAcsRequest<AddP
 				putQueryParameter("Identifier." + (i + 1) , identifiers.get(i));
 			}
 		}	
-	}
-
-	public String getTmallGenieTraceId() {
-		return this.tmallGenieTraceId;
-	}
-
-	public void setTmallGenieTraceId(String tmallGenieTraceId) {
-		this.tmallGenieTraceId = tmallGenieTraceId;
-		if(tmallGenieTraceId != null){
-			putQueryParameter("TmallGenieTraceId", tmallGenieTraceId);
-		}
 	}
 
 	public String getProductKey() {

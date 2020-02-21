@@ -22,19 +22,23 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteListMaintainResponse> {
-	
-	public ProductWhiteListMaintainRequest() {
-		super("Iot", "2019-07-30", "ProductWhiteListMaintain");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String actionType;
+
+	private String iotInstanceId;
 
 	private String product;
 
 	private String manufacture;
 
-	private String iotInstanceId;
+	private String apiProduct;
+
+	private String apiRevision;
+	public ProductWhiteListMaintainRequest() {
+		super("Iot", "2019-07-30", "ProductWhiteListMaintain");
+		setMethod(MethodType.POST);
+	}
 
 	public String getActionType() {
 		return this.actionType;
@@ -47,29 +51,21 @@ public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteL
 		}
 	}
 
-	public String getBizProduct() {
-		return this.product;
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
 	}
 
-	public void setBizProduct(String product) {
-		this.product = product;
-		if(product != null){
-			putQueryParameter("Product", product);
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
-	/**
-	 * @deprecated use getBizProduct instead of this.
-	 */
-	@Deprecated
 	public String getProduct() {
 		return this.product;
 	}
 
-	/**
-	 * @deprecated use setBizProduct instead of this.
-	 */
-	@Deprecated
 	public void setProduct(String product) {
 		this.product = product;
 		if(product != null){
@@ -88,14 +84,25 @@ public class ProductWhiteListMaintainRequest extends RpcAcsRequest<ProductWhiteL
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

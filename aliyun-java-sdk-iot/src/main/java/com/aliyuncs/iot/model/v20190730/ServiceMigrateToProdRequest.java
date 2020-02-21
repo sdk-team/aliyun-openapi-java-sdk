@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToProdResponse> {
-	
-	public ServiceMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "ServiceMigrateToProd");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private List<ArgsDTO> argsDTOs;
 
@@ -52,6 +48,10 @@ public class ServiceMigrateToProdRequest extends RpcAcsRequest<ServiceMigrateToP
 	private String categoryName;
 
 	private String bizTenantId;
+	public ServiceMigrateToProdRequest() {
+		super("Iot", "2019-07-30", "ServiceMigrateToProd");
+		setMethod(MethodType.POST);
+	}
 
 	public List<ArgsDTO> getArgsDTOs() {
 		return this.argsDTOs;

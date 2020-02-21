@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplatePropertyForTmallGenieResponse> {
-	
-	public UpdateThingTemplatePropertyForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplatePropertyForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String dataSpecs;
 
@@ -47,7 +43,15 @@ public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsReque
 
 	private String rwType;
 
+	private String apiProduct;
+
 	private String name;
+
+	private String apiRevision;
+	public UpdateThingTemplatePropertyForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "UpdateThingTemplatePropertyForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getDataSpecs() {
 		return this.dataSpecs;
@@ -151,6 +155,17 @@ public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsReque
 		}
 	}
 
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
 	public String getName() {
 		return this.name;
 	}
@@ -159,6 +174,17 @@ public class UpdateThingTemplatePropertyForTmallGenieRequest extends RpcAcsReque
 		this.name = name;
 		if(name != null){
 			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

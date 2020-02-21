@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdResponse> {
-	
-	public EventMigrateToProdRequest() {
-		super("Iot", "2019-07-30", "EventMigrateToProd");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private List<ArgsDTO> argsDTOs;
 
@@ -52,6 +48,10 @@ public class EventMigrateToProdRequest extends RpcAcsRequest<EventMigrateToProdR
 	private String categoryName;
 
 	private String bizTenantId;
+	public EventMigrateToProdRequest() {
+		super("Iot", "2019-07-30", "EventMigrateToProd");
+		setMethod(MethodType.POST);
+	}
 
 	public List<ArgsDTO> getArgsDTOs() {
 		return this.argsDTOs;

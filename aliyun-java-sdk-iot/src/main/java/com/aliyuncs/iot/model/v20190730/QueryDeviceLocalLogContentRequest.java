@@ -22,11 +22,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDeviceLocalLogContentResponse> {
-	
-	public QueryDeviceLocalLogContentRequest() {
-		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String keywords;
 
@@ -45,6 +41,10 @@ public class QueryDeviceLocalLogContentRequest extends RpcAcsRequest<QueryDevice
 	private String deviceName;
 
 	private String bizTenantId;
+	public QueryDeviceLocalLogContentRequest() {
+		super("Iot", "2019-07-30", "QueryDeviceLocalLogContent");
+		setMethod(MethodType.POST);
+	}
 
 	public String getKeywords() {
 		return this.keywords;

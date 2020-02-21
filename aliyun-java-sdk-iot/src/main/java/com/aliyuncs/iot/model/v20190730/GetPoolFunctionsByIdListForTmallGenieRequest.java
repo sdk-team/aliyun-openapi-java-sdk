@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class GetPoolFunctionsByIdListForTmallGenieRequest extends RpcAcsRequest<GetPoolFunctionsByIdListForTmallGenieResponse> {
-	
-	public GetPoolFunctionsByIdListForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "GetPoolFunctionsByIdListForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private List<Long> tmallFunctionIdLists;
 
@@ -38,6 +34,14 @@ public class GetPoolFunctionsByIdListForTmallGenieRequest extends RpcAcsRequest<
 	private String iotInstanceId;
 
 	private String tmallFunctionType;
+
+	private String apiProduct;
+
+	private String apiRevision;
+	public GetPoolFunctionsByIdListForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "GetPoolFunctionsByIdListForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public List<Long> getTmallFunctionIdLists() {
 		return this.tmallFunctionIdLists;
@@ -95,6 +99,28 @@ public class GetPoolFunctionsByIdListForTmallGenieRequest extends RpcAcsRequest<
 		this.tmallFunctionType = tmallFunctionType;
 		if(tmallFunctionType != null){
 			putQueryParameter("TmallFunctionType", tmallFunctionType);
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

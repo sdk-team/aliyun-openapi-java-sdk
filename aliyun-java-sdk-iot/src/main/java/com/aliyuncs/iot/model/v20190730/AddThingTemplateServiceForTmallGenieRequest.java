@@ -23,11 +23,13 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateServiceForTmallGenieResponse> {
-	
-	public AddThingTemplateServiceForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private Long tmallFunctionId;
+
+	private String iotInstanceId;
+
+	private String callType;
 
 	private String identifier;
 
@@ -37,13 +39,48 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 
 	private List<Tags> tagss;
 
-	private Long tmallFunctionId;
-
-	private String iotInstanceId;
+	private String apiProduct;
 
 	private String name;
 
-	private String callType;
+	private String apiRevision;
+	public AddThingTemplateServiceForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "AddThingTemplateServiceForTmallGenie");
+		setMethod(MethodType.POST);
+	}
+
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
+	}
+
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public String getCallType() {
+		return this.callType;
+	}
+
+	public void setCallType(String callType) {
+		this.callType = callType;
+		if(callType != null){
+			putQueryParameter("CallType", callType);
+		}
+	}
 
 	public String getIdentifier() {
 		return this.identifier;
@@ -108,25 +145,14 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 		}	
 	}
 
-	public Long getTmallFunctionId() {
-		return this.tmallFunctionId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setTmallFunctionId(Long tmallFunctionId) {
-		this.tmallFunctionId = tmallFunctionId;
-		if(tmallFunctionId != null){
-			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
@@ -141,14 +167,14 @@ public class AddThingTemplateServiceForTmallGenieRequest extends RpcAcsRequest<A
 		}
 	}
 
-	public String getCallType() {
-		return this.callType;
+	public String getApiRevision() {
+		return this.apiRevision;
 	}
 
-	public void setCallType(String callType) {
-		this.callType = callType;
-		if(callType != null){
-			putQueryParameter("CallType", callType);
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

@@ -15,46 +15,49 @@
 package com.aliyuncs.iot.model.v20190730;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
 import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
  * @version 
  */
-public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<ListThingTemplateFuncsForTmallGenieResponse> {
+public class ExportDeviceForTmallGenieRequest extends RpcAcsRequest<ExportDeviceForTmallGenieResponse> {
 	   
 
-	private String thingTemplateKey;
+	private List<String> deviceNamess;
 
-	private String iotInstanceId;
+	private String productKey;
 
 	private String apiProduct;
 
 	private String apiRevision;
-	public ListThingTemplateFuncsForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "ListThingTemplateFuncsForTmallGenie");
+	public ExportDeviceForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "ExportDeviceForTmallGenie");
 		setMethod(MethodType.POST);
 	}
 
-	public String getThingTemplateKey() {
-		return this.thingTemplateKey;
+	public List<String> getDeviceNamess() {
+		return this.deviceNamess;
 	}
 
-	public void setThingTemplateKey(String thingTemplateKey) {
-		this.thingTemplateKey = thingTemplateKey;
-		if(thingTemplateKey != null){
-			putQueryParameter("ThingTemplateKey", thingTemplateKey);
-		}
+	public void setDeviceNamess(List<String> deviceNamess) {
+		this.deviceNamess = deviceNamess;	
+		if (deviceNamess != null) {
+			for (int i = 0; i < deviceNamess.size(); i++) {
+				putQueryParameter("DeviceNames." + (i + 1) , deviceNamess.get(i));
+			}
+		}	
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getProductKey() {
+		return this.productKey;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setProductKey(String productKey) {
+		this.productKey = productKey;
+		if(productKey != null){
+			putQueryParameter("ProductKey", productKey);
 		}
 	}
 
@@ -81,8 +84,8 @@ public class ListThingTemplateFuncsForTmallGenieRequest extends RpcAcsRequest<Li
 	}
 
 	@Override
-	public Class<ListThingTemplateFuncsForTmallGenieResponse> getResponseClass() {
-		return ListThingTemplateFuncsForTmallGenieResponse.class;
+	public Class<ExportDeviceForTmallGenieResponse> getResponseClass() {
+		return ExportDeviceForTmallGenieResponse.class;
 	}
 
 }

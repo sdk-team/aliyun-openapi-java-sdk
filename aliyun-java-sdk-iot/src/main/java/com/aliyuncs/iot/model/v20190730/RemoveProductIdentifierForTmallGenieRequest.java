@@ -23,17 +23,32 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<RemoveProductIdentifierForTmallGenieResponse> {
-	
-	public RemoveProductIdentifierForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private String iotInstanceId;
 
 	private List<String> identifiers;
 
 	private String productKey;
 
-	private String iotInstanceId;
+	private String apiProduct;
+
+	private String apiRevision;
+	public RemoveProductIdentifierForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "RemoveProductIdentifierForTmallGenie");
+		setMethod(MethodType.POST);
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
 
 	public List<String> getIdentifiers() {
 		return this.identifiers;
@@ -59,14 +74,25 @@ public class RemoveProductIdentifierForTmallGenieRequest extends RpcAcsRequest<R
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

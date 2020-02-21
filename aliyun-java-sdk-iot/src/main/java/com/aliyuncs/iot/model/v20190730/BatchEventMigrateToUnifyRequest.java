@@ -23,11 +23,7 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class BatchEventMigrateToUnifyRequest extends RpcAcsRequest<BatchEventMigrateToUnifyResponse> {
-	
-	public BatchEventMigrateToUnifyRequest() {
-		super("Iot", "2019-07-30", "BatchEventMigrateToUnify");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String categoryKey;
 
@@ -38,6 +34,10 @@ public class BatchEventMigrateToUnifyRequest extends RpcAcsRequest<BatchEventMig
 	private List<Event> events;
 
 	private String bizTenantId;
+	public BatchEventMigrateToUnifyRequest() {
+		super("Iot", "2019-07-30", "BatchEventMigrateToUnify");
+		setMethod(MethodType.POST);
+	}
 
 	public String getCategoryKey() {
 		return this.categoryKey;

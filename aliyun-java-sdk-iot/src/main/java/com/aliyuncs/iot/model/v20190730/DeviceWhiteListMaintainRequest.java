@@ -23,19 +23,23 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteListMaintainResponse> {
-	
+	   
+
+	private String actionType;
+
+	private String iotInstanceId;
+
+	private String manufacture;
+
+	private String apiProduct;
+
+	private String apiRevision;
+
+	private List<Device> devices;
 	public DeviceWhiteListMaintainRequest() {
 		super("Iot", "2019-07-30", "DeviceWhiteListMaintain");
 		setMethod(MethodType.POST);
 	}
-
-	private String actionType;
-
-	private String manufacture;
-
-	private String iotInstanceId;
-
-	private List<Device> devices;
 
 	public String getActionType() {
 		return this.actionType;
@@ -45,6 +49,17 @@ public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteLis
 		this.actionType = actionType;
 		if(actionType != null){
 			putQueryParameter("ActionType", actionType);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -59,14 +74,25 @@ public class DeviceWhiteListMaintainRequest extends RpcAcsRequest<DeviceWhiteLis
 		}
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

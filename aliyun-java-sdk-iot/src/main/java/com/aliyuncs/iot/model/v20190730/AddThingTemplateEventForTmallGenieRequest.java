@@ -23,11 +23,11 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<AddThingTemplateEventForTmallGenieResponse> {
-	
-	public AddThingTemplateEventForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
+
+	private Long tmallFunctionId;
+
+	private String iotInstanceId;
 
 	private String identifier;
 
@@ -35,13 +35,39 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 
 	private List<OutputData> outputDatas;
 
-	private Long tmallFunctionId;
-
-	private String iotInstanceId;
+	private String apiProduct;
 
 	private String name;
 
+	private String apiRevision;
+
 	private String eventType;
+	public AddThingTemplateEventForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "AddThingTemplateEventForTmallGenie");
+		setMethod(MethodType.POST);
+	}
+
+	public Long getTmallFunctionId() {
+		return this.tmallFunctionId;
+	}
+
+	public void setTmallFunctionId(Long tmallFunctionId) {
+		this.tmallFunctionId = tmallFunctionId;
+		if(tmallFunctionId != null){
+			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
 
 	public String getIdentifier() {
 		return this.identifier;
@@ -87,25 +113,14 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 		}	
 	}
 
-	public Long getTmallFunctionId() {
-		return this.tmallFunctionId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setTmallFunctionId(Long tmallFunctionId) {
-		this.tmallFunctionId = tmallFunctionId;
-		if(tmallFunctionId != null){
-			putQueryParameter("TmallFunctionId", tmallFunctionId.toString());
-		}
-	}
-
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
-	}
-
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
 		}
 	}
 
@@ -117,6 +132,17 @@ public class AddThingTemplateEventForTmallGenieRequest extends RpcAcsRequest<Add
 		this.name = name;
 		if(name != null){
 			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

@@ -22,15 +22,19 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class DeleteThingTemplateForTmallGenieRequest extends RpcAcsRequest<DeleteThingTemplateForTmallGenieResponse> {
-	
-	public DeleteThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "DeleteThingTemplateForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String thingTemplateKey;
 
 	private String iotInstanceId;
+
+	private String apiProduct;
+
+	private String apiRevision;
+	public DeleteThingTemplateForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "DeleteThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -51,6 +55,28 @@ public class DeleteThingTemplateForTmallGenieRequest extends RpcAcsRequest<Delet
 		this.iotInstanceId = iotInstanceId;
 		if(iotInstanceId != null){
 			putQueryParameter("IotInstanceId", iotInstanceId);
+		}
+	}
+
+	public String getApiProduct() {
+		return this.apiProduct;
+	}
+
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

@@ -23,19 +23,23 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<UpdateThingTemplateForTmallGenieResponse> {
-	
-	public UpdateThingTemplateForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String thingTemplateKey;
+
+	private String iotInstanceId;
 
 	private String thingTemplateName;
 
 	private List<Tags> tagss;
 
-	private String iotInstanceId;
+	private String apiProduct;
+
+	private String apiRevision;
+	public UpdateThingTemplateForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "UpdateThingTemplateForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getThingTemplateKey() {
 		return this.thingTemplateKey;
@@ -45,6 +49,17 @@ public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<Updat
 		this.thingTemplateKey = thingTemplateKey;
 		if(thingTemplateKey != null){
 			putQueryParameter("ThingTemplateKey", thingTemplateKey);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -73,14 +88,25 @@ public class UpdateThingTemplateForTmallGenieRequest extends RpcAcsRequest<Updat
 		}	
 	}
 
-	public String getIotInstanceId() {
-		return this.iotInstanceId;
+	public String getApiProduct() {
+		return this.apiProduct;
 	}
 
-	public void setIotInstanceId(String iotInstanceId) {
-		this.iotInstanceId = iotInstanceId;
-		if(iotInstanceId != null){
-			putQueryParameter("IotInstanceId", iotInstanceId);
+	public void setApiProduct(String apiProduct) {
+		this.apiProduct = apiProduct;
+		if(apiProduct != null){
+			putBodyParameter("ApiProduct", apiProduct);
+		}
+	}
+
+	public String getApiRevision() {
+		return this.apiRevision;
+	}
+
+	public void setApiRevision(String apiRevision) {
+		this.apiRevision = apiRevision;
+		if(apiRevision != null){
+			putBodyParameter("ApiRevision", apiRevision);
 		}
 	}
 

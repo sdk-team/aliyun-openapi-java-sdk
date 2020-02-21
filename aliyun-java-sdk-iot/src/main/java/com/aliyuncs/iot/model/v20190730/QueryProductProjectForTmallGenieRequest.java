@@ -22,17 +22,17 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class QueryProductProjectForTmallGenieRequest extends RpcAcsRequest<QueryProductProjectForTmallGenieResponse> {
-	
-	public QueryProductProjectForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "QueryProductProjectForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private String taoBaoId;
 
 	private String productKey;
 
 	private String iotInstanceId;
+	public QueryProductProjectForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "QueryProductProjectForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public String getTaoBaoId() {
 		return this.taoBaoId;

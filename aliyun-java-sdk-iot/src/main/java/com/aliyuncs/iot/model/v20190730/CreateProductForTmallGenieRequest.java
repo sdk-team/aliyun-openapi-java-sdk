@@ -22,17 +22,15 @@ import com.aliyuncs.http.MethodType;
  * @version 
  */
 public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProductForTmallGenieResponse> {
-	
-	public CreateProductForTmallGenieRequest() {
-		super("Iot", "2019-07-30", "CreateProductForTmallGenie");
-		setMethod(MethodType.POST);
-	}
+	   
 
 	private Integer nodeType;
 
 	private String taoBaoId;
 
 	private String description;
+
+	private String iotInstanceId;
 
 	private String productName;
 
@@ -44,13 +42,15 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 
 	private Integer dataFormat;
 
-	private String tmallGenieTraceId;
-
 	private Integer netType;
 
 	private String apiProduct;
 
 	private String apiRevision;
+	public CreateProductForTmallGenieRequest() {
+		super("Iot", "2019-07-30", "CreateProductForTmallGenie");
+		setMethod(MethodType.POST);
+	}
 
 	public Integer getNodeType() {
 		return this.nodeType;
@@ -82,6 +82,17 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.description = description;
 		if(description != null){
 			putBodyParameter("Description", description);
+		}
+	}
+
+	public String getIotInstanceId() {
+		return this.iotInstanceId;
+	}
+
+	public void setIotInstanceId(String iotInstanceId) {
+		this.iotInstanceId = iotInstanceId;
+		if(iotInstanceId != null){
+			putQueryParameter("IotInstanceId", iotInstanceId);
 		}
 	}
 
@@ -137,17 +148,6 @@ public class CreateProductForTmallGenieRequest extends RpcAcsRequest<CreateProdu
 		this.dataFormat = dataFormat;
 		if(dataFormat != null){
 			putBodyParameter("DataFormat", dataFormat.toString());
-		}
-	}
-
-	public String getTmallGenieTraceId() {
-		return this.tmallGenieTraceId;
-	}
-
-	public void setTmallGenieTraceId(String tmallGenieTraceId) {
-		this.tmallGenieTraceId = tmallGenieTraceId;
-		if(tmallGenieTraceId != null){
-			putQueryParameter("TmallGenieTraceId", tmallGenieTraceId);
 		}
 	}
 
