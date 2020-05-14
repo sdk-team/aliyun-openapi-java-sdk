@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.bss.model.v20140714;
+package com.aliyuncs.v5.bss.model.v20140714;
 
-import com.aliyuncs.AcsResponse;
-import com.aliyuncs.bss.transform.v20140714.DescribeCashDetailResponseUnmarshaller;
-import com.aliyuncs.transform.UnmarshallerContext;
+import com.aliyuncs.v5.AcsResponse;
+import com.aliyuncs.v5.bss.transform.v20140714.DescribeCashDetailResponseUnmarshaller;
+import com.aliyuncs.v5.transform.UnmarshallerContext;
 
 /**
  * @author auto create

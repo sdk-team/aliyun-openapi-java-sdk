@@ -12,11 +12,11 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.bss.model.v20140714;
+package com.aliyuncs.v5.bss.model.v20140714;
 
-import com.aliyuncs.RpcAcsRequest;
-import com.aliyuncs.http.ProtocolType;
-import com.aliyuncs.http.MethodType;
+import com.aliyuncs.v5.RpcAcsRequest;
+import com.aliyuncs.v5.http.ProtocolType;
+import com.aliyuncs.v5.http.MethodType;
 
 /**
  * @author auto create

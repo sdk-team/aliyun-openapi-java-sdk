@@ -12,13 +12,13 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.bss.transform.v20140714;
+package com.aliyuncs.v5.bss.transform.v20140714;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.aliyuncs.bss.model.v20140714.DescribeCouponDetailResponse;
-import com.aliyuncs.transform.UnmarshallerContext;
+import com.aliyuncs.v5.bss.model.v20140714.DescribeCouponDetailResponse;
+import com.aliyuncs.v5.transform.UnmarshallerContext;
 
 
 public class DescribeCouponDetailResponseUnmarshaller {
