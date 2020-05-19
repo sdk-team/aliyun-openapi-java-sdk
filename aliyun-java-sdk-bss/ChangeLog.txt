@@ -1,3 +1,6 @@
+2020-05-19 Version: 2.0.NaN-SNAPSHOT
+- Generated 2014-07-14 for `Bss`.
+
 2020-05-15 Version: 0.2.0-SNAPSHOT
 - Generated 2014-07-14 for `Bss`.
 
