@@ -36,7 +36,7 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends RpcAcsRequest<Mod
 
 	private Long ownerId;
 	public ModifyDedicatedHostAutoReleaseTimeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDedicatedHostAutoReleaseTime", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDedicatedHostAutoReleaseTime");
 		setMethod(MethodType.POST);
 	}
 

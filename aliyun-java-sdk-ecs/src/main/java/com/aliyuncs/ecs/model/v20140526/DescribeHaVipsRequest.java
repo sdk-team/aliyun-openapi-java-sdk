@@ -39,7 +39,7 @@ public class DescribeHaVipsRequest extends RpcAcsRequest<DescribeHaVipsResponse>
 
 	private List<Filter> filters;
 	public DescribeHaVipsRequest() {
-		super("Ecs", "2014-05-26", "DescribeHaVips", "ecs");
+		super("Ecs", "2014-05-26", "DescribeHaVips");
 		setMethod(MethodType.POST);
 	}
 

@@ -40,7 +40,7 @@ public class CreateHaVipRequest extends RpcAcsRequest<CreateHaVipResponse> {
 
 	private String vSwitchId;
 	public CreateHaVipRequest() {
-		super("Ecs", "2014-05-26", "CreateHaVip", "ecs");
+		super("Ecs", "2014-05-26", "CreateHaVip");
 		setMethod(MethodType.POST);
 	}
 

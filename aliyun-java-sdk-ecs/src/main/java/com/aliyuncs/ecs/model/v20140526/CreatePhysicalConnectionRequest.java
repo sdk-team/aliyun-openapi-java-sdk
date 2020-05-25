@@ -56,7 +56,7 @@ public class CreatePhysicalConnectionRequest extends RpcAcsRequest<CreatePhysica
 
 	private String name;
 	public CreatePhysicalConnectionRequest() {
-		super("Ecs", "2014-05-26", "CreatePhysicalConnection", "ecs");
+		super("Ecs", "2014-05-26", "CreatePhysicalConnection");
 		setMethod(MethodType.POST);
 	}
 

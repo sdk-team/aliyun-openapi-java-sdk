@@ -47,7 +47,7 @@ public class CreateSecurityGroupRequest extends RpcAcsRequest<CreateSecurityGrou
 
 	private String vpcId;
 	public CreateSecurityGroupRequest() {
-		super("Ecs", "2014-05-26", "CreateSecurityGroup", "ecs");
+		super("Ecs", "2014-05-26", "CreateSecurityGroup");
 		setMethod(MethodType.POST);
 	}
 

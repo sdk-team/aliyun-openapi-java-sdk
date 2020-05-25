@@ -46,7 +46,7 @@ public class DescribeResourcesModificationRequest extends RpcAcsRequest<Describe
 
 	private String destinationResource;
 	public DescribeResourcesModificationRequest() {
-		super("Ecs", "2014-05-26", "DescribeResourcesModification", "ecs");
+		super("Ecs", "2014-05-26", "DescribeResourcesModification");
 		setMethod(MethodType.POST);
 	}
 

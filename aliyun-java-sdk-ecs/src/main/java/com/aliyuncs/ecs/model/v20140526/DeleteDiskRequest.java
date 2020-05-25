@@ -34,7 +34,7 @@ public class DeleteDiskRequest extends RpcAcsRequest<DeleteDiskResponse> {
 
 	private Long ownerId;
 	public DeleteDiskRequest() {
-		super("Ecs", "2014-05-26", "DeleteDisk", "ecs");
+		super("Ecs", "2014-05-26", "DeleteDisk");
 		setMethod(MethodType.POST);
 	}
 

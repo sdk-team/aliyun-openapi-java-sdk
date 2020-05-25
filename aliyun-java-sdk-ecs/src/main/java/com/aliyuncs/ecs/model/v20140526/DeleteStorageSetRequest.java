@@ -36,7 +36,7 @@ public class DeleteStorageSetRequest extends RpcAcsRequest<DeleteStorageSetRespo
 
 	private String storageSetId;
 	public DeleteStorageSetRequest() {
-		super("Ecs", "2014-05-26", "DeleteStorageSet", "ecs");
+		super("Ecs", "2014-05-26", "DeleteStorageSet");
 		setMethod(MethodType.POST);
 	}
 

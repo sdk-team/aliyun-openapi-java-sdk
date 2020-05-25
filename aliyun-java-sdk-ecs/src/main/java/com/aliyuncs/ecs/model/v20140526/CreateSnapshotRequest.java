@@ -47,7 +47,7 @@ public class CreateSnapshotRequest extends RpcAcsRequest<CreateSnapshotResponse>
 
 	private String category;
 	public CreateSnapshotRequest() {
-		super("Ecs", "2014-05-26", "CreateSnapshot", "ecs");
+		super("Ecs", "2014-05-26", "CreateSnapshot");
 		setMethod(MethodType.POST);
 	}
 

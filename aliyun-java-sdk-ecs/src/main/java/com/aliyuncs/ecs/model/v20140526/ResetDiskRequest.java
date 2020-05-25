@@ -36,7 +36,7 @@ public class ResetDiskRequest extends RpcAcsRequest<ResetDiskResponse> {
 
 	private Long ownerId;
 	public ResetDiskRequest() {
-		super("Ecs", "2014-05-26", "ResetDisk", "ecs");
+		super("Ecs", "2014-05-26", "ResetDisk");
 		setMethod(MethodType.POST);
 	}
 

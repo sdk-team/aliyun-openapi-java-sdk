@@ -74,7 +74,7 @@ public class CreateRouterInterfaceRequest extends RpcAcsRequest<CreateRouterInte
 
 	private String pricingCycle;
 	public CreateRouterInterfaceRequest() {
-		super("Ecs", "2014-05-26", "CreateRouterInterface", "ecs");
+		super("Ecs", "2014-05-26", "CreateRouterInterface");
 		setMethod(MethodType.POST);
 	}
 

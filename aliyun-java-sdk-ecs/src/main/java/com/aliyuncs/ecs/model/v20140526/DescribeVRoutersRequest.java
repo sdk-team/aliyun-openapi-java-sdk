@@ -38,7 +38,7 @@ public class DescribeVRoutersRequest extends RpcAcsRequest<DescribeVRoutersRespo
 
 	private Long ownerId;
 	public DescribeVRoutersRequest() {
-		super("Ecs", "2014-05-26", "DescribeVRouters", "ecs");
+		super("Ecs", "2014-05-26", "DescribeVRouters");
 		setMethod(MethodType.POST);
 	}
 

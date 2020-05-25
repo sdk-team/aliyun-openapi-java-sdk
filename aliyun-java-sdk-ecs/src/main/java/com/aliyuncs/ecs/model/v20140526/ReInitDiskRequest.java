@@ -42,7 +42,7 @@ public class ReInitDiskRequest extends RpcAcsRequest<ReInitDiskResponse> {
 
 	private Long ownerId;
 	public ReInitDiskRequest() {
-		super("Ecs", "2014-05-26", "ReInitDisk", "ecs");
+		super("Ecs", "2014-05-26", "ReInitDisk");
 		setMethod(MethodType.POST);
 	}
 

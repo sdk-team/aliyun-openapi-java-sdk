@@ -39,7 +39,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Rp
 
 	private String physicalConnectionId;
 	public DescribeVirtualBorderRoutersForPhysicalConnectionRequest() {
-		super("Ecs", "2014-05-26", "DescribeVirtualBorderRoutersForPhysicalConnection", "ecs");
+		super("Ecs", "2014-05-26", "DescribeVirtualBorderRoutersForPhysicalConnection");
 		setMethod(MethodType.POST);
 	}
 

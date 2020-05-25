@@ -38,7 +38,7 @@ public class DeleteInstanceRequest extends RpcAcsRequest<DeleteInstanceResponse>
 
 	private Boolean force;
 	public DeleteInstanceRequest() {
-		super("Ecs", "2014-05-26", "DeleteInstance", "ecs");
+		super("Ecs", "2014-05-26", "DeleteInstance");
 		setMethod(MethodType.POST);
 	}
 

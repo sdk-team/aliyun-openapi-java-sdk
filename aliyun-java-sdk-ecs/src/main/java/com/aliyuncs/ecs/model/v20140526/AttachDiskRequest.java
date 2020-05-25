@@ -46,7 +46,7 @@ public class AttachDiskRequest extends RpcAcsRequest<AttachDiskResponse> {
 
 	private String device;
 	public AttachDiskRequest() {
-		super("Ecs", "2014-05-26", "AttachDisk", "ecs");
+		super("Ecs", "2014-05-26", "AttachDisk");
 		setMethod(MethodType.POST);
 	}
 

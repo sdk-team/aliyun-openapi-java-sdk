@@ -34,7 +34,7 @@ public class DescribeUserBusinessBehaviorRequest extends RpcAcsRequest<DescribeU
 
 	private String statusKey;
 	public DescribeUserBusinessBehaviorRequest() {
-		super("Ecs", "2014-05-26", "DescribeUserBusinessBehavior", "ecs");
+		super("Ecs", "2014-05-26", "DescribeUserBusinessBehavior");
 		setMethod(MethodType.POST);
 	}
 

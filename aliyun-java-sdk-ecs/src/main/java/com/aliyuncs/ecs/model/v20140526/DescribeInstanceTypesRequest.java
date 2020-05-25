@@ -34,7 +34,7 @@ public class DescribeInstanceTypesRequest extends RpcAcsRequest<DescribeInstance
 
 	private Long ownerId;
 	public DescribeInstanceTypesRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstanceTypes", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInstanceTypes");
 		setMethod(MethodType.POST);
 	}
 

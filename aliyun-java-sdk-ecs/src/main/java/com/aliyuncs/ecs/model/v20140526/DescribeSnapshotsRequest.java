@@ -71,9 +71,11 @@ public class DescribeSnapshotsRequest extends RpcAcsRequest<DescribeSnapshotsRes
 
 	private String kMSKeyId;
 
+	private String category;
+
 	private String status;
 	public DescribeSnapshotsRequest() {
-		super("Ecs", "2014-05-26", "DescribeSnapshots", "ecs");
+		super("Ecs", "2014-05-26", "DescribeSnapshots");
 		setMethod(MethodType.POST);
 	}
 
@@ -330,6 +332,17 @@ public class DescribeSnapshotsRequest extends RpcAcsRequest<DescribeSnapshotsRes
 		this.kMSKeyId = kMSKeyId;
 		if(kMSKeyId != null){
 			putQueryParameter("KMSKeyId", kMSKeyId);
+		}
+	}
+
+	public String getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+		if(category != null){
+			putQueryParameter("Category", category);
 		}
 	}
 

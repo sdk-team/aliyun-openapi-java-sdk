@@ -36,7 +36,7 @@ public class JoinSecurityGroupRequest extends RpcAcsRequest<JoinSecurityGroupRes
 
 	private String instanceId;
 	public JoinSecurityGroupRequest() {
-		super("Ecs", "2014-05-26", "JoinSecurityGroup", "ecs");
+		super("Ecs", "2014-05-26", "JoinSecurityGroup");
 		setMethod(MethodType.POST);
 	}
 

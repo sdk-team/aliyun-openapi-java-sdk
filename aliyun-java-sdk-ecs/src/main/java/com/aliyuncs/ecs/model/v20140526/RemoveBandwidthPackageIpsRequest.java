@@ -39,7 +39,7 @@ public class RemoveBandwidthPackageIpsRequest extends RpcAcsRequest<RemoveBandwi
 
 	private Long ownerId;
 	public RemoveBandwidthPackageIpsRequest() {
-		super("Ecs", "2014-05-26", "RemoveBandwidthPackageIps", "ecs");
+		super("Ecs", "2014-05-26", "RemoveBandwidthPackageIps");
 		setMethod(MethodType.POST);
 	}
 

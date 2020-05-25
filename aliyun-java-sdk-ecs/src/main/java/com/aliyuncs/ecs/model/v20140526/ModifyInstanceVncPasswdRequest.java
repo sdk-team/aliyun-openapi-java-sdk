@@ -36,7 +36,7 @@ public class ModifyInstanceVncPasswdRequest extends RpcAcsRequest<ModifyInstance
 
 	private String vncPassword;
 	public ModifyInstanceVncPasswdRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceVncPasswd", "ecs");
+		super("Ecs", "2014-05-26", "ModifyInstanceVncPasswd");
 		setMethod(MethodType.POST);
 	}
 

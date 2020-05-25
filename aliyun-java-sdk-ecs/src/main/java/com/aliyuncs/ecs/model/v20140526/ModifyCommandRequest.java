@@ -44,7 +44,7 @@ public class ModifyCommandRequest extends RpcAcsRequest<ModifyCommandResponse> {
 
 	private String name;
 	public ModifyCommandRequest() {
-		super("Ecs", "2014-05-26", "ModifyCommand", "ecs");
+		super("Ecs", "2014-05-26", "ModifyCommand");
 		setMethod(MethodType.POST);
 	}
 

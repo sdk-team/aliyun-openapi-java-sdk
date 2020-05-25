@@ -29,6 +29,8 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	private String imageId;
 
+	private String encryptAlgorithm;
+
 	private String destinationRegionId;
 
 	private List<Tag> tags;
@@ -47,7 +49,7 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 
 	private String destinationDescription;
 	public CopyImageRequest() {
-		super("Ecs", "2014-05-26", "CopyImage", "ecs");
+		super("Ecs", "2014-05-26", "CopyImage");
 		setMethod(MethodType.POST);
 	}
 
@@ -70,6 +72,17 @@ public class CopyImageRequest extends RpcAcsRequest<CopyImageResponse> {
 		this.imageId = imageId;
 		if(imageId != null){
 			putQueryParameter("ImageId", imageId);
+		}
+	}
+
+	public String getEncryptAlgorithm() {
+		return this.encryptAlgorithm;
+	}
+
+	public void setEncryptAlgorithm(String encryptAlgorithm) {
+		this.encryptAlgorithm = encryptAlgorithm;
+		if(encryptAlgorithm != null){
+			putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
 		}
 	}
 

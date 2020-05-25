@@ -43,7 +43,7 @@ public class DescribeKeyPairsRequest extends RpcAcsRequest<DescribeKeyPairsRespo
 
 	private Long ownerId;
 	public DescribeKeyPairsRequest() {
-		super("Ecs", "2014-05-26", "DescribeKeyPairs", "ecs");
+		super("Ecs", "2014-05-26", "DescribeKeyPairs");
 		setMethod(MethodType.POST);
 	}
 

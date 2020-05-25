@@ -36,7 +36,7 @@ public class DeleteForwardEntryRequest extends RpcAcsRequest<DeleteForwardEntryR
 
 	private Long ownerId;
 	public DeleteForwardEntryRequest() {
-		super("Ecs", "2014-05-26", "DeleteForwardEntry", "ecs");
+		super("Ecs", "2014-05-26", "DeleteForwardEntry");
 		setMethod(MethodType.POST);
 	}
 

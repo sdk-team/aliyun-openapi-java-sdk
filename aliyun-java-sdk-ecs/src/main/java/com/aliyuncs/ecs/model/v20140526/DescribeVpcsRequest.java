@@ -40,7 +40,7 @@ public class DescribeVpcsRequest extends RpcAcsRequest<DescribeVpcsResponse> {
 
 	private String vpcId;
 	public DescribeVpcsRequest() {
-		super("Ecs", "2014-05-26", "DescribeVpcs", "ecs");
+		super("Ecs", "2014-05-26", "DescribeVpcs");
 		setMethod(MethodType.POST);
 	}
 

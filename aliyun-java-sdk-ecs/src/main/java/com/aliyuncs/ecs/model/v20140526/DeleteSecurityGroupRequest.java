@@ -34,7 +34,7 @@ public class DeleteSecurityGroupRequest extends RpcAcsRequest<DeleteSecurityGrou
 
 	private Long ownerId;
 	public DeleteSecurityGroupRequest() {
-		super("Ecs", "2014-05-26", "DeleteSecurityGroup", "ecs");
+		super("Ecs", "2014-05-26", "DeleteSecurityGroup");
 		setMethod(MethodType.POST);
 	}
 

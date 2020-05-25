@@ -40,7 +40,7 @@ public class RenewDedicatedHostsRequest extends RpcAcsRequest<RenewDedicatedHost
 
 	private String periodUnit;
 	public RenewDedicatedHostsRequest() {
-		super("Ecs", "2014-05-26", "RenewDedicatedHosts", "ecs");
+		super("Ecs", "2014-05-26", "RenewDedicatedHosts");
 		setMethod(MethodType.POST);
 	}
 

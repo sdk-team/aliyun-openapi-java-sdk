@@ -32,7 +32,7 @@ public class ConvertNatPublicIpToEipRequest extends RpcAcsRequest<ConvertNatPubl
 
 	private String instanceId;
 	public ConvertNatPublicIpToEipRequest() {
-		super("Ecs", "2014-05-26", "ConvertNatPublicIpToEip", "ecs");
+		super("Ecs", "2014-05-26", "ConvertNatPublicIpToEip");
 		setMethod(MethodType.POST);
 	}
 

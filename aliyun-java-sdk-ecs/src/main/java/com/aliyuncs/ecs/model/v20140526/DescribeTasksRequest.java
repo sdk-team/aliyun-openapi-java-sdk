@@ -46,7 +46,7 @@ public class DescribeTasksRequest extends RpcAcsRequest<DescribeTasksResponse> {
 
 	private String taskAction;
 	public DescribeTasksRequest() {
-		super("Ecs", "2014-05-26", "DescribeTasks", "ecs");
+		super("Ecs", "2014-05-26", "DescribeTasks");
 		setMethod(MethodType.POST);
 	}
 

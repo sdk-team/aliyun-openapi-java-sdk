@@ -43,7 +43,7 @@ public class DescribeTagsRequest extends RpcAcsRequest<DescribeTagsResponse> {
 
 	private String category;
 	public DescribeTagsRequest() {
-		super("Ecs", "2014-05-26", "DescribeTags", "ecs");
+		super("Ecs", "2014-05-26", "DescribeTags");
 		setMethod(MethodType.POST);
 	}
 

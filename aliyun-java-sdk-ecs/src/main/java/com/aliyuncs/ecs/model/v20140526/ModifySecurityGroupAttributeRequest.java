@@ -38,7 +38,7 @@ public class ModifySecurityGroupAttributeRequest extends RpcAcsRequest<ModifySec
 
 	private Long ownerId;
 	public ModifySecurityGroupAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifySecurityGroupAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifySecurityGroupAttribute");
 		setMethod(MethodType.POST);
 	}
 

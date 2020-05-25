@@ -38,7 +38,7 @@ public class ModifyHaVipAttributeRequest extends RpcAcsRequest<ModifyHaVipAttrib
 
 	private Long ownerId;
 	public ModifyHaVipAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyHaVipAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyHaVipAttribute");
 		setMethod(MethodType.POST);
 	}
 

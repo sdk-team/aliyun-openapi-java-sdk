@@ -46,7 +46,7 @@ public class CreateCommandRequest extends RpcAcsRequest<CreateCommandResponse> {
 
 	private Boolean enableParameter;
 	public CreateCommandRequest() {
-		super("Ecs", "2014-05-26", "CreateCommand", "ecs");
+		super("Ecs", "2014-05-26", "CreateCommand");
 		setMethod(MethodType.POST);
 	}
 

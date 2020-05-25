@@ -40,7 +40,7 @@ public class DescribeForwardTableEntriesRequest extends RpcAcsRequest<DescribeFo
 
 	private Long ownerId;
 	public DescribeForwardTableEntriesRequest() {
-		super("Ecs", "2014-05-26", "DescribeForwardTableEntries", "ecs");
+		super("Ecs", "2014-05-26", "DescribeForwardTableEntries");
 		setMethod(MethodType.POST);
 	}
 

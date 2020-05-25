@@ -39,7 +39,7 @@ public class DeleteLaunchTemplateVersionRequest extends RpcAcsRequest<DeleteLaun
 
 	private Long ownerId;
 	public DeleteLaunchTemplateVersionRequest() {
-		super("Ecs", "2014-05-26", "DeleteLaunchTemplateVersion", "ecs");
+		super("Ecs", "2014-05-26", "DeleteLaunchTemplateVersion");
 		setMethod(MethodType.POST);
 	}
 

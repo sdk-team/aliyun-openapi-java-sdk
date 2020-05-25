@@ -30,6 +30,8 @@ public class DescribeInvocationResultsRequest extends RpcAcsRequest<DescribeInvo
 
 	private Long pageNumber;
 
+	private String contentEncoding;
+
 	private Long pageSize;
 
 	private String invokeId;
@@ -46,7 +48,7 @@ public class DescribeInvocationResultsRequest extends RpcAcsRequest<DescribeInvo
 
 	private Boolean includeHistory;
 	public DescribeInvocationResultsRequest() {
-		super("Ecs", "2014-05-26", "DescribeInvocationResults", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInvocationResults");
 		setMethod(MethodType.POST);
 	}
 
@@ -80,6 +82,17 @@ public class DescribeInvocationResultsRequest extends RpcAcsRequest<DescribeInvo
 		this.pageNumber = pageNumber;
 		if(pageNumber != null){
 			putQueryParameter("PageNumber", pageNumber.toString());
+		}
+	}
+
+	public String getContentEncoding() {
+		return this.contentEncoding;
+	}
+
+	public void setContentEncoding(String contentEncoding) {
+		this.contentEncoding = contentEncoding;
+		if(contentEncoding != null){
+			putQueryParameter("ContentEncoding", contentEncoding);
 		}
 	}
 

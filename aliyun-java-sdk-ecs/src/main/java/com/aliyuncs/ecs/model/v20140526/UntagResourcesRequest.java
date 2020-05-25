@@ -41,7 +41,7 @@ public class UntagResourcesRequest extends RpcAcsRequest<UntagResourcesResponse>
 
 	private List<String> tagKeys;
 	public UntagResourcesRequest() {
-		super("Ecs", "2014-05-26", "UntagResources", "ecs");
+		super("Ecs", "2014-05-26", "UntagResources");
 		setMethod(MethodType.POST);
 	}
 

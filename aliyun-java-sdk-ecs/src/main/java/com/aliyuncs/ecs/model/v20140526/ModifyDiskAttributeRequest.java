@@ -47,7 +47,7 @@ public class ModifyDiskAttributeRequest extends RpcAcsRequest<ModifyDiskAttribut
 
 	private Long ownerId;
 	public ModifyDiskAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDiskAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDiskAttribute");
 		setMethod(MethodType.POST);
 	}
 

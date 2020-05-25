@@ -57,7 +57,7 @@ public class DescribeReservedInstancesRequest extends RpcAcsRequest<DescribeRese
 
 	private String allocationType;
 	public DescribeReservedInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeReservedInstances", "ecs");
+		super("Ecs", "2014-05-26", "DescribeReservedInstances");
 		setMethod(MethodType.POST);
 	}
 

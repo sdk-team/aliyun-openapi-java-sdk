@@ -40,7 +40,7 @@ public class DescribeNewProjectEipMonitorDataRequest extends RpcAcsRequest<Descr
 
 	private Long ownerId;
 	public DescribeNewProjectEipMonitorDataRequest() {
-		super("Ecs", "2014-05-26", "DescribeNewProjectEipMonitorData", "ecs");
+		super("Ecs", "2014-05-26", "DescribeNewProjectEipMonitorData");
 		setMethod(MethodType.POST);
 	}
 

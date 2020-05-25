@@ -75,7 +75,7 @@ public class CreateAutoProvisioningGroupRequest extends RpcAcsRequest<CreateAuto
 
 	private Float maxSpotPrice;
 	public CreateAutoProvisioningGroupRequest() {
-		super("Ecs", "2014-05-26", "CreateAutoProvisioningGroup", "ecs");
+		super("Ecs", "2014-05-26", "CreateAutoProvisioningGroup");
 		setMethod(MethodType.POST);
 	}
 

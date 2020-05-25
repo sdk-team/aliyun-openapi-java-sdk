@@ -69,9 +69,11 @@ public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse>
 
 	private List<Filter> filters;
 
+	private String imageFamily;
+
 	private String status;
 	public DescribeImagesRequest() {
-		super("Ecs", "2014-05-26", "DescribeImages", "ecs");
+		super("Ecs", "2014-05-26", "DescribeImages");
 		setMethod(MethodType.POST);
 	}
 
@@ -321,6 +323,17 @@ public class DescribeImagesRequest extends RpcAcsRequest<DescribeImagesResponse>
 				putQueryParameter("Filter." + (depth1 + 1) + ".Key" , filters.get(depth1).getKey());
 			}
 		}	
+	}
+
+	public String getImageFamily() {
+		return this.imageFamily;
+	}
+
+	public void setImageFamily(String imageFamily) {
+		this.imageFamily = imageFamily;
+		if(imageFamily != null){
+			putQueryParameter("ImageFamily", imageFamily);
+		}
 	}
 
 	public String getStatus() {

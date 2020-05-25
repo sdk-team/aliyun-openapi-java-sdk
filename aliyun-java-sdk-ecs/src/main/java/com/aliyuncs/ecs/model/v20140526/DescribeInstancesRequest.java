@@ -33,6 +33,8 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 
 	private String hpcClusterId;
 
+	private Integer httpPutResponseHopLimit;
+
 	private String filter2Value;
 
 	private String keyPairName;
@@ -58,6 +60,8 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 	private Long ownerId;
 
 	private String vSwitchId;
+
+	private List<String> additionalAttributess;
 
 	private String instanceName;
 
@@ -85,6 +89,8 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 
 	private String rdmaIpAddresses;
 
+	private String httpEndpoint;
+
 	private Integer pageSize;
 
 	private String publicIpAddresses;
@@ -105,9 +111,11 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 
 	private String vpcId;
 
+	private String httpTokens;
+
 	private String filter3Key;
 	public DescribeInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstances", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInstances");
 		setMethod(MethodType.POST);
 	}
 
@@ -152,6 +160,17 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 		this.hpcClusterId = hpcClusterId;
 		if(hpcClusterId != null){
 			putQueryParameter("HpcClusterId", hpcClusterId);
+		}
+	}
+
+	public Integer getHttpPutResponseHopLimit() {
+		return this.httpPutResponseHopLimit;
+	}
+
+	public void setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+		this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+		if(httpPutResponseHopLimit != null){
+			putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit.toString());
 		}
 	}
 
@@ -301,6 +320,19 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 		}
 	}
 
+	public List<String> getAdditionalAttributess() {
+		return this.additionalAttributess;
+	}
+
+	public void setAdditionalAttributess(List<String> additionalAttributess) {
+		this.additionalAttributess = additionalAttributess;	
+		if (additionalAttributess != null) {
+			for (int i = 0; i < additionalAttributess.size(); i++) {
+				putQueryParameter("AdditionalAttributes." + (i + 1) , additionalAttributess.get(i));
+			}
+		}	
+	}
+
 	public String getInstanceName() {
 		return this.instanceName;
 	}
@@ -444,6 +476,17 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 		}
 	}
 
+	public String getHttpEndpoint() {
+		return this.httpEndpoint;
+	}
+
+	public void setHttpEndpoint(String httpEndpoint) {
+		this.httpEndpoint = httpEndpoint;
+		if(httpEndpoint != null){
+			putQueryParameter("HttpEndpoint", httpEndpoint);
+		}
+	}
+
 	public Integer getPageSize() {
 		return this.pageSize;
 	}
@@ -551,6 +594,17 @@ public class DescribeInstancesRequest extends RpcAcsRequest<DescribeInstancesRes
 		this.vpcId = vpcId;
 		if(vpcId != null){
 			putQueryParameter("VpcId", vpcId);
+		}
+	}
+
+	public String getHttpTokens() {
+		return this.httpTokens;
+	}
+
+	public void setHttpTokens(String httpTokens) {
+		this.httpTokens = httpTokens;
+		if(httpTokens != null){
+			putQueryParameter("HttpTokens", httpTokens);
 		}
 	}
 

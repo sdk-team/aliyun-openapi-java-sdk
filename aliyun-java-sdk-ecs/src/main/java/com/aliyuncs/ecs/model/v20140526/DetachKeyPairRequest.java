@@ -34,7 +34,7 @@ public class DetachKeyPairRequest extends RpcAcsRequest<DetachKeyPairResponse> {
 
 	private String instanceIds;
 	public DetachKeyPairRequest() {
-		super("Ecs", "2014-05-26", "DetachKeyPair", "ecs");
+		super("Ecs", "2014-05-26", "DetachKeyPair");
 		setMethod(MethodType.POST);
 	}
 

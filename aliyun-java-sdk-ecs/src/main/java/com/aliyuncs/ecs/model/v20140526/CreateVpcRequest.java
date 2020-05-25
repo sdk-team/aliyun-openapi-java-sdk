@@ -42,7 +42,7 @@ public class CreateVpcRequest extends RpcAcsRequest<CreateVpcResponse> {
 
 	private String cidrBlock;
 	public CreateVpcRequest() {
-		super("Ecs", "2014-05-26", "CreateVpc", "ecs");
+		super("Ecs", "2014-05-26", "CreateVpc");
 		setMethod(MethodType.POST);
 	}
 

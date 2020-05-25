@@ -43,7 +43,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends RpcAcsRequest<Modify
 
 	private String networkInterfaceId;
 	public ModifyNetworkInterfaceAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyNetworkInterfaceAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyNetworkInterfaceAttribute");
 		setMethod(MethodType.POST);
 	}
 

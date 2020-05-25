@@ -31,6 +31,8 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 
 	private String clientToken;
 
+	private String encryptAlgorithm;
+
 	private String description;
 
 	private String diskName;
@@ -67,7 +69,7 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 
 	private String kMSKeyId;
 	public CreateDiskRequest() {
-		super("Ecs", "2014-05-26", "CreateDisk", "ecs");
+		super("Ecs", "2014-05-26", "CreateDisk");
 		setMethod(MethodType.POST);
 	}
 
@@ -101,6 +103,17 @@ public class CreateDiskRequest extends RpcAcsRequest<CreateDiskResponse> {
 		this.clientToken = clientToken;
 		if(clientToken != null){
 			putQueryParameter("ClientToken", clientToken);
+		}
+	}
+
+	public String getEncryptAlgorithm() {
+		return this.encryptAlgorithm;
+	}
+
+	public void setEncryptAlgorithm(String encryptAlgorithm) {
+		this.encryptAlgorithm = encryptAlgorithm;
+		if(encryptAlgorithm != null){
+			putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
 		}
 	}
 

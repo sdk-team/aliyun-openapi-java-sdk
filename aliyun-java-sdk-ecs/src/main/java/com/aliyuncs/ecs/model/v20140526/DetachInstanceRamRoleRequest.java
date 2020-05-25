@@ -34,7 +34,7 @@ public class DetachInstanceRamRoleRequest extends RpcAcsRequest<DetachInstanceRa
 
 	private String instanceIds;
 	public DetachInstanceRamRoleRequest() {
-		super("Ecs", "2014-05-26", "DetachInstanceRamRole", "ecs");
+		super("Ecs", "2014-05-26", "DetachInstanceRamRole");
 		setMethod(MethodType.POST);
 	}
 

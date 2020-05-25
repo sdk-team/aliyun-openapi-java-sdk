@@ -32,7 +32,7 @@ public class DeleteKeyPairsRequest extends RpcAcsRequest<DeleteKeyPairsResponse>
 
 	private Long ownerId;
 	public DeleteKeyPairsRequest() {
-		super("Ecs", "2014-05-26", "DeleteKeyPairs", "ecs");
+		super("Ecs", "2014-05-26", "DeleteKeyPairs");
 		setMethod(MethodType.POST);
 	}
 

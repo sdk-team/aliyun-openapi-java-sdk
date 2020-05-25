@@ -34,7 +34,7 @@ public class DetachClassicLinkVpcRequest extends RpcAcsRequest<DetachClassicLink
 
 	private String vpcId;
 	public DetachClassicLinkVpcRequest() {
-		super("Ecs", "2014-05-26", "DetachClassicLinkVpc", "ecs");
+		super("Ecs", "2014-05-26", "DetachClassicLinkVpc");
 		setMethod(MethodType.POST);
 	}
 

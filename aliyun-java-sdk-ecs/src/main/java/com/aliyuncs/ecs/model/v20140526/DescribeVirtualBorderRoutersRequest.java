@@ -37,7 +37,7 @@ public class DescribeVirtualBorderRoutersRequest extends RpcAcsRequest<DescribeV
 
 	private List<Filter> filters;
 	public DescribeVirtualBorderRoutersRequest() {
-		super("Ecs", "2014-05-26", "DescribeVirtualBorderRouters", "ecs");
+		super("Ecs", "2014-05-26", "DescribeVirtualBorderRouters");
 		setMethod(MethodType.POST);
 	}
 

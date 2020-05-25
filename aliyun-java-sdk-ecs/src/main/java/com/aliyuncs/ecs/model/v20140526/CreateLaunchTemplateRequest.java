@@ -113,7 +113,7 @@ public class CreateLaunchTemplateRequest extends RpcAcsRequest<CreateLaunchTempl
 
 	private String systemDiskDescription;
 	public CreateLaunchTemplateRequest() {
-		super("Ecs", "2014-05-26", "CreateLaunchTemplate", "ecs");
+		super("Ecs", "2014-05-26", "CreateLaunchTemplate");
 		setMethod(MethodType.POST);
 	}
 

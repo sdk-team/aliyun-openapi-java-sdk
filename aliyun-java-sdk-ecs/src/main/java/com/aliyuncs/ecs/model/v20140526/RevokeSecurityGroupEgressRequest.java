@@ -64,7 +64,7 @@ public class RevokeSecurityGroupEgressRequest extends RpcAcsRequest<RevokeSecuri
 
 	private Long destGroupOwnerId;
 	public RevokeSecurityGroupEgressRequest() {
-		super("Ecs", "2014-05-26", "RevokeSecurityGroupEgress", "ecs");
+		super("Ecs", "2014-05-26", "RevokeSecurityGroupEgress");
 		setMethod(MethodType.POST);
 	}
 

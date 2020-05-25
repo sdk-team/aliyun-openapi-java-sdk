@@ -44,7 +44,7 @@ public class DescribeStorageSetDetailsRequest extends RpcAcsRequest<DescribeStor
 
 	private String storageSetId;
 	public DescribeStorageSetDetailsRequest() {
-		super("Ecs", "2014-05-26", "DescribeStorageSetDetails", "ecs");
+		super("Ecs", "2014-05-26", "DescribeStorageSetDetails");
 		setMethod(MethodType.POST);
 	}
 

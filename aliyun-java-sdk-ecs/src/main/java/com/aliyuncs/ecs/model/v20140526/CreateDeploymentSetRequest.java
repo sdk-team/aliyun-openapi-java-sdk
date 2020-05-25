@@ -46,7 +46,7 @@ public class CreateDeploymentSetRequest extends RpcAcsRequest<CreateDeploymentSe
 
 	private String strategy;
 	public CreateDeploymentSetRequest() {
-		super("Ecs", "2014-05-26", "CreateDeploymentSet", "ecs");
+		super("Ecs", "2014-05-26", "CreateDeploymentSet");
 		setMethod(MethodType.POST);
 	}
 

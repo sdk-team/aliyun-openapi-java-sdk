@@ -40,7 +40,7 @@ public class ResizeDiskRequest extends RpcAcsRequest<ResizeDiskResponse> {
 
 	private Long ownerId;
 	public ResizeDiskRequest() {
-		super("Ecs", "2014-05-26", "ResizeDisk", "ecs");
+		super("Ecs", "2014-05-26", "ResizeDisk");
 		setMethod(MethodType.POST);
 	}
 

@@ -61,7 +61,7 @@ public class RunCommandRequest extends RpcAcsRequest<RunCommandResponse> {
 
 	private Boolean enableParameter;
 	public RunCommandRequest() {
-		super("Ecs", "2014-05-26", "RunCommand", "ecs");
+		super("Ecs", "2014-05-26", "RunCommand");
 		setMethod(MethodType.POST);
 	}
 

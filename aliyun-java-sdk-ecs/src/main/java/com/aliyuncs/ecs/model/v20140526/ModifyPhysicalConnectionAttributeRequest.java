@@ -54,7 +54,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends RpcAcsRequest<Modi
 
 	private String name;
 	public ModifyPhysicalConnectionAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyPhysicalConnectionAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyPhysicalConnectionAttribute");
 		setMethod(MethodType.POST);
 	}
 

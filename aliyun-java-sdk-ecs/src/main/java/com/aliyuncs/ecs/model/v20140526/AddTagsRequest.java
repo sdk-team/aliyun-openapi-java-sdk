@@ -37,7 +37,7 @@ public class AddTagsRequest extends RpcAcsRequest<AddTagsResponse> {
 
 	private String resourceType;
 	public AddTagsRequest() {
-		super("Ecs", "2014-05-26", "AddTags", "ecs");
+		super("Ecs", "2014-05-26", "AddTags");
 		setMethod(MethodType.POST);
 	}
 

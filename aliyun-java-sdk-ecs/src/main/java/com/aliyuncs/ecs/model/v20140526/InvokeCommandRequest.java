@@ -45,7 +45,7 @@ public class InvokeCommandRequest extends RpcAcsRequest<InvokeCommandResponse> {
 
 	private Map<Object,Object> parameters;
 	public InvokeCommandRequest() {
-		super("Ecs", "2014-05-26", "InvokeCommand", "ecs");
+		super("Ecs", "2014-05-26", "InvokeCommand");
 		setMethod(MethodType.POST);
 	}
 

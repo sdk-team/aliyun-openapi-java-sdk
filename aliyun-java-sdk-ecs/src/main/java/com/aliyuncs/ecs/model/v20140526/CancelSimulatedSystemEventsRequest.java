@@ -35,7 +35,7 @@ public class CancelSimulatedSystemEventsRequest extends RpcAcsRequest<CancelSimu
 
 	private Long ownerId;
 	public CancelSimulatedSystemEventsRequest() {
-		super("Ecs", "2014-05-26", "CancelSimulatedSystemEvents", "ecs");
+		super("Ecs", "2014-05-26", "CancelSimulatedSystemEvents");
 		setMethod(MethodType.POST);
 	}
 

@@ -34,7 +34,7 @@ public class ReActivateInstancesRequest extends RpcAcsRequest<ReActivateInstance
 
 	private String instanceId;
 	public ReActivateInstancesRequest() {
-		super("Ecs", "2014-05-26", "ReActivateInstances", "ecs");
+		super("Ecs", "2014-05-26", "ReActivateInstances");
 		setMethod(MethodType.POST);
 	}
 

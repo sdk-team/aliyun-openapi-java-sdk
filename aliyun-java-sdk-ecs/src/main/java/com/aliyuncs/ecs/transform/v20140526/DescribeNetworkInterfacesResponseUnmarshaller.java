@@ -20,6 +20,7 @@ import java.util.List;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet.AssociatedPublicIp;
+import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet.Attachment;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet.Ipv6Set;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet.PrivateIpSet;
 import com.aliyuncs.ecs.model.v20140526.DescribeNetworkInterfacesResponse.NetworkInterfaceSet.PrivateIpSet.AssociatedPublicIp1;
@@ -56,6 +57,7 @@ public class DescribeNetworkInterfacesResponseUnmarshaller {
 			networkInterfaceSet.setServiceID(_ctx.longValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].ServiceID"));
 			networkInterfaceSet.setServiceManaged(_ctx.booleanValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].ServiceManaged"));
 			networkInterfaceSet.setQueueNumber(_ctx.integerValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].QueueNumber"));
+			networkInterfaceSet.setOwnerId(_ctx.stringValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].OwnerId"));
 
 			List<String> securityGroupIds = new ArrayList<String>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].SecurityGroupIds.Length"); j++) {
@@ -67,6 +69,12 @@ public class DescribeNetworkInterfacesResponseUnmarshaller {
 			associatedPublicIp.setPublicIpAddress(_ctx.stringValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].AssociatedPublicIp.PublicIpAddress"));
 			associatedPublicIp.setAllocationId(_ctx.stringValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].AssociatedPublicIp.AllocationId"));
 			networkInterfaceSet.setAssociatedPublicIp(associatedPublicIp);
+
+			Attachment attachment = new Attachment();
+			attachment.setInstanceId(_ctx.stringValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].Attachment.InstanceId"));
+			attachment.setTrunkNetworkInterfaceId(_ctx.stringValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].Attachment.TrunkNetworkInterfaceId"));
+			attachment.setDeviceIndex(_ctx.integerValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].Attachment.DeviceIndex"));
+			networkInterfaceSet.setAttachment(attachment);
 
 			List<PrivateIpSet> privateIpSets = new ArrayList<PrivateIpSet>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeNetworkInterfacesResponse.NetworkInterfaceSets["+ i +"].PrivateIpSets.Length"); j++) {

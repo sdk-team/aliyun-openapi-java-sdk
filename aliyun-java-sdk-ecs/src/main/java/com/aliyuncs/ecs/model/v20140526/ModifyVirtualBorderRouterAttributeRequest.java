@@ -52,7 +52,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends RpcAcsRequest<Mod
 
 	private String name;
 	public ModifyVirtualBorderRouterAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyVirtualBorderRouterAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyVirtualBorderRouterAttribute");
 		setMethod(MethodType.POST);
 	}
 

@@ -46,7 +46,7 @@ public class DescribeCommandsRequest extends RpcAcsRequest<DescribeCommandsRespo
 
 	private String name;
 	public DescribeCommandsRequest() {
-		super("Ecs", "2014-05-26", "DescribeCommands", "ecs");
+		super("Ecs", "2014-05-26", "DescribeCommands");
 		setMethod(MethodType.POST);
 	}
 

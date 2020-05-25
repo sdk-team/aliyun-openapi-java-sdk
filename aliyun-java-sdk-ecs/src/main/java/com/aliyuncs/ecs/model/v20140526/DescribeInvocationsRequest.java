@@ -54,7 +54,7 @@ public class DescribeInvocationsRequest extends RpcAcsRequest<DescribeInvocation
 
 	private String instanceId;
 	public DescribeInvocationsRequest() {
-		super("Ecs", "2014-05-26", "DescribeInvocations", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInvocations");
 		setMethod(MethodType.POST);
 	}
 

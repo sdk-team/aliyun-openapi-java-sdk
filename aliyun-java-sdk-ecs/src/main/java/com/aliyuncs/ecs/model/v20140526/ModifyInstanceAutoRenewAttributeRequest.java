@@ -42,7 +42,7 @@ public class ModifyInstanceAutoRenewAttributeRequest extends RpcAcsRequest<Modif
 
 	private Boolean autoRenew;
 	public ModifyInstanceAutoRenewAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceAutoRenewAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyInstanceAutoRenewAttribute");
 		setMethod(MethodType.POST);
 	}
 

@@ -26,6 +26,8 @@ public class DetachNetworkInterfaceRequest extends RpcAcsRequest<DetachNetworkIn
 
 	private Long resourceOwnerId;
 
+	private String trunkNetworkInstanceId;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
@@ -36,7 +38,7 @@ public class DetachNetworkInterfaceRequest extends RpcAcsRequest<DetachNetworkIn
 
 	private String networkInterfaceId;
 	public DetachNetworkInterfaceRequest() {
-		super("Ecs", "2014-05-26", "DetachNetworkInterface", "ecs");
+		super("Ecs", "2014-05-26", "DetachNetworkInterface");
 		setMethod(MethodType.POST);
 	}
 
@@ -48,6 +50,17 @@ public class DetachNetworkInterfaceRequest extends RpcAcsRequest<DetachNetworkIn
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public String getTrunkNetworkInstanceId() {
+		return this.trunkNetworkInstanceId;
+	}
+
+	public void setTrunkNetworkInstanceId(String trunkNetworkInstanceId) {
+		this.trunkNetworkInstanceId = trunkNetworkInstanceId;
+		if(trunkNetworkInstanceId != null){
+			putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);
 		}
 	}
 

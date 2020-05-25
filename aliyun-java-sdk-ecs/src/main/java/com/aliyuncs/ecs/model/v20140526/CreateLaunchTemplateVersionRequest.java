@@ -111,7 +111,7 @@ public class CreateLaunchTemplateVersionRequest extends RpcAcsRequest<CreateLaun
 
 	private String systemDiskDescription;
 	public CreateLaunchTemplateVersionRequest() {
-		super("Ecs", "2014-05-26", "CreateLaunchTemplateVersion", "ecs");
+		super("Ecs", "2014-05-26", "CreateLaunchTemplateVersion");
 		setMethod(MethodType.POST);
 	}
 

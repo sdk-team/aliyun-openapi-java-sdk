@@ -51,7 +51,7 @@ public class DescribeDisksFullStatusRequest extends RpcAcsRequest<DescribeDisksF
 
 	private String status;
 	public DescribeDisksFullStatusRequest() {
-		super("Ecs", "2014-05-26", "DescribeDisksFullStatus", "ecs");
+		super("Ecs", "2014-05-26", "DescribeDisksFullStatus");
 		setMethod(MethodType.POST);
 	}
 

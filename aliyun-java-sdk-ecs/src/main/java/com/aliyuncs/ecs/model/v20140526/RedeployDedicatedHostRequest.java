@@ -34,7 +34,7 @@ public class RedeployDedicatedHostRequest extends RpcAcsRequest<RedeployDedicate
 
 	private Long ownerId;
 	public RedeployDedicatedHostRequest() {
-		super("Ecs", "2014-05-26", "RedeployDedicatedHost", "ecs");
+		super("Ecs", "2014-05-26", "RedeployDedicatedHost");
 		setMethod(MethodType.POST);
 	}
 

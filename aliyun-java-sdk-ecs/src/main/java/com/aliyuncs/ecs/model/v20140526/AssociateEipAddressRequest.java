@@ -38,7 +38,7 @@ public class AssociateEipAddressRequest extends RpcAcsRequest<AssociateEipAddres
 
 	private String instanceId;
 	public AssociateEipAddressRequest() {
-		super("Ecs", "2014-05-26", "AssociateEipAddress", "ecs");
+		super("Ecs", "2014-05-26", "AssociateEipAddress");
 		setMethod(MethodType.POST);
 	}
 

@@ -64,7 +64,7 @@ public class AuthorizeSecurityGroupRequest extends RpcAcsRequest<AuthorizeSecuri
 
 	private String sourceGroupId;
 	public AuthorizeSecurityGroupRequest() {
-		super("Ecs", "2014-05-26", "AuthorizeSecurityGroup", "ecs");
+		super("Ecs", "2014-05-26", "AuthorizeSecurityGroup");
 		setMethod(MethodType.POST);
 	}
 

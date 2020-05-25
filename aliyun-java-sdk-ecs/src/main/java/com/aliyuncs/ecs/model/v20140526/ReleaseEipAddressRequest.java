@@ -34,7 +34,7 @@ public class ReleaseEipAddressRequest extends RpcAcsRequest<ReleaseEipAddressRes
 
 	private Long ownerId;
 	public ReleaseEipAddressRequest() {
-		super("Ecs", "2014-05-26", "ReleaseEipAddress", "ecs");
+		super("Ecs", "2014-05-26", "ReleaseEipAddress");
 		setMethod(MethodType.POST);
 	}
 

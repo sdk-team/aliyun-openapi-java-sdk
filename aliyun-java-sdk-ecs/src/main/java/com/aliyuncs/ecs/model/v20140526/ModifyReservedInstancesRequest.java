@@ -37,7 +37,7 @@ public class ModifyReservedInstancesRequest extends RpcAcsRequest<ModifyReserved
 
 	private List<String> reservedInstanceIds;
 	public ModifyReservedInstancesRequest() {
-		super("Ecs", "2014-05-26", "ModifyReservedInstances", "ecs");
+		super("Ecs", "2014-05-26", "ModifyReservedInstances");
 		setMethod(MethodType.POST);
 	}
 

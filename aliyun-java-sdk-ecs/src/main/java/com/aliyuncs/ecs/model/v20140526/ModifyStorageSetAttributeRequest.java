@@ -40,7 +40,7 @@ public class ModifyStorageSetAttributeRequest extends RpcAcsRequest<ModifyStorag
 
 	private String storageSetName;
 	public ModifyStorageSetAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyStorageSetAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyStorageSetAttribute");
 		setMethod(MethodType.POST);
 	}
 

@@ -38,7 +38,7 @@ public class EipFillParamsRequest extends RpcAcsRequest<EipFillParamsResponse> {
 
 	private Long ownerId;
 	public EipFillParamsRequest() {
-		super("Ecs", "2014-05-26", "EipFillParams", "ecs");
+		super("Ecs", "2014-05-26", "EipFillParams");
 		setMethod(MethodType.POST);
 	}
 

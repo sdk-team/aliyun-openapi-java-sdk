@@ -38,7 +38,7 @@ public class EipFillProductRequest extends RpcAcsRequest<EipFillProductResponse>
 
 	private Long ownerId;
 	public EipFillProductRequest() {
-		super("Ecs", "2014-05-26", "EipFillProduct", "ecs");
+		super("Ecs", "2014-05-26", "EipFillProduct");
 		setMethod(MethodType.POST);
 	}
 

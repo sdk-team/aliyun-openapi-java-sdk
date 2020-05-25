@@ -38,7 +38,7 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends RpcAcsRequest
 
 	private String autoProvisioningGroupId;
 	public DescribeAutoProvisioningGroupInstancesRequest() {
-		super("Ecs", "2014-05-26", "DescribeAutoProvisioningGroupInstances", "ecs");
+		super("Ecs", "2014-05-26", "DescribeAutoProvisioningGroupInstances");
 		setMethod(MethodType.POST);
 	}
 

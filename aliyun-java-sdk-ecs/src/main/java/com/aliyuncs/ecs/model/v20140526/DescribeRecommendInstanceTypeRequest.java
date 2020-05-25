@@ -61,7 +61,7 @@ public class DescribeRecommendInstanceTypeRequest extends RpcAcsRequest<Describe
 
 	private String zoneId;
 	public DescribeRecommendInstanceTypeRequest() {
-		super("Ecs", "2014-05-26", "DescribeRecommendInstanceType", "ecs");
+		super("Ecs", "2014-05-26", "DescribeRecommendInstanceType");
 		setMethod(MethodType.POST);
 	}
 

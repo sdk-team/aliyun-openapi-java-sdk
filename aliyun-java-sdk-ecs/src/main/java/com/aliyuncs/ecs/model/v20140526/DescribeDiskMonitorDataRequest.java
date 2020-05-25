@@ -40,7 +40,7 @@ public class DescribeDiskMonitorDataRequest extends RpcAcsRequest<DescribeDiskMo
 
 	private Long ownerId;
 	public DescribeDiskMonitorDataRequest() {
-		super("Ecs", "2014-05-26", "DescribeDiskMonitorData", "ecs");
+		super("Ecs", "2014-05-26", "DescribeDiskMonitorData");
 		setMethod(MethodType.POST);
 	}
 

@@ -36,7 +36,7 @@ public class ExportSnapshotRequest extends RpcAcsRequest<ExportSnapshotResponse>
 
 	private Long ownerId;
 	public ExportSnapshotRequest() {
-		super("Ecs", "2014-05-26", "ExportSnapshot", "ecs");
+		super("Ecs", "2014-05-26", "ExportSnapshot");
 		setMethod(MethodType.POST);
 	}
 

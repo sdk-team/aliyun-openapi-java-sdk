@@ -41,7 +41,7 @@ public class DeleteRouteEntryRequest extends RpcAcsRequest<DeleteRouteEntryRespo
 
 	private List<NextHopList> nextHopLists;
 	public DeleteRouteEntryRequest() {
-		super("Ecs", "2014-05-26", "DeleteRouteEntry", "ecs");
+		super("Ecs", "2014-05-26", "DeleteRouteEntry");
 		setMethod(MethodType.POST);
 	}
 

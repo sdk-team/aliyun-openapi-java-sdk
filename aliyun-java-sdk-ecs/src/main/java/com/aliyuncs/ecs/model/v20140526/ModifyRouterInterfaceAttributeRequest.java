@@ -48,7 +48,7 @@ public class ModifyRouterInterfaceAttributeRequest extends RpcAcsRequest<ModifyR
 
 	private String oppositeRouterType;
 	public ModifyRouterInterfaceAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyRouterInterfaceAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyRouterInterfaceAttribute");
 		setMethod(MethodType.POST);
 	}
 

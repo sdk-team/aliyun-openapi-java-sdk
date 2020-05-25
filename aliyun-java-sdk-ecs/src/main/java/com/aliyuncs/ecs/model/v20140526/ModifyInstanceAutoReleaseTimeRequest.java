@@ -36,7 +36,7 @@ public class ModifyInstanceAutoReleaseTimeRequest extends RpcAcsRequest<ModifyIn
 
 	private String instanceId;
 	public ModifyInstanceAutoReleaseTimeRequest() {
-		super("Ecs", "2014-05-26", "ModifyInstanceAutoReleaseTime", "ecs");
+		super("Ecs", "2014-05-26", "ModifyInstanceAutoReleaseTime");
 		setMethod(MethodType.POST);
 	}
 

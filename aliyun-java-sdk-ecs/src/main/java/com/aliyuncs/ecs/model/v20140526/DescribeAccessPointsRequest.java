@@ -39,7 +39,7 @@ public class DescribeAccessPointsRequest extends RpcAcsRequest<DescribeAccessPoi
 
 	private List<Filter> filters;
 	public DescribeAccessPointsRequest() {
-		super("Ecs", "2014-05-26", "DescribeAccessPoints", "ecs");
+		super("Ecs", "2014-05-26", "DescribeAccessPoints");
 		setMethod(MethodType.POST);
 	}
 

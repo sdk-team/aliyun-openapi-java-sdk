@@ -38,7 +38,7 @@ public class ModifySnapshotAttributeRequest extends RpcAcsRequest<ModifySnapshot
 
 	private Long ownerId;
 	public ModifySnapshotAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifySnapshotAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifySnapshotAttribute");
 		setMethod(MethodType.POST);
 	}
 

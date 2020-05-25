@@ -42,7 +42,7 @@ public class ModifyDiskChargeTypeRequest extends RpcAcsRequest<ModifyDiskChargeT
 
 	private String instanceId;
 	public ModifyDiskChargeTypeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDiskChargeType", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDiskChargeType");
 		setMethod(MethodType.POST);
 	}
 

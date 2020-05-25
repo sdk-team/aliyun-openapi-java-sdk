@@ -42,7 +42,7 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends RpcAcsRequest<
 
 	private Boolean autoRenew;
 	public ModifyDedicatedHostAutoRenewAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDedicatedHostAutoRenewAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDedicatedHostAutoRenewAttribute");
 		setMethod(MethodType.POST);
 	}
 

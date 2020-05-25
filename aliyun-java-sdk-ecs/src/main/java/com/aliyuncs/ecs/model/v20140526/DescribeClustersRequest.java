@@ -32,7 +32,7 @@ public class DescribeClustersRequest extends RpcAcsRequest<DescribeClustersRespo
 
 	private Long ownerId;
 	public DescribeClustersRequest() {
-		super("Ecs", "2014-05-26", "DescribeClusters", "ecs");
+		super("Ecs", "2014-05-26", "DescribeClusters");
 		setMethod(MethodType.POST);
 	}
 

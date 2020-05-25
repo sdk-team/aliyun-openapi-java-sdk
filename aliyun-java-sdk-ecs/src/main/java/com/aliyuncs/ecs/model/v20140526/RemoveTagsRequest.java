@@ -37,7 +37,7 @@ public class RemoveTagsRequest extends RpcAcsRequest<RemoveTagsResponse> {
 
 	private String resourceType;
 	public RemoveTagsRequest() {
-		super("Ecs", "2014-05-26", "RemoveTags", "ecs");
+		super("Ecs", "2014-05-26", "RemoveTags");
 		setMethod(MethodType.POST);
 	}
 

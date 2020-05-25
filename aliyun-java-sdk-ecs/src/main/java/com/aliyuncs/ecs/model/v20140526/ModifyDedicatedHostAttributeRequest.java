@@ -46,7 +46,7 @@ public class ModifyDedicatedHostAttributeRequest extends RpcAcsRequest<ModifyDed
 
 	private Integer networkAttributesUdpTimeout;
 	public ModifyDedicatedHostAttributeRequest() {
-		super("Ecs", "2014-05-26", "ModifyDedicatedHostAttribute", "ecs");
+		super("Ecs", "2014-05-26", "ModifyDedicatedHostAttribute");
 		setMethod(MethodType.POST);
 	}
 

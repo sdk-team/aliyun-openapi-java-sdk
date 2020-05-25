@@ -36,7 +36,7 @@ public class DescribeSnapshotPackageRequest extends RpcAcsRequest<DescribeSnapsh
 
 	private Long ownerId;
 	public DescribeSnapshotPackageRequest() {
-		super("Ecs", "2014-05-26", "DescribeSnapshotPackage", "ecs");
+		super("Ecs", "2014-05-26", "DescribeSnapshotPackage");
 		setMethod(MethodType.POST);
 	}
 

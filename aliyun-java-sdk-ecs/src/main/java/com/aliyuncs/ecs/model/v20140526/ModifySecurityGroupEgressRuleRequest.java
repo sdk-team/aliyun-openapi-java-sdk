@@ -64,7 +64,7 @@ public class ModifySecurityGroupEgressRuleRequest extends RpcAcsRequest<ModifySe
 
 	private Long destGroupOwnerId;
 	public ModifySecurityGroupEgressRuleRequest() {
-		super("Ecs", "2014-05-26", "ModifySecurityGroupEgressRule", "ecs");
+		super("Ecs", "2014-05-26", "ModifySecurityGroupEgressRule");
 		setMethod(MethodType.POST);
 	}
 

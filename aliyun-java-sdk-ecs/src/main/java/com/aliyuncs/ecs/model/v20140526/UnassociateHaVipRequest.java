@@ -40,7 +40,7 @@ public class UnassociateHaVipRequest extends RpcAcsRequest<UnassociateHaVipRespo
 
 	private String force;
 	public UnassociateHaVipRequest() {
-		super("Ecs", "2014-05-26", "UnassociateHaVip", "ecs");
+		super("Ecs", "2014-05-26", "UnassociateHaVip");
 		setMethod(MethodType.POST);
 	}
 

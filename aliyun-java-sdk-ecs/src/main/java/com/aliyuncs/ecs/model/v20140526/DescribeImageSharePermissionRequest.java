@@ -38,7 +38,7 @@ public class DescribeImageSharePermissionRequest extends RpcAcsRequest<DescribeI
 
 	private Long ownerId;
 	public DescribeImageSharePermissionRequest() {
-		super("Ecs", "2014-05-26", "DescribeImageSharePermission", "ecs");
+		super("Ecs", "2014-05-26", "DescribeImageSharePermission");
 		setMethod(MethodType.POST);
 	}
 

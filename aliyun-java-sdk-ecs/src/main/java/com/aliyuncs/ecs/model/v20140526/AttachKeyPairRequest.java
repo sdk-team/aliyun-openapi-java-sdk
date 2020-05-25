@@ -34,7 +34,7 @@ public class AttachKeyPairRequest extends RpcAcsRequest<AttachKeyPairResponse> {
 
 	private String instanceIds;
 	public AttachKeyPairRequest() {
-		super("Ecs", "2014-05-26", "AttachKeyPair", "ecs");
+		super("Ecs", "2014-05-26", "AttachKeyPair");
 		setMethod(MethodType.POST);
 	}
 

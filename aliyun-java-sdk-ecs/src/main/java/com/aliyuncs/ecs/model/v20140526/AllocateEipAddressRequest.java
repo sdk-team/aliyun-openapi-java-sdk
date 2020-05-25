@@ -42,7 +42,7 @@ public class AllocateEipAddressRequest extends RpcAcsRequest<AllocateEipAddressR
 
 	private String internetChargeType;
 	public AllocateEipAddressRequest() {
-		super("Ecs", "2014-05-26", "AllocateEipAddress", "ecs");
+		super("Ecs", "2014-05-26", "AllocateEipAddress");
 		setMethod(MethodType.POST);
 	}
 

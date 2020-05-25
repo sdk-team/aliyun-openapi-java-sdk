@@ -55,7 +55,7 @@ public class DescribeDemandsRequest extends RpcAcsRequest<DescribeDemandsRespons
 
 	private String demandType;
 	public DescribeDemandsRequest() {
-		super("Ecs", "2014-05-26", "DescribeDemands", "ecs");
+		super("Ecs", "2014-05-26", "DescribeDemands");
 		setMethod(MethodType.POST);
 	}
 

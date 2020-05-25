@@ -37,7 +37,7 @@ public class DescribeRouterInterfacesRequest extends RpcAcsRequest<DescribeRoute
 
 	private List<Filter> filters;
 	public DescribeRouterInterfacesRequest() {
-		super("Ecs", "2014-05-26", "DescribeRouterInterfaces", "ecs");
+		super("Ecs", "2014-05-26", "DescribeRouterInterfaces");
 		setMethod(MethodType.POST);
 	}
 

@@ -45,7 +45,7 @@ public class DescribeLaunchTemplatesRequest extends RpcAcsRequest<DescribeLaunch
 
 	private Long ownerId;
 	public DescribeLaunchTemplatesRequest() {
-		super("Ecs", "2014-05-26", "DescribeLaunchTemplates", "ecs");
+		super("Ecs", "2014-05-26", "DescribeLaunchTemplates");
 		setMethod(MethodType.POST);
 	}
 

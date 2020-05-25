@@ -38,7 +38,7 @@ public class AllocatePublicIpAddressRequest extends RpcAcsRequest<AllocatePublic
 
 	private String instanceId;
 	public AllocatePublicIpAddressRequest() {
-		super("Ecs", "2014-05-26", "AllocatePublicIpAddress", "ecs");
+		super("Ecs", "2014-05-26", "AllocatePublicIpAddress");
 		setMethod(MethodType.POST);
 	}
 

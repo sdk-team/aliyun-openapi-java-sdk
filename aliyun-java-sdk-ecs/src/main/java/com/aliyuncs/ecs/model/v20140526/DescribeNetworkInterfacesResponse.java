@@ -119,6 +119,8 @@ public class DescribeNetworkInterfacesResponse extends AcsResponse {
 
 		private Integer queueNumber;
 
+		private String ownerId;
+
 		private List<PrivateIpSet> privateIpSets;
 
 		private List<Ipv6Set> ipv6Sets;
@@ -128,6 +130,8 @@ public class DescribeNetworkInterfacesResponse extends AcsResponse {
 		private List<String> securityGroupIds;
 
 		private AssociatedPublicIp associatedPublicIp;
+
+		private Attachment attachment;
 
 		public String getNetworkInterfaceId() {
 			return this.networkInterfaceId;
@@ -257,6 +261,14 @@ public class DescribeNetworkInterfacesResponse extends AcsResponse {
 			this.queueNumber = queueNumber;
 		}
 
+		public String getOwnerId() {
+			return this.ownerId;
+		}
+
+		public void setOwnerId(String ownerId) {
+			this.ownerId = ownerId;
+		}
+
 		public List<PrivateIpSet> getPrivateIpSets() {
 			return this.privateIpSets;
 		}
@@ -295,6 +307,14 @@ public class DescribeNetworkInterfacesResponse extends AcsResponse {
 
 		public void setAssociatedPublicIp(AssociatedPublicIp associatedPublicIp) {
 			this.associatedPublicIp = associatedPublicIp;
+		}
+
+		public Attachment getAttachment() {
+			return this.attachment;
+		}
+
+		public void setAttachment(Attachment attachment) {
+			this.attachment = attachment;
 		}
 
 		public static class PrivateIpSet {
@@ -409,6 +429,39 @@ public class DescribeNetworkInterfacesResponse extends AcsResponse {
 
 			public void setAllocationId(String allocationId) {
 				this.allocationId = allocationId;
+			}
+		}
+
+		public static class Attachment {
+
+			private String instanceId;
+
+			private String trunkNetworkInterfaceId;
+
+			private Integer deviceIndex;
+
+			public String getInstanceId() {
+				return this.instanceId;
+			}
+
+			public void setInstanceId(String instanceId) {
+				this.instanceId = instanceId;
+			}
+
+			public String getTrunkNetworkInterfaceId() {
+				return this.trunkNetworkInterfaceId;
+			}
+
+			public void setTrunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
+				this.trunkNetworkInterfaceId = trunkNetworkInterfaceId;
+			}
+
+			public Integer getDeviceIndex() {
+				return this.deviceIndex;
+			}
+
+			public void setDeviceIndex(Integer deviceIndex) {
+				this.deviceIndex = deviceIndex;
 			}
 		}
 	}

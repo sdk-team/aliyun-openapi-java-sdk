@@ -34,7 +34,7 @@ public class DeleteBandwidthPackageRequest extends RpcAcsRequest<DeleteBandwidth
 
 	private Long ownerId;
 	public DeleteBandwidthPackageRequest() {
-		super("Ecs", "2014-05-26", "DeleteBandwidthPackage", "ecs");
+		super("Ecs", "2014-05-26", "DeleteBandwidthPackage");
 		setMethod(MethodType.POST);
 	}
 

@@ -39,7 +39,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends RpcAcsRequest<
 
 	private List<String> instanceIds;
 	public DescribeInstanceMaintenanceAttributesRequest() {
-		super("Ecs", "2014-05-26", "DescribeInstanceMaintenanceAttributes", "ecs");
+		super("Ecs", "2014-05-26", "DescribeInstanceMaintenanceAttributes");
 		setMethod(MethodType.POST);
 	}
 

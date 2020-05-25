@@ -39,7 +39,7 @@ public class DescribeResourceByTagsRequest extends RpcAcsRequest<DescribeResourc
 
 	private String resourceType;
 	public DescribeResourceByTagsRequest() {
-		super("Ecs", "2014-05-26", "DescribeResourceByTags", "ecs");
+		super("Ecs", "2014-05-26", "DescribeResourceByTags");
 		setMethod(MethodType.POST);
 	}
 

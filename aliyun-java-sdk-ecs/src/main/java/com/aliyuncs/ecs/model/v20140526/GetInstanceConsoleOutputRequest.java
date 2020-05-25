@@ -26,6 +26,8 @@ public class GetInstanceConsoleOutputRequest extends RpcAcsRequest<GetInstanceCo
 
 	private Long resourceOwnerId;
 
+	private Boolean removeSymbols;
+
 	private String resourceOwnerAccount;
 
 	private String ownerAccount;
@@ -34,7 +36,7 @@ public class GetInstanceConsoleOutputRequest extends RpcAcsRequest<GetInstanceCo
 
 	private String instanceId;
 	public GetInstanceConsoleOutputRequest() {
-		super("Ecs", "2014-05-26", "GetInstanceConsoleOutput", "ecs");
+		super("Ecs", "2014-05-26", "GetInstanceConsoleOutput");
 		setMethod(MethodType.POST);
 	}
 
@@ -46,6 +48,17 @@ public class GetInstanceConsoleOutputRequest extends RpcAcsRequest<GetInstanceCo
 		this.resourceOwnerId = resourceOwnerId;
 		if(resourceOwnerId != null){
 			putQueryParameter("ResourceOwnerId", resourceOwnerId.toString());
+		}
+	}
+
+	public Boolean getRemoveSymbols() {
+		return this.removeSymbols;
+	}
+
+	public void setRemoveSymbols(Boolean removeSymbols) {
+		this.removeSymbols = removeSymbols;
+		if(removeSymbols != null){
+			putQueryParameter("RemoveSymbols", removeSymbols.toString());
 		}
 	}
 

@@ -46,7 +46,7 @@ public class ModifyForwardEntryRequest extends RpcAcsRequest<ModifyForwardEntryR
 
 	private String externalPort;
 	public ModifyForwardEntryRequest() {
-		super("Ecs", "2014-05-26", "ModifyForwardEntry", "ecs");
+		super("Ecs", "2014-05-26", "ModifyForwardEntry");
 		setMethod(MethodType.POST);
 	}
 

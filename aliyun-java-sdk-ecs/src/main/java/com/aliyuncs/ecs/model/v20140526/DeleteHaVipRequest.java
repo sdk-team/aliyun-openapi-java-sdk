@@ -36,7 +36,7 @@ public class DeleteHaVipRequest extends RpcAcsRequest<DeleteHaVipResponse> {
 
 	private Long ownerId;
 	public DeleteHaVipRequest() {
-		super("Ecs", "2014-05-26", "DeleteHaVip", "ecs");
+		super("Ecs", "2014-05-26", "DeleteHaVip");
 		setMethod(MethodType.POST);
 	}
 
