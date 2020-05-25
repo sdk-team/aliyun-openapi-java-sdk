@@ -48,7 +48,7 @@ public class SubmitSnapshotJobRequest extends RpcAcsRequest<SubmitSnapshotJobRes
 
 	private Long interval;
 	public SubmitSnapshotJobRequest() {
-		super("vod", "2019-06-10", "SubmitSnapshotJob", "vod");
+		super("vod", "2019-06-10", "SubmitSnapshotJob");
 		setMethod(MethodType.POST);
 	}
 

@@ -34,7 +34,7 @@ public class DescribeVodAIDataRequest extends RpcAcsRequest<DescribeVodAIDataRes
 
 	private String region;
 	public DescribeVodAIDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodAIData", "vod");
+		super("vod", "2019-06-10", "DescribeVodAIData");
 		setMethod(MethodType.POST);
 	}
 

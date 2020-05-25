@@ -30,7 +30,7 @@ public class SetAuditSecurityIpRequest extends RpcAcsRequest<SetAuditSecurityIpR
 
 	private String ips;
 	public SetAuditSecurityIpRequest() {
-		super("vod", "2019-06-10", "SetAuditSecurityIp", "vod");
+		super("vod", "2019-06-10", "SetAuditSecurityIp");
 		setMethod(MethodType.POST);
 	}
 

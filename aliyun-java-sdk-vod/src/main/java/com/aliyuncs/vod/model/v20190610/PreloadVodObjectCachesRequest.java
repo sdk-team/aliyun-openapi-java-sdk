@@ -30,7 +30,7 @@ public class PreloadVodObjectCachesRequest extends RpcAcsRequest<PreloadVodObjec
 
 	private String securityToken;
 	public PreloadVodObjectCachesRequest() {
-		super("vod", "2019-06-10", "PreloadVodObjectCaches", "vod");
+		super("vod", "2019-06-10", "PreloadVodObjectCaches");
 		setMethod(MethodType.POST);
 	}
 

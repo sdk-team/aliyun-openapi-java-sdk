@@ -32,7 +32,7 @@ public class RefreshUploadVideoRequest extends RpcAcsRequest<RefreshUploadVideoR
 
 	private Long ownerId;
 	public RefreshUploadVideoRequest() {
-		super("vod", "2019-06-10", "RefreshUploadVideo", "vod");
+		super("vod", "2019-06-10", "RefreshUploadVideo");
 		setMethod(MethodType.POST);
 	}
 

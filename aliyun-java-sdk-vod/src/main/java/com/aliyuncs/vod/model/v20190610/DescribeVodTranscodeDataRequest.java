@@ -38,7 +38,7 @@ public class DescribeVodTranscodeDataRequest extends RpcAcsRequest<DescribeVodTr
 
 	private String region;
 	public DescribeVodTranscodeDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodTranscodeData", "vod");
+		super("vod", "2019-06-10", "DescribeVodTranscodeData");
 		setMethod(MethodType.POST);
 	}
 

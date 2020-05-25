@@ -44,7 +44,7 @@ public class SubmitTranscodeJobsRequest extends RpcAcsRequest<SubmitTranscodeJob
 
 	private String encryptConfig;
 	public SubmitTranscodeJobsRequest() {
-		super("vod", "2019-06-10", "SubmitTranscodeJobs", "vod");
+		super("vod", "2019-06-10", "SubmitTranscodeJobs");
 		setMethod(MethodType.POST);
 	}
 

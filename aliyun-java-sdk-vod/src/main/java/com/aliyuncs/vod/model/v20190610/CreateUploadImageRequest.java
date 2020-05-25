@@ -50,7 +50,7 @@ public class CreateUploadImageRequest extends RpcAcsRequest<CreateUploadImageRes
 
 	private String appId;
 	public CreateUploadImageRequest() {
-		super("vod", "2019-06-10", "CreateUploadImage", "vod");
+		super("vod", "2019-06-10", "CreateUploadImage");
 		setMethod(MethodType.POST);
 	}
 

@@ -36,7 +36,7 @@ public class UpdateWatermarkRequest extends RpcAcsRequest<UpdateWatermarkRespons
 
 	private String name;
 	public UpdateWatermarkRequest() {
-		super("vod", "2019-06-10", "UpdateWatermark", "vod");
+		super("vod", "2019-06-10", "UpdateWatermark");
 		setMethod(MethodType.POST);
 	}
 

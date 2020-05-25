@@ -32,7 +32,7 @@ public class GetAuditHistoryRequest extends RpcAcsRequest<GetAuditHistoryRespons
 
 	private String sortBy;
 	public GetAuditHistoryRequest() {
-		super("vod", "2019-06-10", "GetAuditHistory", "vod");
+		super("vod", "2019-06-10", "GetAuditHistory");
 		setMethod(MethodType.POST);
 	}
 

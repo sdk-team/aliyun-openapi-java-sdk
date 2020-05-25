@@ -32,7 +32,7 @@ public class GetWatermarkRequest extends RpcAcsRequest<GetWatermarkResponse> {
 
 	private String watermarkId;
 	public GetWatermarkRequest() {
-		super("vod", "2019-06-10", "GetWatermark", "vod");
+		super("vod", "2019-06-10", "GetWatermark");
 		setMethod(MethodType.POST);
 	}
 

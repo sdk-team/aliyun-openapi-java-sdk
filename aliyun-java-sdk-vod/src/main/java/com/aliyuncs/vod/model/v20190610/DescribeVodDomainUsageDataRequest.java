@@ -38,7 +38,7 @@ public class DescribeVodDomainUsageDataRequest extends RpcAcsRequest<DescribeVod
 
 	private String field;
 	public DescribeVodDomainUsageDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainUsageData", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainUsageData");
 		setMethod(MethodType.POST);
 	}
 

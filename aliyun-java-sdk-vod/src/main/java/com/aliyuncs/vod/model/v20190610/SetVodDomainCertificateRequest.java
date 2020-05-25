@@ -40,7 +40,7 @@ public class SetVodDomainCertificateRequest extends RpcAcsRequest<SetVodDomainCe
 
 	private String region;
 	public SetVodDomainCertificateRequest() {
-		super("vod", "2019-06-10", "SetVodDomainCertificate", "vod");
+		super("vod", "2019-06-10", "SetVodDomainCertificate");
 		setMethod(MethodType.POST);
 	}
 

@@ -34,7 +34,7 @@ public class ListVodTemplateRequest extends RpcAcsRequest<ListVodTemplateRespons
 
 	private String appId;
 	public ListVodTemplateRequest() {
-		super("vod", "2019-06-10", "ListVodTemplate", "vod");
+		super("vod", "2019-06-10", "ListVodTemplate");
 		setMethod(MethodType.POST);
 	}
 

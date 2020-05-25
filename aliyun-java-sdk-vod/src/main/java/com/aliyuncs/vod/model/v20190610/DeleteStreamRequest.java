@@ -34,7 +34,7 @@ public class DeleteStreamRequest extends RpcAcsRequest<DeleteStreamResponse> {
 
 	private String jobIds;
 	public DeleteStreamRequest() {
-		super("vod", "2019-06-10", "DeleteStream", "vod");
+		super("vod", "2019-06-10", "DeleteStream");
 		setMethod(MethodType.POST);
 	}
 

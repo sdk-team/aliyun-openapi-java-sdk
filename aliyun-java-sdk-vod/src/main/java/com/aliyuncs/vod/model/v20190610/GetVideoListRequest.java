@@ -46,7 +46,7 @@ public class GetVideoListRequest extends RpcAcsRequest<GetVideoListResponse> {
 
 	private String status;
 	public GetVideoListRequest() {
-		super("vod", "2019-06-10", "GetVideoList", "vod");
+		super("vod", "2019-06-10", "GetVideoList");
 		setMethod(MethodType.POST);
 	}
 

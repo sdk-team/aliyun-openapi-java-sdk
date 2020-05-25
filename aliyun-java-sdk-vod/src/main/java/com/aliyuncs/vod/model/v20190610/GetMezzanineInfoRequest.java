@@ -40,7 +40,7 @@ public class GetMezzanineInfoRequest extends RpcAcsRequest<GetMezzanineInfoRespo
 
 	private String additionType;
 	public GetMezzanineInfoRequest() {
-		super("vod", "2019-06-10", "GetMezzanineInfo", "vod");
+		super("vod", "2019-06-10", "GetMezzanineInfo");
 		setMethod(MethodType.POST);
 	}
 

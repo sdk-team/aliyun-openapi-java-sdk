@@ -36,7 +36,7 @@ public class GetMessageCallbackRequest extends RpcAcsRequest<GetMessageCallbackR
 
 	private String appId;
 	public GetMessageCallbackRequest() {
-		super("vod", "2019-06-10", "GetMessageCallback", "vod");
+		super("vod", "2019-06-10", "GetMessageCallback");
 		setMethod(MethodType.POST);
 	}
 

@@ -32,7 +32,7 @@ public class SetDefaultTranscodeTemplateGroupRequest extends RpcAcsRequest<SetDe
 
 	private String transcodeTemplateGroupId;
 	public SetDefaultTranscodeTemplateGroupRequest() {
-		super("vod", "2019-06-10", "SetDefaultTranscodeTemplateGroup", "vod");
+		super("vod", "2019-06-10", "SetDefaultTranscodeTemplateGroup");
 		setMethod(MethodType.POST);
 	}
 

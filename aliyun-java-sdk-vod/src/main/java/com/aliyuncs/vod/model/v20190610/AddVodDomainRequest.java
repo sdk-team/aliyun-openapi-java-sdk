@@ -38,7 +38,7 @@ public class AddVodDomainRequest extends RpcAcsRequest<AddVodDomainResponse> {
 
 	private String checkUrl;
 	public AddVodDomainRequest() {
-		super("vod", "2019-06-10", "AddVodDomain", "vod");
+		super("vod", "2019-06-10", "AddVodDomain");
 		setMethod(MethodType.POST);
 	}
 

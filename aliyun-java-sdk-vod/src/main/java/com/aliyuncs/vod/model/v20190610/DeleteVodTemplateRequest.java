@@ -32,7 +32,7 @@ public class DeleteVodTemplateRequest extends RpcAcsRequest<DeleteVodTemplateRes
 
 	private String vodTemplateId;
 	public DeleteVodTemplateRequest() {
-		super("vod", "2019-06-10", "DeleteVodTemplate", "vod");
+		super("vod", "2019-06-10", "DeleteVodTemplate");
 		setMethod(MethodType.POST);
 	}
 

@@ -36,7 +36,7 @@ public class CreateAppInfoRequest extends RpcAcsRequest<CreateAppInfoResponse> {
 
 	private Long ownerId;
 	public CreateAppInfoRequest() {
-		super("vod", "2019-06-10", "CreateAppInfo", "vod");
+		super("vod", "2019-06-10", "CreateAppInfo");
 		setMethod(MethodType.POST);
 	}
 

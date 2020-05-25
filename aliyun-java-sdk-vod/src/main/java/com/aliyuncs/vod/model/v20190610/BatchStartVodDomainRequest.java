@@ -30,7 +30,7 @@ public class BatchStartVodDomainRequest extends RpcAcsRequest<BatchStartVodDomai
 
 	private String securityToken;
 	public BatchStartVodDomainRequest() {
-		super("vod", "2019-06-10", "BatchStartVodDomain", "vod");
+		super("vod", "2019-06-10", "BatchStartVodDomain");
 		setMethod(MethodType.POST);
 	}
 

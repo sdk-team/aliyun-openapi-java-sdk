@@ -44,7 +44,7 @@ public class UpdateVideoInfoRequest extends RpcAcsRequest<UpdateVideoInfoRespons
 
 	private String tags;
 	public UpdateVideoInfoRequest() {
-		super("vod", "2019-06-10", "UpdateVideoInfo", "vod");
+		super("vod", "2019-06-10", "UpdateVideoInfo");
 		setMethod(MethodType.POST);
 	}
 

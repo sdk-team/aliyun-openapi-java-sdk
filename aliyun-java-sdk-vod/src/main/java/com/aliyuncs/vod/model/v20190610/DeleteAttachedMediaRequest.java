@@ -32,7 +32,7 @@ public class DeleteAttachedMediaRequest extends RpcAcsRequest<DeleteAttachedMedi
 
 	private String mediaIds;
 	public DeleteAttachedMediaRequest() {
-		super("vod", "2019-06-10", "DeleteAttachedMedia", "vod");
+		super("vod", "2019-06-10", "DeleteAttachedMedia");
 		setMethod(MethodType.POST);
 	}
 

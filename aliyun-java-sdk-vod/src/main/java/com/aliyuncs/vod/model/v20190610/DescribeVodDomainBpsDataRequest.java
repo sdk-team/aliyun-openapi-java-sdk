@@ -38,7 +38,7 @@ public class DescribeVodDomainBpsDataRequest extends RpcAcsRequest<DescribeVodDo
 
 	private String interval;
 	public DescribeVodDomainBpsDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainBpsData", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainBpsData");
 		setMethod(MethodType.POST);
 	}
 

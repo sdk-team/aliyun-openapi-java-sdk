@@ -36,7 +36,7 @@ public class DescribeVodDomainLogRequest extends RpcAcsRequest<DescribeVodDomain
 
 	private Long ownerId;
 	public DescribeVodDomainLogRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainLog", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainLog");
 		setMethod(MethodType.POST);
 	}
 

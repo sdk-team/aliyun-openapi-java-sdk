@@ -50,7 +50,7 @@ public class SetMessageCallbackRequest extends RpcAcsRequest<SetMessageCallbackR
 
 	private String callbackURL;
 	public SetMessageCallbackRequest() {
-		super("vod", "2019-06-10", "SetMessageCallback", "vod");
+		super("vod", "2019-06-10", "SetMessageCallback");
 		setMethod(MethodType.POST);
 	}
 

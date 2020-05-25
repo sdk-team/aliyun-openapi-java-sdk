@@ -32,7 +32,7 @@ public class DeleteVodDomainRequest extends RpcAcsRequest<DeleteVodDomainRespons
 
 	private String securityToken;
 	public DeleteVodDomainRequest() {
-		super("vod", "2019-06-10", "DeleteVodDomain", "vod");
+		super("vod", "2019-06-10", "DeleteVodDomain");
 		setMethod(MethodType.POST);
 	}
 

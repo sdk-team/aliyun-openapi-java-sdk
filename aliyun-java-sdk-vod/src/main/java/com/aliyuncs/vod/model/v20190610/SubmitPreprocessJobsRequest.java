@@ -34,7 +34,7 @@ public class SubmitPreprocessJobsRequest extends RpcAcsRequest<SubmitPreprocessJ
 
 	private String preprocessType;
 	public SubmitPreprocessJobsRequest() {
-		super("vod", "2019-06-10", "SubmitPreprocessJobs", "vod");
+		super("vod", "2019-06-10", "SubmitPreprocessJobs");
 		setMethod(MethodType.POST);
 	}
 

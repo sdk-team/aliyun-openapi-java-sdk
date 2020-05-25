@@ -28,7 +28,7 @@ public class DescribeVodDomainCertificateInfoRequest extends RpcAcsRequest<Descr
 
 	private Long ownerId;
 	public DescribeVodDomainCertificateInfoRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainCertificateInfo", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainCertificateInfo");
 		setMethod(MethodType.POST);
 	}
 

@@ -48,7 +48,7 @@ public class DescribeVodRefreshTasksRequest extends RpcAcsRequest<DescribeVodRef
 
 	private String status;
 	public DescribeVodRefreshTasksRequest() {
-		super("vod", "2019-06-10", "DescribeVodRefreshTasks", "vod");
+		super("vod", "2019-06-10", "DescribeVodRefreshTasks");
 		setMethod(MethodType.POST);
 	}
 

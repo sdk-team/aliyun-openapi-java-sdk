@@ -38,7 +38,7 @@ public class GetAttachedMediaInfoRequest extends RpcAcsRequest<GetAttachedMediaI
 
 	private Long ownerId;
 	public GetAttachedMediaInfoRequest() {
-		super("vod", "2019-06-10", "GetAttachedMediaInfo", "vod");
+		super("vod", "2019-06-10", "GetAttachedMediaInfo");
 		setMethod(MethodType.POST);
 	}
 

@@ -32,7 +32,7 @@ public class GetTranscodeTaskRequest extends RpcAcsRequest<GetTranscodeTaskRespo
 
 	private String transcodeTaskId;
 	public GetTranscodeTaskRequest() {
-		super("vod", "2019-06-10", "GetTranscodeTask", "vod");
+		super("vod", "2019-06-10", "GetTranscodeTask");
 		setMethod(MethodType.POST);
 	}
 

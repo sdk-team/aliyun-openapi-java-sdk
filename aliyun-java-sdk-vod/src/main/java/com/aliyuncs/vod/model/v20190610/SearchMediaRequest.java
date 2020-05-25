@@ -46,7 +46,7 @@ public class SearchMediaRequest extends RpcAcsRequest<SearchMediaResponse> {
 
 	private String fields;
 	public SearchMediaRequest() {
-		super("vod", "2019-06-10", "SearchMedia", "vod");
+		super("vod", "2019-06-10", "SearchMedia");
 		setMethod(MethodType.POST);
 	}
 

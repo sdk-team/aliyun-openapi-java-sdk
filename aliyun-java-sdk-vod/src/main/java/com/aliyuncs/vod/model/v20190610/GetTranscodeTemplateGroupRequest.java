@@ -32,7 +32,7 @@ public class GetTranscodeTemplateGroupRequest extends RpcAcsRequest<GetTranscode
 
 	private String transcodeTemplateGroupId;
 	public GetTranscodeTemplateGroupRequest() {
-		super("vod", "2019-06-10", "GetTranscodeTemplateGroup", "vod");
+		super("vod", "2019-06-10", "GetTranscodeTemplateGroup");
 		setMethod(MethodType.POST);
 	}
 

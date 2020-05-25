@@ -34,7 +34,7 @@ public class DeleteMezzaninesRequest extends RpcAcsRequest<DeleteMezzaninesRespo
 
 	private String videoIds;
 	public DeleteMezzaninesRequest() {
-		super("vod", "2019-06-10", "DeleteMezzanines", "vod");
+		super("vod", "2019-06-10", "DeleteMezzanines");
 		setMethod(MethodType.POST);
 	}
 

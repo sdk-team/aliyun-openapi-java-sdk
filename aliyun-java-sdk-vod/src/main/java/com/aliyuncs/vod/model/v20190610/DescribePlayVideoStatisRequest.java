@@ -32,7 +32,7 @@ public class DescribePlayVideoStatisRequest extends RpcAcsRequest<DescribePlayVi
 
 	private Long ownerId;
 	public DescribePlayVideoStatisRequest() {
-		super("vod", "2019-06-10", "DescribePlayVideoStatis", "vod");
+		super("vod", "2019-06-10", "DescribePlayVideoStatis");
 		setMethod(MethodType.POST);
 	}
 

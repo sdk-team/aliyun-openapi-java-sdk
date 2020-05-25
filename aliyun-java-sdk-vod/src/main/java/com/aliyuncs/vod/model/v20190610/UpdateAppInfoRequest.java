@@ -40,7 +40,7 @@ public class UpdateAppInfoRequest extends RpcAcsRequest<UpdateAppInfoResponse> {
 
 	private String status;
 	public UpdateAppInfoRequest() {
-		super("vod", "2019-06-10", "UpdateAppInfo", "vod");
+		super("vod", "2019-06-10", "UpdateAppInfo");
 		setMethod(MethodType.POST);
 	}
 

@@ -32,7 +32,7 @@ public class GetTranscodeSummaryRequest extends RpcAcsRequest<GetTranscodeSummar
 
 	private String videoIds;
 	public GetTranscodeSummaryRequest() {
-		super("vod", "2019-06-10", "GetTranscodeSummary", "vod");
+		super("vod", "2019-06-10", "GetTranscodeSummary");
 		setMethod(MethodType.POST);
 	}
 

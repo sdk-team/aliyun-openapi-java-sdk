@@ -34,7 +34,7 @@ public class UpdateVodDomainRequest extends RpcAcsRequest<UpdateVodDomainRespons
 
 	private String securityToken;
 	public UpdateVodDomainRequest() {
-		super("vod", "2019-06-10", "UpdateVodDomain", "vod");
+		super("vod", "2019-06-10", "UpdateVodDomain");
 		setMethod(MethodType.POST);
 	}
 

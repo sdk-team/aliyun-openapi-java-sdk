@@ -38,7 +38,7 @@ public class DescribeVodDomainTrafficDataRequest extends RpcAcsRequest<DescribeV
 
 	private String interval;
 	public DescribeVodDomainTrafficDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainTrafficData", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainTrafficData");
 		setMethod(MethodType.POST);
 	}
 

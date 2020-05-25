@@ -38,7 +38,7 @@ public class MoveAppResourceRequest extends RpcAcsRequest<MoveAppResourceRespons
 
 	private String resourceIds;
 	public MoveAppResourceRequest() {
-		super("vod", "2019-06-10", "MoveAppResource", "vod");
+		super("vod", "2019-06-10", "MoveAppResource");
 		setMethod(MethodType.POST);
 	}
 

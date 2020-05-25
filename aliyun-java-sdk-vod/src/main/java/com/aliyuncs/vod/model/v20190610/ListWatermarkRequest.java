@@ -36,7 +36,7 @@ public class ListWatermarkRequest extends RpcAcsRequest<ListWatermarkResponse> {
 
 	private String appId;
 	public ListWatermarkRequest() {
-		super("vod", "2019-06-10", "ListWatermark", "vod");
+		super("vod", "2019-06-10", "ListWatermark");
 		setMethod(MethodType.POST);
 	}
 

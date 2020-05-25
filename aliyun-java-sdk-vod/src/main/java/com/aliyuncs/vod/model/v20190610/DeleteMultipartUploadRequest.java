@@ -38,7 +38,7 @@ public class DeleteMultipartUploadRequest extends RpcAcsRequest<DeleteMultipartU
 
 	private String mediaType;
 	public DeleteMultipartUploadRequest() {
-		super("vod", "2019-06-10", "DeleteMultipartUpload", "vod");
+		super("vod", "2019-06-10", "DeleteMultipartUpload");
 		setMethod(MethodType.POST);
 	}
 

@@ -40,7 +40,7 @@ public class AddWatermarkRequest extends RpcAcsRequest<AddWatermarkResponse> {
 
 	private String fileUrl;
 	public AddWatermarkRequest() {
-		super("vod", "2019-06-10", "AddWatermark", "vod");
+		super("vod", "2019-06-10", "AddWatermark");
 		setMethod(MethodType.POST);
 	}
 

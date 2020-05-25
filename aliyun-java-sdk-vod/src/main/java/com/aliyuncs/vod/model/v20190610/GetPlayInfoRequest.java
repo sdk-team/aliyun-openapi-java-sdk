@@ -56,7 +56,7 @@ public class GetPlayInfoRequest extends RpcAcsRequest<GetPlayInfoResponse> {
 
 	private String authInfo;
 	public GetPlayInfoRequest() {
-		super("vod", "2019-06-10", "GetPlayInfo", "vod");
+		super("vod", "2019-06-10", "GetPlayInfo");
 		setMethod(MethodType.POST);
 	}
 

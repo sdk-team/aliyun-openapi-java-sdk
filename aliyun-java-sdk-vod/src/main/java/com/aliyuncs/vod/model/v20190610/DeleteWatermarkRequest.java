@@ -32,7 +32,7 @@ public class DeleteWatermarkRequest extends RpcAcsRequest<DeleteWatermarkRespons
 
 	private String watermarkId;
 	public DeleteWatermarkRequest() {
-		super("vod", "2019-06-10", "DeleteWatermark", "vod");
+		super("vod", "2019-06-10", "DeleteWatermark");
 		setMethod(MethodType.POST);
 	}
 

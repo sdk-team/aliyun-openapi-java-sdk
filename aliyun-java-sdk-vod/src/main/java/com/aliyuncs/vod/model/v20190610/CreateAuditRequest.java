@@ -26,7 +26,7 @@ public class CreateAuditRequest extends RpcAcsRequest<CreateAuditResponse> {
 
 	private String auditContent;
 	public CreateAuditRequest() {
-		super("vod", "2019-06-10", "CreateAudit", "vod");
+		super("vod", "2019-06-10", "CreateAudit");
 		setMethod(MethodType.POST);
 	}
 

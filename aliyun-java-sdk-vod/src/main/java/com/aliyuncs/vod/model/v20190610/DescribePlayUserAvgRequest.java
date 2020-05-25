@@ -30,7 +30,7 @@ public class DescribePlayUserAvgRequest extends RpcAcsRequest<DescribePlayUserAv
 
 	private Long ownerId;
 	public DescribePlayUserAvgRequest() {
-		super("vod", "2019-06-10", "DescribePlayUserAvg", "vod");
+		super("vod", "2019-06-10", "DescribePlayUserAvg");
 		setMethod(MethodType.POST);
 	}
 

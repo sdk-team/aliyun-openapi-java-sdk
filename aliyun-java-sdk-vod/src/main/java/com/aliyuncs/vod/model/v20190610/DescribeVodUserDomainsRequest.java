@@ -46,7 +46,7 @@ public class DescribeVodUserDomainsRequest extends RpcAcsRequest<DescribeVodUser
 
 	private String domainSearchType;
 	public DescribeVodUserDomainsRequest() {
-		super("vod", "2019-06-10", "DescribeVodUserDomains", "vod");
+		super("vod", "2019-06-10", "DescribeVodUserDomains");
 		setMethod(MethodType.POST);
 	}
 

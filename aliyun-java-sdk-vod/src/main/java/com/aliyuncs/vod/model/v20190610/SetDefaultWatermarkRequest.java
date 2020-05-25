@@ -32,7 +32,7 @@ public class SetDefaultWatermarkRequest extends RpcAcsRequest<SetDefaultWatermar
 
 	private String watermarkId;
 	public SetDefaultWatermarkRequest() {
-		super("vod", "2019-06-10", "SetDefaultWatermark", "vod");
+		super("vod", "2019-06-10", "SetDefaultWatermark");
 		setMethod(MethodType.POST);
 	}
 

@@ -34,7 +34,7 @@ public class UpdateCategoryRequest extends RpcAcsRequest<UpdateCategoryResponse>
 
 	private String cateName;
 	public UpdateCategoryRequest() {
-		super("vod", "2019-06-10", "UpdateCategory", "vod");
+		super("vod", "2019-06-10", "UpdateCategory");
 		setMethod(MethodType.POST);
 	}
 

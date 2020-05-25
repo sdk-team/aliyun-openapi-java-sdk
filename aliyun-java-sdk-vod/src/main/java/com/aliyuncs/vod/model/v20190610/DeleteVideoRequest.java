@@ -32,7 +32,7 @@ public class DeleteVideoRequest extends RpcAcsRequest<DeleteVideoResponse> {
 
 	private String videoIds;
 	public DeleteVideoRequest() {
-		super("vod", "2019-06-10", "DeleteVideo", "vod");
+		super("vod", "2019-06-10", "DeleteVideo");
 		setMethod(MethodType.POST);
 	}
 

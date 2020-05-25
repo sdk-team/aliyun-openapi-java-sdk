@@ -36,7 +36,7 @@ public class DeleteMessageCallbackRequest extends RpcAcsRequest<DeleteMessageCal
 
 	private String appId;
 	public DeleteMessageCallbackRequest() {
-		super("vod", "2019-06-10", "DeleteMessageCallback", "vod");
+		super("vod", "2019-06-10", "DeleteMessageCallback");
 		setMethod(MethodType.POST);
 	}
 

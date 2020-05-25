@@ -32,7 +32,7 @@ public class UpdateVideoInfosRequest extends RpcAcsRequest<UpdateVideoInfosRespo
 
 	private Long ownerId;
 	public UpdateVideoInfosRequest() {
-		super("vod", "2019-06-10", "UpdateVideoInfos", "vod");
+		super("vod", "2019-06-10", "UpdateVideoInfos");
 		setMethod(MethodType.POST);
 	}
 

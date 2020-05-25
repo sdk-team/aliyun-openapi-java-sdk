@@ -34,7 +34,7 @@ public class GetAppInfosRequest extends RpcAcsRequest<GetAppInfosResponse> {
 
 	private String appIds;
 	public GetAppInfosRequest() {
-		super("vod", "2019-06-10", "GetAppInfos", "vod");
+		super("vod", "2019-06-10", "GetAppInfos");
 		setMethod(MethodType.POST);
 	}
 

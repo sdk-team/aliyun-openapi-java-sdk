@@ -36,7 +36,7 @@ public class AddCategoryRequest extends RpcAcsRequest<AddCategoryResponse> {
 
 	private String ownerId;
 	public AddCategoryRequest() {
-		super("vod", "2019-06-10", "AddCategory", "vod");
+		super("vod", "2019-06-10", "AddCategory");
 		setMethod(MethodType.POST);
 	}
 

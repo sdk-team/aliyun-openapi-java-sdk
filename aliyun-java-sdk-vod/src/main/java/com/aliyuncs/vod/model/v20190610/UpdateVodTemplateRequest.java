@@ -36,7 +36,7 @@ public class UpdateVodTemplateRequest extends RpcAcsRequest<UpdateVodTemplateRes
 
 	private String name;
 	public UpdateVodTemplateRequest() {
-		super("vod", "2019-06-10", "UpdateVodTemplate", "vod");
+		super("vod", "2019-06-10", "UpdateVodTemplate");
 		setMethod(MethodType.POST);
 	}
 

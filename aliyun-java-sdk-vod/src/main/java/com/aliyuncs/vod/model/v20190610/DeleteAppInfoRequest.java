@@ -34,7 +34,7 @@ public class DeleteAppInfoRequest extends RpcAcsRequest<DeleteAppInfoResponse> {
 
 	private String appId;
 	public DeleteAppInfoRequest() {
-		super("vod", "2019-06-10", "DeleteAppInfo", "vod");
+		super("vod", "2019-06-10", "DeleteAppInfo");
 		setMethod(MethodType.POST);
 	}
 

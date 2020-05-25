@@ -30,7 +30,7 @@ public class DescribeVodCertificateListRequest extends RpcAcsRequest<DescribeVod
 
 	private String securityToken;
 	public DescribeVodCertificateListRequest() {
-		super("vod", "2019-06-10", "DescribeVodCertificateList", "vod");
+		super("vod", "2019-06-10", "DescribeVodCertificateList");
 		setMethod(MethodType.POST);
 	}
 

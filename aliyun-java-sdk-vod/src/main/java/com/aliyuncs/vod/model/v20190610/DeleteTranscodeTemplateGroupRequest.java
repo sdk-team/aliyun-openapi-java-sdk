@@ -36,7 +36,7 @@ public class DeleteTranscodeTemplateGroupRequest extends RpcAcsRequest<DeleteTra
 
 	private String transcodeTemplateGroupId;
 	public DeleteTranscodeTemplateGroupRequest() {
-		super("vod", "2019-06-10", "DeleteTranscodeTemplateGroup", "vod");
+		super("vod", "2019-06-10", "DeleteTranscodeTemplateGroup");
 		setMethod(MethodType.POST);
 	}
 

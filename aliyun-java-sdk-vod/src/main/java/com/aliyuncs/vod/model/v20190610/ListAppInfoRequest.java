@@ -38,7 +38,7 @@ public class ListAppInfoRequest extends RpcAcsRequest<ListAppInfoResponse> {
 
 	private String status;
 	public ListAppInfoRequest() {
-		super("vod", "2019-06-10", "ListAppInfo", "vod");
+		super("vod", "2019-06-10", "ListAppInfo");
 		setMethod(MethodType.POST);
 	}
 

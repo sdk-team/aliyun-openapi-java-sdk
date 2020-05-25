@@ -28,7 +28,7 @@ public class DescribeVodRefreshQuotaRequest extends RpcAcsRequest<DescribeVodRef
 
 	private String securityToken;
 	public DescribeVodRefreshQuotaRequest() {
-		super("vod", "2019-06-10", "DescribeVodRefreshQuota", "vod");
+		super("vod", "2019-06-10", "DescribeVodRefreshQuota");
 		setMethod(MethodType.POST);
 	}
 

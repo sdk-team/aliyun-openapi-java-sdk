@@ -36,7 +36,7 @@ public class GetImageInfoRequest extends RpcAcsRequest<GetImageInfoResponse> {
 
 	private Long ownerId;
 	public GetImageInfoRequest() {
-		super("vod", "2019-06-10", "GetImageInfo", "vod");
+		super("vod", "2019-06-10", "GetImageInfo");
 		setMethod(MethodType.POST);
 	}
 

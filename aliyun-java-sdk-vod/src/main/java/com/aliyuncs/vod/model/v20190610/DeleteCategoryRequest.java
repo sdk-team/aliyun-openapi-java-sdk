@@ -32,7 +32,7 @@ public class DeleteCategoryRequest extends RpcAcsRequest<DeleteCategoryResponse>
 
 	private Long cateId;
 	public DeleteCategoryRequest() {
-		super("vod", "2019-06-10", "DeleteCategory", "vod");
+		super("vod", "2019-06-10", "DeleteCategory");
 		setMethod(MethodType.POST);
 	}
 

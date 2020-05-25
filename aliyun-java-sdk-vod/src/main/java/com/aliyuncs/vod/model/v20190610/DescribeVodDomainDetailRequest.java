@@ -30,7 +30,7 @@ public class DescribeVodDomainDetailRequest extends RpcAcsRequest<DescribeVodDom
 
 	private String securityToken;
 	public DescribeVodDomainDetailRequest() {
-		super("vod", "2019-06-10", "DescribeVodDomainDetail", "vod");
+		super("vod", "2019-06-10", "DescribeVodDomainDetail");
 		setMethod(MethodType.POST);
 	}
 

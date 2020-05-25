@@ -26,7 +26,7 @@ public class ListAuditSecurityIpRequest extends RpcAcsRequest<ListAuditSecurityI
 
 	private String securityGroupName;
 	public ListAuditSecurityIpRequest() {
-		super("vod", "2019-06-10", "ListAuditSecurityIp", "vod");
+		super("vod", "2019-06-10", "ListAuditSecurityIp");
 		setMethod(MethodType.POST);
 	}
 

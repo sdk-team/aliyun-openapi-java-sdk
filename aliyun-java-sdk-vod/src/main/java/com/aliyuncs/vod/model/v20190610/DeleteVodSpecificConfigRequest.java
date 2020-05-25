@@ -32,7 +32,7 @@ public class DeleteVodSpecificConfigRequest extends RpcAcsRequest<DeleteVodSpeci
 
 	private String configId;
 	public DeleteVodSpecificConfigRequest() {
-		super("vod", "2019-06-10", "DeleteVodSpecificConfig", "vod");
+		super("vod", "2019-06-10", "DeleteVodSpecificConfig");
 		setMethod(MethodType.POST);
 	}
 

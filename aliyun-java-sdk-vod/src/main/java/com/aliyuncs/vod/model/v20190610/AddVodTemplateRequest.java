@@ -40,7 +40,7 @@ public class AddVodTemplateRequest extends RpcAcsRequest<AddVodTemplateResponse>
 
 	private String name;
 	public AddVodTemplateRequest() {
-		super("vod", "2019-06-10", "AddVodTemplate", "vod");
+		super("vod", "2019-06-10", "AddVodTemplate");
 		setMethod(MethodType.POST);
 	}
 

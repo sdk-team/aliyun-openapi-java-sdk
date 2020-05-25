@@ -30,7 +30,7 @@ public class DescribePlayUserTotalRequest extends RpcAcsRequest<DescribePlayUser
 
 	private Long ownerId;
 	public DescribePlayUserTotalRequest() {
-		super("vod", "2019-06-10", "DescribePlayUserTotal", "vod");
+		super("vod", "2019-06-10", "DescribePlayUserTotal");
 		setMethod(MethodType.POST);
 	}
 

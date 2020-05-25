@@ -36,7 +36,7 @@ public class ListTranscodeTemplateGroupRequest extends RpcAcsRequest<ListTransco
 
 	private String appId;
 	public ListTranscodeTemplateGroupRequest() {
-		super("vod", "2019-06-10", "ListTranscodeTemplateGroup", "vod");
+		super("vod", "2019-06-10", "ListTranscodeTemplateGroup");
 		setMethod(MethodType.POST);
 	}
 

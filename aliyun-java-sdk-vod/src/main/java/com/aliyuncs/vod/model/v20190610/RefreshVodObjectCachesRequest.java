@@ -32,7 +32,7 @@ public class RefreshVodObjectCachesRequest extends RpcAcsRequest<RefreshVodObjec
 
 	private String objectType;
 	public RefreshVodObjectCachesRequest() {
-		super("vod", "2019-06-10", "RefreshVodObjectCaches", "vod");
+		super("vod", "2019-06-10", "RefreshVodObjectCaches");
 		setMethod(MethodType.POST);
 	}
 

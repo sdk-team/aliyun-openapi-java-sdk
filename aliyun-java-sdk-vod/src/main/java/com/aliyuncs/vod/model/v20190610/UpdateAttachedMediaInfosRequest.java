@@ -34,7 +34,7 @@ public class UpdateAttachedMediaInfosRequest extends RpcAcsRequest<UpdateAttache
 
 	private Long ownerId;
 	public UpdateAttachedMediaInfosRequest() {
-		super("vod", "2019-06-10", "UpdateAttachedMediaInfos", "vod");
+		super("vod", "2019-06-10", "UpdateAttachedMediaInfos");
 		setMethod(MethodType.POST);
 	}
 

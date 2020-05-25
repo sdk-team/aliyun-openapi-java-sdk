@@ -40,7 +40,7 @@ public class ListSnapshotsRequest extends RpcAcsRequest<ListSnapshotsResponse> {
 
 	private String pageNo;
 	public ListSnapshotsRequest() {
-		super("vod", "2019-06-10", "ListSnapshots", "vod");
+		super("vod", "2019-06-10", "ListSnapshots");
 		setMethod(MethodType.POST);
 	}
 

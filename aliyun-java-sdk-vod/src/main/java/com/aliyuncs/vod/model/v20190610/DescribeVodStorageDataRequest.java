@@ -36,7 +36,7 @@ public class DescribeVodStorageDataRequest extends RpcAcsRequest<DescribeVodStor
 
 	private String region;
 	public DescribeVodStorageDataRequest() {
-		super("vod", "2019-06-10", "DescribeVodStorageData", "vod");
+		super("vod", "2019-06-10", "DescribeVodStorageData");
 		setMethod(MethodType.POST);
 	}
 

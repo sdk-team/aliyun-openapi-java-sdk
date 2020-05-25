@@ -38,7 +38,7 @@ public class UpdateTranscodeTemplateGroupRequest extends RpcAcsRequest<UpdateTra
 
 	private String name;
 	public UpdateTranscodeTemplateGroupRequest() {
-		super("vod", "2019-06-10", "UpdateTranscodeTemplateGroup", "vod");
+		super("vod", "2019-06-10", "UpdateTranscodeTemplateGroup");
 		setMethod(MethodType.POST);
 	}
 

@@ -40,7 +40,7 @@ public class ListTranscodeTaskRequest extends RpcAcsRequest<ListTranscodeTaskRes
 
 	private Integer pageNo;
 	public ListTranscodeTaskRequest() {
-		super("vod", "2019-06-10", "ListTranscodeTask", "vod");
+		super("vod", "2019-06-10", "ListTranscodeTask");
 		setMethod(MethodType.POST);
 	}
 

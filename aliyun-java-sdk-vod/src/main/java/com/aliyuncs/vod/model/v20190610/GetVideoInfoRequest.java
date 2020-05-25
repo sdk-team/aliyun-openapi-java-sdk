@@ -34,7 +34,7 @@ public class GetVideoInfoRequest extends RpcAcsRequest<GetVideoInfoResponse> {
 
 	private String additionType;
 	public GetVideoInfoRequest() {
-		super("vod", "2019-06-10", "GetVideoInfo", "vod");
+		super("vod", "2019-06-10", "GetVideoInfo");
 		setMethod(MethodType.POST);
 	}
 

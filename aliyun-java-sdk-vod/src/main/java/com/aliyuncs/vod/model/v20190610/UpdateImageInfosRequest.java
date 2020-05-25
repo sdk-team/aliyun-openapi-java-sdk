@@ -34,7 +34,7 @@ public class UpdateImageInfosRequest extends RpcAcsRequest<UpdateImageInfosRespo
 
 	private Long ownerId;
 	public UpdateImageInfosRequest() {
-		super("vod", "2019-06-10", "UpdateImageInfos", "vod");
+		super("vod", "2019-06-10", "UpdateImageInfos");
 		setMethod(MethodType.POST);
 	}
 

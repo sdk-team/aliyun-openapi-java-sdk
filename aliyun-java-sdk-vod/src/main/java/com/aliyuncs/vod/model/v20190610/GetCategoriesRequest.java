@@ -40,7 +40,7 @@ public class GetCategoriesRequest extends RpcAcsRequest<GetCategoriesResponse> {
 
 	private String sortBy;
 	public GetCategoriesRequest() {
-		super("vod", "2019-06-10", "GetCategories", "vod");
+		super("vod", "2019-06-10", "GetCategories");
 		setMethod(MethodType.POST);
 	}
 

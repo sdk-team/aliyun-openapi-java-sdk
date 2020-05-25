@@ -32,7 +32,7 @@ public class DescribePlayTopVideosRequest extends RpcAcsRequest<DescribePlayTopV
 
 	private Long pageNo;
 	public DescribePlayTopVideosRequest() {
-		super("vod", "2019-06-10", "DescribePlayTopVideos", "vod");
+		super("vod", "2019-06-10", "DescribePlayTopVideos");
 		setMethod(MethodType.POST);
 	}
 

@@ -36,7 +36,7 @@ public class GetVideoPlayAuthRequest extends RpcAcsRequest<GetVideoPlayAuthRespo
 
 	private Long authInfoTimeout;
 	public GetVideoPlayAuthRequest() {
-		super("vod", "2019-06-10", "GetVideoPlayAuth", "vod");
+		super("vod", "2019-06-10", "GetVideoPlayAuth");
 		setMethod(MethodType.POST);
 	}
 
