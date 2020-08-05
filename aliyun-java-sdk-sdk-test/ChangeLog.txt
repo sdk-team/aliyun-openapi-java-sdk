@@ -1,6 +1,9 @@
 2020-08-05 Version: 1.1.2
 - Generated 2019-02-25 for `sdk-test`.
 
+2020-08-05 Version: 1.1.2
+- Generated 2019-02-25 for `sdk-test`.
+
 2020-08-05 Version: 1.1.1
 - Generated 2019-02-25 for `sdk-test`.
 
