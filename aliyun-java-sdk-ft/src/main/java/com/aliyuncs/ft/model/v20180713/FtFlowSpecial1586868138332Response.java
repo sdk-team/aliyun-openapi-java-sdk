@@ -14,25 +14,26 @@
 
 package com.aliyuncs.ft.model.v20180713;
 
-import com.aliyuncs.RpcAcsRequest;
-import com.aliyuncs.http.MethodType;
-import com.aliyuncs.ft.Endpoint;
+import com.aliyuncs.AcsResponse;
+import com.aliyuncs.ft.transform.v20180713.FtFlowSpecial1586868138332ResponseUnmarshaller;
+import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class FtEagleEyeRequest extends RpcAcsRequest<FtEagleEyeResponse> {
-	   
+public class FtFlowSpecial1586868138332Response extends AcsResponse {
+
+	private String requestId;
 
 	private String name;
-	public FtEagleEyeRequest() {
-		super("Ft", "2018-07-13", "FtEagleEye");
-		setMethod(MethodType.POST);
-		try {
-			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
-			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
-		} catch (Exception e) {}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	public String getName() {
@@ -41,14 +42,10 @@ public class FtEagleEyeRequest extends RpcAcsRequest<FtEagleEyeResponse> {
 
 	public void setName(String name) {
 		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
-		}
 	}
 
 	@Override
-	public Class<FtEagleEyeResponse> getResponseClass() {
-		return FtEagleEyeResponse.class;
+	public FtFlowSpecial1586868138332Response getInstance(UnmarshallerContext context) {
+		return	FtFlowSpecial1586868138332ResponseUnmarshaller.unmarshall(this, context);
 	}
-
 }

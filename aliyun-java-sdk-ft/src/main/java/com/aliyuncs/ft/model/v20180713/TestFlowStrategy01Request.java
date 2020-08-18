@@ -15,6 +15,8 @@
 package com.aliyuncs.ft.model.v20180713;
 
 import com.aliyuncs.RpcAcsRequest;
+import java.util.List;
+import com.google.gson.Gson;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.ft.Endpoint;
 
@@ -22,33 +24,33 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class TestFlowStrategy01Request extends RpcAcsRequest<TestFlowStrategy01Response> {
 	   
 
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
-		setMethod(MethodType.POST);
+	private List<Object> names;
+	public TestFlowStrategy01Request() {
+		super("Ft", "2018-07-13", "TestFlowStrategy01");
+		setMethod(MethodType.PUT);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public List<Object> getNames() {
+		return this.names;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setNames(List<Object> names) {
+		this.names = names;
+		if(names != null){
+			putBodyParameter("Names", new Gson().toJson(names));
 		}
 	}
 
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<TestFlowStrategy01Response> getResponseClass() {
+		return TestFlowStrategy01Response.class;
 	}
 
 }
