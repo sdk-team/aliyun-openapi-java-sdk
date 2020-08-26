@@ -23,7 +23,6 @@ public class Endpoint {
             put("cn-beijing-gov-1", "ft.aliyuncs.com");
             put("cn-shenzhen-su18-b01", "ft.aliyuncs.com");
             put("cn-beijing", "ft.aliyuncs.com");
-            put("cn-wulanchabu", "ft.aliyuncs.com");
             put("ap-south-1", "ft.aliyuncs.com");
             put("cn-shanghai-inner", "ft.aliyuncs.com");
             put("cn-shenzhen-st4-d01", "ft.aliyuncs.com");
@@ -53,7 +52,6 @@ public class Endpoint {
             put("me-east-1", "ft.aliyuncs.com");
             put("cn-chengdu", "ft.aliyuncs.com");
             put("cn-hangzhou-test-306", "ft.aliyuncs.com");
-            put("cn-huhehaote-nebula-1", "ft.aliyuncs.com");
             put("cn-shanghai-et2-b01", "ft.aliyuncs.com");
             put("cn-hangzhou-finance", "ft.aliyuncs.com");
             put("ap-southeast-1", "ft.aliyuncs.com");

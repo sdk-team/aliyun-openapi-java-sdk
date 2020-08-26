@@ -25,7 +25,7 @@ import com.aliyuncs.ft.Endpoint;
 public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
 	   
 
-	private String stringList;
+	private String name;
 	public FtIpFlowControlRequest() {
 		super("Ft", "2018-07-13", "FtIpFlowControl");
 		setMethod(MethodType.POST);
@@ -35,14 +35,14 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
 		}
 	}
 

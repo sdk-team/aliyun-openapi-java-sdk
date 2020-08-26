@@ -14,7 +14,6 @@
 
 package com.aliyuncs.ft.model.v20180713;
 
-import java.util.List;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.ft.transform.v20180713.FtIpFlowControlResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -27,13 +26,7 @@ public class FtIpFlowControlResponse extends AcsResponse {
 
 	private String requestId;
 
-	private List<String> names;
-
-	private List<String> names01;
-
-	private List<Integer> integerList;
-
-	private List<Integer> integerList1;
+	private String name;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -43,36 +36,12 @@ public class FtIpFlowControlResponse extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public List<String> getNames() {
-		return this.names;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setNames(List<String> names) {
-		this.names = names;
-	}
-
-	public List<String> getNames01() {
-		return this.names01;
-	}
-
-	public void setNames01(List<String> names01) {
-		this.names01 = names01;
-	}
-
-	public List<Integer> getIntegerList() {
-		return this.integerList;
-	}
-
-	public void setIntegerList(List<Integer> integerList) {
-		this.integerList = integerList;
-	}
-
-	public List<Integer> getIntegerList1() {
-		return this.integerList1;
-	}
-
-	public void setIntegerList1(List<Integer> integerList1) {
-		this.integerList1 = integerList1;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
