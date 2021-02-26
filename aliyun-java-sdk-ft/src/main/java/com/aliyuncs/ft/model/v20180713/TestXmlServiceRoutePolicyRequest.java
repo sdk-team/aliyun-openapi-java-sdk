@@ -22,12 +22,12 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class TestXmlServiceRoutePolicyRequest extends RpcAcsRequest<TestXmlServiceRoutePolicyResponse> {
 	   
 
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
+	private String api;
+	public TestXmlServiceRoutePolicyRequest() {
+		super("Ft", "2018-07-13", "TestXmlServiceRoutePolicy");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -35,20 +35,20 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public String getApi() {
+		return this.api;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setApi(String api) {
+		this.api = api;
+		if(api != null){
+			putQueryParameter("Api", api);
 		}
 	}
 
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<TestXmlServiceRoutePolicyResponse> getResponseClass() {
+		return TestXmlServiceRoutePolicyResponse.class;
 	}
 
 }

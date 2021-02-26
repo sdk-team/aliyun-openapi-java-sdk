@@ -14,22 +14,19 @@
 
 package com.aliyuncs.ft.model.v20180713;
 
-import java.util.List;
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.ft.transform.v20180713.BatchAuditTest01ResponseUnmarshaller;
+import com.aliyuncs.ft.transform.v20180713.FtGatedLaunchPolicy3ApiResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class BatchAuditTest01Response extends AcsResponse {
+public class FtGatedLaunchPolicy3ApiResponse extends AcsResponse {
 
 	private String requestId;
 
 	private String name;
-
-	private Demo01 demo01;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -47,47 +44,8 @@ public class BatchAuditTest01Response extends AcsResponse {
 		this.name = name;
 	}
 
-	public Demo01 getDemo01() {
-		return this.demo01;
-	}
-
-	public void setDemo01(Demo01 demo01) {
-		this.demo01 = demo01;
-	}
-
-	public static class Demo01 {
-
-		private List<Demo011Item> demo011;
-
-		public List<Demo011Item> getDemo011() {
-			return this.demo011;
-		}
-
-		public void setDemo011(List<Demo011Item> demo011) {
-			this.demo011 = demo011;
-		}
-
-		public static class Demo011Item {
-
-			private String demo0111;
-
-			public String getDemo0111() {
-				return this.demo0111;
-			}
-
-			public void setDemo0111(String demo0111) {
-				this.demo0111 = demo0111;
-			}
-		}
-	}
-
 	@Override
-	public BatchAuditTest01Response getInstance(UnmarshallerContext context) {
-		return	BatchAuditTest01ResponseUnmarshaller.unmarshall(this, context);
-	}
-
-	@Override
-	public boolean checkShowJsonItemName() {
-		return false;
+	public FtGatedLaunchPolicy3ApiResponse getInstance(UnmarshallerContext context) {
+		return	FtGatedLaunchPolicy3ApiResponseUnmarshaller.unmarshall(this, context);
 	}
 }

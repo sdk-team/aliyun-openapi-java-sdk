@@ -14,22 +14,27 @@
 
 package com.aliyuncs.ft.model.v20180713;
 
-import java.util.List;
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.ft.transform.v20180713.BatchAuditTest01ResponseUnmarshaller;
+import com.aliyuncs.ft.transform.v20180713.MigrateStrategyResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class BatchAuditTest01Response extends AcsResponse {
+public class MigrateStrategyResponse extends AcsResponse {
 
 	private String requestId;
 
-	private String name;
+	private Boolean success;
 
-	private Demo01 demo01;
+	private String code;
+
+	private String message;
+
+	private String messageCN;
+
+	private Boolean data;
 
 	public String getRequestId() {
 		return this.requestId;
@@ -39,51 +44,49 @@ public class BatchAuditTest01Response extends AcsResponse {
 		this.requestId = requestId;
 	}
 
-	public String getName() {
-		return this.name;
+	public Boolean getSuccess() {
+		return this.success;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSuccess(Boolean success) {
+		this.success = success;
 	}
 
-	public Demo01 getDemo01() {
-		return this.demo01;
+	public String getCode() {
+		return this.code;
 	}
 
-	public void setDemo01(Demo01 demo01) {
-		this.demo01 = demo01;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
-	public static class Demo01 {
+	public String getMessage() {
+		return this.message;
+	}
 
-		private List<Demo011Item> demo011;
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-		public List<Demo011Item> getDemo011() {
-			return this.demo011;
-		}
+	public String getMessageCN() {
+		return this.messageCN;
+	}
 
-		public void setDemo011(List<Demo011Item> demo011) {
-			this.demo011 = demo011;
-		}
+	public void setMessageCN(String messageCN) {
+		this.messageCN = messageCN;
+	}
 
-		public static class Demo011Item {
+	public Boolean getData() {
+		return this.data;
+	}
 
-			private String demo0111;
-
-			public String getDemo0111() {
-				return this.demo0111;
-			}
-
-			public void setDemo0111(String demo0111) {
-				this.demo0111 = demo0111;
-			}
-		}
+	public void setData(Boolean data) {
+		this.data = data;
 	}
 
 	@Override
-	public BatchAuditTest01Response getInstance(UnmarshallerContext context) {
-		return	BatchAuditTest01ResponseUnmarshaller.unmarshall(this, context);
+	public MigrateStrategyResponse getInstance(UnmarshallerContext context) {
+		return	MigrateStrategyResponseUnmarshaller.unmarshall(this, context);
 	}
 
 	@Override

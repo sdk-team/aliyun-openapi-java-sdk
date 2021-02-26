@@ -22,12 +22,14 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class BatchAuditTest02Request extends RpcAcsRequest<BatchAuditTest02Response> {
 	   
 
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
+	private String name;
+
+	private String batchAuditTest01;
+	public BatchAuditTest02Request() {
+		super("Ft", "2018-07-13", "BatchAuditTest02");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -35,20 +37,31 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getBatchAuditTest01() {
+		return this.batchAuditTest01;
+	}
+
+	public void setBatchAuditTest01(String batchAuditTest01) {
+		this.batchAuditTest01 = batchAuditTest01;
+		if(batchAuditTest01 != null){
+			putQueryParameter("BatchAuditTest01", batchAuditTest01);
 		}
 	}
 
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<BatchAuditTest02Response> getResponseClass() {
+		return BatchAuditTest02Response.class;
 	}
 
 }

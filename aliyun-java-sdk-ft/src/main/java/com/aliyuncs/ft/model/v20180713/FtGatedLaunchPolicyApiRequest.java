@@ -22,12 +22,12 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class FtGatedLaunchPolicyApiRequest extends RpcAcsRequest<FtGatedLaunchPolicyApiResponse> {
 	   
 
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
+	private String unGatedLaunchPolicy;
+	public FtGatedLaunchPolicyApiRequest() {
+		super("Ft", "2018-07-13", "FtGatedLaunchPolicyApi");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -35,20 +35,20 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public String getUnGatedLaunchPolicy() {
+		return this.unGatedLaunchPolicy;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setUnGatedLaunchPolicy(String unGatedLaunchPolicy) {
+		this.unGatedLaunchPolicy = unGatedLaunchPolicy;
+		if(unGatedLaunchPolicy != null){
+			putQueryParameter("UnGatedLaunchPolicy", unGatedLaunchPolicy);
 		}
 	}
 
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<FtGatedLaunchPolicyApiResponse> getResponseClass() {
+		return FtGatedLaunchPolicyApiResponse.class;
 	}
 
 }

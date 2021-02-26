@@ -22,12 +22,10 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class TestDubboRetryApiRequest extends RpcAcsRequest<TestDubboRetryApiResponse> {
 	   
-
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
+	public TestDubboRetryApiRequest() {
+		super("Ft", "2018-07-13", "TestDubboRetryApi");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -35,20 +33,9 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
-	}
-
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
-		}
-	}
-
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<TestDubboRetryApiResponse> getResponseClass() {
+		return TestDubboRetryApiResponse.class;
 	}
 
 }

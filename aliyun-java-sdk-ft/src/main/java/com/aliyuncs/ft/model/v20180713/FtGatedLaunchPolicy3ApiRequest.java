@@ -22,12 +22,12 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlResponse> {
+public class FtGatedLaunchPolicy3ApiRequest extends RpcAcsRequest<FtGatedLaunchPolicy3ApiResponse> {
 	   
 
-	private String stringList;
-	public FtIpFlowControlRequest() {
-		super("Ft", "2018-07-13", "FtIpFlowControl");
+	private String name;
+	public FtGatedLaunchPolicy3ApiRequest() {
+		super("Ft", "2018-07-13", "FtGatedLaunchPolicy3Api");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -35,20 +35,20 @@ public class FtIpFlowControlRequest extends RpcAcsRequest<FtIpFlowControlRespons
 		} catch (Exception e) {}
 	}
 
-	public String getStringList() {
-		return this.stringList;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setStringList(String stringList) {
-		this.stringList = stringList;
-		if(stringList != null){
-			putQueryParameter("StringList", stringList);
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
 		}
 	}
 
 	@Override
-	public Class<FtIpFlowControlResponse> getResponseClass() {
-		return FtIpFlowControlResponse.class;
+	public Class<FtGatedLaunchPolicy3ApiResponse> getResponseClass() {
+		return FtGatedLaunchPolicy3ApiResponse.class;
 	}
 
 }
