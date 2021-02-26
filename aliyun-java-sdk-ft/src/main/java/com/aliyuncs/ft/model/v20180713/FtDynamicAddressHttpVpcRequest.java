@@ -25,6 +25,8 @@ import com.aliyuncs.ft.Endpoint;
 public class FtDynamicAddressHttpVpcRequest extends RpcAcsRequest<FtDynamicAddressHttpVpcResponse> {
 	   
 
+	private String p1;
+
 	private String stringValue;
 
 	private String otherParam;
@@ -39,6 +41,17 @@ public class FtDynamicAddressHttpVpcRequest extends RpcAcsRequest<FtDynamicAddre
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
+	}
+
+	public String getP1() {
+		return this.p1;
+	}
+
+	public void setP1(String p1) {
+		this.p1 = p1;
+		if(p1 != null){
+			putQueryParameter("P1", p1);
+		}
 	}
 
 	public String getStringValue() {

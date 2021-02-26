@@ -85,9 +85,4 @@ public class BatchAuditTest01Response extends AcsResponse {
 	public BatchAuditTest01Response getInstance(UnmarshallerContext context) {
 		return	BatchAuditTest01ResponseUnmarshaller.unmarshall(this, context);
 	}
-
-	@Override
-	public boolean checkShowJsonItemName() {
-		return false;
-	}
 }
