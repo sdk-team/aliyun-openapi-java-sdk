@@ -12,31 +12,41 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.model.v20190827;
+package com.aliyuncs.ft.model.v20180713;
 
 import com.aliyuncs.AcsResponse;
-import com.aliyuncs.ft.transform.v20190827.RetryTestDailyDemoResponseUnmarshaller;
+import com.aliyuncs.ft.transform.v20180713.FtDynamicAddressHttpVpcResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 /**
  * @author auto create
  * @version 
  */
-public class RetryTestDailyDemoResponse extends AcsResponse {
+public class FtDynamicAddressHttpVpcResponse extends AcsResponse {
 
-	private String requestId;
+	private String params;
 
-	public String getRequestId() {
-		return this.requestId;
+	private String serviceRpcSign;
+
+	public String getParams() {
+		return this.params;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
+	public void setParams(String params) {
+		this.params = params;
+	}
+
+	public String getServiceRpcSign() {
+		return this.serviceRpcSign;
+	}
+
+	public void setServiceRpcSign(String serviceRpcSign) {
+		this.serviceRpcSign = serviceRpcSign;
 	}
 
 	@Override
-	public RetryTestDailyDemoResponse getInstance(UnmarshallerContext context) {
-		return	RetryTestDailyDemoResponseUnmarshaller.unmarshall(this, context);
+	public FtDynamicAddressHttpVpcResponse getInstance(UnmarshallerContext context) {
+		return	FtDynamicAddressHttpVpcResponseUnmarshaller.unmarshall(this, context);
 	}
 
 	@Override

@@ -22,26 +22,22 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyResponse> {
+public class QueryErrorApisRequest extends RpcAcsRequest<QueryErrorApisResponse> {
 	   
 
-	private String apiName;
+	private String beginDate;
+
+	private String endDate;
 
 	private String productName;
 
 	private Long bucUid;
 
-	private Long step;
-
 	private String bucName;
 
-	private String env;
-
 	private String bucEmpId;
-
-	private String versionName;
-	public MigrateStrategyRequest() {
-		super("Ft", "2018-07-13", "MigrateStrategy");
+	public QueryErrorApisRequest() {
+		super("Ft", "2018-07-13", "QueryErrorApis");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -49,14 +45,25 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		} catch (Exception e) {}
 	}
 
-	public String getApiName() {
-		return this.apiName;
+	public String getBeginDate() {
+		return this.beginDate;
 	}
 
-	public void setApiName(String apiName) {
-		this.apiName = apiName;
-		if(apiName != null){
-			putQueryParameter("ApiName", apiName);
+	public void setBeginDate(String beginDate) {
+		this.beginDate = beginDate;
+		if(beginDate != null){
+			putQueryParameter("BeginDate", beginDate);
+		}
+	}
+
+	public String getEndDate() {
+		return this.endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+		if(endDate != null){
+			putQueryParameter("EndDate", endDate);
 		}
 	}
 
@@ -82,17 +89,6 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		}
 	}
 
-	public Long getStep() {
-		return this.step;
-	}
-
-	public void setStep(Long step) {
-		this.step = step;
-		if(step != null){
-			putQueryParameter("Step", step.toString());
-		}
-	}
-
 	public String getBucName() {
 		return this.bucName;
 	}
@@ -101,17 +97,6 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		this.bucName = bucName;
 		if(bucName != null){
 			putQueryParameter("BucName", bucName);
-		}
-	}
-
-	public String getEnv() {
-		return this.env;
-	}
-
-	public void setEnv(String env) {
-		this.env = env;
-		if(env != null){
-			putQueryParameter("Env", env);
 		}
 	}
 
@@ -126,20 +111,9 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		}
 	}
 
-	public String getVersionName() {
-		return this.versionName;
-	}
-
-	public void setVersionName(String versionName) {
-		this.versionName = versionName;
-		if(versionName != null){
-			putQueryParameter("VersionName", versionName);
-		}
-	}
-
 	@Override
-	public Class<MigrateStrategyResponse> getResponseClass() {
-		return MigrateStrategyResponse.class;
+	public Class<QueryErrorApisResponse> getResponseClass() {
+		return QueryErrorApisResponse.class;
 	}
 
 }

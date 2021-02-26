@@ -34,11 +34,13 @@ public class GetMigrateStrategyResultResponseUnmarshaller {
 		getMigrateStrategyResultResponse.setCode(_ctx.stringValue("GetMigrateStrategyResultResponse.Code"));
 		getMigrateStrategyResultResponse.setMessage(_ctx.stringValue("GetMigrateStrategyResultResponse.Message"));
 		getMigrateStrategyResultResponse.setMessageCN(_ctx.stringValue("GetMigrateStrategyResultResponse.MessageCN"));
+		getMigrateStrategyResultResponse.setNullValue(_ctx.stringValue("GetMigrateStrategyResultResponse.NullValue"));
 
 		Data data = new Data();
 		data.setPageSize(_ctx.integerValue("GetMigrateStrategyResultResponse.Data.PageSize"));
 		data.setCurrentPage(_ctx.integerValue("GetMigrateStrategyResultResponse.Data.CurrentPage"));
 		data.setTotalItem(_ctx.integerValue("GetMigrateStrategyResultResponse.Data.TotalItem"));
+		data.setTestNull(_ctx.stringValue("GetMigrateStrategyResultResponse.Data.TestNull"));
 
 		List<DataListItem> dataList = new ArrayList<DataListItem>();
 		for (int i = 0; i < _ctx.lengthValue("GetMigrateStrategyResultResponse.Data.DataList.Length"); i++) {

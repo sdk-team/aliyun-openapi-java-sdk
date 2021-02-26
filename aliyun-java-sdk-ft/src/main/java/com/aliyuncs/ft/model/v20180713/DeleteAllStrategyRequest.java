@@ -22,53 +22,25 @@ import com.aliyuncs.ft.Endpoint;
  * @author auto create
  * @version 
  */
-public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyResponse> {
+public class DeleteAllStrategyRequest extends RpcAcsRequest<DeleteAllStrategyResponse> {
 	   
-
-	private String apiName;
-
-	private String productName;
 
 	private Long bucUid;
 
-	private Long step;
-
 	private String bucName;
-
-	private String env;
 
 	private String bucEmpId;
 
-	private String versionName;
-	public MigrateStrategyRequest() {
-		super("Ft", "2018-07-13", "MigrateStrategy");
+	private String productName;
+
+	private String env;
+	public DeleteAllStrategyRequest() {
+		super("Ft", "2018-07-13", "DeleteAllStrategy");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
-	}
-
-	public String getApiName() {
-		return this.apiName;
-	}
-
-	public void setApiName(String apiName) {
-		this.apiName = apiName;
-		if(apiName != null){
-			putQueryParameter("ApiName", apiName);
-		}
-	}
-
-	public String getProductName() {
-		return this.productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-		if(productName != null){
-			putQueryParameter("ProductName", productName);
-		}
 	}
 
 	public Long getBucUid() {
@@ -79,17 +51,6 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		this.bucUid = bucUid;
 		if(bucUid != null){
 			putQueryParameter("BucUid", bucUid.toString());
-		}
-	}
-
-	public Long getStep() {
-		return this.step;
-	}
-
-	public void setStep(Long step) {
-		this.step = step;
-		if(step != null){
-			putQueryParameter("Step", step.toString());
 		}
 	}
 
@@ -104,17 +65,6 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		}
 	}
 
-	public String getEnv() {
-		return this.env;
-	}
-
-	public void setEnv(String env) {
-		this.env = env;
-		if(env != null){
-			putQueryParameter("Env", env);
-		}
-	}
-
 	public String getBucEmpId() {
 		return this.bucEmpId;
 	}
@@ -126,20 +76,31 @@ public class MigrateStrategyRequest extends RpcAcsRequest<MigrateStrategyRespons
 		}
 	}
 
-	public String getVersionName() {
-		return this.versionName;
+	public String getProductName() {
+		return this.productName;
 	}
 
-	public void setVersionName(String versionName) {
-		this.versionName = versionName;
-		if(versionName != null){
-			putQueryParameter("VersionName", versionName);
+	public void setProductName(String productName) {
+		this.productName = productName;
+		if(productName != null){
+			putQueryParameter("ProductName", productName);
+		}
+	}
+
+	public String getEnv() {
+		return this.env;
+	}
+
+	public void setEnv(String env) {
+		this.env = env;
+		if(env != null){
+			putQueryParameter("Env", env);
 		}
 	}
 
 	@Override
-	public Class<MigrateStrategyResponse> getResponseClass() {
-		return MigrateStrategyResponse.class;
+	public Class<DeleteAllStrategyResponse> getResponseClass() {
+		return DeleteAllStrategyResponse.class;
 	}
 
 }

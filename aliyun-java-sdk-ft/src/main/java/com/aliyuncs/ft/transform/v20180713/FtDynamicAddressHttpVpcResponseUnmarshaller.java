@@ -12,18 +12,19 @@
  * limitations under the License.
  */
 
-package com.aliyuncs.ft.transform.v20190827;
+package com.aliyuncs.ft.transform.v20180713;
 
-import com.aliyuncs.ft.model.v20190827.RetryTestDailyDemoResponse;
+import com.aliyuncs.ft.model.v20180713.FtDynamicAddressHttpVpcResponse;
 import com.aliyuncs.transform.UnmarshallerContext;
 
 
-public class RetryTestDailyDemoResponseUnmarshaller {
+public class FtDynamicAddressHttpVpcResponseUnmarshaller {
 
-	public static RetryTestDailyDemoResponse unmarshall(RetryTestDailyDemoResponse retryTestDailyDemoResponse, UnmarshallerContext _ctx) {
+	public static FtDynamicAddressHttpVpcResponse unmarshall(FtDynamicAddressHttpVpcResponse ftDynamicAddressHttpVpcResponse, UnmarshallerContext _ctx) {
 		
-		retryTestDailyDemoResponse.setRequestId(_ctx.stringValue("RetryTestDailyDemoResponse.RequestId"));
+		ftDynamicAddressHttpVpcResponse.setParams(_ctx.stringValue("FtDynamicAddressHttpVpcResponse.Params"));
+		ftDynamicAddressHttpVpcResponse.setServiceRpcSign(_ctx.stringValue("FtDynamicAddressHttpVpcResponse.ServiceRpcSign"));
 	 
-	 	return retryTestDailyDemoResponse;
+	 	return ftDynamicAddressHttpVpcResponse;
 	}
 }
